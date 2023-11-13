@@ -1,0 +1,114 @@
+@import "_reset.scss";
+@import "_setting.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400&family=Kanit:wght@300;400&family=Noto+Sans+TC:wght@300;400&display=swap");
+
+@font-face {
+    font-family: "DFMingStd-W9";
+    src: url('../font/DFMingStd-W9.otf');
+}
+
+@font-face {
+    font-family: "DFMingStd-W5";
+    src: url('../font/DFMingStd-W5.otf');
+}
+
+@font-face {
+    font-family: "DFMingStd-W3";
+    src: url('../font/DFMingStd-W3.otf');
+}
+
+@font-face {
+    font-family: "NotoSansTC-400";
+    src: url('../font/NotoSansTC-Regular.ttf');
+}
+
+@font-face {
+    font-family: "NotoSansTC-300";
+    src: url('../font/NotoSansTC-Light.ttf');
+}
+
+@import "primeicons/primeicons.css";
+@import "primevue/resources/themes/saga-blue/theme.css";
+@import "primevue/resources/primevue.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// html {
+//     font-size: 100px;
+// }
+
+body {
+    font-family: $font-Noto;
+    font-size: 14px;
+    color: $text-color;
+    line-height: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+//出刊消息,發行,價錢等等樣式
+.info {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    &__new {
+        color: $text-color2;
+        // font-family: $font-Inria;
+        font-size: 0.675rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+
+    &__month {
+
+        font-size: 1.3rem;
+        line-height: 3rem;
+    }
+
+    &__content {
+
+        line-height: 1.50375rem;
+    }
+
+    &__price {
+
+
+        line-height: 1.96875rem;
+    }
+
+    &__shopcart {
+        text-align: center;
+        // font-size: 1rem;
+        letter-spacing: 1.071px;
+        border: 0.5px solid rgba(0, 0, 0, 0.5);
+        padding: 2.25%;
+        padding-left: 3.25%;
+        padding-right: 3.25%;
+
+    }
+}
+
+// 間距樣式
+.wrap {
+    padding-left: 8.5%;
+    padding-right: 8.5%;
+
+
+}
+
+// 線的樣式
+.line {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.38);
+}

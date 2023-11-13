@@ -1,0 +1,50 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "nuxt": "^3.8.0",
+    "nuxt-primevue": "^0.1.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "@nuxtjs/robots": "^3.0.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@websitebeaver/vue-magnifier": "^1.1.0",
+    "nuxt-swiper": "^1.2.2",
+    "pinia": "^2.1.7",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.37.0",
+    "v-image-magnifier": "^1.1.1"
+  },
+  "description": "Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

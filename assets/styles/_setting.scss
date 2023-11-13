@@ -1,0 +1,71 @@
+@function toRem($val) {
+  $rem: (
+    $val * 0.01) + rem;
+  @return $rem;
+}
+
+@mixin max-media($width) {
+  @media (max-width: $width+"px") {
+    @content;
+  }
+}
+
+@mixin min-media($width) {
+  @media (min-width: $width+"px") {
+    @content;
+  }
+}
+
+@mixin mm-media($minWidth, $maxWidth) {
+  @media (min-width: $minWidth+"px") and (max-width: $maxWidth+"px") {
+    @content;
+  }
+}
+
+@mixin max-height-media($Height) {
+  @media (max-height: $Height+"px") {
+    @content;
+  }
+}
+
+@mixin min-height-media($Height) {
+  @media (min-height: $Height+"px") {
+    @content;
+  }
+}
+
+@mixin mm-height-media($minHeight, $maxHeight) {
+  @media (min-height: $minHeight+"px") and (max-height: $maxHeight+"px") {
+    @content;
+  }
+}
+
+@mixin dot-one-line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin dot-many-line($line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+
+// 字體
+$font-Noto: 'NotoSansTC-400',
+  sans-serif;
+$font-Inria: "Inria Serif",
+  "Noto Sans TC",
+  serif;
+$font-Kanit: "Kanit";
+$font-DFMingStd3: "DFMingStd-W3";
+$font-DFMingStd5: "DFMingStd-W5";
+$font-DFMingSrgb: "DFMingStd-W9";
+
+// 顏色
+$text-color: #000;
+$text-color2: #999696;
+$text-color3: #000000CC
