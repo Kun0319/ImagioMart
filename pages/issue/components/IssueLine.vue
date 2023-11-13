@@ -23,7 +23,7 @@ const selectOption = (option) => {
 </script>
 
 <template>
-  <div class="line">
+  <div class="line md:mb-0 mb-10">
     <div class="">
       <div class="flex justify-between">
         <div>
@@ -52,6 +52,7 @@ const selectOption = (option) => {
 
 <style scoped lang="scss">
 .line {
+  // margin-bottom: 10%;
 }
 .dropdown {
   border: none;

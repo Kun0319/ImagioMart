@@ -42,7 +42,7 @@
       </div>
       <!-- 聯絡資訊 -->
       <div
-        class="flex flex-col md:justify-self-end md:col-end-13 md:col-span-3 col-span-12 row-span-2 order-1"
+        class="flex flex-col md:justify-self-end md:col-end-13 md:col-span-4 col-span-12 row-span-2 order-1"
       >
         <!-- gap -->
         <div class="flex md:justify-start justify-center md:gap-5 gap-8">
