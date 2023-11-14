@@ -97,18 +97,9 @@ const isLanguageVisible = ref(false);
         <div class="feature__icon">
           <img src="@/assets/icon/bag.svg" alt="" />
         </div>
-      </div>
-      <div class="language">
-        <div
-          class="language__main"
-          @click="isLanguageVisible = !isLanguageVisible"
-        >
+        <div class="feature__icon">
           <img src="../assets/icon/chinese.svg" alt="" />
         </div>
-        <!-- <div class="language__drop" :class="{ isShow: isLanguageVisible }">
-          <div class="language__item">中文</div>
-          <div class="language__item">EN</div>
-        </div> -->
       </div>
     </div>
     <!-- 手機版按鈕 -->
@@ -151,12 +142,7 @@ const isLanguageVisible = ref(false);
           <div class="flex items-center justify-between mt-4">
             <img src="@/assets/icon/member.svg" alt="" class="" />
             <img src="@/assets/icon/bag.svg" alt="" class="" />
-            <div
-              class="language__main"
-              @click="isLanguageVisible = !isLanguageVisible"
-            >
-              中
-            </div>
+            <img src="../assets/icon/chinese.svg" alt="" />
           </div>
         </div>
       </div>

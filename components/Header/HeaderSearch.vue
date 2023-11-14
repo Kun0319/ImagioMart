@@ -4,7 +4,7 @@ const globalStore = useGlobalStore();
 </script>
 <template>
   <div
-    class="grid grid-cols-10 w-full search-container"
+    class="grid grid-cols-10 w-full search-container wrap"
     :style="{ top: globalStore.showSearch ? '0' : '-100%' }"
   >
     <input
@@ -13,7 +13,7 @@ const globalStore = useGlobalStore();
       class="mr-auto col-span-8 w-full"
     />
     <div
-      class="flex items-center md:col-start-10 col-start-9 col-span-2 md:justify-self-end justify-self-center"
+      class="flex items-center md:col-start-10 col-start-9 col-span-2 justify-self-end"
     >
       <img src="@/assets/icon/search.svg" alt="" class="" />
       <img
@@ -57,17 +57,5 @@ img {
   background: white;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
   transition: top 0.5s ease-in-out;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-
-  @media (min-width: 768px) {
-    padding-left: 5.1rem;
-    padding-right: 5.1rem;
-  }
-
-  @media (min-width: 1024px) {
-    padding-left: 10.2rem;
-    padding-right: 10.2rem;
-  }
 }
 </style>
