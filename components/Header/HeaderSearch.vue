@@ -4,21 +4,23 @@ const globalStore = useGlobalStore();
 </script>
 <template>
   <div
-    class="grid grid-cols-12 w-full search-container"
+    class="grid grid-cols-10 w-full search-container"
     :style="{ top: globalStore.showSearch ? '0' : '-100%' }"
   >
     <input
       type="text"
       placeholder="Search..."
-      class="mr-auto col-span-10 w-full"
+      class="mr-auto col-span-8 w-full"
     />
-    <div class="flex items-center col-end-13 col-span-1 justify-self-center">
+    <div
+      class="flex items-center md:col-start-10 col-start-9 col-span-2 md:justify-self-end justify-self-center"
+    >
       <img src="@/assets/icon/search.svg" alt="" class="" />
       <img
         src="@/assets/icon/close.svg"
         @click="globalStore.toggleSearchBar"
         alt=""
-        class="ml-8"
+        class="ml-6"
       />
     </div>
   </div>
@@ -44,7 +46,9 @@ img {
 
 .search-container {
   position: fixed;
+  // position: relative;
   top: -100%;
+
   left: 0;
   // width: 100%;
   // 高度需跟Navbar一樣

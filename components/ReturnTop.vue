@@ -10,16 +10,20 @@ const scrollToTop = () => {
 <template lang="">
   <div class="flex justify-end sticky m-8">
     <button @click="scrollToTop" class="return border-none">
-      <img src="../assets/images/returntop.svg" alt="" class="return w-3/5" />
+      <img src="../assets/images/returntop.svg" alt="" class="return" />
     </button>
   </div>
 </template>
 
 <style lang="scss" scoped>
+img {
+  width: 30px;
+  height: 30px;
+}
 button.return {
   background: none;
   position: fixed;
-  right: 1rem;
+  right: 2rem;
   bottom: 1rem;
   z-index: 9999;
 

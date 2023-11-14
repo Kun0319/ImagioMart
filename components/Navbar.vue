@@ -103,12 +103,12 @@ const isLanguageVisible = ref(false);
           class="language__main"
           @click="isLanguageVisible = !isLanguageVisible"
         >
-          中
+          <img src="../assets/icon/chinese.svg" alt="" />
         </div>
-        <div class="language__drop" :class="{ isShow: isLanguageVisible }">
+        <!-- <div class="language__drop" :class="{ isShow: isLanguageVisible }">
           <div class="language__item">中文</div>
           <div class="language__item">EN</div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- 手機版按鈕 -->
@@ -255,7 +255,7 @@ header {
     left: 50%;
     top: 120%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 150px;
     background-color: #fff;
     border-top: 2px solid #000;
     box-shadow: 0 4px 12px rgba(#000, 0.1);
@@ -273,7 +273,7 @@ header {
 
       &:hover {
         color: #fff;
-        background-color: #000;
+        background-color: #00000050;
       }
     }
   }
