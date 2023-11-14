@@ -56,7 +56,7 @@ setInterval(() => {
 
     <!-- 大圖 -->
     <article
-      class="md:col-start-7 md:col-span-2 col-span-10 md:order-1 order-none justify-center"
+      class="md:col-start-7 md:col-span-2 col-span-10 md:order-1 order-none md:justify-self-end justify-center"
     >
       <!-- <img src="~/assets/images/Rectangle.svg" alt="IW傢飾" /> -->
       <img
@@ -64,7 +64,7 @@ setInterval(() => {
         @mouseover="handleMouseOver"
         @mouseout="handleMouseOut"
         alt="IW傢飾"
-        class="w-full max-w-xl sm:max-w-xl md:max-w-4xl lg:max-w-3xl"
+        class="w-full max-w-full"
       />
     </article>
   </div>

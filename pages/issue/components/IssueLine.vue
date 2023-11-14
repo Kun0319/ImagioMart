@@ -25,7 +25,7 @@ const selectOption = (option) => {
 <template>
   <div class="line md:mb-0 mb-10">
     <div class="">
-      <div class="flex justify-between">
+      <div class="flex justify-between items-center">
         <div>
           <p class="home">Home/Issue</p>
         </div>

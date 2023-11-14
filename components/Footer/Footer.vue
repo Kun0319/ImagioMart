@@ -27,7 +27,7 @@
     <!-- 關於我們等等連結 -->
     <div class="flex flex-col md:grid grid-cols-12 grid-rows-2 md:gap-3 gap-2">
       <div
-        class="flex row-start-1 md:col-start-1 md:col-span-7 col-span-12 md:justify-start justify-between order-2"
+        class="flex row-start-1 md:col-start-1 md:col-span-7 col-span-12 md:justify-start justify-around order-2"
       >
         <span><a href="">About us</a></span> <span class="dot">•</span>
         <span><a href="">Privacy policy</a></span> <span class="dot">•</span>
@@ -118,14 +118,14 @@ p {
 
 // 暫時修改
 .dot {
-  margin: 0 5px; /* 调整左右间距 */
+  margin: 0 5px;
 }
 
 span,
 p {
   @include max-media(390) {
     justify-content: space-between;
-    font-size: 50%;
+    font-size: 40%;
   }
 
   @include max-media(480) {

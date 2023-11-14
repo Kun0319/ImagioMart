@@ -6,7 +6,7 @@
       <p>Home/Issue</p>
     </div>
   </div>
-  <div class="flex justify-end">
+  <div class="flex justify-end mt-4">
     <!-- <img src="../assets/icon/i_heart 5.png" alt="" class="mx-3" />
         <img src="../assets/icon/share.png" alt="" class="" /> -->
     <i class="pi pi-heart mx-3"></i>

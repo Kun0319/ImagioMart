@@ -7,27 +7,26 @@ const menuLists = ref([
     link: "issue",
     name: "Issue",
     children: [
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
+      { link: "../", name: "IW" },
+      { link: "../", name: "DETAIL'" },
     ],
   },
   {
     link: "../",
     name: "Project",
     children: [
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
+      { link: "../", name: "Scope" },
+      { link: "../", name: "Space" },
+      { link: "../", name: "Art" },
     ],
   },
   {
     link: "../",
     name: "Story",
     children: [
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
+      { link: "../", name: "Furniture" },
+      { link: "../", name: "Interior" },
+      { link: "../", name: "Product" },
     ],
   },
   {
@@ -38,9 +37,8 @@ const menuLists = ref([
     link: "../",
     name: "Competition",
     children: [
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
-      { link: "../", name: "Sub Issue" },
+      { link: "../", name: "IW" },
+      { link: "../", name: "Other" },
     ],
   },
   {
@@ -58,8 +56,8 @@ const isLanguageVisible = ref(false);
 
 <template>
   <header class="wrap grid grid-cols-10">
-    <nuxt-link to="/" class="col-start-1 lg:col-span-2 col-span-3 w-full h-auto"
-      ><img src="@/assets/images/logo.svg" alt="IW家飾" class=""
+    <nuxt-link to="/" class="col-start-1 col-span-2 w-full h-auto"
+      ><img src="@/assets/images/logo.svg" alt="IW家飾" class="block"
     /></nuxt-link>
     <nav class="menu col-start-3 col-span-6">
       <ul class="menu__list">
