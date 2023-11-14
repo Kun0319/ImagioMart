@@ -32,7 +32,7 @@ setInterval(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-10 pt-12 pb-28">
+  <div class="grid grid-cols-10 md:pt-12 pb-28">
     <!-- Magazine Info -->
     <article
       class="info md:col-start-3 md:col-span-3 col-span-10 md:order-none order-1 md:text-left text-center gap-5"

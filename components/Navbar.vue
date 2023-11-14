@@ -114,7 +114,7 @@ const isLanguageVisible = ref(false);
       </div>
     </div>
     <!-- 手機版按鈕 -->
-    <div class="header__mobile col-start-9 gap-4">
+    <div class="header__mobile col-start-9 col-span-2 gap-5 justify-self-end">
       <div
         class="feature__icon feature__icon__search"
         @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"

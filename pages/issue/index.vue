@@ -18,4 +18,4 @@ import Advertise from "./components/Advertise.vue";
   </NuxtLayout>
 </template>
 
-<style lang=""></style>
+<style lang="scss" scoped></style>

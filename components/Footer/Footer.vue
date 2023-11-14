@@ -27,25 +27,25 @@
     <!-- 關於我們等等連結 -->
     <div class="flex flex-col md:grid grid-cols-12 grid-rows-2 md:gap-3 gap-2">
       <div
-        class="flex row-start-1 md:col-start-1 md:col-span-7 col-span-12 md:justify-start justify-center order-2"
+        class="flex row-start-1 md:col-start-1 md:col-span-7 col-span-12 md:justify-start justify-between order-2"
       >
-        <span><a href="">About us</a>•</span>
-        <span><a href="">Privacy policy</a>•</span>
-        <span><a href="">Terms of service</a>•</span>
-        <span><a href="">Shipping policy</a>•</span>
+        <span><a href="">About us</a></span> <span class="dot">•</span>
+        <span><a href="">Privacy policy</a></span> <span class="dot">•</span>
+        <span><a href="">Terms of service</a></span> <span class="dot">•</span>
+        <span><a href="">Shipping policy</a></span> <span class="dot">•</span>
         <span><a href="">Contact</a></span>
       </div>
       <div
         class="row-start-2 md:col-span-4 col-span-6 md:col-start-1 col-start-4 md:order order-3 md:text-start text-center"
       >
-        <p>&copy; 2023, IW MAGAZINE. ALL RIGHTS RESERVED</p>
+        <p class="year">&copy; 2023, IW MAGAZINE. ALL RIGHTS RESERVED</p>
       </div>
       <!-- 聯絡資訊 -->
       <div
-        class="flex flex-col md:justify-self-end gap-3 md:col-end-13 md:col-span-4 col-span-12 row-span-2 order-1"
+        class="flex flex-col sm:justify-self-end gap-3 sm:col-end-13 sm:col-span-4 col-span-12 row-span-2 order-1"
       >
         <!-- gap -->
-        <div class="flex md:justify-start justify-center md:gap-5 gap-8">
+        <div class="flex md:justify-start justify-center sm:gap-5 gap-8">
           <img src="@/assets/icon/fb.svg" alt="Facebook" class="" />
           <img src="@/assets/icon/ig.svg" alt="Instagram" class="" />
           <img src="@/assets/icon/line.svg" alt="Line" class="" />
@@ -75,6 +75,8 @@
 }
 
 .flex.flex-row {
+  margin-bottom: 22%;
+
   @include min-media(560) {
     margin-bottom: 22%;
   }
@@ -112,6 +114,30 @@ span,
 p {
   color: $text-color3;
   font-size: 0.675rem;
+}
+
+// 暫時修改
+.dot {
+  margin: 0 5px; /* 调整左右间距 */
+}
+
+span,
+p {
+  @include max-media(390) {
+    justify-content: space-between;
+    font-size: 50%;
+  }
+
+  @include max-media(480) {
+    justify-content: space-between;
+    font-size: 63%;
+  }
+}
+
+.year {
+  @include max-media(480) {
+    font-size: 50%;
+  }
 }
 
 label {

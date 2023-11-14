@@ -1,6 +1,7 @@
 @import "_reset.scss";
 @import "_setting.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400&family=Kanit:wght@300;400&family=Noto+Sans+TC:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 @font-face {
     font-family: "DFMingStd-W9";
@@ -39,7 +40,7 @@
 // }
 
 body {
-    font-family: $font-Noto;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 14px;
     color: $text-color;
     line-height: 1.6rem;
