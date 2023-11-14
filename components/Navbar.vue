@@ -80,18 +80,19 @@ const isLanguageVisible = ref(false);
         </li>
       </ul>
     </nav>
-    <div
-      class="feature__icon feature__icon__search col-start-9"
-      @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
-    >
-      <img
-        @click="globalStore.toggleSearchBar"
-        src="@/assets/icon/search.svg"
-        alt=""
-      />
-    </div>
-    <div class="right-box">
+
+    <div class="right-box col-start-10">
       <div class="feature">
+        <div
+          class="feature__icon feature__icon__search"
+          @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
+        >
+          <img
+            @click="globalStore.toggleSearchBar"
+            src="@/assets/icon/search.svg"
+            alt=""
+          />
+        </div>
         <div class="feature__icon">
           <img src="@/assets/icon/member.svg" alt="" />
         </div>
@@ -113,7 +114,17 @@ const isLanguageVisible = ref(false);
       </div>
     </div>
     <!-- 手機版按鈕 -->
-    <div class="header__mobile">
+    <div class="header__mobile col-start-9 gap-4">
+      <div
+        class="feature__icon feature__icon__search"
+        @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
+      >
+        <img
+          @click="globalStore.toggleSearchBar"
+          src="@/assets/icon/search.svg"
+          alt=""
+        />
+      </div>
       <button
         class="mobile-menu-button"
         @click="globalStore.toggleHamburgerMenu()"
@@ -169,6 +180,7 @@ header {
 
   .right-box {
     display: flex;
+    justify-self: end;
 
     @include max-media(1024) {
       display: none;
@@ -285,7 +297,6 @@ header {
 
     &__search {
       display: flex;
-      align-items: center;
       justify-self: end;
       width: 20px;
     }

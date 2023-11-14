@@ -25,7 +25,7 @@
       </div>
     </div>
     <!-- 關於我們等等連結 -->
-    <div class="flex flex-col md:grid grid-cols-12 grid-rows-2">
+    <div class="flex flex-col md:grid grid-cols-12 grid-rows-2 md:gap-3 gap-2">
       <div
         class="flex row-start-1 md:col-start-1 md:col-span-7 col-span-12 md:justify-start justify-center order-2"
       >
@@ -42,7 +42,7 @@
       </div>
       <!-- 聯絡資訊 -->
       <div
-        class="flex flex-col md:justify-self-end md:col-end-13 md:col-span-4 col-span-12 row-span-2 order-1"
+        class="flex flex-col md:justify-self-end gap-3 md:col-end-13 md:col-span-4 col-span-12 row-span-2 order-1"
       >
         <!-- gap -->
         <div class="flex md:justify-start justify-center md:gap-5 gap-8">
@@ -68,13 +68,21 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.footer::after {
+  content: "";
+  display: block;
+  height: 2rem;
+}
+
 .flex.flex-row {
   @include min-media(560) {
     margin-bottom: 22%;
   }
+
   @include min-media(768) {
     margin-bottom: 20%;
   }
+
   @include min-media(1025) {
     margin-bottom: 30.7%;
   }
