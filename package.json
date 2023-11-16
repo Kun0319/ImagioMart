@@ -34,6 +34,7 @@
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.5.1",
+    "@vueuse/core": "^10.6.1",
     "@websitebeaver/vue-magnifier": "^1.1.0",
     "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",

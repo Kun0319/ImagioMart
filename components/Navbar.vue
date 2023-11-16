@@ -176,8 +176,11 @@ header {
   &__mobile {
     display: flex;
     align-items: center;
-    margin-left: 1rem;
-
+    // margin-left: 1rem;
+    img,
+    button {
+      width: 18px;
+    }
     @include min-media(1025) {
       display: none;
     }
@@ -276,14 +279,14 @@ header {
   }
 
   &__icon {
-    width: 22px;
+    width: 18px;
     cursor: pointer;
     margin-left: 20px;
 
     &__search {
       display: flex;
       justify-self: end;
-      width: 20px;
+      width: 18px;
     }
   }
 }

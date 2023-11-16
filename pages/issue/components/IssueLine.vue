@@ -27,7 +27,7 @@ const selectOption = (option) => {
     <div class="">
       <div class="flex justify-between items-center">
         <div>
-          <p class="home">Home/Issue</p>
+          <p class="home">Home / Issue</p>
         </div>
         <div class="dropdown" @click="toggleDropdown">
           <div class="selected justify-end">

@@ -3,7 +3,7 @@
 <template>
   <div class="mb-2 line">
     <div class="mb-2">
-      <p>Home/Issue</p>
+      <p>Home / Issue</p>
     </div>
   </div>
   <div class="line__icon flex justify-end mt-4">

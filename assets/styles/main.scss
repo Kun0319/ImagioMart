@@ -5,6 +5,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+// Swiper styles
+@import "swiper/css";
+@import "swiper/swiper-bundle.css";
 @font-face {
     font-family: "DFMingStd-W9";
     src: url('../font/DFMingStd-W9.otf');
