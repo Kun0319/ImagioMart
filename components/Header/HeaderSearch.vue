@@ -10,7 +10,7 @@ const globalStore = useGlobalStore();
     <input
       type="text"
       placeholder="Search..."
-      class="mr-auto col-span-8 w-full"
+      class="search mr-auto col-span-8 w-full"
     />
     <div
       class="flex items-center md:col-start-10 col-start-9 col-span-2 justify-self-end"
@@ -26,36 +26,35 @@ const globalStore = useGlobalStore();
   </div>
 </template>
 <style lang="scss" scoped>
-input {
+.search {
   outline: none;
   border: none;
-}
 
-input:focus {
-  border-bottom: 1px solid #000;
-}
+  &:focus {
+    border-bottom: 1px solid #000;
+  }
 
-::placeholder {
-  color: #000000cc;
-  font-size: 1rem;
+  &::placeholder {
+    color: #000000cc;
+    font-size: 1rem;
+  }
+
+  &-container {
+    position: fixed;
+    // position: relative;
+    top: -100%;
+    left: 0;
+    // width: 100%;
+    // 高度需跟Navbar一樣
+    height: 65px;
+    z-index: 20;
+    background: white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
+    transition: top 0.5s ease-in-out;
+  }
 }
 
 img {
   cursor: pointer;
-}
-
-.search-container {
-  position: fixed;
-  // position: relative;
-  top: -100%;
-
-  left: 0;
-  // width: 100%;
-  // 高度需跟Navbar一樣
-  height: 65px;
-  z-index: 20;
-  background: white;
-  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
-  transition: top 0.5s ease-in-out;
 }
 </style>

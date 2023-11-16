@@ -3,7 +3,7 @@ export default {};
 </script>
 
 <template lang="">
-  <div class="flex items-center justify-center">
+  <div class="advertise flex items-center justify-center">
     <img
       src="@/assets/images/advertise.svg"
       alt=""
@@ -12,7 +12,8 @@ export default {};
   </div>
 </template>
 
-<style scoped>
-img {
+<style lang="scss" scoped>
+.advertise {
+  margin-bottom: 9.66%;
 }
 </style>

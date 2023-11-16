@@ -2,7 +2,7 @@
 import Paginator from "primevue/paginator";
 </script>
 <template>
-  <div class="my-32">
+  <div class="paginator">
     <Paginator
       :rows="10"
       :totalRecords="50"
@@ -14,6 +14,10 @@ import Paginator from "primevue/paginator";
 </template>
 
 <style lang="scss">
+.paginator {
+  margin-top: 12.09%;
+  margin-bottom: 10.65%;
+}
 .custom-paginator
   .p-paginator
   .p-paginator-pages

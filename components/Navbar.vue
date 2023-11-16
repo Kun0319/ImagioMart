@@ -138,7 +138,7 @@ const isLanguageVisible = ref(false);
           <NuxtLink to="/">Opinion</NuxtLink>
           <NuxtLink to="/">Competiton</NuxtLink>
           <NuxtLink to="/">News</NuxtLink>
-          <NuxtLink to="/about">About</NuxtLink>
+          <NuxtLink to="/">About</NuxtLink>
           <div class="flex items-center justify-between mt-4">
             <img src="@/assets/icon/member.svg" alt="" class="" />
             <img src="@/assets/icon/bag.svg" alt="" class="" />
@@ -186,7 +186,7 @@ header {
 
 .menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   // justify-content: space-between;
   @include max-media(1024) {
     display: none;
@@ -194,7 +194,6 @@ header {
 
   li {
     position: relative;
-
     &:hover {
       .menu {
         &__drop {
@@ -213,21 +212,23 @@ header {
   }
 
   &__title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    display: block;
+    // width: 100%;
 
     @include min-media(1024) {
-      padding-left: 1.4rem;
-      padding-right: 1.4rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
     }
     @include min-media(1280) {
       padding-left: 2rem;
       padding-right: 2rem;
     }
     @include min-media(1580) {
-      padding-left: 3.2rem;
-      padding-right: 3.2rem;
+      padding-left: 3.3rem;
+      padding-right: 3.3rem;
     }
 
     font-size: toRem(87.5);
@@ -340,8 +341,6 @@ header {
   // top需要跟Navbar高度一樣
   top: 65px;
   right: 0;
-  // padding-left: 3rem;
-  // padding-top: 3rem;
   transform: translateX(100%);
   transition: transform 0.6s ease-in-out;
   &-list {
@@ -369,7 +368,6 @@ header {
       transform: translate(-50%, -50%);
       width: 24px;
       height: 2px;
-
       &:nth-child(1) {
         margin-top: -6px;
       }

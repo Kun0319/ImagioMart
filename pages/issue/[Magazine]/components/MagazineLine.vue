@@ -6,7 +6,7 @@
       <p>Home/Issue</p>
     </div>
   </div>
-  <div class="flex justify-end mt-4">
+  <div class="line__icon flex justify-end mt-4">
     <!-- <img src="../assets/icon/i_heart 5.png" alt="" class="mx-3" />
         <img src="../assets/icon/share.png" alt="" class="" /> -->
     <i class="pi pi-heart mx-3"></i>
@@ -14,12 +14,11 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .line {
-  margin-top: 7rem;
-}
-
-.flex.justify-end {
-  margin-bottom: 4rem;
+  margin-top: 5.56%;
+  &__icon {
+    margin-bottom: 4.75%;
+  }
 }
 </style>

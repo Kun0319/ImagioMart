@@ -1,5 +1,5 @@
 <script setup>
-// const SoldOut = ref(true);
+const special = ref(false);
 </script>
 
 <template>
@@ -7,7 +7,6 @@
     <div class="flex flex-col items-center">
       <nuxt-link to="/issue/[Magazine]" class="image-container">
         <img src="~/assets/images/Magazine.png" alt="" class="max-w-full" />
-        <!-- <div class="overlay-text">已售完</div> -->
       </nuxt-link>
 
       <p class="mt-4">第151期2023/07&08月</p>
@@ -21,32 +20,14 @@
 
 <style scoped lang="scss">
 .grid {
-  margin-top: 23.72%;
+  margin-top: 20.67%;
 }
 a > img {
   opacity: 1;
-
   transition: all 0.6s;
 }
 
 a > img:hover {
   opacity: 0.5;
 }
-
-// 已售完樣式
-// img {
-//   opacity: 0.4;
-// }
-
-// .overlay-text {
-//   display: flex;
-//   width: 25%;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-//   bottom: 50%;
-//   left: 38%;
-//   background-color: #ffffff;
-//   color: rgb(0, 0, 0);
-// }
 </style>

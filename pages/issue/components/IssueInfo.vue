@@ -32,10 +32,10 @@ setInterval(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-10 md:pt-12 pb-28">
+  <div class="issue grid grid-cols-10 gap-4">
     <!-- Magazine Info -->
     <article
-      class="info md:col-start-3 md:col-span-3 col-span-10 md:order-none order-1 md:text-left text-center gap-5"
+      class="flex info md:col-span-5 lg:col-span-6 col-span-full md:order-none order-1 md:text-start text-center md:justify-self-center"
     >
       <div class="grid gap-1">
         <p class="info__new">Jun.27 / 2023 出刊消息</p>
@@ -46,9 +46,9 @@ setInterval(() => {
         墨西哥米卻肯．拉彼達之家<br />
         義大利．2023 威尼斯建築雙年展：一個循環的故事
       </p>
-      <p class="info__content py-5">文字．影像 ｜ 提供：IW傢飾</p>
+      <p class="info__content my-8">文字．影像 ｜ 提供：IW傢飾</p>
       <div>
-        <p class="info__price mb-10">NT$300</p>
+        <p class="info__price mb-12">NT$300</p>
 
         <a href="/" class="info__shopcart">ADD TO CART</a>
       </div>
@@ -56,7 +56,7 @@ setInterval(() => {
 
     <!-- 大圖 -->
     <article
-      class="md:col-start-7 md:col-span-2 col-span-10 md:order-1 order-none md:justify-self-end justify-center"
+      class="pic flex md:col-span-4 col-span-10 md:order-1 order-none md:justify-start justify-center"
     >
       <!-- <img src="~/assets/images/Rectangle.svg" alt="IW傢飾" /> -->
       <img
@@ -64,25 +64,28 @@ setInterval(() => {
         @mouseover="handleMouseOver"
         @mouseout="handleMouseOut"
         alt="IW傢飾"
-        class="w-full max-w-full"
+        class=""
       />
     </article>
   </div>
 </template>
 
 <style lang="scss" scoped>
-img {
-  width: 100%;
-  height: 32rem;
+.issue {
+  margin-top: 7.75%;
+  margin-bottom: 9.72%;
 }
-
 .info {
-  @include min-media(1025) {
-    margin-left: 10%;
-  }
+  white-space: nowrap;
+}
+.pic {
+  display: flex;
+  align-items: center;
+}
+.pic img {
+  width: 300px;
+  height: 450px;
 
-  @include max-media(1024) {
-    padding-left: 0;
-  }
+  object-fit: cover;
 }
 </style>

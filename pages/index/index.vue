@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+// window.location.href = "/issue";
+</script>
 
 <template lang="">
   <div>
