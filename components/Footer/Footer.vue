@@ -97,7 +97,7 @@
   &::placeholder {
     color: #cecece;
     font-size: 0.675rem;
-    // padding-left: 5%;
+    padding-left: 1%;
     @include max-media(1024) {
       font-size: 0.675rem * 0.85;
     }
