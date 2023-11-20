@@ -17,8 +17,14 @@
 <style lang="scss" scoped>
 .line {
   margin-top: 5.56%;
+  p {
+    font-size: 0.75rem;
+  }
   &__icon {
-    margin-bottom: 4.75%;
+    margin-bottom: 2.75%;
+    @include max-media(769) {
+      display: none;
+    }
   }
 }
 </style>

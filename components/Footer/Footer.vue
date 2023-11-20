@@ -6,14 +6,14 @@
     <!-- 輸入email區塊 -->
     <div class="email__block grid grid-cols-10">
       <div
-        class="textset flex flex-col md:col-start-4 md:col-span-4 col-span-10 pl-2"
+        class="textset flex flex-col md:col-start-4 md:col-span-4 col-span-10"
       >
         <p class="mb-2 md:text-left text-center">Sign up to our newsletter</p>
         <div class="flex flex-row relative">
           <input
             type="email"
             class="email border-0 w-full md:text-left text-center md:pl-0 pl-5"
-            placeholder="Enter your email"
+            placeholder="Email"
           />
           <button class="email__button">
             <img
@@ -77,6 +77,7 @@
   outline: none;
   padding-left: 0;
   padding-bottom: 1rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   &__block {
     margin-bottom: 22%;
@@ -94,7 +95,9 @@
   }
 
   &::placeholder {
+    color: #cecece;
     font-size: 0.675rem;
+    // padding-left: 5%;
     @include max-media(1024) {
       font-size: 0.675rem * 0.85;
     }

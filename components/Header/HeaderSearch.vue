@@ -33,7 +33,7 @@ const globalStore = useGlobalStore();
   left: 0;
   // width: 100%;
   // 高度需跟Navbar一樣
-  height: 65px;
+  height: 55px;
   z-index: 20;
   background: white;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
@@ -54,7 +54,7 @@ const globalStore = useGlobalStore();
   }
   img {
     cursor: pointer;
-    width: 18px;
+    width: 16px;
   }
 }
 </style>

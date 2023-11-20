@@ -30,4 +30,7 @@ a > img {
 a > img:hover {
   opacity: 0.5;
 }
+.special-style img {
+  opacity: 0.2;
+}
 </style>

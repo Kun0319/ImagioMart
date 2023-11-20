@@ -6,6 +6,8 @@ const menuLists = ref([
   {
     link: "issue",
     name: "Issue",
+    nameZh: "發布",
+    hover: ref(false),
     children: [
       { link: "../", name: "IW" },
       { link: "../", name: "DETAIL'" },
@@ -14,6 +16,8 @@ const menuLists = ref([
   {
     link: "../",
     name: "Project",
+    nameZh: "案例",
+    hover: ref(false),
     children: [
       { link: "../", name: "Scope" },
       { link: "../", name: "Space" },
@@ -23,6 +27,8 @@ const menuLists = ref([
   {
     link: "../",
     name: "Story",
+    nameZh: "故事",
+    hover: ref(false),
     children: [
       { link: "../", name: "Furniture" },
       { link: "../", name: "Interior" },
@@ -32,10 +38,14 @@ const menuLists = ref([
   {
     link: "../",
     name: "Opinion",
+    nameZh: "觀點",
+    hover: ref(false),
   },
   {
     link: "../",
     name: "Competition",
+    nameZh: "競賽",
+    hover: ref(false),
     children: [
       { link: "../", name: "IW" },
       { link: "../", name: "Other" },
@@ -44,27 +54,50 @@ const menuLists = ref([
   {
     link: "../",
     name: "News",
+    nameZh: "新資訊",
+    hover: ref(false),
   },
   {
     link: "../",
     name: "About",
+    nameZh: "關於我們",
+    hover: ref(false),
   },
 ]);
 
-const isLanguageVisible = ref(false);
+const isChinese = ref(false);
+
+function toggleLanguage() {
+  isChinese.value = !isChinese.value; // 切換語言
+}
+function setHover(item, value) {
+  item.hover = value;
+}
+
+function displayName(item) {
+  if (item.hover) {
+    return isChinese.value ? item.name : item.nameZh; // 懸停時顯示相反的語言
+  } else {
+    return isChinese.value ? item.nameZh : item.name; // 非懸停時顯示當前語言
+  }
+}
 </script>
 
 <template>
   <header class="wrap grid grid-cols-10">
-    <nuxt-link to="/" class="col-start-1 col-span-2 w-full h-auto"
-      ><img src="@/assets/images/logo.svg" alt="IW家飾" class="block"
+    <nuxt-link to="/" class="col-start-1 col-span-2"
+      ><img src="@/assets/images/logo.svg" alt="IW家飾" class="logopic block"
     /></nuxt-link>
     <nav class="menu col-start-3 col-span-6">
       <ul class="menu__list">
-        <li v-for="(item, index) in menuLists" :key="index">
+        <li
+          v-for="(item, index) in menuLists"
+          :key="index"
+          @mouseover="setHover(item, true)"
+          @mouseleave="setHover(item, false)"
+        >
           <nuxt-link :to="item.link" class="menu__title">
-            {{ item.name }}
-            <!-- <img src="@/assets/icon/arrow.svg" alt="" v-if="item.children" /> -->
+            {{ displayName(item) }}
           </nuxt-link>
           <div class="menu__drop" v-if="item.children">
             <div
@@ -97,8 +130,14 @@ const isLanguageVisible = ref(false);
         <div class="feature__icon">
           <img src="@/assets/icon/bag.svg" alt="" />
         </div>
-        <div class="feature__icon">
-          <img src="../assets/icon/chinese.svg" alt="" />
+        <div class="feature__icon" @click="toggleLanguage">
+          <!-- <img src="../assets/icon/chinese.svg" alt="" /> -->
+          <img
+            v-if="isChinese"
+            src="../assets/icon/english.svg"
+            alt="English"
+          />
+          <img v-else src="../assets/icon/chinese.svg" alt="中文" />
         </div>
       </div>
     </div>
@@ -158,7 +197,7 @@ header {
   width: 100%;
   z-index: 10;
   align-items: center;
-  height: 65px;
+  height: 55px;
   background-color: #fff;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
 
@@ -172,15 +211,21 @@ header {
   }
 }
 
+.logopic {
+  width: 100px;
+}
+
 .header {
   &__mobile {
     display: flex;
     align-items: center;
+
     // margin-left: 1rem;
     img,
     button {
       width: 18px;
     }
+
     @include min-media(1025) {
       display: none;
     }
@@ -190,13 +235,16 @@ header {
 .menu {
   display: flex;
   justify-content: space-around;
-  // justify-content: space-between;
   @include max-media(1024) {
     display: none;
   }
 
   li {
     position: relative;
+    // font-size: 0.328125rem;
+    font-size: 0.75rem;
+    font-family: $Yantramanav;
+
     &:hover {
       .menu {
         &__drop {
@@ -211,33 +259,30 @@ header {
   &__list {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
   }
 
   &__title {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
     display: block;
-    // width: 100%;
+    white-space: nowrap;
+    letter-spacing: 0.035rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
 
     @include min-media(1024) {
       padding-left: 1.1rem;
       padding-right: 1.1rem;
     }
+
     @include min-media(1280) {
       padding-left: 2rem;
       padding-right: 2rem;
     }
+
     @include min-media(1580) {
       padding-left: 3.3rem;
       padding-right: 3.3rem;
     }
-
-    font-size: toRem(87.5);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px;
   }
 
   &__drop {
@@ -252,7 +297,8 @@ header {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease-in-out;
-    font-size: toRem(87.5);
+    // font-size: toRem(87.5);
+    font-size: 0.65rem;
 
     a {
       display: block;
@@ -279,14 +325,14 @@ header {
   }
 
   &__icon {
-    width: 18px;
+    width: 16px;
     cursor: pointer;
     margin-left: 20px;
 
     &__search {
       display: flex;
       justify-self: end;
-      width: 18px;
+      width: 16px;
     }
   }
 }
@@ -342,10 +388,11 @@ header {
   position: fixed;
 
   // top需要跟Navbar高度一樣
-  top: 65px;
+  top: 55px;
   right: 0;
   transform: translateX(100%);
   transition: transform 0.6s ease-in-out;
+
   &-list {
     margin-left: 20%;
     margin-right: 20%;
@@ -371,6 +418,7 @@ header {
       transform: translate(-50%, -50%);
       width: 24px;
       height: 2px;
+
       &:nth-child(1) {
         margin-top: -6px;
       }

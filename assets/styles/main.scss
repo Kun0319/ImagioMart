@@ -2,6 +2,8 @@
 @import "_setting.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400&family=Kanit:wght@300;400&family=Noto+Sans+TC:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -43,7 +45,7 @@
 // }
 
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $font-NotoSerif;
     font-size: 14px;
     color: $text-color;
     line-height: 1.6rem;
@@ -76,23 +78,27 @@ button {
     &__month {
         font-size: 1.3rem;
         line-height: 3rem;
+        padding-top: 3rem;
     }
 
     &__content {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         line-height: 1.50375rem;
     }
 
     &__price {
         line-height: 1.96875rem;
+        padding-top: 1.2rem;
     }
 
     &__shopcart {
         text-align: center;
-        letter-spacing: 1.071px;
         border: 0.5px solid rgba(0, 0, 0, 0.5);
         padding: 2.25%;
         padding-left: 3.25%;
         padding-right: 3.25%;
+        
     }
 }
 
@@ -106,3 +112,4 @@ button {
 .line {
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.38);
 }
+

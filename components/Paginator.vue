@@ -14,6 +14,9 @@ import Paginator from "primevue/paginator";
 </template>
 
 <style lang="scss">
+.custom-paginator .p-paginator .p-paginator-pages .p-paginator-page {
+  font-size: 12px;
+}
 .paginator {
   margin-top: 12.09%;
   margin-bottom: 10.65%;

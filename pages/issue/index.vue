@@ -25,15 +25,15 @@ import Advertise from "./components/Advertise.vue";
 <style lang="scss" scoped>
 // 已售完樣式
 .special-style {
-  opacity: 0.4;
+  // opacity: 0.4;
   position: relative;
 }
 
 .special-style::before {
-  content: "已售完";
+  content: "Sold out";
   display: flex;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
   justify-content: center;
   align-items: center;
   position: absolute;

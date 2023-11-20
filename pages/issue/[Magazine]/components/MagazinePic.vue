@@ -22,11 +22,21 @@ import pic from "@/assets/images/magazine_mockup_1.svg";
     <div><img src="@/assets/images/magazine_mockup_3.svg" alt="" /></div>
     <div><img src="@/assets/images/magazine_mockup_4.svg" alt="" /></div>
     <p>文字．影像 ｜ 提供：IW傢飾</p>
+    <div class="heartshare">
+      <i class="pi pi-heart mx-3"></i> <i class="pi pi-share-alt"></i>
+    </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 img {
   max-width: 100%;
+}
+.heartshare {
+  display: none;
+  margin-top: -15%;
+  @include max-media(768) {
+    display: block;
+  }
 }
 </style>

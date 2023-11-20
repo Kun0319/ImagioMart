@@ -68,14 +68,14 @@ watch(width, (newWidth) => {
     >
       <div class="grid gap-1">
         <p class="info__new">Jun.27 / 2023 出刊消息</p>
-        <p class="info__month">&laquo;IW傢飾&raquo;11月號 / 2023 第153期</p>
+        <p class="info__month">IW傢飾 11月號 / 2023 第153期</p>
       </div>
       <p class="info__content mt-3">
         本期雙封面精選 <br />
         墨西哥米卻肯．拉彼達之家<br />
         義大利．2023 威尼斯建築雙年展：一個循環的故事
       </p>
-      <p class="info__content my-8">文字．影像 ｜ 提供：IW傢飾</p>
+
       <div class="info__shop">
         <p class="info__price mb-12">NT$300</p>
 
@@ -85,7 +85,7 @@ watch(width, (newWidth) => {
 
     <!-- 大圖 -->
     <article
-      class="pic flex md:col-span-3 col-span-10 md:order-1 order-none md:justify-start justify-center"
+      class="pic flex md:col-span-3 col-span-10 md:order-1 order-none md:justify-start justify-center my-swiper-container"
     >
       <!-- <img src="~/assets/images/Rectangle.svg" alt="IW傢飾" /> -->
       <img
@@ -96,7 +96,13 @@ watch(width, (newWidth) => {
         class="pic__hover"
       />
       <client-only>
-        <Swiper ref="mySwiper" :slides-per-view="1" :class="'pic__swpier '">
+        <Swiper
+          ref="mySwiper"
+          :slides-per-view="1"
+          :pagination="{ clickable: true }"
+          :modules="[SwiperPagination]"
+          :class="'pic__swpier '"
+        >
           <SwiperSlide><img :src="imgSrc" alt="" /></SwiperSlide>
           <SwiperSlide> <img :src="hoverSrc" alt="" /></SwiperSlide>
         </Swiper>
@@ -115,6 +121,7 @@ watch(width, (newWidth) => {
   white-space: nowrap;
 
   &__month {
+    padding: 0;
     @include max-media(769) {
       margin-top: 9.19%;
     }
@@ -122,7 +129,7 @@ watch(width, (newWidth) => {
 
   &__content {
     @include max-media(769) {
-      margin-top: 12.49%;
+      // margin-top: 12.49%;
     }
   }
 
@@ -165,5 +172,9 @@ watch(width, (newWidth) => {
       display: none;
     }
   }
+}
+.my-swiper-container .swiper-pagination-bullet {
+  background-color: #d22121; // 例如將背景顏色設為灰色
+  opacity: 0.7; // 設置不透明度
 }
 </style>
