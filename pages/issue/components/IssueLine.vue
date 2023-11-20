@@ -27,7 +27,7 @@ const selectOption = (option) => {
     <div class="">
       <div class="flex justify-between items-center">
         <div>
-          <p class="line__home">Home / Issue</p>
+          <p class="line__home">Home &nbsp; / &nbsp; Issue</p>
         </div>
         <div class="dropdown" @click="toggleDropdown">
           <div class="selected justify-end">
@@ -64,6 +64,7 @@ const selectOption = (option) => {
 }
 
 .selected {
+  font-size: 0.75rem;
   padding: 5px;
   display: flex;
   // justify-content: space-around;
@@ -71,7 +72,7 @@ const selectOption = (option) => {
 
 .arrow {
   margin-left: 1rem;
-  font-size: 0.55rem;
+  font-size: 0.45rem;
 }
 
 .options {
@@ -81,10 +82,11 @@ const selectOption = (option) => {
     0px 2px 6px rgba(0, 0, 0, 0.12);
   position: absolute;
   // top: 100%;
-  width: 7%;
+  width: 100px;
   background-color: white;
   z-index: 10;
   list-style: none;
+  font-size: 0.75rem;
 }
 
 .options li {

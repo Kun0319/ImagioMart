@@ -6,7 +6,7 @@ const menuLists = ref([
   {
     link: "issue",
     name: "Issue",
-    nameZh: "發布",
+    nameZh: "雜誌",
     hover: ref(false),
     children: [
       { link: "../", name: "IW" },
@@ -54,13 +54,13 @@ const menuLists = ref([
   {
     link: "../",
     name: "News",
-    nameZh: "新資訊",
+    nameZh: "新訊",
     hover: ref(false),
   },
   {
     link: "../",
     name: "About",
-    nameZh: "關於我們",
+    nameZh: "關於",
     hover: ref(false),
   },
 ]);
@@ -68,17 +68,17 @@ const menuLists = ref([
 const isChinese = ref(false);
 
 function toggleLanguage() {
-  isChinese.value = !isChinese.value; // 切換語言
+  isChinese.value = !isChinese.value;
 }
 function setHover(item, value) {
   item.hover = value;
 }
 
 function displayName(item) {
-  if (item.hover) {
-    return isChinese.value ? item.name : item.nameZh; // 懸停時顯示相反的語言
+  if (isChinese.value) {
+    return item.hover ? item.name : item.nameZh;
   } else {
-    return isChinese.value ? item.nameZh : item.name; // 非懸停時顯示當前語言
+    return item.hover ? item.nameZh : item.name;
   }
 }
 </script>
@@ -86,7 +86,7 @@ function displayName(item) {
 <template>
   <header class="wrap grid grid-cols-10">
     <nuxt-link to="/" class="col-start-1 col-span-2"
-      ><img src="@/assets/images/logo.svg" alt="IW家飾" class="logopic block"
+      ><img src="@/assets/images/logo.png" alt="IW家飾" class="logopic block"
     /></nuxt-link>
     <nav class="menu col-start-3 col-span-6">
       <ul class="menu__list">
@@ -97,7 +97,10 @@ function displayName(item) {
           @mouseleave="setHover(item, false)"
         >
           <nuxt-link :to="item.link" class="menu__title">
-            {{ displayName(item) }}
+            <div class="ins">
+              <span class="en">{{ isChinese ? item.nameZh : item.name }}</span>
+              <span class="tw">{{ isChinese ? item.name : item.nameZh }}</span>
+            </div>
           </nuxt-link>
           <div class="menu__drop" v-if="item.children">
             <div
@@ -223,7 +226,7 @@ header {
     // margin-left: 1rem;
     img,
     button {
-      width: 18px;
+      width: 16px;
     }
 
     @include min-media(1025) {
@@ -235,6 +238,7 @@ header {
 .menu {
   display: flex;
   justify-content: space-around;
+
   @include max-media(1024) {
     display: none;
   }
@@ -265,8 +269,6 @@ header {
     display: block;
     white-space: nowrap;
     letter-spacing: 0.035rem;
-    font-style: normal;
-    font-weight: 400;
     line-height: 50px;
 
     @include min-media(1024) {
@@ -280,8 +282,8 @@ header {
     }
 
     @include min-media(1580) {
-      padding-left: 3.3rem;
-      padding-right: 3.3rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
@@ -290,7 +292,7 @@ header {
     left: 50%;
     top: 120%;
     transform: translateX(-50%);
-    width: 150px;
+    width: 100px;
     background-color: #fff;
     border-top: 2px solid #000;
     box-shadow: 0 4px 12px rgba(#000, 0.1);
@@ -416,7 +418,7 @@ header {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 24px;
+      width: 20px;
       height: 2px;
 
       &:nth-child(1) {
@@ -448,5 +450,52 @@ header {
   position: relative;
   top: 3px;
   left: -5px;
+}
+
+// navbar語言切換
+.menu a:hover .en {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.menu a:hover .tw {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.menu a.current::before {
+  width: 100%;
+}
+
+.menu .ins {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  min-width: 65px;
+}
+
+.menu .en,
+.menu .tw {
+  display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu .en {
+  // text-transform: uppercase;
+}
+
+.menu .tw {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 </style>

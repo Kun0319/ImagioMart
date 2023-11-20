@@ -6,11 +6,11 @@ const special = ref(false);
   <div class="grid col-span-6 justify-center">
     <div class="flex flex-col items-center">
       <nuxt-link to="/issue/[Magazine]" class="image-container">
-        <img src="~/assets/images/Magazine.png" alt="" class="max-w-full" />
+        <img src="~/assets/images/Magazine.svg" alt="" class="max-w-full" />
       </nuxt-link>
 
-      <p class="mt-4">第151期2023/07&08月</p>
-      <p class="info__price mt-3 mb-4">NT$300</p>
+      <p class="mt-4">第151期2023 &nbsp; 07&08月</p>
+      <p class="info__price">NT$300</p>
       <a href="" class="line-height-4 info__shopcart text-black-alpha-90"
         >ADD TO CART</a
       >
@@ -19,6 +19,14 @@ const special = ref(false);
 </template>
 
 <style scoped lang="scss">
+.info__price {
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+}
 .grid {
   margin-top: 20.67%;
 }

@@ -19,7 +19,7 @@
             <img
               src="@/assets/images/arrow.svg"
               alt="Submit"
-              class="absolute right-2 bottom-3"
+              class="email__button--arrow absolute"
             />
           </button>
         </div>
@@ -43,7 +43,7 @@
       </div>
       <!-- 聯絡資訊 FB IG Line-->
       <div
-        class="flex flex-col sm:justify-self-end gap-3 sm:col-end-13 sm:col-span-4 col-span-12 row-span-2 order-1"
+        class="flex flex-col sm:justify-self-end md:gap-3 sm:col-end-13 sm:col-span-4 col-span-12 row-span-2 order-1"
       >
         <div class="flex md:justify-start justify-center sm:gap-5 gap-8">
           <img src="@/assets/icon/fb.svg" alt="Facebook" class="" />
@@ -51,7 +51,7 @@
           <img src="@/assets/icon/line.svg" alt="Line" class="" />
         </div>
         <div
-          class="textset flex md:flex-row flex-col md:text-justify text-center md:p-0 pt-4 pb-10"
+          class="textset textset__email flex md:flex-row flex-col md:text-justify text-center md:p-0 pb-10"
         >
           <p class="md:mr-5 md:order-none order-1">Info@iw-magazine.com</p>
           <p class="md:order-1 order-none">886-2-2501-9868</p>
@@ -79,6 +79,7 @@
   padding-bottom: 1rem;
   border-left: 1px solid rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0 !important;
   &__block {
     margin-bottom: 22%;
 
@@ -90,6 +91,7 @@
       margin-bottom: 12.15%;
     }
   }
+
   &:focus {
     border-bottom: 1px solid #00000076;
   }
@@ -110,23 +112,34 @@
   &__button {
     background: none;
     border: none;
+    &--arrow {
+      right: 11px;
+    }
   }
 }
 
 // 暫時修改
 .dot {
-  margin: 0 5;
+  @include max-media(768) {
+    transform: scale(1.1);
+  }
 }
 
 .textset {
   color: $text-color3;
   font-size: 0.675rem;
+
   @include max-media(1024) {
     font-size: 0.675rem * 0.85;
   }
 
   @include max-media(390) {
     font-size: 0.675rem * 0.75;
+  }
+  &__email {
+    @include max-media(768) {
+      padding-top: 0.574rem;
+    }
   }
 }
 </style>

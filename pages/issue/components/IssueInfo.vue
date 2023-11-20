@@ -66,21 +66,19 @@ watch(width, (newWidth) => {
     <article
       class="flex info md:col-span-5 lg:col-span-6 col-span-full md:order-none order-1 md:text-start text-center md:justify-self-center"
     >
-      <div class="grid gap-1">
+      <div class="">
         <p class="info__new">Jun.27 / 2023 出刊消息</p>
         <p class="info__month">IW傢飾 11月號 / 2023 第153期</p>
       </div>
-      <p class="info__content mt-3">
+      <p class="info__content">
         本期雙封面精選 <br />
         墨西哥米卻肯．拉彼達之家<br />
         義大利．2023 威尼斯建築雙年展：一個循環的故事
       </p>
 
-      <div class="info__shop">
-        <p class="info__price mb-12">NT$300</p>
+      <p class="info__price">NT$300</p>
 
-        <a href="/" class="info__shopcart">ADD TO CART</a>
-      </div>
+      <a href="/" class="info__shopcart">ADD TO CART</a>
     </article>
 
     <!-- 大圖 -->
@@ -122,20 +120,21 @@ watch(width, (newWidth) => {
 
   &__month {
     padding: 0;
-    @include max-media(769) {
-      margin-top: 9.19%;
-    }
+    margin-top: -2%;
   }
 
   &__content {
-    @include max-media(769) {
-      // margin-top: 12.49%;
-    }
   }
 
-  &__shop {
+  &__shopcart {
+    display: flex;
+    justify-content: center;
+    // margin-top: 0.9%;
+    width: 30%;
     @include max-media(769) {
+      width: 15%;
       margin-bottom: 16.28%;
+      align-self: center;
     }
   }
 }
@@ -155,6 +154,9 @@ watch(width, (newWidth) => {
   }
   &__swpier {
     width: 100%;
+    @include max-media(768) {
+      padding-bottom: 10%;
+    }
     .swiper-slide {
       display: flex;
       justify-content: center;
@@ -172,9 +174,5 @@ watch(width, (newWidth) => {
       display: none;
     }
   }
-}
-.my-swiper-container .swiper-pagination-bullet {
-  background-color: #d22121; // 例如將背景顏色設為灰色
-  opacity: 0.7; // 設置不透明度
 }
 </style>

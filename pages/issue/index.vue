@@ -25,7 +25,6 @@ import Advertise from "./components/Advertise.vue";
 <style lang="scss" scoped>
 // 已售完樣式
 .special-style {
-  // opacity: 0.4;
   position: relative;
 }
 
@@ -41,6 +40,7 @@ import Advertise from "./components/Advertise.vue";
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffffff;
+  box-shadow: -10px 5px 10px 5px rgba(0, 0, 0, 0.1);
   color: rgb(0, 0, 0);
 
   @include max-media(768) {

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template lang="">
-  <div class="flex flex-col max-w-full items-center gap-7">
+  <div class="flex flex-col max-w-full items-center">
     <p class="h-16 info__new">Jun.27 / 2023 出刊消息</p>
     <div class="flex flex-col md:max-w-full lg:w-auto w-9/12">
       <img src="@/assets/images/MagazineContent.svg" alt="" />
@@ -20,20 +20,12 @@
 <style lang="scss" scoped>
 .info {
   &__content {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
   &__month {
-    padding-top: 3rem;
   }
   &__price {
-    padding-top: 1.2rem;
   }
   &__shopcart {
-    padding: 0.6% 1.1%;
-    font-size: 0.55rem;
-    margin-top: -0.5rem;
-    margin-bottom: 1rem;
   }
 }
 </style>

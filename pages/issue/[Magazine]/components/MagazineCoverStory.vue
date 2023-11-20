@@ -3,9 +3,9 @@
 <template lang="">
   <div class="cover grid grid-cols-12 mt-32 gap-4">
     <p
-      class="cover__title md:col-start-2 col-start-1 md:col-span-5 col-span-6 md:w-11/12 h-14 md:justify-self-center"
+      class="cover__title md:col-start-2 col-start-1 md:col-span-5 col-span-6 md:w-11/12 md:justify-self-center"
     >
-      COVER&apos;S STORIES
+      COVER STORY
     </p>
 
     <!-- 封面故事 -->
@@ -59,9 +59,15 @@
   margin-bottom: 10.59%;
   &__title {
     font-size: 1rem;
+    padding-bottom: 5%;
   }
   &__content {
     font-family: $font-Noto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 </style>
