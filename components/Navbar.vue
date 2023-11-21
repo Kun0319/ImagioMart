@@ -85,7 +85,7 @@ function displayName(item) {
 
 <template>
   <header class="wrap grid grid-cols-10">
-    <nuxt-link to="/" class="col-start-1 col-span-2"
+    <nuxt-link to="/" class="col-start-1 col-span-1"
       ><img src="@/assets/images/logo.png" alt="IW家飾" class="logopic block"
     /></nuxt-link>
     <nav class="menu col-start-3 col-span-6">
@@ -236,8 +236,10 @@ header {
 }
 
 .menu {
-  display: flex;
-  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 
   @include max-media(1024) {
     display: none;
@@ -245,7 +247,6 @@ header {
 
   li {
     position: relative;
-    // font-size: 0.328125rem;
     font-size: 0.75rem;
     font-family: $Yantramanav;
 
@@ -263,27 +264,31 @@ header {
   &__list {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__title {
-    display: block;
+    display: flex;
     white-space: nowrap;
     letter-spacing: 0.035rem;
     line-height: 50px;
+    overflow: hidden;
 
     @include min-media(1024) {
-      padding-left: 1.1rem;
-      padding-right: 1.1rem;
+      padding-left: 17px;
+      padding-right: 17px;
     }
 
     @include min-media(1280) {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 5px;
+      padding-right: 10px;
     }
 
     @include min-media(1580) {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      // padding-left: 3rem;
+      // padding-right: 3rem;
+      padding-left: 20px;
+      padding-right: 40px;
     }
   }
 
@@ -388,6 +393,7 @@ header {
   width: 50%;
   height: 32rem;
   position: fixed;
+  font-family: $Yantramanav;
 
   // top需要跟Navbar高度一樣
   top: 55px;
@@ -436,23 +442,22 @@ header {
   transition:
     transform 0.5s ease,
     position 0.3s ease;
-}
-
-.line.cross1 {
-  transform: rotate(45deg);
-  position: relative;
-  top: 5px;
-  left: -5px;
-}
-
-.line.cross2 {
-  transform: rotate(-45deg);
-  position: relative;
-  top: 3px;
-  left: -5px;
+  &.cross1 {
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+    left: -5px;
+  }
+  &.cross2 {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 3px;
+    left: -5px;
+  }
 }
 
 // navbar語言切換
+
 .menu a:hover .en {
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -471,10 +476,9 @@ header {
 
 .menu .ins {
   position: relative;
-  display: block;
-  overflow: hidden;
+  // display: block;
   text-align: center;
-  min-width: 65px;
+  width: 60px;
 }
 
 .menu .en,
@@ -485,17 +489,14 @@ header {
   transition: all 0.5s ease-in-out;
 }
 
-.menu .en {
-  // text-transform: uppercase;
-}
-
 .menu .tw {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  width: 100%;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
+  width: 100px;
+  text-align: center;
   transform: translateY(100%);
+  margin-left: -50px;
+  // transform: translate(50%, 100%);
 }
 </style>

@@ -74,9 +74,10 @@
 }
 
 .email {
+  height: 2rem;
   outline: none;
   padding-left: 0;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   border-left: 1px solid rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 0 !important;
@@ -100,6 +101,7 @@
     color: #cecece;
     font-size: 0.675rem;
     padding-left: 1%;
+    align-content: center;
     @include max-media(1024) {
       font-size: 0.675rem * 0.85;
     }
@@ -114,6 +116,7 @@
     border: none;
     &--arrow {
       right: 11px;
+      bottom: 8px;
     }
   }
 }

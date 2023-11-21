@@ -9,7 +9,7 @@ const special = ref(false);
         <img src="~/assets/images/Magazine.svg" alt="" class="max-w-full" />
       </nuxt-link>
 
-      <p class="mt-4">第151期2023 &nbsp; 07&08月</p>
+      <p class="info__month">第151期2023 &nbsp; 07&08月</p>
       <p class="info__price">NT$300</p>
       <a href="" class="line-height-4 info__shopcart text-black-alpha-90"
         >ADD TO CART</a
@@ -19,9 +19,14 @@ const special = ref(false);
 </template>
 
 <style scoped lang="scss">
-.info__price {
-  padding-top: 4%;
-  padding-bottom: 4%;
+.info {
+  &__price {
+  }
+  &__month {
+    font-size: 0.875rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 .image-container {
   display: flex;

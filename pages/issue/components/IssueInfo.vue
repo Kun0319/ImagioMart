@@ -66,19 +66,18 @@ watch(width, (newWidth) => {
     <article
       class="flex info md:col-span-5 lg:col-span-6 col-span-full md:order-none order-1 md:text-start text-center md:justify-self-center"
     >
-      <div class="">
+      <div class="flex flex-col md:items-start items-center">
         <p class="info__new">Jun.27 / 2023 出刊消息</p>
+        <div class="flex flex-col md:max-w-full lg:w-auto w-9/12"></div>
         <p class="info__month">IW傢飾 11月號 / 2023 第153期</p>
+        <p class="info__content">
+          本期雙封面精選<br />
+          墨西哥米卻肯．拉彼達之家<br />
+          義大利．2023 威尼斯建築雙年展：一個循環的故事
+        </p>
+        <p class="info__price">NT$300</p>
+        <a href="/" class="info__shopcart">ADD TO CART</a>
       </div>
-      <p class="info__content">
-        本期雙封面精選 <br />
-        墨西哥米卻肯．拉彼達之家<br />
-        義大利．2023 威尼斯建築雙年展：一個循環的故事
-      </p>
-
-      <p class="info__price">NT$300</p>
-
-      <a href="/" class="info__shopcart">ADD TO CART</a>
     </article>
 
     <!-- 大圖 -->
@@ -117,24 +116,22 @@ watch(width, (newWidth) => {
 
 .info {
   white-space: nowrap;
+  &__new {
+    line-height: 2rem;
+  }
 
   &__month {
     padding: 0;
-    margin-top: -2%;
   }
 
   &__content {
   }
+  &__price {
+  }
 
   &__shopcart {
-    display: flex;
-    justify-content: center;
-    // margin-top: 0.9%;
-    width: 30%;
     @include max-media(769) {
-      width: 15%;
       margin-bottom: 16.28%;
-      align-self: center;
     }
   }
 }
