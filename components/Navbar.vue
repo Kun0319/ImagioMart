@@ -264,7 +264,7 @@ header {
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__title {
@@ -275,19 +275,19 @@ header {
     overflow: hidden;
 
     @include min-media(1024) {
-      padding-left: 17px;
-      padding-right: 17px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     @include min-media(1280) {
-      padding-left: 5px;
-      padding-right: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     @include min-media(1580) {
       // padding-left: 3rem;
       // padding-right: 3rem;
-      padding-left: 20px;
+      padding-left: 40px;
       padding-right: 40px;
     }
   }

@@ -143,7 +143,7 @@ watch(width, (newWidth) => {
     width: 290px;
     object-fit: cover;
     box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-    @include max-media(769) {
+    @include max-media(767) {
       display: none;
       margin-top: 15%;
       margin-bottom: 7%;
