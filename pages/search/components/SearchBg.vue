@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="no-padding">
-    <img src="~/assets/images/ScopeBg.png" alt="" class="full-width" />
+    <img src="~/assets/images/SearchCover.png" alt="" class="full-width" />
   </div>
 </template>
 

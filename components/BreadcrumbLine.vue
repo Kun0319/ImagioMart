@@ -4,13 +4,14 @@ const props = defineProps({
   showYearSelector: Boolean,
   showIcon: Boolean,
   showTags: Boolean,
+  customClass: String,
 });
 </script>
 
 <template>
-  <div class="mb-2 line">
+  <div class="line">
     <div class="mb-2">
-      <div class="icon">
+      <div class="icon" :class="customClass">
         <p class="line__text">{{ text }}</p>
         <slot name="icon" v-if="showIcon"></slot>
       </div>
@@ -30,6 +31,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .line {
   margin-top: 5.56%;
+  margin-bottom: 1.7551%;
 
   &__text {
     font-size: 0.75rem;

@@ -3,6 +3,11 @@ import TextImageBlock from "./components/TextImageBlock.vue";
 import ImageGallery from "./components/ImageGallery.vue";
 import PhotoGallery from "./components/PhotoGallery.vue";
 import RelatedProject from "./components/RelatedProject.vue";
+
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+const projectId = route.params.ProjectShowcase;
 </script>
 <template lang="">
   <NuxtLayout>

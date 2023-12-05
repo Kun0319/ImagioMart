@@ -42,7 +42,7 @@ import "swiper/css/scrollbar";
             <img src="~/assets/images/PhotoGallery8.png" alt="" class="photo" />
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-4">
+        <!-- <div class="grid grid-cols-12 gap-4">
           <div class="col-span-3">
             <img src="~/assets/images/PhotoGallery1.png" alt="" class="photo" />
           </div>
@@ -67,10 +67,14 @@ import "swiper/css/scrollbar";
           <div class="col-span-3">
             <img src="~/assets/images/PhotoGallery8.png" alt="" class="photo" />
           </div>
-        </div>
+        </div> -->
       </SwiperSlide>
       <SwiperSlide> </SwiperSlide>
     </Swiper>
+    <!-- load more 按鈕 -->
+    <div class="load">
+      <button class="load__btn md:hidden">LOAD MORE</button>
+    </div>
     <div class="text__wrap">
       <div class="text text__cn">
         <p>主要建築師：阿瑟．卡薩斯</p>
@@ -108,9 +112,8 @@ import "swiper/css/scrollbar";
           the area’s landscape is valuable, the city’s .
         </p>
         <div class="grid grid-cols-12">
-          <div class="col-span-3 flex gap-3">
+          <div class="md:col-span-3 col-span-12 flex gap-3">
             <p class="introduce__four">Kenny molee</p>
-
             <img src="@/assets/icon/fb.svg" alt="Facebook" class="" />
             <img src="@/assets/icon/ig.svg" alt="Instagram" class="" />
           </div>
@@ -137,11 +140,19 @@ import "swiper/css/scrollbar";
 .swiper {
   height: 450px;
   margin-bottom: 13.6535%;
+  @include max-media(768) {
+    height: 150px;
+  }
+}
+
+.swiper-slide {
+  height: auto;
 }
 
 .text {
   font-size: 0.8125rem;
   color: $text-color3;
+
   &__wrap {
     padding-left: 12.2298%;
     padding-right: 12.2298%;
@@ -150,12 +161,20 @@ import "swiper/css/scrollbar";
   &__cn {
     line-height: 30.99px;
     margin-bottom: 8.5%;
+
+    @include max-media(768) {
+      margin-bottom: 17.57%;
+    }
   }
 
   &__en {
     font-family: $font-Noto;
     line-height: 24.96px;
     margin-bottom: 13.653%;
+
+    @include max-media(768) {
+      margin-bottom: 52.6%;
+    }
   }
 }
 
@@ -168,10 +187,19 @@ import "swiper/css/scrollbar";
   font-family: $font-Noto;
   margin-bottom: 17.4134%;
 
+  @include max-media(768) {
+    padding-top: 15.1%;
+    padding-bottom: 15.6%;
+    margin-bottom: 67.7%;
+  }
+
   &__one {
     margin-bottom: 1.6%;
-
     letter-spacing: 0.36px;
+
+    @include max-media(768) {
+      margin-bottom: 4.899%;
+    }
   }
 
   &__two {
@@ -179,6 +207,10 @@ import "swiper/css/scrollbar";
     margin-bottom: 3.099%;
     line-height: 20.94px;
     font-family: $font-NotoSerif;
+
+    @include max-media(768) {
+      margin-bottom: 11.25%;
+    }
   }
 
   &__three {
@@ -186,11 +218,35 @@ import "swiper/css/scrollbar";
     letter-spacing: 0.51px;
     line-height: 24.96px;
     margin-bottom: 4.1045%;
+
+    @include max-media(768) {
+      margin-bottom: 14.61%;
+    }
   }
 
   &__four {
     font-size: 0.8125rem;
     padding-right: 5%;
+  }
+}
+// load more
+.load {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 9.2%;
+  @include max-media(768) {
+    margin-bottom: 24.672%;
+  }
+
+  &__btn {
+    width: 127px;
+    height: 45px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    font-family: $font-NotoSerif;
   }
 }
 </style>

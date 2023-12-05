@@ -23,7 +23,7 @@ const toggleFilterMenu = () => {
             src="~/assets/icon/sliders.svg"
             alt=""
             class="md:hidden block relative"
-            @click="toggleRwdMenu"
+            @click="toggleFilterMenu"
           />
         </template>
         <!-- 類別按鈕 -->
@@ -48,6 +48,11 @@ const toggleFilterMenu = () => {
     </div>
     <!-- 篩選選單 -->
     <div class="filter__menu" v-show="FilterMenuOpen">
+      <div
+        v-show="FilterMenuOpen"
+        class="overlay"
+        @click="toggleFilterMenu"
+      ></div>
       <FilterMenu />
     </div>
     <div class="inner-wrap">
@@ -56,20 +61,23 @@ const toggleFilterMenu = () => {
       <StoryInfo />
       <StoryInfo />
       <StoryInfo />
-      <div class="grid-cols-12 gap-12 md:grid hidden">
-        <div class="col-span-4" v-for="n in 6" :key="n">
-          <LittleAdvertise />
-        </div>
-      </div>
     </div>
     <Paginator />
+    <div class="grid-cols-12 gap-12 md:grid hidden advertise inner-wrap">
+      <div class="col-span-4" v-for="n in 6" :key="n">
+        <LittleAdvertise />
+      </div>
+    </div>
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
-.line {
-  margin-bottom: 10%;
+:deep(.line) {
+  margin-bottom: 0;
 }
-
+:deep(.icon) {
+  display: flex;
+  justify-content: space-between;
+}
 .tags-container {
   display: flex;
   flex-wrap: wrap;
@@ -104,10 +112,33 @@ const toggleFilterMenu = () => {
   &__menu {
     position: absolute;
     width: 100%;
-    top: 577px;
-    right: 140px;
+    right: 8.45%;
     display: flex;
     justify-content: flex-end;
+
+    background-color: white;
+    @include max-media(1024) {
+      width: 70%;
+      right: 0;
+      top: 30%;
+      justify-content: flex-start;
+      height: 60vh;
+    }
   }
+}
+.overlay {
+  @include max-media(1024) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #d9d9d9b5;
+    z-index: 20;
+  }
+}
+.advertise {
+  margin-top: 20%;
+  margin-bottom: 30%;
 }
 </style>

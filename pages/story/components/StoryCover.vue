@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="no-padding">
-    <img src="~/assets/images/furniture.svg" alt="" class="full-width" />
+    <img src="~/assets/images/Storycover.png" alt="" class="full-width" />
   </div>
 </template>
 

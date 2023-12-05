@@ -2,22 +2,25 @@
 <template>
   <div class="RelatedProject">
     <div>
-      <p class="text__title">RELATED PROJECT</p>
+      <p class="md:block hidden text__title">RELATED PROJECT</p>
+      <p class="md:hidden text-center text__title">RELATED</p>
     </div>
     <div class="grid grid-cols-12 gap-4 justify-center">
-      <div class="col-span-4 text">
+      <div class="md:col-span-4 col-span-6 text">
         <img src="~/assets/images/RelatedProject1.png" alt="" class="image" />
         <p class="text__one">天沐設計事業有限公司</p>
         <p class="text__two">Huang's House, Taichung</p>
         <p class="text__three">台中黃宅</p>
+        <button class="more md:hidden">MORE+</button>
       </div>
-      <div class="col-span-4 text">
+      <div class="md:col-span-4 col-span-6 text">
         <img src="~/assets/images/RelatedProject2.png" alt="" class="image" />
         <p class="text__one">天沐設計事業有限公司</p>
         <p class="text__two">Huang's House, Shenzhen, China</p>
         <p class="text__three">中國深圳黃宅</p>
+        <button class="more md:hidden">MORE+</button>
       </div>
-      <div class="col-span-4 text">
+      <div class="md:col-span-4 md:block hidden text">
         <img src="~/assets/images/RelatedProject3.png" alt="" class="image" />
         <p class="text__one">天沐設計事業有限公司</p>
         <p class="text__two">Blue Whale's Villa, New Taipei</p>
@@ -38,6 +41,10 @@
 .image {
   width: 310px;
   height: 210px;
+  @include max-media(768) {
+    width: 157px;
+    height: 100px;
+  }
 }
 .text {
   color: $text-color3;
@@ -46,6 +53,9 @@
     font-size: 1.3125rem;
     line-height: 30.18px;
     margin-bottom: 3.7694%;
+    @include max-media(768) {
+      margin-bottom: 12.2473%;
+    }
   }
   &__one {
     font-size: 0.625rem;
@@ -65,7 +75,7 @@
   width: 12.5%;
   text-align: center;
 }
-ß .swiper-button-prev::after,
+.swiper-button-prev::after,
 .swiper-button-next::after {
   content: "";
 }

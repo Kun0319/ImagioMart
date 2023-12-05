@@ -1,6 +1,6 @@
 <script setup></script>
 <template lang="">
-  <div class="grid grid-cols-12 gap-4">
+  <div class="grid grid-cols-12 md:gap-16 gap-6">
     <div class="col-span-12">
       <img class="photo" src="~/assets/images/projectcontent5.png" alt="" />
     </div>

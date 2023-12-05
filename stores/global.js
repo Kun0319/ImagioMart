@@ -6,6 +6,7 @@ export const useGlobalStore = defineStore("globalStore", {
     isSearchVisible: false,
     showSearch: false,
     showMeun: false,
+    language: "EN",
   }),
   actions: {
     toggleSearchBar() {
@@ -13,6 +14,9 @@ export const useGlobalStore = defineStore("globalStore", {
     },
     toggleHamburgerMenu() {
       this.showMeun = !this.showMeun;
+    },
+    toggleLanguage() {
+      this.language = this.language === "EN" ? "CN" : "EN";
     },
   },
 });

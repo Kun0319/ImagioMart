@@ -1,6 +1,26 @@
 <script setup>
 import { useGlobalStore } from "@/stores/global.js";
 const globalStore = useGlobalStore();
+
+const searchQuery = ref("");
+const router = useRouter();
+
+function handleSearch() {
+  if (searchQuery.value.trim()) {
+    router.push({
+      path: "/search",
+      query: { q: searchQuery.value.trim() },
+    });
+  }
+}
+
+function onSearchIconClick() {
+  handleSearch();
+}
+function onSearchButtonClick() {
+  onSearchIconClick();
+  globalStore.toggleSearchBar();
+}
 </script>
 <template>
   <div
@@ -11,11 +31,18 @@ const globalStore = useGlobalStore();
       type="text"
       placeholder="Search..."
       class="search__input mr-auto col-span-8 w-full"
+      v-model="searchQuery"
+      @keyup.enter="onSearchButtonClick"
     />
     <div
       class="flex items-center md:col-start-10 col-start-9 col-span-2 justify-self-end"
     >
-      <img src="@/assets/icon/search.svg" alt="" class="" />
+      <img
+        src="@/assets/icon/search.svg"
+        alt=""
+        class=""
+        @click="onSearchButtonClick"
+      />
       <img
         src="@/assets/icon/close.svg"
         @click="globalStore.toggleSearchBar"
@@ -51,6 +78,7 @@ const globalStore = useGlobalStore();
       font-size: 1rem;
     }
   }
+
   img {
     cursor: pointer;
     width: 16px;

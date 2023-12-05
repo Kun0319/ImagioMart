@@ -1,4 +1,14 @@
 <script setup>
+import { useGlobalStore } from "@/stores/global.js";
+
+const globalStore = useGlobalStore();
+const isChinese = computed(() => globalStore.language === "CN");
+const titles = ref({
+  categories: { en: "Categories", cn: "類別" },
+  recentPosts: { en: "Recent Post", cn: "本週最新" },
+  archive: { en: "Archive", cn: "年度精選" },
+  popularTags: { en: "Popular Tags", cn: "熱門主題" },
+});
 const categoryList = ref([
   { name: "Furniture", count: 20 },
   { name: "Dining", count: 10 },
@@ -40,7 +50,10 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
   <div class="col-start-10 col-span-3 selector grid">
     <!-- 類別 -->
     <div class="grid">
-      <p class="selector__title">Categories</p>
+      <!-- 標題 -->
+      <p class="selector__title">
+        {{ isChinese ? titles.categories.cn : titles.categories.en }}
+      </p>
       <button
         v-for="category in categoryList"
         :key="category.name"
@@ -52,7 +65,9 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
 
     <!-- 本週最新 -->
     <div class="grid">
-      <p class="selector__title">Recent Post</p>
+      <p class="selector__title">
+        {{ isChinese ? titles.recentPosts.cn : titles.recentPosts.en }}
+      </p>
       <button
         v-for="post in recentPosts"
         :key="post.name"
@@ -64,7 +79,9 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
 
     <!--年度精選-->
     <div class="">
-      <p class="selector__title">Archive</p>
+      <p class="selector__title">
+        {{ isChinese ? titles.archive.cn : titles.archive.en }}
+      </p>
       <div v-for="archive in archives" :key="archive.year">
         <button class="selector__options">{{ archive.year }}</button>
         <div v-for="month in archive.months" :key="month.name">
@@ -77,7 +94,10 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
 
     <!-- 熱門主題 -->
     <div class="grid grid-cols-12 gap-4 no-border-bottom">
-      <p class="selector__title col-span-12">Popular Tags</p>
+      <p class="selector__title col-span-12">
+        {{ isChinese ? titles.popularTags.cn : titles.popularTags.en }}
+      </p>
+
       <button v-for="tag in popularTags" :key="tag" class="popular col-span-5">
         {{ tag }}
       </button>

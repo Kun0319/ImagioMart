@@ -41,9 +41,14 @@
 @import "primevue/resources/primevue.min.css";
 
 
-html {
-    // font-size: 100px;
-}
+// html {
+//     // font-size: 100px;
+//     // 反白禁止
+//     -webkit-user-select: none;
+//     -moz-user-select: none; 
+//     -ms-user-select: none; 
+//     user-select: none;
+// }
 
 body {
     font-family: $font-NotoSerif;
@@ -118,8 +123,19 @@ button {
 
 // 線的樣式
 .line {
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.38);
+    border-bottom: 1px solid rgba(0, 0, 0);
 }
+// more+按鈕樣式
+.more {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    width: 5rem;
+    font-family: $font-Noto;
+    font-size: 0.65rem;
+  }
 
 // swiper樣式
 .swiper-pagination-bullet {

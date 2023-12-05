@@ -33,9 +33,9 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "../", name: "Furniture" },
-      { link: "../", name: "Interior" },
-      { link: "../", name: "Product" },
+      { link: "/story", name: "Furniture" },
+      { link: "/story", name: "Interior" },
+      { link: "/story", name: "Product" },
     ],
   },
   {
@@ -69,8 +69,7 @@ const menuLists = ref([
   },
 ]);
 
-const isChinese = ref(false);
-
+const isChinese = computed(() => globalStore.language === "CN");
 function toggleLanguage() {
   isChinese.value = !isChinese.value;
 }
@@ -140,7 +139,7 @@ function displayName(item) {
         <div class="feature__icon">
           <img src="@/assets/icon/bag.svg" alt="" />
         </div>
-        <div class="feature__icon" @click="toggleLanguage">
+        <div class="feature__icon" @click="globalStore.toggleLanguage">
           <!-- <img src="../assets/icon/chinese.svg" alt="" /> -->
           <img
             v-if="isChinese"
@@ -210,13 +209,13 @@ function displayName(item) {
               </transition>
             </li>
           </ul>
-          <div class="flex items-center justify-between mt-4">
+          <div class="sub-menu__icon flex items-center justify-between mt-4">
             <img src="@/assets/icon/member.svg" alt="" class="" />
             <img src="@/assets/icon/bag.svg" alt="" class="" />
             <img
               src="../assets/icon/chinese.svg"
               alt=""
-              @click="toggleLanguage"
+              @click="globalStore.toggleLanguage"
             />
           </div>
         </div>
@@ -231,7 +230,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 10;
   align-items: center;
   height: 55px;
   background-color: #fff;
@@ -255,6 +254,7 @@ header {
   &__mobile {
     display: flex;
     align-items: center;
+
     img,
     button {
       width: 26px;
@@ -321,6 +321,7 @@ header {
       padding-right: 40px;
     }
   }
+
   // Hover出現向下選單
   &__drop {
     position: absolute;
@@ -350,6 +351,7 @@ header {
     }
   }
 }
+
 // icon樣式
 .feature {
   display: flex;
@@ -435,10 +437,12 @@ header {
   &-list {
     margin-left: 20%;
     margin-right: 20%;
+
     &__span {
       cursor: pointer;
     }
   }
+
   // 切換黑暗模式？
   &-button {
     position: relative;
@@ -476,12 +480,14 @@ header {
   transition:
     transform 0.5s ease,
     position 0.3s ease;
+
   &.cross1 {
     transform: rotate(45deg);
     position: relative;
     top: 5px;
     left: -5px;
   }
+
   &.cross2 {
     transform: rotate(-45deg);
     position: relative;
@@ -532,14 +538,19 @@ header {
   transform: translateY(100%);
   margin-left: -50px;
 }
+
 // 子選單
 .sub-menu {
   // overflow: hidden;
   cursor: pointer;
+
   a {
     color: #999696;
     padding-left: 20px;
     font-size: 0.75rem;
+  }
+  &__icon {
+    cursor: pointer;
   }
 }
 </style>

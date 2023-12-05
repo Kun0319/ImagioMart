@@ -7,11 +7,15 @@ const toggleFilterMenu = () => {
   FilterMenuOpen.value = !FilterMenuOpen.value;
 };
 </script>
-<template lang="">
+<template>
   <NuxtLayout>
     <div class="filter__relative">
       <OpinionCover />
-      <BreadcrumbLine text="Home / Opinion " :showTags="true" :showIcon="true">
+      <BreadcrumbLine
+        text="Home&nbsp; /&nbsp; Opinion "
+        :showTags="true"
+        :showIcon="true"
+      >
         <template #icon>
           <img
             src="~/assets/icon/sliders.svg"
@@ -66,8 +70,7 @@ const toggleFilterMenu = () => {
 
 :deep(.icon) {
   display: flex;
-  // justify-content: space-between;
-  margin-bottom: 2rem;
+  justify-content: space-between;
 }
 
 .tags-container {
@@ -84,8 +87,8 @@ const toggleFilterMenu = () => {
   margin-left: auto;
 }
 
-.line {
-  margin-bottom: 0;
+:deep(.line) {
+  margin-bottom: 0%;
 }
 
 .filter {
