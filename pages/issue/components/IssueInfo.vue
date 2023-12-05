@@ -119,16 +119,9 @@ watch(width, (newWidth) => {
   &__new {
     line-height: 2rem;
   }
-
   &__month {
     padding: 0;
   }
-
-  &__content {
-  }
-  &__price {
-  }
-
   &__shopcart {
     @include max-media(769) {
       margin-bottom: 16.28%;
@@ -139,21 +132,25 @@ watch(width, (newWidth) => {
 .pic {
   display: flex;
   align-items: center;
+
   &__hover {
     width: 290px;
     object-fit: cover;
     box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+
     @include max-media(767) {
       display: none;
       margin-top: 15%;
       margin-bottom: 7%;
     }
   }
+
   &__swpier {
     width: 100%;
     @include max-media(768) {
       padding-bottom: 10%;
     }
+
     .swiper-slide {
       display: flex;
       justify-content: center;

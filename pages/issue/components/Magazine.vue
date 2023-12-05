@@ -1,11 +1,20 @@
 <script setup>
-const special = ref(false);
+import { useRoute } from "vue-router";
+
+const props = defineProps({
+  magazine: {
+    type: Object,
+    required: true,
+  },
+});
+const route = useRoute();
+const magazineName = route.params.Magazine;
 </script>
 
 <template>
   <div class="grid col-span-6 justify-center">
     <div class="flex flex-col items-center">
-      <nuxt-link to="/issue/[Magazine]" class="image-container">
+      <nuxt-link :to="`/issue/${magazine.name}`" class="image-container">
         <img src="~/assets/images/Magazine.svg" alt="" class="max-w-full" />
       </nuxt-link>
 

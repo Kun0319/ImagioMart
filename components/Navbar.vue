@@ -4,31 +4,34 @@ const globalStore = useGlobalStore();
 
 const menuLists = ref([
   {
-    link: "issue",
+    link: "/issue",
     name: "Issue",
     nameZh: "雜誌",
     hover: ref(false),
+    click: ref(false),
     children: [
       { link: "../", name: "IW" },
       { link: "../", name: "DETAIL'" },
     ],
   },
   {
-    link: "../",
+    link: "/project",
     name: "Project",
     nameZh: "案例",
     hover: ref(false),
+    click: ref(false),
     children: [
-      { link: "../", name: "Scope" },
+      { link: "/project", name: "Scope" },
       { link: "../", name: "Space" },
       { link: "../", name: "Art" },
     ],
   },
   {
-    link: "../",
+    link: "/story",
     name: "Story",
     nameZh: "故事",
     hover: ref(false),
+    click: ref(false),
     children: [
       { link: "../", name: "Furniture" },
       { link: "../", name: "Interior" },
@@ -36,7 +39,7 @@ const menuLists = ref([
     ],
   },
   {
-    link: "../",
+    link: "/opinion",
     name: "Opinion",
     nameZh: "觀點",
     hover: ref(false),
@@ -46,6 +49,7 @@ const menuLists = ref([
     name: "Competition",
     nameZh: "競賽",
     hover: ref(false),
+    click: ref(false),
     children: [
       { link: "../", name: "IW" },
       { link: "../", name: "Other" },
@@ -72,6 +76,9 @@ function toggleLanguage() {
 }
 function setHover(item, value) {
   item.hover = value;
+}
+function setClick(item) {
+  item.click = !item.click;
 }
 
 function displayName(item) {
@@ -174,17 +181,43 @@ function displayName(item) {
         }"
       >
         <div class="mobile-menu-list flex flex-col gap-8">
-          <NuxtLink to="/Issue">Issue</NuxtLink>
-          <NuxtLink to="/">Project</NuxtLink>
-          <NuxtLink to="/">Story</NuxtLink>
-          <NuxtLink to="/">Opinion</NuxtLink>
-          <NuxtLink to="/">Competiton</NuxtLink>
-          <NuxtLink to="/">News</NuxtLink>
-          <NuxtLink to="/">About</NuxtLink>
+          <ul class="flex flex-col gap-8">
+            <li
+              v-for="(item, index) in menuLists"
+              :key="index"
+              @click="setClick(item)"
+            >
+              <!-- 選單要可以點擊進去 或單純展開子選單？-->
+              <!-- link -->
+              <nuxt-link :to="item.link" class="mobile-menu-list__span">
+                <div class="ins">
+                  <span class="en">{{
+                    isChinese ? item.nameZh : item.name
+                  }}</span>
+                </div>
+              </nuxt-link>
+              <!-- 子選單 -->
+              <transition name="menu-expand">
+                <ul v-show="item.click && item.children" class="sub-menu">
+                  <li
+                    class=""
+                    v-for="(child, childIndex) in item.children"
+                    :key="`child-${childIndex}`"
+                  >
+                    <nuxt-link :to="child.link">{{ child.name }}</nuxt-link>
+                  </li>
+                </ul>
+              </transition>
+            </li>
+          </ul>
           <div class="flex items-center justify-between mt-4">
             <img src="@/assets/icon/member.svg" alt="" class="" />
             <img src="@/assets/icon/bag.svg" alt="" class="" />
-            <img src="../assets/icon/chinese.svg" alt="" />
+            <img
+              src="../assets/icon/chinese.svg"
+              alt=""
+              @click="toggleLanguage"
+            />
           </div>
         </div>
       </div>
@@ -198,7 +231,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 99;
   align-items: center;
   height: 55px;
   background-color: #fff;
@@ -222,11 +255,9 @@ header {
   &__mobile {
     display: flex;
     align-items: center;
-
-    // margin-left: 1rem;
     img,
     button {
-      width: 16px;
+      width: 26px;
     }
 
     @include min-media(1025) {
@@ -247,7 +278,7 @@ header {
 
   li {
     position: relative;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-family: $Yantramanav;
 
     &:hover {
@@ -265,6 +296,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    // margin-right: 2.5rem;
   }
 
   &__title {
@@ -285,13 +317,11 @@ header {
     }
 
     @include min-media(1580) {
-      // padding-left: 3rem;
-      // padding-right: 3rem;
       padding-left: 40px;
       padding-right: 40px;
     }
   }
-
+  // Hover出現向下選單
   &__drop {
     position: absolute;
     left: 50%;
@@ -304,7 +334,6 @@ header {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease-in-out;
-    // font-size: toRem(87.5);
     font-size: 0.65rem;
 
     a {
@@ -321,7 +350,7 @@ header {
     }
   }
 }
-
+// icon樣式
 .feature {
   display: flex;
   align-items: center;
@@ -344,44 +373,44 @@ header {
   }
 }
 
-.language {
-  position: relative;
-  margin-left: 20px;
+// .language {
+//   position: relative;
+//   margin-left: 20px;
 
-  &__main {
-    font-family: $font-DFMingStd5;
-    font-size: 1.3125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
-  }
+//   &__main {
+//     font-family: $font-DFMingStd5;
+//     font-size: 1.3125rem;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+//     cursor: pointer;
+//   }
 
-  &__drop {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    background-color: #fff;
-    box-shadow: 0 10px 10px rgba(#000, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease-in-out;
+//   &__drop {
+//     position: absolute;
+//     top: 110%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 80px;
+//     background-color: #fff;
+//     box-shadow: 0 10px 10px rgba(#000, 0.1);
+//     opacity: 0;
+//     pointer-events: none;
+//     transition: all 0.5s ease-in-out;
 
-    &.isShow {
-      opacity: 1;
-      pointer-events: auto;
-      top: 100%;
-    }
-  }
+//     &.isShow {
+//       opacity: 1;
+//       pointer-events: auto;
+//       top: 100%;
+//     }
+//   }
 
-  &__item {
-    padding: 4px 12px;
-    font-size: 20px;
-    text-align: center;
-  }
-}
+//   &__item {
+//     padding: 4px 12px;
+//     font-size: 20px;
+//     text-align: center;
+//   }
+// }
 
 // Navbar漢堡選單
 .mobile-menu {
@@ -391,9 +420,11 @@ header {
   box-shadow: 0px 2px 2px 0px #00000040;
   gap: 2rem;
   width: 50%;
-  height: 32rem;
+  height: auto;
   position: fixed;
   font-family: $Yantramanav;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 
   // top需要跟Navbar高度一樣
   top: 55px;
@@ -404,8 +435,11 @@ header {
   &-list {
     margin-left: 20%;
     margin-right: 20%;
+    &__span {
+      cursor: pointer;
+    }
   }
-
+  // 切換黑暗模式？
   &-button {
     position: relative;
     width: 24px;
@@ -478,7 +512,7 @@ header {
   position: relative;
   // display: block;
   text-align: center;
-  width: 60px;
+  // width: 60px;
 }
 
 .menu .en,
@@ -497,6 +531,15 @@ header {
   text-align: center;
   transform: translateY(100%);
   margin-left: -50px;
-  // transform: translate(50%, 100%);
+}
+// 子選單
+.sub-menu {
+  // overflow: hidden;
+  cursor: pointer;
+  a {
+    color: #999696;
+    padding-left: 20px;
+    font-size: 0.75rem;
+  }
 }
 </style>

@@ -1,0 +1,33 @@
+<svg width="35" height="42" viewBox="0 0 35 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Project_Scope_RWD" clip-path="url(#clip0_0_1)">
+<rect width="393" height="3998" transform="translate(-358 -219)" fill="white"/>
+<g id="Group 171">
+<g id="Rectangle 830" filter="url(#filter0_d_0_1)">
+<rect x="2" width="33" height="38" fill="white"/>
+</g>
+<line id="Line 15" x1="9.5" y1="6" x2="9.5" y2="32" stroke="black"/>
+<line id="Line 16" x1="15.5" y1="6" x2="15.5" y2="32" stroke="black"/>
+<line id="Line 17" x1="21.5" y1="6" x2="21.5" y2="32" stroke="black"/>
+<line id="Line 18" x1="27.5" y1="6" x2="27.5" y2="32" stroke="black"/>
+<rect id="Rectangle 831" x="8" y="8" width="3" height="3" fill="black"/>
+<rect id="Rectangle 832" x="14" y="18" width="3" height="3" fill="black"/>
+<rect id="Rectangle 833" x="20" y="11" width="3" height="3" fill="black"/>
+<rect id="Rectangle 834" x="26" y="25" width="3" height="3" fill="black"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_1" x="0" y="0" width="37" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.13 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+</filter>
+<clipPath id="clip0_0_1">
+<rect width="393" height="3998" fill="white" transform="translate(-358 -219)"/>
+</clipPath>
+</defs>
+</svg>

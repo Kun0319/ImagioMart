@@ -3,7 +3,7 @@
     <HeaderSearch />
     <Navbar />
     <ReturnTop />
-    <main class="mt-6">
+    <main class="">
       <slot />
     </main>
   </div>

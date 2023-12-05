@@ -4,7 +4,7 @@
 
 <template lang="">
   <div>
-    <a href="/issue">issue</a>
+    <NuxtLayout> <h1>this is index</h1></NuxtLayout>
   </div>
 </template>
 

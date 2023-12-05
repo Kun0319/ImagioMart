@@ -8,7 +8,6 @@ export const useGlobalStore = defineStore("globalStore", {
     showMeun: false,
   }),
   actions: {
-    // 添加新的动作
     toggleSearchBar() {
       this.showSearch = !this.showSearch;
     },

@@ -28,8 +28,7 @@ const globalStore = useGlobalStore();
 <style lang="scss" scoped>
 .search {
   position: fixed;
-  // position: relative;
-  top: -100%;
+  // top: -100%;
   left: 0;
   // width: 100%;
   // 高度需跟Navbar一樣
