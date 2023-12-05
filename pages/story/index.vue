@@ -1,7 +1,8 @@
 <script setup>
 import StorySwiperPic from "./components/StorySwiperPic.vue";
 import StoryCover from "./components/StoryCover.vue";
-import StoryInfo from "./components/Storyinfo.vue";
+import StoryInfo from "./components/StoryInfo.vue";
+
 const FilterMenuOpen = ref(false);
 
 const toggleFilterMenu = () => {

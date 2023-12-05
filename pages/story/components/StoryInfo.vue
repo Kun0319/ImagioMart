@@ -29,6 +29,7 @@
   &__info {
     margin-bottom: 12.14%;
   }
+
   &__text {
     font-size: 0.625rem;
   }
