@@ -4,20 +4,9 @@ const globalStore = useGlobalStore();
 
 const menuLists = ref([
   {
-    link: "/issue",
-    name: "Issue",
-    nameZh: "雜誌",
-    hover: ref(false),
-    click: ref(false),
-    children: [
-      { link: "../", name: "IW" },
-      { link: "../", name: "DETAIL'" },
-    ],
-  },
-  {
     link: "/project",
     name: "Project",
-    nameZh: "案例",
+    nameZh: "設計案例",
     hover: ref(false),
     click: ref(false),
     children: [
@@ -29,7 +18,7 @@ const menuLists = ref([
   {
     link: "/story",
     name: "Story",
-    nameZh: "故事",
+    nameZh: "設計故事",
     hover: ref(false),
     click: ref(false),
     children: [
@@ -41,8 +30,32 @@ const menuLists = ref([
   {
     link: "/opinion",
     name: "Opinion",
-    nameZh: "觀點",
+    nameZh: "人物觀點",
     hover: ref(false),
+  },
+
+  {
+    link: "../",
+    name: "News",
+    nameZh: "新訊",
+    hover: ref(false),
+  },
+  {
+    link: "../",
+    name: "About",
+    nameZh: "傢飾選物",
+    hover: ref(false),
+  },
+  {
+    link: "/issue",
+    name: "IW Issue",
+    nameZh: "雜誌期刊",
+    hover: ref(false),
+    click: ref(false),
+    children: [
+      { link: "../", name: "IW" },
+      { link: "../", name: "DETAIL'" },
+    ],
   },
   {
     link: "../",
@@ -54,18 +67,6 @@ const menuLists = ref([
       { link: "../", name: "IW" },
       { link: "../", name: "Other" },
     ],
-  },
-  {
-    link: "../",
-    name: "News",
-    nameZh: "新訊",
-    hover: ref(false),
-  },
-  {
-    link: "../",
-    name: "About",
-    nameZh: "關於",
-    hover: ref(false),
   },
 ]);
 
@@ -87,10 +88,20 @@ function displayName(item) {
     return item.hover ? item.nameZh : item.name;
   }
 }
+// mobile menu位置
+const mobilemenuStyle = computed(() => {
+  return {
+    transform: globalStore.showMeun ? "translateX(0%)" : "translateX(100%)",
+    top: globalStore.showSearch ? "110px" : "55px",
+  };
+});
 </script>
 
 <template>
-  <header class="wrap grid grid-cols-10">
+  <header
+    class="wrap grid grid-cols-10"
+    :style="{ top: globalStore.showSearch ? '55px' : '0px' }"
+  >
     <nuxt-link to="/" class="col-start-1 col-span-1"
       ><img src="@/assets/images/logo.png" alt="IW家飾" class="logopic block"
     /></nuxt-link>
@@ -152,14 +163,12 @@ function displayName(item) {
     </div>
     <!-- 手機版按鈕 -->
     <div class="header__mobile col-start-9 col-span-2 gap-5 justify-self-end">
-      <div
-        class="feature__icon feature__icon__search"
-        @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
-      >
+      <div @click="globalStore.isSearchVisible = !globalStore.isSearchVisible">
         <img
           @click="globalStore.toggleSearchBar"
           src="@/assets/icon/search.svg"
           alt=""
+          class="feature__icon feature__icon__search"
         />
       </div>
       <button
@@ -171,14 +180,7 @@ function displayName(item) {
         <div class="line" :class="{ cross2: globalStore.showMeun }"></div>
       </button>
       <!-- 手機版選單 -->
-      <div
-        class="mobile-menu justify-center"
-        :style="{
-          transform: globalStore.showMeun
-            ? 'translateX(0%)'
-            : 'translateX(100%)',
-        }"
-      >
+      <div class="mobile-menu justify-center" :style="mobilemenuStyle">
         <div class="mobile-menu-list flex flex-col gap-8">
           <ul class="flex flex-col gap-8">
             <li
@@ -235,6 +237,7 @@ header {
   height: 55px;
   background-color: #fff;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
+  transition: top 0.5s ease-in-out;
 
   .right-box {
     display: flex;
@@ -257,7 +260,7 @@ header {
 
     img,
     button {
-      width: 26px;
+      width: 16px;
     }
 
     @include min-media(1025) {
@@ -432,7 +435,9 @@ header {
   top: 55px;
   right: 0;
   transform: translateX(100%);
-  transition: transform 0.6s ease-in-out;
+  transition:
+    transform 0.5s ease-in-out,
+    top 0.5s ease-in-out;
 
   &-list {
     margin-left: 20%;
@@ -549,6 +554,7 @@ header {
     padding-left: 20px;
     font-size: 0.75rem;
   }
+
   &__icon {
     cursor: pointer;
   }

@@ -6,7 +6,7 @@ export const useGlobalStore = defineStore("globalStore", {
     isSearchVisible: false,
     showSearch: false,
     showMeun: false,
-    language: "EN",
+    language: "CN",
   }),
   actions: {
     toggleSearchBar() {

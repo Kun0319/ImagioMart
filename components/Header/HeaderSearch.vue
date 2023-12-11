@@ -55,14 +55,15 @@ function onSearchButtonClick() {
 <style lang="scss" scoped>
 .search {
   position: fixed;
-  // top: -100%;
+  top: -100%;
   left: 0;
+  display: inline-flex;
   // width: 100%;
   // 高度需跟Navbar一樣
   height: 55px;
   z-index: 20;
   background: white;
-  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
+  // box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.03);
   transition: top 0.5s ease-in-out;
 
   &__input {

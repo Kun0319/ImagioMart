@@ -2,13 +2,21 @@
 import { Scrollbar, Navigation } from "swiper/modules";
 
 // import "swiper/css/scrollbar";
+const mySwiper = ref(null);
+onMounted(() => {
+  if (mySwiper.value) {
+    // 使用 mySwiper.value 進行操作
+    // 例如：mySwiper.value.setGrabCursor(true);
+    mySwiper.value.setGrabCursor(true);
+  }
+});
 </script>
 <template>
   <div class="swiperpic">
-    <!-- <client-only> -->
     <Swiper
       :modules="[Navigation, Scrollbar]"
-      :scrollbar="{ hide: false }"
+      :scrollbar="{ hide: false, draggable: true }"
+      :ref="mySwiper"
       :slidesPerView="1"
       :navigation="{
         nextEl: '.swiper-button-next',
@@ -76,15 +84,18 @@ import { Scrollbar, Navigation } from "swiper/modules";
         </div>
       </SwiperSlide>
     </Swiper>
-    <div class="swiper-navigation md:block hidden">
+
+    <!-- 向左向右按鈕 -->
+    <!-- <div class="swiper-navigation md:block hidden">
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-    </div>
-    <!-- </client-only> -->
+    </div> -->
   </div>
 </template>
 <style lang="scss" scoped>
 .swiperpic {
+  margin-bottom: 2%;
+  // cursor: pointer;
   &__icon {
     font-size: 18px;
 
@@ -104,7 +115,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
   --swiper-scrollbar-drag-bg-color: black;
   --swiper-scrollbar-sides-offset: 0%;
 }
-
+// cursor: pointer;
 .swiper-navigation {
   position: relative;
   // top: 3.94%;

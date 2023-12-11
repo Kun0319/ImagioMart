@@ -199,3 +199,26 @@ button {
       margin-right: 0;
     }
   }
+//   Filter menu樣式(story opinion頁面)
+.filter {
+    &__relative {
+      position: relative;
+    }
+  
+    &__menu {
+      position: absolute;
+      width: 100%;
+      right: 8.45%;
+      display: flex;
+      justify-content: flex-end;
+  
+      background-color: white;
+      @include max-media(1024) {
+        width: 70%;
+        right: 0;
+        top: 30%;
+        justify-content: flex-start;
+        height: 70vh;
+      }
+    }
+  }

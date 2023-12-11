@@ -88,7 +88,8 @@
   &__two {
     margin-top: 2.428%;
     margin-bottom: 4.101%;
-    font-size: 1rem;
+    // font-size: 1rem;
+    font-size: 1.3125rem;
     letter-spacing: 0.51px;
   }
 

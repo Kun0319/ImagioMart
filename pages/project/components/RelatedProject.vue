@@ -26,7 +26,9 @@
         <p class="text__two">Blue Whale's Villa, New Taipei</p>
         <p class="text__three">藍鯨 Villa</p>
       </div>
-      <div class="swiper-navigation md:block hidden col-span-11">
+      <div
+        class="swiper-navigation md:flex hidden col-span-2 col-start-11 2xl:col-start-10"
+      >
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
@@ -53,6 +55,7 @@
     font-size: 1.3125rem;
     line-height: 30.18px;
     margin-bottom: 3.7694%;
+    font-family: $font-Noto;
     @include max-media(768) {
       margin-bottom: 12.2473%;
     }
@@ -70,9 +73,9 @@
 }
 .swiper-navigation {
   position: relative;
-  padding-top: 5%;
-  margin-left: auto;
-  width: 12.5%;
+  padding: 30%;
+  // margin-left: auto;
+  // width: 12.5%;
   text-align: center;
 }
 .swiper-button-prev::after,
@@ -82,7 +85,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 25%;
+  width: 20%;
   background-image: url("assets/icon/prev.svg");
   background-repeat: no-repeat;
   background-position: center;

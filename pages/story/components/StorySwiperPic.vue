@@ -1,13 +1,12 @@
 <script setup>
+import "swiper/swiper-bundle.css";
 import { Scrollbar, Navigation } from "swiper/modules";
-// import "swiper/css/scrollbar";
 </script>
 <template>
   <div class="swiperpic">
-    <!-- <client-only> -->
     <Swiper
-      :modules="[Navigation, Scrollbar]"
-      :scrollbar="{ hide: false }"
+      :modules="[Scrollbar]"
+      :scrollbar="{ hide: false, draggable: true }"
       :slidesPerView="1"
       :navigation="{
         nextEl: '.swiper-button-next',
@@ -55,7 +54,10 @@ import { Scrollbar, Navigation } from "swiper/modules";
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">
+        <div
+          class="swiperpic__scrollbar grid grid-cols-12 gap-4"
+          @click="handleScrollbarClick"
+        >
           <img
             src="~/assets/images/storyswiper.png"
             class="lg:col-span-8 col-span-12 w-full"
@@ -75,22 +77,25 @@ import { Scrollbar, Navigation } from "swiper/modules";
         </div>
       </SwiperSlide>
     </Swiper>
-    <div class="swiper-navigation md:block hidden">
+    <!-- 向左向右按鈕 -->
+    <!-- <div class="swiper-navigation md:block hidden">
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-    </div>
-    <!-- </client-only> -->
+    </div> -->
   </div>
 </template>
 <style lang="scss" scoped>
 .swiperpic {
   margin-top: 10%;
+  margin-bottom: 2%;
+
   @include max-media(768) {
     margin-top: 19.435%;
   }
 
   &__icon {
     font-size: 18px;
+
     @include max-media(768) {
       font-size: 12px;
     }

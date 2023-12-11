@@ -21,27 +21,43 @@ const toggleFilterMenu = () => {
             src="~/assets/icon/sliders.svg"
             alt=""
             class="md:hidden block relative"
-            @click="toggleRwdMenu"
+            @click="toggleFilterMenu"
           />
         </template>
         <!-- 類別按鈕 -->
         <template #tags>
           <div class="tags-container md:flex hidden">
-            <TagButton :tag="'All(23)'" class="tag-button" />
-            <TagButton :tag="'Furniture(5)'" class="tag-button" />
-            <TagButton :tag="'Dining(6)'" class="tag-button" />
-            <TagButton :tag="'Bath(5)'" class="tag-button" />
-            <TagButton :tag="'Kitchen(6)'" class="tag-button" />
-            <TagButton :tag="'Wellness(5)'" class="tag-button" />
-            <TagButton :tag="'Wall(5)'" class="tag-button" />
-            <TagButton :tag="'Floor(6)'" class="tag-button" />
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'All(23)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Furniture(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Dining(6)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Bath(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Kitchen(6)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Wellness(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Wall(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Floor(6)'" />
+            </nuxt-link>
             <!-- 篩選按鈕 -->
             <div
               class="icon-container justify-self-end md:flex hidden"
               @click="toggleFilterMenu"
             >
-              <img src="~/assets/icon/Filter.svg" alt="Filter" class="" />
-              <span>Filter ▾</span>
+              <img src="~/assets/icon/Filter.svg" alt="Filter" class="icon" />
+              <span>Filter&nbsp;&nbsp;▾</span>
             </div>
           </div>
         </template>
@@ -49,6 +65,11 @@ const toggleFilterMenu = () => {
     </div>
     <!-- 篩選選單 -->
     <div class="filter__menu" v-show="FilterMenuOpen">
+      <div
+        v-show="FilterMenuOpen"
+        class="overlay"
+        @click="toggleFilterMenu"
+      ></div>
       <FilterMenu />
     </div>
     <div class="inner-wrap">
@@ -63,11 +84,6 @@ const toggleFilterMenu = () => {
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
-:deep(.tags) {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 :deep(.icon) {
   display: flex;
   justify-content: space-between;
@@ -81,32 +97,36 @@ const toggleFilterMenu = () => {
   margin-bottom: 3.698%;
 }
 
-.icon-container {
-  // display: flex;
-  align-items: center;
-  margin-left: auto;
+.icon {
+  margin-right: 10%;
+  &-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include max-media(768) {
+      display: none;
+    }
+  }
 }
 
 :deep(.line) {
   margin-bottom: 0%;
 }
 
-.filter {
-  &__relative {
-    position: relative;
-  }
-
-  &__menu {
-    position: absolute;
-    width: 100%;
-    // top: 100%;
-    right: 8.45%;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
 .advertise {
   margin-top: 30.7421%;
   margin-bottom: 26.1124%;
+}
+
+.overlay {
+  @include max-media(1024) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #d9d9d9b5;
+    z-index: 20;
+  }
 }
 </style>

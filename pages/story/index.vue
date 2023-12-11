@@ -2,7 +2,6 @@
 import StorySwiperPic from "./components/StorySwiperPic.vue";
 import StoryCover from "./components/StoryCover.vue";
 import StoryInfo from "./components/StoryInfo.vue";
-
 const FilterMenuOpen = ref(false);
 
 const toggleFilterMenu = () => {
@@ -30,18 +29,34 @@ const toggleFilterMenu = () => {
         <!-- 類別按鈕 -->
         <template #tags>
           <div class="tags-container">
-            <TagButton :tag="'All(23)'" class="tag-button" />
-            <TagButton :tag="'Furniture(5)'" class="tag-button" />
-            <TagButton :tag="'Dining(6)'" class="tag-button" />
-            <TagButton :tag="'Bath(5)'" class="tag-button" />
-            <TagButton :tag="'Kitchen(6)'" class="tag-button" />
-            <TagButton :tag="'Wellness(5)'" class="tag-button" />
-            <TagButton :tag="'Wall(5)'" class="tag-button" />
-            <TagButton :tag="'Floor(6)'" class="tag-button" />
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'All(23)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Furniture(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Dining(6)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Bath(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Kitchen(6)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Wellness(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Wall(5)'" />
+            </nuxt-link>
+            <nuxt-link to="/search/Dining" class="tag-button">
+              <TagButton :tag="'Floor(6)'" />
+            </nuxt-link>
             <!-- 篩選按鈕 -->
             <div class="icon-container" @click="toggleFilterMenu">
-              <img src="~/assets/icon/Filter.svg" alt="Filter" class="" />
-              <span>Filter ▾</span>
+              <img src="~/assets/icon/Filter.svg" alt="Filter" class="icon" />
+              <span>Filter&nbsp;&nbsp;▾</span>
             </div>
           </div>
         </template>
@@ -75,10 +90,12 @@ const toggleFilterMenu = () => {
 :deep(.line) {
   margin-bottom: 0;
 }
+
 :deep(.icon) {
   display: flex;
   justify-content: space-between;
 }
+
 .tags-container {
   display: flex;
   flex-wrap: wrap;
@@ -86,8 +103,8 @@ const toggleFilterMenu = () => {
   .tag-button {
     margin-top: 3.35%;
     margin-bottom: 3.698%;
-
     font-size: 0.6875rem;
+
     @include max-media(768) {
       display: flex;
       font-size: 0.5rem;
@@ -95,38 +112,18 @@ const toggleFilterMenu = () => {
     }
   }
 }
-
-.icon-container {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  @include max-media(768) {
-    display: none;
-  }
-}
-
-.filter {
-  &__relative {
-    position: relative;
-  }
-
-  &__menu {
-    position: absolute;
-    width: 100%;
-    right: 8.45%;
+.icon {
+  margin-right: 10%;
+  &-container {
     display: flex;
-    justify-content: flex-end;
-
-    background-color: white;
-    @include max-media(1024) {
-      width: 70%;
-      right: 0;
-      top: 30%;
-      justify-content: flex-start;
-      height: 60vh;
+    align-items: center;
+    margin-left: auto;
+    @include max-media(768) {
+      display: none;
     }
   }
 }
+
 .overlay {
   @include max-media(1024) {
     position: fixed;
@@ -138,6 +135,7 @@ const toggleFilterMenu = () => {
     z-index: 20;
   }
 }
+
 .advertise {
   margin-top: 20%;
   margin-bottom: 30%;
