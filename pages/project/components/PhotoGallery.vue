@@ -42,7 +42,7 @@ import "swiper/css/scrollbar";
             <img src="~/assets/images/PhotoGallery8.png" alt="" class="photo" />
           </div>
         </div>
-        <!-- <div class="grid grid-cols-12 gap-4">
+        <div class="grid grid-cols-12 gap-4 mt-4">
           <div class="col-span-3">
             <img src="~/assets/images/PhotoGallery1.png" alt="" class="photo" />
           </div>
@@ -67,7 +67,7 @@ import "swiper/css/scrollbar";
           <div class="col-span-3">
             <img src="~/assets/images/PhotoGallery8.png" alt="" class="photo" />
           </div>
-        </div> -->
+        </div>
       </SwiperSlide>
       <SwiperSlide> </SwiperSlide>
     </Swiper>
@@ -130,6 +130,9 @@ import "swiper/css/scrollbar";
   letter-spacing: 1.56px;
   margin-top: 13.31%;
   margin-bottom: 7.287%;
+  @include max-media(768) {
+    font-size: 0.875rem;
+  }
 }
 
 .photo {
@@ -138,7 +141,7 @@ import "swiper/css/scrollbar";
 }
 
 .swiper {
-  height: 450px;
+  height: 500px;
   margin-bottom: 13.6535%;
   @include max-media(768) {
     height: 150px;
@@ -146,7 +149,7 @@ import "swiper/css/scrollbar";
 }
 
 .swiper-slide {
-  height: auto;
+  // height: auto;
 }
 
 .text {
@@ -182,10 +185,11 @@ import "swiper/css/scrollbar";
   border-top: 1px solid rgba(0, 0, 0);
   border-bottom: 1px solid rgba(0, 0, 0);
   padding-top: 6.36622%;
-  padding-bottom: 4.69%;
+  padding-bottom: 6.36622%;
   color: $text-color3;
   font-family: $font-Noto;
-  margin-bottom: 17.4134%;
+  // margin-bottom: 17.4134%;
+  margin-bottom: 13.653%;
 
   @include max-media(768) {
     padding-top: 15.1%;

@@ -14,7 +14,7 @@ const toggleFilterMenu = () => {
     <div class="filter__relative">
       <StoryCover />
       <BreadcrumbLine
-        text="Home / Story / Furniture "
+        text="Home &nbsp;/&nbsp; Story &nbsp;/ &nbsp;Furniture "
         :showTags="true"
         :showIcon="true"
       >
@@ -84,11 +84,15 @@ const toggleFilterMenu = () => {
         <LittleAdvertise />
       </div>
     </div>
+    <PaginationAdvertise class="pagination-advertise" />
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
 :deep(.line) {
-  margin-bottom: 0;
+  margin-bottom: 8.8446%;
+  @include max-media(768) {
+    margin-bottom: 24%;
+  }
 }
 
 :deep(.icon) {
@@ -138,6 +142,12 @@ const toggleFilterMenu = () => {
 
 .advertise {
   margin-top: 20%;
-  margin-bottom: 30%;
+  margin-bottom: 15%;
+}
+.pagination-advertise {
+  display: none;
+  @include max-media(768) {
+    display: block;
+  }
 }
 </style>

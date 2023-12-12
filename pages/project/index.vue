@@ -116,7 +116,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
     <div class="filter__relative">
       <Background />
       <BreadcrumbLine
-        text="Home&nbsp; / &nbsp;Story &nbsp;/ &nbsp;Furniture"
+        text="Home&nbsp; /&nbsp; Project &nbsp;/&nbsp; Scope"
         :showTags="true"
         :showIcon="true"
       >

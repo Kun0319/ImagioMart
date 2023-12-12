@@ -42,7 +42,7 @@ const menuLists = ref([
   },
   {
     link: "../",
-    name: "About",
+    name: "IW Select",
     nameZh: "傢飾選物",
     hover: ref(false),
   },
@@ -54,7 +54,7 @@ const menuLists = ref([
     click: ref(false),
     children: [
       { link: "../", name: "IW" },
-      { link: "../", name: "DETAIL'" },
+      { link: "../", name: "DETAIL" },
     ],
   },
   {
@@ -64,8 +64,8 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "../", name: "IW" },
-      { link: "../", name: "Other" },
+      // { link: "../", name: "IW" },
+      // { link: "../", name: "Other" },
     ],
   },
 ]);

@@ -75,6 +75,14 @@ onMounted(() => {
     console.log("Search Results: ", searchResults.value); // 調試搜尋結果
   }
 });
+watch(
+  () => route.query.q,
+  (newQuery, oldQuery) => {
+    if (newQuery !== oldQuery) {
+      search(newQuery);
+    }
+  },
+);
 </script>
 
 <template>

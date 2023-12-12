@@ -54,10 +54,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div
-          class="swiperpic__scrollbar grid grid-cols-12 gap-4"
-          @click="handleScrollbarClick"
-        >
+        <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">
           <img
             src="~/assets/images/storyswiper.png"
             class="lg:col-span-8 col-span-12 w-full"
@@ -84,61 +81,4 @@ import { Scrollbar, Navigation } from "swiper/modules";
     </div> -->
   </div>
 </template>
-<style lang="scss" scoped>
-.swiperpic {
-  margin-top: 10%;
-  margin-bottom: 2%;
-
-  @include max-media(768) {
-    margin-top: 19.435%;
-  }
-
-  &__icon {
-    font-size: 18px;
-
-    @include max-media(768) {
-      font-size: 12px;
-    }
-  }
-
-  &__scrollbar {
-    margin-bottom: 6.3%;
-
-    > img {
-      background-size: contain;
-    }
-  }
-
-  --swiper-scrollbar-drag-bg-color: black;
-  --swiper-scrollbar-sides-offset: 0%;
-}
-
-.swiper-navigation {
-  position: relative;
-  // top: 3.94%;
-  padding-top: 10%;
-  width: 10%;
-  text-align: center;
-  margin-bottom: 2%;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  content: "";
-  /* 移除默认内容 */
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  width: 20%;
-  background-image: url("assets/icon/prev.svg");
-  /* 设置自定义图标的路径 */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.swiper-button-next {
-  background-image: url("assets/icon/next.svg");
-}
-</style>
+<style lang="scss" scoped></style>

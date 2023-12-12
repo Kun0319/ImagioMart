@@ -91,6 +91,9 @@
     // font-size: 1rem;
     font-size: 1.3125rem;
     letter-spacing: 0.51px;
+    @include max-media(768) {
+      font-size: 0.875rem;
+    }
   }
 
   &__three {
@@ -104,7 +107,7 @@
 
   &__en {
     font-family: $font-Noto;
-    margin-top: 13.222%;
+    margin-top: 11.825%;
     font-size: 0.8125rem;
     padding-left: 12.218%;
     padding-right: 12.218%;
@@ -117,7 +120,7 @@
 
   &__cn {
     margin-top: 3.5171%;
-    margin-bottom: 11.883%;
+    margin-bottom: 11.825%;
     font-size: 0.875rem;
     padding-left: 12.218%;
     padding-right: 12.218%;
