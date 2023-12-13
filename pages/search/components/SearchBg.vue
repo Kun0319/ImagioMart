@@ -18,5 +18,8 @@
   margin-top: -7px;
   // padding-left: -8.45%;
   // padding-right: -8.45%;
+  @include max-media(768) {
+    margin-top: 15px;
+  }
 }
 </style>
