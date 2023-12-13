@@ -74,7 +74,7 @@
 }
 // 12/13箭頭暫時樣式
 .swiper-navigation {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-self: end;
 }
@@ -85,7 +85,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 20%;
+  width: 30%;
   background-image: url("assets/icon/prev.svg");
   background-repeat: no-repeat;
   background-position: center;
