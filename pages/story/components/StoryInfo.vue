@@ -12,14 +12,16 @@
         <i class="pi pi-heart mx-3"></i>
         <i class="pi pi-share-alt"></i>
       </div>
-      <p class="flex project__text__one">Industrial ｜ADEVA</p>
-      <p class="project__text__two">Get some more sleep</p>
-      <p class="project__text__three">多睡一會</p>
-      <p class="project__text__four">
-        The location of this private house is unique: even though the site is
-        just a couple of kilometers away from Hämeenlinna city center, the small
-        cape surrounded by a lake is completely in its own privacy.
-      </p>
+      <div class="project__text">
+        <p class="flex project__text__one">Industrial ｜ADEVA</p>
+        <p class="project__text__two">Get some more sleep</p>
+        <p class="project__text__three">多睡一會</p>
+        <p class="project__text__four">
+          The location of this private house is unique: even though the site is
+          just a couple of kilometers away from Hämeenlinna city center, the
+          small cape surrounded by a lake is completely in its own privacy.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -37,6 +39,10 @@
 
 .project {
   &__text {
+    margin-left: 1rem;
+    @include max-media(768) {
+      margin-left: 0;
+    }
     &__four {
       font-family: $font-Noto;
     }

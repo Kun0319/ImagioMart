@@ -134,7 +134,6 @@ const peopleopinion = ref([
 }
 
 .photo__container:hover .overlay {
-  background: rgba(0, 0, 0, 0.5);
   /* 悬停时的黑色滤镜效果 */
   opacity: 1;
   /* 显示遮罩层和文字 */

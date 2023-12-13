@@ -26,8 +26,9 @@
         <p class="text__two">Blue Whale's Villa, New Taipei</p>
         <p class="text__three">藍鯨 Villa</p>
       </div>
+      <!-- 12/13暫時樣式 -->
       <div
-        class="swiper-navigation md:flex hidden col-span-2 col-start-11 2xl:col-start-10"
+        class="swiper-navigation md:flex hidden col-span-2 2xl:col-end-12 col-end-13"
       >
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -71,12 +72,11 @@
   &__three {
   }
 }
+// 12/13箭頭暫時樣式
 .swiper-navigation {
-  position: relative;
-  padding: 30%;
-  // margin-left: auto;
-  // width: 12.5%;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-self: end;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {

@@ -54,4 +54,15 @@ const projectId = route.params.ProjectShowcase;
   margin-top: 3.35%;
   margin-bottom: 3.698%;
 }
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include max-media(1024) {
+    justify-content: start;
+    @include max-media(768) {
+      justify-content: space-around;
+    }
+  }
+}
 </style>

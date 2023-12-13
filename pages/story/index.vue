@@ -103,7 +103,12 @@ const toggleFilterMenu = () => {
 .tags-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  @include max-media(1024) {
+    justify-content: start;
+    @include max-media(768) {
+      justify-content: space-around;
+    }
+  }
 
   .tag-button {
     margin-top: 3.35%;
