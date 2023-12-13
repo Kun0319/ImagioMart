@@ -248,6 +248,9 @@ button {
 // tag按鈕標籤樣式
 .tag-button {
     margin-right: 1.125rem;
+    @include max-media(768) {
+        margin-right:0 
+    }
 
 
     &:last-child {

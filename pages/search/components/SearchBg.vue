@@ -8,6 +8,7 @@
 <style lang="scss" scoped>
 .no-padding {
   width: 100vw;
+  height: auto;
   position: relative;
   left: -10.2%;
 }
