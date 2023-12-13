@@ -75,7 +75,7 @@
 // 12/13箭頭暫時樣式
 .swiper-navigation {
   width: 60%;
-  display: flex;
+  // display: flex;
   justify-self: end;
 }
 .swiper-button-prev::after,
