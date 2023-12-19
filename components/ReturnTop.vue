@@ -8,7 +8,7 @@ const scrollToTop = () => {
 </script>
 
 <template lang="">
-  <div class="flex justify-end sticky m-8">
+  <div class="flex justify-end sticky">
     <button @click="scrollToTop" class="return border-none">
       <img src="../assets/images/returntop.svg" alt="" class="return" />
     </button>

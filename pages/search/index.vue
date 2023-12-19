@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from "vue-router";
-import SearchBg from "./components/SearchBg.vue";
+import cover from "~/assets/images/SearchCover.png";
 
 const mockData = [
   {
@@ -9,7 +9,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1e1c/cca5/2ea41bf30b298a2525f69e048ff3985e?Expires=1702857600&Signature=hc85-jYRo5rdOeGPOpMUfZC-4goSu0-fZhxzL8634ZN4Ije33SyVAA~IYHToOJCgxlnM2eOeJVsfNCCqOFMAZHwjElqEvtfc-1Cqjs3~8kV8s7TLH-8GGtNBRKaBBZsGPrOiDhK6quPM~OySi5b5ISy53v-rvgFJrD0zCeRcP0A9uXAxnBkMdDl-aFRn52JmRT01Lu-veWbSQGrCxVgmCkGcJcWXgYh7IFAEMplSnSM5vs6wj5IZPspnd-pAFIt9c-hZhlqafgD7HRrDl5glAn2N5edUFUECq212SYiheii6JV77317q6oY~Zxe790Fyq-1hQuCGNjlUg9KktAyoDA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/1e1c/cca5/2ea41bf30b298a2525f69e048ff3985e?Expires=1704067200&Signature=L-T3w54wmOIK1QvT2CWK9ysbA1thHLfohlTXFrDyqpF1uFUWyzBTAJm7AgBBfxTS6TD9O70ugpjkC-Rsgo5dk3syK-dd~SvAaaWKfwoXi0-beF224zrbIiXidRBVWk066M4HZY0z6th4-D~GsWADqnprk7ylcEwXbRz7zDQCMVSI4jCIMaPQnL9ydWCK7ce-UFcZ~6cYdaOCLtXDIuouTNsbACjVbFTWJAB1xxt0NCgIVZb88qSqu0qNd4TiOugGbsTySbQBhiAExTXcL~FaH0bfR1bdr4U8pGOYVV1ycKH8AdRsqrTv69r6OMDjZ36KRghlkr3AXZbHLmizpaAF2g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1702857600&Signature=pOOvXeUmm6t77KwVzj1AVy-Oe3Kcgh81Qv4tmNCr19vuCS8dpDNrmWMrz0gtmOKyo8~5wcDGzEDESaWUQYuVJ~WUVtH8wsnMRv5ba13TOR0WLzeV5oIzHioAyL-Evqg04POIhurdxilG5Z2yxvnbctpNB9lHObIei1Pep1YQpV2F14N-VJmQvB1BUAMIZhAzBir8WGT40FwbV0tJRR3pzf3UotaWJFiusLCTvVOxof87qGaEEfIbtrwIMHj0H5kmK2PPOu0UNYBoL2Bmmotp0DFxUxwa52XV2LWRArM7Vu12HAOYn6t1oV5o76h99h9Ay8KXVkHAqxgcvq-skH13bg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1704067200&Signature=X4JQ76l07kYYyqBTqpcuIpd~4n6von01779UYYBt6Vm6lOGdrJqru~s1XMQZ87ilS3-YRwYF6Zjc--A~KyO0uKr3GU46VC8UDmhCYjNCtseBWV51xkIqMt~fzgDWjG7j2-szHnsEThhZgJj2pG8kX2qO8wa73k61wAj3onGwwXuyPle4Ml1Xv6K0fAFbdtsBGMDTPkQYshG6nSe9DV5SAGeY5vcAXxBAAUa7Rt-un~UbqvJGwBNwfVmYXTtntVvOD-ltiIiDqcKR1Pr1XdNev03aBuECrDUdcCePeZC9~yUZXPv8zzAGG3~GIOPZ8R6gMdzhBJyi8yOCaOQ7n9FxIg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1702857600&Signature=O0cPWQEc4MlM-DflsMmuEciGjfjRdbV4M4UxW5Jr7fdgVDEAJ3TQyGQi2xwiv20VWSE6UfLZSJEYMvxa1yoO4hffeWNKCzMwWKGLsty2L8FEBeF11aUzkG8zwJ7TiQA4wSmWzdb21U13TPP8jX9IXWvuLXQ2FwTuxWHfcfMrqWqGOWCMdWo9yK-AKZn589NpsbfbtxVeleGk11MWaV0kUFHVXxy1B4d5V-52HEoNTwl~jGlFYd1Joxm1PbGn-PwQL0kbdKiLE~B3Q-sYHtq7QfQQsjH7anvOv~88~WSuX~zBpnhR4MEgDn-BVVWnlHPg0TBnd~SyXWAzlFGevnJehg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1704067200&Signature=Q-4GGt~v7DeVSwyukbVMxwNDA89NBGuAN~PVrxep2mSpsj3p35ALJ42sncsrdnhZmKmygoAkxH9rggRbvJfxelSXOmXXrkyPW4hrSLQCCCQPl0YRuvhgbuzpnI-odmCZqxHLaVxS84wj7cCJCtsYIbzoxuX4eyPLZEQdk56ucbq1FGB4NScDNSecrfk7nkPFm98~sVavQfQ4nPuM5vFqT~0JxuBF1B73dgVjniQB8an-mTsL6F6BUNGtUFM0tWLlx-Ya4fpYQnbNuOALYqhmSO1KRymPOi1lV1IychunczRcmXeEhCr8cgSYd96GBjaMJwpD5pWqLh8HMXmcuUkJOQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/133c/aae5/b5c0d95ffc5aaf1bba7bf39ccc61c2e1?Expires=1702857600&Signature=S7ZJrdNDsVWPRHHB81vtE8I7xa0qYGCec6fRzE8ug7U7~cJuBjWEoNhDOfpMin3HJBe3SzzU8Qcc6iqb-cHjFPzx0Ii~K-aJLyIYaVF8TWyVuoWmHWtKAfnaWUVf-K6VZ6B-Akr4pv9-KfRgeAJp2Bb9c5F0XQ-beL7cbbuAlzL9UtN51-M9w~EXlW4nKV44GMkUeQ-Zt7Ds85GAWYFUMJfCvSfM8rLtYI7VuAju4ESM1tqiZHO6VLFCTwVI74H9F8nJfX9vFD6aMPVe8ebXeau4tqrWqXyuuow~KllLewVVLpBbf4zJeCCOzaSJqZdsVYr5BTrgVD0b6NRCsfUbDQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/347f/4785/ec22566614e99f57dd7e88f129b9e188?Expires=1704067200&Signature=JV~SYXFjaBPvT~nFURG7E4aUKzX~O6wrxlB6GF3Fv23gQo3lN~Zzf3v~E4AC-J2-N4JnmWaptGHQ3tsobehSMNKQ--rosyhGBMVLXI-m0EFXx5uCLUuovcu-g9p5kB5wpOZ320cOGp2P6d1tXJLJ7jToD5DrrARiKYeejSqAUsp4JXW3Gz92HhWu5wd37aA9MMuI5h4U2F9Xt079bOHDVkdg9fLspKUUo5jZ16X9SivSfWp1l~BGxnRGmTJ2wo8oBOslfGkxrWKE7mGi1YvNFy7bJLDivl69tfTb3vtKMxWhBQhz~KzHYUkPc0DtCDN0L0NRkIyAmYJSeNADeBOjGw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1702857600&Signature=DJJCyCQZRBQqnf7TKDmtesP7T2CIKvgjQgpsMLQzxwEiXaLxDITZhI0MbsAqR74cRSmPqlsZmcva7Dt2o4y4cpRaICbNPP08oVWTCkG9UY9kRXGP4JI5s0fw3ZPWIk0duqfhVsjGkFgtBpW8DH~IpISMvqGzHmsb8BHi2STGl1ktaIn1vRR~C26PEHwH8btaROVD00SPGnClWu0T0TGpuYQHhQS7TX-h4TnZ0aek~nLwcv08JK0G1Xhpk-JcVysKrMjTdxOEbnXJIiwkKFcVROpNWt8QtO9Lmtp8AfPI9pyFELMWx4XpNyq-P7UDnbXrXonayHekuDZX3a67iP~BMw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/133c/aae5/b5c0d95ffc5aaf1bba7bf39ccc61c2e1?Expires=1704067200&Signature=bDP7PQYQB~KZAX3DkAvHHVGwwGn3lFpEatoaRt8hacUGOQQ69cdyH0rgMYJHMUyJGQVzcxA1rt-AAXfswYxSZNaVhlQ2iil6SrqCYIcx51kNy-CdJFFc0MplvyWs6slIqo3Vn9Jvrt7MBY4WD-LYECtwXGzO9e18PPfbDcisxdre2yOJH-A9ESwyUtg6y5PAxTHfNp9-W78IY3x1B17cvk4wScqPIXxgTMKDbHT3ofaAyK7p~oPV9MIxLaYRMzMba1lNCqkazjAy1I9OrjbRc4YRg-zeu2QdVMzGnqGytp77PGv5dvjVsrymdmMrE8i15eFKXX7-hBIaysJmA-tqNA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/347f/4785/ec22566614e99f57dd7e88f129b9e188?Expires=1702857600&Signature=fmebmfPDjsKGTddkMcezKHx14AqsD1GDpt1FZVwJ-ByAPCZCYdsf1FCEDesXWqyLQ7QOzdxZzio11xXXN3~ZRl~dvRutdPOUJiHklVkREUd-yvg4T0RpT9FRjHGCdBS~p7kqTK~hPBsSsLzEcPmgjK7fubbqYKdyB0Ilx9iNpER5KzBWVoEV2IDOvaj-4EtlLGOgH3ihpIJh1o6f6FHay2rpjUZ8VR1DBq~~uKtyJHzVhUuRFZIKTAU1rcYPInSropDICNAXwTzDSc8I806qOTaEPdZPDo5x~kpfgHegGgqoYuU75FmRqO2TvlYJZYZpyHUmz-SToWFGprNImqURTg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const mockData = [
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center, the small cape surrounded by a lake is completely in its own privacy. There are long pasto",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/0bdc/ba50/6fd29092576205a0b89757239a475c32?Expires=1702857600&Signature=AUfQ5rUMv006SIgXqwWLNDutPapDYxpQ3q9LoiH2QQVm4MGSZQzGWyJe4-fqqj2InihmJBtZZVPzW~xbGVhsRWMMwaC4TmPrgAiwz1oYRBTXQbRyBpS~jjjwI8Sc~Pwk2ukZ1K5i-9LrAAKt8O0mR1t5MhzN21S7TWKa3GgtDUnGdQJiqfL-P4bzoo22CkKl47VHRc9MDFUMl1mUjsFDli-ZHQ553~jgbUGgrH9JIZlGArz6vhKZAWmnTh73cdyo2PzoI8Onf5tq77kfgzHThwTiqB5ZPbNo297cRA1DFaOVGpv4u4AWWmfAcHrrXvyJd4n02salPD8EDpQKo~vKWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/0bdc/ba50/6fd29092576205a0b89757239a475c32?Expires=1704067200&Signature=kfMVwK-DPttbYKb5HTaniS1JiwAHSFSxinIoGyRAoyBzQH3-bcP141gOBCopKw~1WYPIiJBnr80zmUvh8dOvSBS0qaSrE0yUrbjuwNHcB1ndd1i8fxkjKkzSL8Z-q96PPRCc--hQ6evgqCDckBGMlLF88eZnox7RNfafasnLZwBmAyi0OciiGrts9Nm1vBEFtYWuZPrNJWln1SYXSE6qTwJJgXoiKJgeKXKUnPb89JKHdCzJTGO-AtnQlo-GKuzfoJM27nVY-JURsf254os5M~FbmdyoIr3OPaVGPlv7TMr8rfkFld5F7FDcsf6gLuMJOIRfaDEWq7k8WZe0DQBI8w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
 ];
 
@@ -87,7 +87,7 @@ watch(
 
 <template>
   <NuxtLayout>
-    <SearchBg />
+    <Banner :imgSrc="cover" />
     <div class="search-results inner-wrap">
       <p
         v-if="searchResults && searchResults.length"
@@ -139,6 +139,7 @@ watch(
     padding: 0;
   }
 }
+
 .search-results {
   &__text {
     margin-top: 11.8947%;
@@ -147,38 +148,47 @@ watch(
     font-weight: 400;
     color: $text-color3;
   }
+
   &-items {
     margin-bottom: 10.9733%;
   }
 }
+
 .photo {
   width: 100%;
   // height: 311px;
 }
+
 .text {
   margin-left: 8.4875%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: $text-color3;
+
   @include max-media(768) {
     margin-left: 0%;
     justify-content: center;
   }
+
   &__one {
     font-size: 1rem;
     margin-bottom: 5.286%;
+
     @include max-media(768) {
       font-size: 0.75rem;
-      // line-height: 13.56px;
+      line-height: 13.56px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
+
   &__two {
     font-size: 0.875rem;
     font-family: $font-Noto;
+    line-height: 26.88px;
+
     @include max-media(768) {
       font-size: 0.5rem;
       line-height: 15.36px;
@@ -188,6 +198,7 @@ watch(
     }
   }
 }
+
 //
 .Search {
   padding-top: 25%;
@@ -197,6 +208,7 @@ watch(
 .text {
   font-size: 1.3125rem;
   line-height: 49.46px;
+
   @include max-media(768) {
     font-size: 0.75rem;
   }

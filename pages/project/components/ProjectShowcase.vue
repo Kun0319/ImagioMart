@@ -7,11 +7,11 @@ const props = defineProps({
 });
 </script>
 <template>
-  <nuxt-link :to="`/project/${project.id}`">
-    <div class="projectpic flex flex-col">
+  <div class="projectpic flex flex-col">
+    <nuxt-link :to="`/project/${project.id}`">
       <div class="projectpic__pic">
         <!-- <img src="@/assets/images/project1.png" alt="" class="w-full h-full" /> -->
-        <img :src="project.imageUrl" alt="" class="w-full h-full" />
+        <img :src="project.imageUrl" alt="" class="photo" />
       </div>
       <div class="project__text">
         <p class="flex project__text__one">
@@ -23,13 +23,24 @@ const props = defineProps({
         <p class="project__text__two">Cooking and art</p>
         <p class="project__text__three">西澳大利亞珀斯 隱園</p>
       </div>
-    </div>
-  </nuxt-link>
+    </nuxt-link>
+  </div>
 </template>
 <style lang="scss" scoped>
-.projectpic {
-  width: 310px;
+.photo {
+  width: 100%;
   height: 100%;
+  // max-width: 310px;
+  // max-height: 210px;
+}
+.projectpic {
+  width: 100%;
+
+  height: 100%;
+  @include min-media(768) {
+    margin-bottom: 36.0923%;
+    max-width: 310px;
+  }
 
   @include max-media(1024) {
     width: 100%;
@@ -37,10 +48,13 @@ const props = defineProps({
   }
 
   &__pic {
-    width: 310px;
-    height: 210px;
-    @include max-media(1024) {
-      width: 100%;
+    width: 100%;
+    height: 100%;
+    // max-width: 310px;
+    max-height: 210px;
+
+    @include min-media(1024) {
+      max-width: 310px;
       height: 100%;
     }
   }
@@ -54,6 +68,7 @@ const props = defineProps({
 
     &__one {
       margin-top: 5%;
+      margin-bottom: 6.456%;
     }
   }
 }

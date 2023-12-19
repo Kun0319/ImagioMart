@@ -64,6 +64,6 @@ import "swiper/css/pagination";
   }
 }
 .PaginationAdvertise {
-  margin-bottom: 1%;
+  margin-bottom: 39.804%;
 }
 </style>

@@ -1,8 +1,8 @@
 @import "_reset.scss";
 @import "_setting.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400&family=Kanit:wght@300;400&family=Noto+Sans+TC:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900&display=swap');
 @tailwind base;
 @tailwind components;
@@ -102,11 +102,15 @@ button {
     }
 
     &__shopcart {
+        background-color: white;
         text-align: center;
         border: 0.5px solid rgba(0, 0, 0, 0.5);
         padding: 0.598rem 1.097rem;
+        line-height: 1.6rem;
+        font-family: $font-NotoSerif;
         letter-spacing: 0.035rem;
         font-size: 0.55rem;
+
     }
 }
 
@@ -117,8 +121,8 @@ button {
 }
 
 .inner-wrap {
-    padding-left: 8.39%;
-    padding-right: 8.39%;
+    padding-left: 10.4469%;
+    padding-right: 10.4469%;
 }
 
 // 線的樣式
@@ -170,35 +174,10 @@ button {
 
     --swiper-scrollbar-drag-bg-color: black;
     --swiper-scrollbar-sides-offset: 0%;
+    --swiper-scrollbar-size: 6px;
 }
 
-.swiper-navigation {
-    position: relative;
-    padding-top: 10%;
-    width: 10%;
-    text-align: center;
-    margin-bottom: 2%;
-}
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    content: "";
-    /* 移除默认内容 */
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    width: 20%;
-    background-image: url("assets/icon/prev.svg");
-    /* 设置自定义图标的路径 */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.swiper-button-next {
-    background-image: url("assets/icon/next.svg");
-}
 
 //   /* RWD漢堡選單進入和離開的動畫效果 */
 .menu-expand-enter-active {
@@ -230,7 +209,7 @@ button {
         &__one {
             font-family: $font-Noto;
             font-size: 0.75rem;
-            height: 2rem;
+            // height: 2rem;
             text-align: left;
         }
 
@@ -248,8 +227,9 @@ button {
 // tag按鈕標籤樣式
 .tag-button {
     margin-right: 1.125rem;
+
     @include max-media(768) {
-        margin-right:0 
+        margin-right: 0
     }
 
 
@@ -257,18 +237,53 @@ button {
         margin-right: 0;
     }
 }
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include max-media(1024) {
+        justify-content: start;
+
+        @include max-media(500) {
+            justify-content: space-around;
+        }
+
+        @include max-media(396) {
+            justify-content: start;
+        }
+    }
+
+    .tag-button {
+        margin-top: 3.35%;
+        margin-bottom: 3.698%;
+        font-size: 0.6875rem;
+
+        @include max-media(769) {
+            display: flex;
+            font-size: 0.5rem;
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+    }
+}
+
 // 按鈕樣式
 .button {
-  line-height: 107%;
-  color: $text-color3;
-  background-color: white;
-  border-radius: 46px;
-  border: 0.5px solid rgba(0, 0, 0, 0.5);
-  font-family: $font-NotoSerif;
-  letter-spacing: 0.561px;
-  font-size: 0.75rem;
-  text-align: center;
-  padding: 0.5rem 1rem;
+    line-height: 107%;
+    color: $text-color3;
+    background-color: white;
+    border-radius: 46px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    font-family: $font-NotoSerif;
+    letter-spacing: 0.561px;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
 }
 
 //   Filter menu樣式(story opinion頁面)
@@ -283,8 +298,7 @@ button {
         right: 8.45%;
         display: flex;
         justify-content: flex-end;
-
-        background-color: white;
+        // background-color: white;
 
         @include max-media(1024) {
             width: 70%;
@@ -295,10 +309,12 @@ button {
         }
     }
 }
+
 // 手機版廣告 pagination
 .pagination-advertise {
     display: none;
+
     @include max-media(768) {
-      display: block;
+        display: block;
     }
-  }
+}

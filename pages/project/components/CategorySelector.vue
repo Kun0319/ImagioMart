@@ -36,15 +36,19 @@ const archives = ref([
   {
     year: "2023",
     months: [
-      { name: "September", count: 10 },
-      { name: "August", count: 8 },
-      { name: "July", count: 8 },
+      { nameEn: "September", nameCn: "九月", count: 10 },
+      { nameEn: "August", nameCn: "八月", count: 8 },
+      { nameEn: "July", nameCn: "七月", count: 8 },
     ],
   },
   { year: "2022", months: [] },
 ]);
 
 const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
+const monthlist = ref(false);
+const clickyear = () => {
+  monthlist.value = !monthlist.value;
+};
 </script>
 <template lang="">
   <div class="col-start-10 col-span-3 selector grid">
@@ -57,7 +61,7 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
       <button
         v-for="category in categoryList"
         :key="category.name"
-        class="selector__options"
+        class="selector__options selectorbutton"
       >
         {{ category.name }} ({{ category.count }})
       </button>
@@ -71,7 +75,7 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
       <button
         v-for="post in recentPosts"
         :key="post.name"
-        class="selector__recent"
+        class="selector__recent selectorbutton"
       >
         {{ post.name }}
       </button>
@@ -82,11 +86,13 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
       <p class="selector__title">
         {{ isChinese ? titles.archive.cn : titles.archive.en }}
       </p>
-      <div v-for="archive in archives" :key="archive.year">
-        <button class="selector__options">{{ archive.year }}</button>
+      <div v-for="archive in archives" :key="archive.year" @click="clickyear">
+        <button class="selector__options selectorbutton">
+          {{ archive.year }}
+        </button>
         <div v-for="month in archive.months" :key="month.name">
-          <button class="selector__options">
-            {{ month.name }}({{ month.count }})
+          <button class="selector__options selectorbutton" v-show="monthlist">
+            {{ isChinese ? month.nameCn : month.nameEn }}({{ month.count }})
           </button>
         </div>
       </div>
@@ -98,7 +104,11 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
         {{ isChinese ? titles.popularTags.cn : titles.popularTags.en }}
       </p>
 
-      <button v-for="tag in popularTags" :key="tag" class="popular col-span-5">
+      <button
+        v-for="tag in popularTags"
+        :key="tag"
+        class="button md:col-span-6"
+      >
         {{ tag }}
       </button>
     </div>
@@ -137,23 +147,22 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
     padding-bottom: 1.875rem;
   }
 
-  button {
+  .selectorbutton {
     background: none;
     border: none;
     text-align: left;
     color: $text-color3;
     font-size: 0.875rem;
     font-family: $font-NotoSerif;
+  }
 
-    // 熱門選項的按鈕
-    &.popular {
-      border: 0.5px solid rgba(0, 0, 0, 0.5);
-      border-radius: 46px;
-      text-align: center;
-      font-size: 0.75rem;
-      width: 106px;
-      height: 30px;
-    }
+  .button {
+    text-align: center;
+    width: 100%;
+    max-width: 108px;
+    max-height: 30px;
+    font-size: 0.75rem;
+    padding: 5% 10%;
   }
 
   > div:not(.card) {
@@ -173,7 +182,7 @@ const popularTags = ref(["Furniture", "Dining", "Wellness", "Kitchen"]);
 .card {
   // width: 220px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  // border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 50%;

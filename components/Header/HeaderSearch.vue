@@ -58,7 +58,7 @@ function onSearchButtonClick() {
   top: -100%;
   left: 0;
   display: inline-flex;
-  // width: 100%;
+  width: 100%;
   // 高度需跟Navbar一樣
   height: 55px;
   z-index: 20;

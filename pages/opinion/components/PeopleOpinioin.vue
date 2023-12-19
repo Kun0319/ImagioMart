@@ -13,8 +13,9 @@ const peopleopinion = ref([
       "You cannot understand good design if you do not understand people. ",
     opinionEnPeo: "Dieter Rams",
     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic1,
-    // "https://s3-alpha-sig.figma.com/img/9777/1ae9/8ca225f7ab6d641e78fa949a97f25e84?Expires=1702857600&Signature=pDiWTR6DP9MCruTY6d~WR~dKcJhdnGQfdd5s8k~zP9RipGOzGLvtnK6PPfT6O5T2kYRiVhglb4lUNk-AvY2AOSnNDCqyfeVYHhXkJgCZm7XaYU0ZYUeZ1kMZ1WWqIumcHCWxTLqFfD1p7bliME58j56YrKF3yEVCalYs0cT1TEoUEeyZLt17fGcEoXAz1SOfdegHaQYhElZ0dVTTEA5L2I-hzysCiua4Sr5FqmvqXQYDDjhX4Nt~hmsntaWxWOcfqs1~pOBFlrw5s7cHjA5uuBlcBULmQexryEsqHyLbY4x3iIg9RuAEmPCcpPFzG0sufD3AjQ7oenwtM6~7WxlrTA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    imageUrl:
+      // pic1,
+      "https://s3-alpha-sig.figma.com/img/9777/1ae9/8ca225f7ab6d641e78fa949a97f25e84?Expires=1704067200&Signature=TknZlLiHWCwC0I5jw7i98YVwFS9-0rNthU-UHSbN8wwYfsTlJvTVbwOiKCkuijlMhQpNkl8kN91INVSGuC5Jb6z5TwcJ2Mc1qo1sxR~oxbqGdPKhOOFVBN8Q-nM~uqS0f-uycXAc~Vy26ZRmEpgIMJfLEX~DXnK0j~cOToIVOoajg6q0WlIZOQMwdSRrN6YM7fYdTXJKBhaROEkO3SoBDayRn7K5hCzLThQPJbVRvpSFwFy~aK4PBeuwNHYtnzumfve04psophhxOEnMArnuM9H~aTUctleIUIJU1tkYJDGsQNbta7nsQ44xVdV3uB7sjawFMTfbNGGbqHbgz-LXlQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     nameEn: "Patrick Norguet",
@@ -59,41 +60,47 @@ const peopleopinion = ref([
 ]);
 </script>
 <template>
-  <div
-    v-for="person in peopleopinion"
-    :key="person.id"
-    class="opinion flex grid grid-cols-12 gap-4"
-  >
-    <div class="photo__container md:col-span-4 col-span-12">
-      <img :src="person.imageUrl" alt="" class="photo" />
-      <div class="overlay">
-        <p>industrial designer｜工業設計師</p>
+  <nuxt-link to="/opinion/1">
+    <div v-for="person in peopleopinion" :key="person.id" class="opinion flex grid grid-cols-12 gap-4">
+      <div class="photo__container md:col-span-5 col-span-12  ">
+        <img :src="person.imageUrl" alt="" class="photo" />
+        <div class="overlay">
+          <p class="text__designer">industrial designer｜工業設計師</p>
+        </div>
+      </div>
+
+      <div class="flex-col md:col-span-6 md:col-start-6 col-span-12 self-end md:text-left text-center">
+        <!-- 名字 -->
+        <p class="text__designer md:hidden">industrial designer｜工業設計師</p>
+        <p class="text__nameEn">{{ person.nameEn }}</p>
+        <p class="text__nameCn">{{ person.nameCn }}</p>
+        <!-- icon -->
+        <div class="line-container md:justify-end justify-center">
+          <div class="line__opinion md:flex hidden"></div>
+          <i class="pi pi-heart mx-3"></i>
+          <i class="pi pi-share-alt"></i>
+        </div>
+        <!-- 觀點 想法 -->
+        <p class="text__opinionEn text-left">
+          “{{ person.opinionEn }}”<span class="text__opinionEnPeo md:hidden">&nbsp; &nbsp;—{{ person.opinionEnPeo
+          }}</span>
+        </p>
+
+        <p class="text__opinionEnPeo md:block hidden">
+          &nbsp; &nbsp;—{{ person.opinionEnPeo }}
+        </p>
+        <p class="text__opinionCn">
+          「{{ person.opinionCn }} 」<span class="md:inline-block hidden">—{{ person.nameCn }}</span>
+        <p class="md:hidden">—{{ person.nameCn }}</p>
+        </p>
+
+
+
+        <!-- More -->
+        <button class="more">MORE+</button>
       </div>
     </div>
-
-    <div
-      class="flex-col md:col-span-6 md:col-start-6 col-span-12 self-center md:text-left text-center"
-    >
-      <!-- 名字 -->
-      <p class="text__nameEn">{{ person.nameEn }}</p>
-      <p class="text__nameCn">{{ person.nameCn }}</p>
-      <!-- icon -->
-      <div class="line-container md:justify-end justify-center">
-        <div class="line__opinion md:flex hidden"></div>
-        <i class="pi pi-heart mx-3"></i>
-        <i class="pi pi-share-alt"></i>
-      </div>
-      <!-- 觀點 想法 -->
-      <p class="text__opinionEn text-left">“{{ person.opinionEn }}”</p>
-
-      <p class="text__opinionEnPeo">&nbsp; &nbsp;—{{ person.opinionEnPeo }}</p>
-      <p class="text__opinionCn">
-        「{{ person.opinionCn }} 」—{{ person.nameCn }}
-      </p>
-      <!-- More -->
-      <button class="more">MORE+</button>
-    </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <style lang="scss" scoped>
@@ -104,8 +111,29 @@ const peopleopinion = ref([
 
 .photo {
   width: 100%;
-  height: 478px;
+  height: 531px;
+  // height: 478px;
+  // max-width: 345px;
+  max-height: 27.65625vw; 
+  max-width: 19.94792vw;
   display: block;
+  object-fit: cover;
+
+  @include max-media(1024){
+
+  }
+  @include max-media(768) {
+    max-height: 269px;
+    max-width: 191px;
+
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+
 
   &__container {
     position: relative;
@@ -113,6 +141,10 @@ const peopleopinion = ref([
 
   &:hover {
     -webkit-filter: brightness(0.5);
+
+    @include max-media(768) {
+      -webkit-filter: brightness(1);
+    }
   }
 }
 
@@ -124,19 +156,22 @@ const peopleopinion = ref([
   top: 90%;
   left: 0;
   width: 95%;
-
   background: rgba(0, 0, 0, 0);
   color: white;
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
   text-align: center;
+  z-index: 30;
+
+  @include max-media(768) {
+    display: none;
+  }
 }
 
 .photo__container:hover .overlay {
   /* 悬停时的黑色滤镜效果 */
   opacity: 1;
-  /* 显示遮罩层和文字 */
 }
 
 .line {
@@ -152,7 +187,7 @@ const peopleopinion = ref([
     width: 90%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 30;
   }
 }
 
@@ -179,12 +214,20 @@ const peopleopinion = ref([
     font-size: 1rem;
     // margin-bottom: 2%;
     margin-bottom: 0.6865rem;
+
+    @include max-media(768) {
+      font-size: 0.875rem;
+    }
   }
 
   &__nameCn {
     font-size: 1rem;
     // margin-bottom: 4%;
     margin-bottom: 1.374rem;
+
+    @include max-media(768) {
+      font-size: 0.875rem;
+    }
   }
 
   &__opinionEn {
@@ -204,6 +247,19 @@ const peopleopinion = ref([
     font-size: 0.875rem;
     margin-top: 1.5rem;
     margin-bottom: 5.75rem;
+
+    @include max-media(768) {
+      text-align: left;
+    }
+  }
+
+  &__designer {
+    font-size: 0.875rem;
+
+    @include max-media(768) {
+      font-size: 0.625rem;
+      margin-bottom: 9.8884%;
+    }
   }
 }
 </style>

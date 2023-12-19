@@ -1,17 +1,17 @@
 <script setup>
-import PeopleOpinioin from "./components/PeopleOpinioin.vue";
-import cover from "~/assets/images/opinion.png";
-
 const FilterMenuOpen = ref(false);
 
 const toggleFilterMenu = () => {
   FilterMenuOpen.value = !FilterMenuOpen.value;
 };
 </script>
+
 <template>
-  <NuxtLayout>
+  <div class="wrap">
+    <HeaderSearch />
+    <Navbar />
+    <ReturnTop />
     <div class="filter__relative">
-      <Banner :imgSrc="cover" />
       <BreadcrumbLine
         text="Home&nbsp; /&nbsp; Opinion "
         :showTags="true"
@@ -54,17 +54,27 @@ const toggleFilterMenu = () => {
             </nuxt-link>
             <!-- 篩選按鈕 -->
             <div
-              class="icon-container justify-self-end md:flex hidden"
+              class="Filtericon-container justify-self-end md:flex hidden"
               @click="toggleFilterMenu"
             >
-              <img src="~/assets/icon/Filter.svg" alt="Filter" class="icon" />
+              <img
+                src="~/assets/icon/Filter.svg"
+                alt="Filter"
+                class="Filtericon"
+              />
+
               <span>Filter&nbsp;&nbsp;▾</span>
             </div>
           </div>
         </template>
+        <template #icon2>
+          <div class="icon" v-show="!FilterMenuOpen">
+            <i class="pi pi-heart mx-3"></i>
+            <i class="pi pi-share-alt"></i>
+          </div>
+        </template>
       </BreadcrumbLine>
     </div>
-    <!-- 篩選選單 -->
     <div class="filter__menu" v-show="FilterMenuOpen">
       <div
         v-show="FilterMenuOpen"
@@ -73,37 +83,14 @@ const toggleFilterMenu = () => {
       ></div>
       <FilterMenu />
     </div>
-    <div class="inner-wrap">
-      <PeopleOpinioin />
-    </div>
-    <Paginator />
-    <div class="advertise grid-cols-12 gap-12 md:grid hidden inner-wrap">
-      <div class="col-span-4" v-for="n in 6" :key="n">
-        <LittleAdvertise />
-      </div>
-    </div>
-  </NuxtLayout>
+    <main class="">
+      <slot />
+    </main>
+  </div>
+  <Footer />
 </template>
 <style lang="scss" scoped>
-:deep(.icon__one) {
-  display: flex;
-  justify-content: space-between;
-}
-
-.tags-container {
-  // display: flex;
-}
-
-.tag-button {
-  margin-top: 3.35%;
-  margin-bottom: 3.698%;
-
-  @include max-media(769) {
-    display: none;
-  }
-}
-
-.icon {
+.Filtericon {
   margin-right: 10%;
 
   &-container {
@@ -117,25 +104,34 @@ const toggleFilterMenu = () => {
     }
   }
 }
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.37%;
+}
 
+.tag-button {
+  margin-top: 3.35%;
+  margin-bottom: 3.698%;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include max-media(1024) {
+    justify-content: start;
+
+    @include max-media(500) {
+      justify-content: space-around;
+    }
+
+    @include max-media(396) {
+      justify-content: start;
+    }
+  }
+}
 :deep(.line) {
   margin-bottom: 0%;
-}
-
-.advertise {
-  margin-top: 30.7421%;
-  margin-bottom: 26.1124%;
-}
-
-.overlay {
-  @include max-media(1024) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #d9d9d9b5;
-    z-index: 20;
-  }
 }
 </style>

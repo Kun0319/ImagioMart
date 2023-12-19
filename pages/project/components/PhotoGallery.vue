@@ -130,6 +130,7 @@ import "swiper/css/scrollbar";
   letter-spacing: 1.56px;
   margin-top: 13.31%;
   margin-bottom: 7.287%;
+
   @include max-media(768) {
     font-size: 0.875rem;
   }
@@ -143,13 +144,10 @@ import "swiper/css/scrollbar";
 .swiper {
   height: 500px;
   margin-bottom: 13.6535%;
+
   @include max-media(768) {
     height: 150px;
   }
-}
-
-.swiper-slide {
-  // height: auto;
 }
 
 .text {
@@ -188,7 +186,6 @@ import "swiper/css/scrollbar";
   padding-bottom: 6.36622%;
   color: $text-color3;
   font-family: $font-Noto;
-  // margin-bottom: 17.4134%;
   margin-bottom: 13.653%;
 
   @include max-media(768) {
@@ -233,6 +230,7 @@ import "swiper/css/scrollbar";
     padding-right: 5%;
   }
 }
+
 // load more
 .load {
   display: flex;
@@ -241,6 +239,7 @@ import "swiper/css/scrollbar";
   align-items: center;
   align-self: flex-start;
   margin-top: 9.2%;
+
   @include max-media(768) {
     margin-bottom: 24.672%;
   }

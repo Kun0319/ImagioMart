@@ -8,7 +8,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Project",
+    sourceCategory: "IW / 設計案例",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -20,7 +20,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Project",
+    sourceCategory: "IW / 設計案例",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -32,7 +32,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Project",
+    sourceCategory: "IW / 設計案例",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -44,7 +44,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Project",
+    sourceCategory: "IW / 設計案例",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -56,7 +56,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Story",
+    sourceCategory: "IW / 設計故事",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -68,7 +68,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Story",
+    sourceCategory: "IW / 設計故事",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -80,7 +80,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Story",
+    sourceCategory: "IW / 設計故事",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -92,7 +92,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / Story",
+    sourceCategory: "IW / 設計故事",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -104,7 +104,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / News",
+    sourceCategory: "IW / 新訊",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -116,7 +116,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / News",
+    sourceCategory: "IW / 新訊",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -128,7 +128,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / News",
+    sourceCategory: "IW / 新訊",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -140,7 +140,7 @@ const mockdata = [
     titleCn: "多睡一會",
     source: "Industrial ｜ ADEVA",
     tags: "Dining",
-    sourceCategory: "IW / News",
+    sourceCategory: "IW / 新訊",
     description:
       "The location of this private house is unique: even though the site is just a couple of kilometers away from Hämeenlinna city center.",
     imageUrl:
@@ -211,15 +211,17 @@ const groupedData = computed(() => {
 </script>
 
 <template>
-  <div class="wrap">
+  <div class="inner-wrap">
     <div class="grid grid-cols-12 gap-4">
       <div
         v-if="filteredData.length"
-        class="col-span-6 justify-self-center project__text"
+        class="col-span-4 justify-self-center project__text"
       >
         <p class="results">
           {{ filteredData.length }} results for
-          <button class="button">{{ route.params.tag }}</button>
+          <button class="button">
+            {{ route.params.tag }}
+          </button>
         </p>
       </div>
       <div class="col-span-6"></div>
@@ -231,15 +233,15 @@ const groupedData = computed(() => {
       >
         <!-- 分組標題 -->
 
-        <div class="col-span-6 justify-self-center category-title">
+        <div class="col-span-4 justify-self-center category-title">
           <p class="">{{ category }}</p>
         </div>
-        <div class="col-span-6"></div>
+        <div class="col-span-8"></div>
         <!-- 分組項目 -->
         <div
           v-for="item in items"
           :key="item.id"
-          class="col-span-6 photo__container"
+          class="col-span-4 photo__container"
         >
           <div class="photo">
             <img :src="item.imageUrl" alt="" class="photo" />
@@ -248,7 +250,6 @@ const groupedData = computed(() => {
             <p class="project__text__one">{{ item.source }}</p>
             <p class="project__text__two">{{ item.titleEn }}</p>
             <p class="project__text__three">{{ item.titleCn }}</p>
-            <p class="project__text__four">{{ item.description }}</p>
           </div>
         </div>
       </div>
@@ -257,6 +258,9 @@ const groupedData = computed(() => {
 </template>
 
 <style lang="scss" scoped>
+.button {
+  margin-left: 5%;
+}
 .results {
   font-size: 1.3125rem;
   color: $text-color3;
@@ -285,6 +289,7 @@ const groupedData = computed(() => {
   max-width: 459px;
   height: 100%;
   max-height: 311px;
+  align-content: center;
 
   &__one {
     margin-top: 3.7134%;

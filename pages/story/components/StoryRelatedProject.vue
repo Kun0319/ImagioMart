@@ -1,26 +1,30 @@
-<script setup></script>
+<script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper/modules";
+</script>
 <template>
   <div class="RelatedProject">
     <div>
       <p class="md:block hidden text__title">RELATED PROJECT</p>
       <p class="md:hidden text-center text__title">RELATED</p>
     </div>
+
     <div class="grid grid-cols-12 gap-4 justify-center">
-      <div class="md:col-span-4 col-span-6 text">
+      <div class="col-span-6 text">
         <img src="~/assets/images/RelatedProject1.png" alt="" class="image" />
         <p class="text__one">天沐設計事業有限公司</p>
         <p class="text__two">Huang's House, Taichung</p>
         <p class="text__three">台中黃宅</p>
         <button class="more md:hidden">MORE+</button>
       </div>
-      <div class="md:col-span-4 col-span-6 text">
+      <div class="col-span-6 text">
         <img src="~/assets/images/RelatedProject2.png" alt="" class="image" />
         <p class="text__one">天沐設計事業有限公司</p>
         <p class="text__two">Huang's House, Shenzhen, China</p>
         <p class="text__three">中國深圳黃宅</p>
         <button class="more md:hidden">MORE+</button>
       </div>
-      <div class="md:col-span-4 md:block hidden text">
+      <div class="text">
         <img src="~/assets/images/RelatedProject3.png" alt="" class="image" />
         <p class="text__one">天沐設計事業有限公司</p>
         <p class="text__two">Blue Whale's Villa, New Taipei</p>
@@ -39,12 +43,13 @@
 
 <style lang="scss" scoped>
 .RelatedProject {
-  margin-bottom: 13.57%;
+  margin-bottom: 24.65%;
 }
 .image {
   width: 100%;
-  height: 210px;
+  height: 100%;
   max-width: 310px;
+  max-height: 210px;
   @include max-media(768) {
     width: 157px;
     height: 100px;
@@ -53,6 +58,7 @@
 .text {
   color: $text-color3;
   font-size: 1rem;
+  @apply md:block hidden md:col-span-4 col-span-6;
   &__title {
     font-size: 1.3125rem;
     line-height: 30.18px;
@@ -75,9 +81,12 @@
 }
 // 12/13箭頭暫時樣式
 .swiper-navigation {
-  width: 60%;
+  width: 50%;
   justify-self: flex-end;
   position: relative;
+  padding-top: 10%;
+  text-align: center;
+  // margin-bottom: 2%;
   --swiper-navigation-sides-offset: 0px;
 }
 .swiper-button-prev::after,

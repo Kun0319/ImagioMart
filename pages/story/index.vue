@@ -1,7 +1,7 @@
 <script setup>
 import StorySwiperPic from "./components/StorySwiperPic.vue";
-import StoryCover from "./components/StoryCover.vue";
 import StoryInfo from "./components/StoryInfo.vue";
+import cover from "~/assets/images/Storycover.png";
 const FilterMenuOpen = ref(false);
 
 const toggleFilterMenu = () => {
@@ -12,7 +12,7 @@ const toggleFilterMenu = () => {
 <template>
   <NuxtLayout>
     <div class="filter__relative">
-      <StoryCover />
+      <Banner :imgSrc="cover" />
       <BreadcrumbLine
         text="Home &nbsp;/&nbsp; Story &nbsp;/ &nbsp;Furniture "
         :showTags="true"
@@ -89,13 +89,13 @@ const toggleFilterMenu = () => {
 </template>
 <style lang="scss" scoped>
 :deep(.line) {
-  margin-bottom: 8.8446%;
+  margin-bottom: 0%;
   @include max-media(768) {
-    margin-bottom: 24%;
+    // margin-bottom: 24%;
   }
 }
 
-:deep(.icon) {
+:deep(.icon__one) {
   display: flex;
   justify-content: space-between;
 }
@@ -105,8 +105,12 @@ const toggleFilterMenu = () => {
   flex-wrap: wrap;
   @include max-media(1024) {
     justify-content: start;
-    @include max-media(768) {
+
+    @include max-media(500) {
       justify-content: space-around;
+    }
+    @include max-media(396) {
+      justify-content: start;
     }
   }
 
@@ -115,19 +119,22 @@ const toggleFilterMenu = () => {
     margin-bottom: 3.698%;
     font-size: 0.6875rem;
 
-    @include max-media(768) {
+    @include max-media(769) {
       display: flex;
       font-size: 0.5rem;
       padding-top: 1.5%;
       padding-bottom: 1.5%;
       margin-top: 0;
       margin-bottom: 0;
+      margin-left: 1%;
+      margin-right: 1%;
     }
   }
 }
 .icon {
   margin-right: 10%;
   &-container {
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -157,6 +164,8 @@ const toggleFilterMenu = () => {
   display: none;
   @include max-media(768) {
     display: block;
+    margin-bottom: 59.706%;
+    margin-top: 56.6442%;
   }
 }
 </style>

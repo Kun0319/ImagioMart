@@ -11,9 +11,12 @@
   position: relative;
 
   &__icon {
-    // background-color: black;
     position: absolute;
-    top: 40%;
+    top: 35%;
   }
+}
+.photo {
+  width: 100%;
+  max-width: 310px;
 }
 </style>

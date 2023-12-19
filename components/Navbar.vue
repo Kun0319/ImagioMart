@@ -10,9 +10,9 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "/project", name: "Scope" },
-      { link: "../", name: "Space" },
-      { link: "../", name: "Art" },
+      { link: "/project", nameEn: "Scope", nameCn: "全球視窗" },
+      { link: "../", nameEn: "Space", nameCn: "空間設計" },
+      { link: "../", nameEn: "Art", nameCn: "人文藝術" },
     ],
   },
   {
@@ -22,9 +22,9 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "/story", name: "Furniture" },
-      { link: "/story", name: "Interior" },
-      { link: "/story", name: "Product" },
+      { link: "/story", nameEn: "Furniture", nameCn: "家具" },
+      { link: "/story", nameEn: "Interior", nameCn: "室內" },
+      { link: "/story", nameEn: "Product", nameCn: "單品" },
     ],
   },
   {
@@ -35,7 +35,7 @@ const menuLists = ref([
   },
 
   {
-    link: "../",
+    link: "../news",
     name: "News",
     nameZh: "新訊",
     hover: ref(false),
@@ -53,8 +53,8 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "../", name: "IW" },
-      { link: "../", name: "DETAIL" },
+      { link: "../", nameEn: "IW", nameCn: "IW" },
+      { link: "../", nameEn: "DETAIL", nameCn: "DETAIL" },
     ],
   },
   {
@@ -115,8 +115,8 @@ const mobilemenuStyle = computed(() => {
         >
           <nuxt-link :to="item.link" class="menu__title">
             <div class="ins">
-              <span class="en">{{ isChinese ? item.nameZh : item.name }}</span>
-              <span class="tw">{{ isChinese ? item.name : item.nameZh }}</span>
+              <span class="en">{{ isChinese ? item.name : item.nameZh }}</span>
+              <span class="tw">{{ isChinese ? item.nameZh : item.name }}</span>
             </div>
           </nuxt-link>
           <div class="menu__drop" v-if="item.children">
@@ -125,7 +125,9 @@ const mobilemenuStyle = computed(() => {
               v-for="(childItem, childIndex) in item.children"
               :key="childIndex"
             >
-              <nuxt-link :to="childItem.link">{{ childItem.name }}</nuxt-link>
+              <nuxt-link :to="childItem.link">{{
+                isChinese ? childItem.nameCn : childItem.nameEn
+              }}</nuxt-link>
             </div>
           </div>
         </li>
@@ -145,7 +147,9 @@ const mobilemenuStyle = computed(() => {
           />
         </div>
         <div class="feature__icon">
-          <img src="@/assets/icon/member.svg" alt="" />
+          <nuxt-link to="/login"
+            ><img src="@/assets/icon/member.svg" alt=""
+          /></nuxt-link>
         </div>
         <div class="feature__icon">
           <img src="@/assets/icon/bag.svg" alt="" />
@@ -205,7 +209,9 @@ const mobilemenuStyle = computed(() => {
                     v-for="(child, childIndex) in item.children"
                     :key="`child-${childIndex}`"
                   >
-                    <nuxt-link :to="child.link">{{ child.name }}</nuxt-link>
+                    <nuxt-link :to="child.link">{{
+                      isChinese ? child.nameEn : child.nameCn
+                    }}</nuxt-link>
                   </li>
                 </ul>
               </transition>
@@ -232,7 +238,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 50;
   align-items: center;
   height: 55px;
   background-color: #fff;
@@ -550,7 +556,7 @@ header {
   cursor: pointer;
 
   a {
-    color: #999696;
+    color: $text-color2;
     padding-left: 20px;
     font-size: 0.75rem;
   }

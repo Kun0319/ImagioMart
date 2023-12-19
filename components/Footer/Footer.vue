@@ -30,10 +30,14 @@
       <div
         class="textset flex row-start-1 md:col-start-1 md:col-span-7 col-span-12 md:justify-start justify-around order-2"
       >
-        <span><a href="">About us</a></span> <span class="dot">•</span>
-        <span><a href="">Privacy policy</a></span> <span class="dot">•</span>
-        <span><a href="">Terms of service</a></span> <span class="dot">•</span>
-        <span><a href="">Shipping policy</a></span> <span class="dot">•</span>
+        <span><nuxt-link href="/aboutus">About us</nuxt-link></span>
+        <span class="dot">•</span>
+        <span><nuxt-link href="/privacypolicy">Privacy policy</nuxt-link></span>
+        <span class="dot">•</span>
+        <span><nuxt-link href="">Terms of service</nuxt-link></span>
+        <span class="dot">•</span>
+        <span><nuxt-link href="">Shipping policy</nuxt-link></span>
+        <span class="dot">•</span>
         <span><a href="">Contact</a></span>
       </div>
       <div
@@ -46,9 +50,9 @@
         class="flex flex-col sm:justify-self-end md:gap-3 sm:col-end-13 sm:col-span-4 col-span-12 row-span-2 order-1"
       >
         <div class="flex md:justify-start justify-center sm:gap-5 gap-8">
-          <img src="@/assets/icon/fb.svg" alt="Facebook" class="" />
-          <img src="@/assets/icon/ig.svg" alt="Instagram" class="" />
-          <img src="@/assets/icon/line.svg" alt="Line" class="" />
+          <img src="@/assets/icon/fb.svg" alt="Facebook" class="icon" />
+          <img src="@/assets/icon/ig.svg" alt="Instagram" class="icon" />
+          <img src="@/assets/icon/line.svg" alt="Line" class="icon" />
         </div>
         <div
           class="textset textset__email flex md:flex-row flex-col md:text-justify text-center md:p-0 pb-10"
@@ -143,6 +147,11 @@
     @include max-media(768) {
       padding-top: 0.574rem;
     }
+  }
+}
+.icon {
+  @include max-media(768) {
+    width: 16px;
   }
 }
 </style>

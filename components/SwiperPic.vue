@@ -1,12 +1,10 @@
 <script setup>
-import { Scrollbar, Navigation } from "swiper/modules";
-
+import { Scrollbar, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
 // import "swiper/css/scrollbar";
 const mySwiper = ref(null);
 onMounted(() => {
   if (mySwiper.value) {
-    // 使用 mySwiper.value 進行操作
-    // 例如：mySwiper.value.setGrabCursor(true);
     mySwiper.value.setGrabCursor(true);
   }
 });
@@ -14,9 +12,9 @@ onMounted(() => {
 <template>
   <div class="swiperpic">
     <Swiper
-      :modules="[Navigation, Scrollbar]"
+      :modules="[Scrollbar, Autoplay]"
       :scrollbar="{ hide: false, draggable: true }"
-      :ref="mySwiper"
+      :autoplay="{ delay: 2000, disableOnInteraction: false }"
       :slidesPerView="1"
       :navigation="{
         nextEl: '.swiper-button-next',
@@ -92,4 +90,8 @@ onMounted(() => {
     </div> -->
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.project__text__one {
+  margin-bottom: 5.4466%;
+}
+</style>

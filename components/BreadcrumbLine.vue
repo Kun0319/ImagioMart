@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
   <div class="line">
     <div class="mb-2">
-      <div class="icon" :class="customClass">
+      <div class="icon__one" :class="customClass">
         <p class="line__text">{{ text }}</p>
         <slot name="icon" v-if="showIcon"></slot>
       </div>
@@ -23,7 +23,7 @@ const props = defineProps({
       </div>
     </div>
   </div>
-  <div class="icon">
+  <div class="icon__two">
     <slot name="icon2" v-if="showIcon"></slot>
   </div>
 </template>

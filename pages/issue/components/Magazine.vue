@@ -20,9 +20,10 @@ const magazineName = route.params.Magazine;
 
       <p class="info__month">第151期2023 &nbsp; 07&08月</p>
       <p class="info__price">NT$300</p>
-      <a href="" class="line-height-4 info__shopcart text-black-alpha-90"
-        >ADD TO CART</a
-      >
+      <!-- <a href="" class="info__shopcart text-black-alpha-90"> ADD TO CART </a> -->
+      <button href="" class="line-height-4 info__shopcart text-black-alpha-90">
+        ADD TO CART
+      </button>
     </div>
   </div>
 </template>
@@ -31,19 +32,23 @@ const magazineName = route.params.Magazine;
 .info {
   &__price {
   }
+
   &__month {
     font-size: 0.875rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
+
 .image-container {
   display: flex;
   justify-content: center;
 }
+
 .grid {
   margin-top: 20.67%;
 }
+
 a > img {
   opacity: 1;
   transition: all 0.6s;
@@ -52,6 +57,7 @@ a > img {
 a > img:hover {
   opacity: 0.5;
 }
+
 .special-style img {
   opacity: 0.2;
 }

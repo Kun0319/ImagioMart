@@ -3,10 +3,14 @@
     <HeaderSearch />
     <Navbar />
     <ReturnTop />
-    <main class="">
+    <main class="margin">
       <slot />
     </main>
   </div>
   <Footer />
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.margin {
+  margin-top: 55px;
+}
+</style>

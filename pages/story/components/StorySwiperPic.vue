@@ -1,17 +1,14 @@
 <script setup>
 import "swiper/swiper-bundle.css";
-import { Scrollbar, Navigation } from "swiper/modules";
+import { Scrollbar, Autoplay } from "swiper/modules";
 </script>
 <template>
   <div class="swiperpic">
     <Swiper
-      :modules="[Scrollbar]"
+      :modules="[Scrollbar, Autoplay]"
       :scrollbar="{ hide: false, draggable: true }"
+      :autoplay="{ delay: 2000, disableOnInteraction: false }"
       :slidesPerView="1"
-      :navigation="{
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }"
     >
       <SwiperSlide>
         <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">
@@ -19,6 +16,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
             src="~/assets/images/storyswiper.png"
             class="lg:col-span-8 col-span-12 w-full"
           />
+          <!-- 文字區塊 -->
           <div
             class="flex flex-col project__text justify-end lg:col-start-9 lg:col-span-4 col-span-12"
           >
@@ -74,6 +72,7 @@ import { Scrollbar, Navigation } from "swiper/modules";
         </div>
       </SwiperSlide>
     </Swiper>
+
     <!-- 向左向右按鈕 -->
     <!-- <div class="swiper-navigation md:block hidden">
       <div class="swiper-button-prev"></div>
@@ -81,4 +80,21 @@ import { Scrollbar, Navigation } from "swiper/modules";
     </div> -->
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.swiperpic {
+  margin-top: 10%;
+}
+
+.project__text {
+  @include min-media(1024) {
+    margin-left: 10%;
+  }
+  &__one {
+    margin-bottom: 6.066%;
+  }
+  &__two {
+  }
+  &__three {
+  }
+}
+</style>
