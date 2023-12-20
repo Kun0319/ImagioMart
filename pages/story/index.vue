@@ -89,6 +89,7 @@ const toggleFilterMenu = () => {
 </template>
 <style lang="scss" scoped>
 :deep(.line) {
+  margin-top: 4.7357%;
   margin-bottom: 0%;
   @include max-media(768) {
     // margin-bottom: 24%;

@@ -89,7 +89,10 @@ const toggleFilterMenu = () => {
   display: flex;
   justify-content: space-between;
 }
-
+:deep(.line) {
+  margin-top: 4.7357%;
+  margin-bottom: 0%;
+}
 .tags-container {
   // display: flex;
 }

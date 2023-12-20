@@ -77,6 +77,7 @@
   &__one {
     font-size: 0.625rem;
     margin-bottom: 3.5%;
+    margin-top: 6.5359%;
     font-family: $font-Noto;
   }
   &__two {
@@ -90,6 +91,7 @@
   width: 60%;
   justify-self: flex-end;
   position: relative;
+  margin-top: 48%;
   --swiper-navigation-sides-offset: 0px;
 }
 .swiper-button-prev::after,

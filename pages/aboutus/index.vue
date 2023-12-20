@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <title>About Us</title>
+  <title>關於我們</title>
   <NuxtLayout>
     <div class="text">
       <section class="flex flex-col">

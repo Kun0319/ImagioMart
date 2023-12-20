@@ -209,9 +209,12 @@ const slidesData = ref([
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5%;
+  // margin-bottom: 5%;
 }
-
+// 暫時
+:deep(.line) {
+  margin-top: 35.5174%;
+}
 .photo {
   width: 100%;
 }

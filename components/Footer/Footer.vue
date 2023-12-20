@@ -38,7 +38,7 @@
         <span class="dot">•</span>
         <span><nuxt-link href="">Shipping policy</nuxt-link></span>
         <span class="dot">•</span>
-        <span><a href="">Contact</a></span>
+        <span><a href="/contact">Contact</a></span>
       </div>
       <div
         class="row-start-2 md:col-span-4 col-span-6 md:col-start-1 col-start-4 md:order order-3 md:text-start text-center"

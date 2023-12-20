@@ -4,6 +4,13 @@ const FilterMenuOpen = ref(false);
 const toggleFilterMenu = () => {
   FilterMenuOpen.value = !FilterMenuOpen.value;
 };
+
+const props = defineProps({
+  breadcrumbText: {
+    type: String,
+    default: "Home /News/Furniture",
+  },
+});
 </script>
 
 <template>
@@ -12,11 +19,7 @@ const toggleFilterMenu = () => {
     <Navbar />
     <ReturnTop />
     <div class="filter__relative">
-      <BreadcrumbLine
-        text="Home&nbsp; /&nbsp; Opinion "
-        :showTags="true"
-        :showIcon="true"
-      >
+      <BreadcrumbLine :text="breadcrumbText" :showTags="true" :showIcon="true">
         <template #icon>
           <img
             src="~/assets/icon/sliders.svg"

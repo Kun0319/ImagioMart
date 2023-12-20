@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <title>privacypolicy</title>
+  <title>隱私權政策</title>
   <NuxtLayout>
     <div class="text">
       <section class="flex flex-col">

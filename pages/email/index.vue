@@ -31,7 +31,7 @@ const login = () => {
           <button @click="login" class="login__btn">登入</button>
           <div class="ml-auto login__signup">
             <nuxt-link to="/register">會員註冊/</nuxt-link>
-            <nuxt-link to="/forgotpassword">忘記密碼</nuxt-link>
+            <nuxt-link to="/forgot-password">忘記密碼</nuxt-link>
           </div>
         </div>
         <div class="login__social">

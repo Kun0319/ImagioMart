@@ -156,12 +156,8 @@ const mobilemenuStyle = computed(() => {
         </div>
         <div class="feature__icon" @click="globalStore.toggleLanguage">
           <!-- <img src="../assets/icon/chinese.svg" alt="" /> -->
-          <img
-            v-if="isChinese"
-            src="../assets/icon/english.svg"
-            alt="English"
-          />
-          <img v-else src="../assets/icon/chinese.svg" alt="中文" />
+          <img v-if="isChinese" src="../assets/icon/chinese.svg" alt="中文" />
+          <img v-else src="../assets/icon/english.svg" alt="English" />
         </div>
       </div>
     </div>
@@ -218,13 +214,18 @@ const mobilemenuStyle = computed(() => {
             </li>
           </ul>
           <div class="sub-menu__icon flex items-center justify-between mt-4">
-            <img src="@/assets/icon/member.svg" alt="" class="" />
-            <img src="@/assets/icon/bag.svg" alt="" class="" />
-            <img
-              src="../assets/icon/chinese.svg"
-              alt=""
-              @click="globalStore.toggleLanguage"
-            />
+            <nuxt-link to="/login"
+              ><img src="@/assets/icon/member.svg" alt="" class=""
+            /></nuxt-link>
+            <nuxt-link to="/login"
+              ><img src="@/assets/icon/bag.svg" alt="" class=""
+            /></nuxt-link>
+            <nuxt-link to=""
+              ><img
+                src="../assets/icon/chinese.svg"
+                alt=""
+                @click="globalStore.toggleLanguage"
+            /></nuxt-link>
           </div>
         </div>
       </div>
