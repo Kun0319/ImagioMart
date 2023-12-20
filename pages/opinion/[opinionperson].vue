@@ -239,7 +239,9 @@ const slidesData = ref([
   // margin-bottom: 5%;
 }
 .test {
-  margin-top: 20%;
+  @include max-media(768) {
+    margin-top: 20%;
+  }
 }
 
 .photo {

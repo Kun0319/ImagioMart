@@ -161,7 +161,9 @@ definePageMeta({
 }
 // 暫時
 .test {
-  margin-top: 20%;
+  @include max-media(768) {
+    margin-top: 20%;
+  }
 }
 .inner-wrap {
   @include max-media(768) {

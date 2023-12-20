@@ -213,7 +213,9 @@ const slidesData = ref([
 }
 // 暫時
 :deep(.line) {
-  margin-top: 35.5174%;
+  @include max-media(768) {
+    margin-top: 35.5174%;
+  }
 }
 .photo {
   width: 100%;
