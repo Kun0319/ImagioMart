@@ -69,16 +69,18 @@ const peopleopinion = ref([
         </div>
       </div>
 
-      <div class="flex-col md:col-span-6 md:col-start-6 col-span-12 self-end md:text-left text-center">
+      <div class="text">
         <!-- 名字 -->
         <p class="text__designer md:hidden">industrial designer｜工業設計師</p>
         <p class="text__nameEn">{{ person.nameEn }}</p>
         <p class="text__nameCn">{{ person.nameCn }}</p>
         <!-- icon -->
-        <div class="line-container md:justify-end justify-center">
-          <div class="line__opinion md:flex hidden"></div>
-          <i class="pi pi-heart mx-3"></i>
-          <i class="pi pi-share-alt"></i>
+        <div class="line-container">
+          <div class="line__opinion"></div>
+          <div>
+            <i class="pi pi-heart mx-3"></i>
+            <i class="pi pi-share-alt"></i>
+          </div>
         </div>
         <!-- 觀點 想法 -->
         <p class="text__opinionEn text-left">
@@ -114,14 +116,13 @@ const peopleopinion = ref([
   height: 531px;
   // height: 478px;
   // max-width: 345px;
-  max-height: 27.65625vw; 
+  max-height: 27.65625vw;
   max-width: 19.94792vw;
   display: block;
   object-fit: cover;
 
-  @include max-media(1024){
+  @include max-media(1024) {}
 
-  }
   @include max-media(768) {
     max-height: 269px;
     max-width: 191px;
@@ -178,16 +179,27 @@ const peopleopinion = ref([
   &-container {
     position: relative;
     display: flex;
+    justify-content: flex-end;
+
+    @include max-media(768) {
+      justify-content: center;
+    }
   }
 
   &__opinion {
     position: absolute;
+    display: inline-block;
     top: 50%;
-    left: 0;
+    left: 0px;
     width: 90%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 30;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+
+    @include max-media(1200) {
+      width: 80%;
+    }
+    @include max-media(768) {
+      display: none;
+    }
   }
 }
 
@@ -203,6 +215,7 @@ const peopleopinion = ref([
 }
 
 .text {
+  @apply flex-col md:col-span-6 md:col-start-6 col-span-12 self-end md:text-left text-center;
   &__rwd {
     margin-top: 7.3991%;
     margin-bottom: 12.5786%;
@@ -222,8 +235,7 @@ const peopleopinion = ref([
 
   &__nameCn {
     font-size: 1rem;
-    // margin-bottom: 4%;
-    margin-bottom: 1.374rem;
+    margin-bottom: 3.7540%;
 
     @include max-media(768) {
       font-size: 0.875rem;
@@ -232,8 +244,7 @@ const peopleopinion = ref([
 
   &__opinionEn {
     font-size: 0.875rem;
-    // margin-top: 8.3177%;
-    margin-top: 3rem;
+    margin-top: 8.7593%;
     font-style: italic;
   }
 
@@ -245,8 +256,8 @@ const peopleopinion = ref([
 
   &__opinionCn {
     font-size: 0.875rem;
-    margin-top: 1.5rem;
-    margin-bottom: 5.75rem;
+    margin-top: 4.2903%;
+    margin-bottom:13.0496%;
 
     @include max-media(768) {
       text-align: left;

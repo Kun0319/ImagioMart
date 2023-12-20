@@ -173,6 +173,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
+// 12/20
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;

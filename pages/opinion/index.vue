@@ -27,7 +27,7 @@ const toggleFilterMenu = () => {
         </template>
         <!-- 類別按鈕 -->
         <template #tags>
-          <div class="tags-container md:flex hidden">
+          <div class="md:flex hidden">
             <nuxt-link to="/search/Dining" class="tag-button">
               <TagButton :tag="'All(23)'" />
             </nuxt-link>
@@ -92,9 +92,6 @@ const toggleFilterMenu = () => {
 :deep(.line) {
   margin-top: 4.7357%;
   margin-bottom: 0%;
-}
-.tags-container {
-  // display: flex;
 }
 
 .tag-button {

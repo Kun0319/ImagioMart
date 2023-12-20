@@ -12,18 +12,17 @@ defineProps({
 
 <style lang="scss" scoped>
 .no-padding {
-  width: 100vw;
   height: auto;
   position: relative;
   left: -10.2%;
 }
 
 .full-width {
-  width: 100%;
-  height: 16.2%;
+  width: 100vw;
+  height: 100%;
 
   @include max-media(768) {
-    margin-top: 15px;
+    // margin-top: 15px;
   }
 }
 </style>

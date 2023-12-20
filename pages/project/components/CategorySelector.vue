@@ -91,7 +91,10 @@ const clickyear = () => {
           {{ archive.year }}
         </button>
         <div v-for="month in archive.months" :key="month.name">
-          <button class="selector__options selectorbutton" v-show="monthlist">
+          <button
+            class="selector__options__month selectorbutton"
+            v-show="monthlist"
+          >
             {{ isChinese ? month.nameCn : month.nameEn }}({{ month.count }})
           </button>
         </div>
@@ -136,6 +139,10 @@ const clickyear = () => {
     letter-spacing: 0.714px;
     padding-bottom: 1.875rem;
     font-family: $font-NotoSerif;
+    &__month {
+      @extend .selector__options;
+      padding-left: 1.5rem;
+    }
   }
 
   &__recent {
