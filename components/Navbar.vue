@@ -222,8 +222,14 @@ const mobilemenuStyle = computed(() => {
             /></nuxt-link>
             <nuxt-link to=""
               ><img
+                v-if="isChinese"
                 src="../assets/icon/chinese.svg"
-                alt=""
+                alt="中文"
+                @click="globalStore.toggleLanguage" />
+              <img
+                v-else
+                src="../assets/icon/english.svg"
+                alt="English"
                 @click="globalStore.toggleLanguage"
             /></nuxt-link>
           </div>

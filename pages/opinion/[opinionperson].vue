@@ -233,6 +233,11 @@ const slidesData = ref([
 
 <style lang="scss" scoped>
 // 暫時
+:deep(.icon__one) {
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 5%;
+}
 .test {
   margin-top: 20%;
 }

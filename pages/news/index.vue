@@ -154,6 +154,11 @@ definePageMeta({
 </template>
 
 <style lang="scss" scoped>
+:deep(.icon__one) {
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 5%;
+}
 // 暫時
 .test {
   margin-top: 20%;
