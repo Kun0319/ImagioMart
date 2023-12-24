@@ -60,7 +60,8 @@ import { Pagination } from "swiper/modules";
   font-size: 1rem;
   @apply md:block hidden md:col-span-4 col-span-6;
   &__title {
-    font-size: 1.3125rem;
+    // font-size: 1.3125rem;
+    font-size: 1rem;
     line-height: 30.18px;
     margin-bottom: 3.7694%;
     // font-family: $font-Noto;

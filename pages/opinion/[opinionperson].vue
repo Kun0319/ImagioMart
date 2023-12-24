@@ -1,5 +1,12 @@
 <script setup>
+import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Scrollbar } from "swiper/modules";
 import RelatedOpinion from "./components/RelatedOpinion.vue";
+import "swiper/css";
+import "swiper/css/scrollbar";
+
 definePageMeta({
   layout: "innerpage",
 });
@@ -48,14 +55,17 @@ const slidesData = ref([
     projectLocation: "派屈克．諾蓋",
   },
 ]);
+const breadcrumbText = "Home/Story/Furniture";
 </script>
 
 <template>
-  <div class="test">
-    <NuxtLayout :breadcrumbText="'Home/Story/Furniture'">
+  <div class="rwd-wrap">
+    <NuxtLayout
+      :breadcrumbText="'Home &nbsp; / &nbsp; Opinion &nbsp; / &nbsp; Furniture'"
+    >
       <div class="inner-wrap">
         <div class="flex flex-col items-center">
-          <p class="text__designer">industrial designer｜工業設計師</p>
+          <p class="text__designer">Industrial designer｜工業設計師</p>
           <img
             src="https://s3-alpha-sig.figma.com/img/f89d/ec49/1a3b1fa09ea0b02c0cfae9c791ac7127?Expires=1704067200&Signature=MTLyfG7OU8NFPGA6MT-CjQtkzsyBpxwcKzP908wybYuGg9oIyBE0Wgon5XqIl5j7IkIBvvm9ssMt-II5o4zmzf2KDKH8IYJ7BfzRz~5qJA8w-WyYS4At0W~lwwzQA1bo8n6ZLQKsaHxekO-ez1RgqP5dGYOVD6O~cauVQmfCENPkP2Z4Ap1hn3aVRyIJL23CCHy0IOnnbpG3ZLNVHwA4nZjlwsKpMGRK2x83WdbS46tUEHctXyptg4o0Qd9CLI1er-2tt4M2W~JZAfjlCVYjZqZmCQtVYkXfNN~jnEQuD3iV0wPtGigmH1DNolqDi3mzJH-O-WUhrIhrMnO3uDJaVQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
@@ -63,6 +73,10 @@ const slidesData = ref([
           />
           <p class="text__nameEn">Patrick Norguet</p>
           <p class="text__nameCn">派屈克．諾蓋</p>
+          <div class="text__icon">
+            <i class="pi pi-heart mx-3"></i> <i class="pi pi-share-alt"></i>
+          </div>
+
           <p class="text__photoCn">影像：派屈克．諾蓋提供 ｜ 採訪：洪雅琪</p>
           <div class="text__photoEn text-center">
             <p>Photo：Courtesy by Patrick Norguet</p>
@@ -216,6 +230,134 @@ const slidesData = ref([
             </div>
           </div>
         </div>
+
+        <Swiper
+          direction="'vertical'"
+          :modules="[Scrollbar]"
+          :scrollbar="{ hide: false }"
+          :slidesPerView="1"
+          :class="'swiper'"
+        >
+          <SwiperSlide>
+            <div class="grid grid-cols-12 gap-4">
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery1.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery2.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery3.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery4.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery5.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery6.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery7.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery8.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-12 gap-4 mt-4">
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery1.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery2.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery3.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery4.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery5.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery6.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery7.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery8.png"
+                  alt=""
+                  class="photo"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide> </SwiperSlide>
+        </Swiper>
         <div class="md:block hidden">
           <RelatedOpinion />
         </div>
@@ -223,7 +365,7 @@ const slidesData = ref([
       <div class="md:hidden">
         <StoryOpinonPagination :slidesData="slidesData">
           <template #title>
-            <slot name="title">RELATED OPINION</slot>
+            <slot name="title">相關人物</slot>
           </template>
         </StoryOpinonPagination>
       </div>
@@ -238,23 +380,22 @@ const slidesData = ref([
   justify-content: space-between;
   // margin-bottom: 5%;
 }
-.test {
+.rwd-wrap {
   @include max-media(768) {
     margin-top: 20%;
   }
 }
 
 .photo {
+  height: 100%;
   width: 100%;
 
   &__people {
     width: 27.78vw;
     height: 37.5vw;
     object-fit: contain;
-
     @include max-media(768) {
       min-width: 225px;
-      min-height: 313px;
     }
   }
 
@@ -276,17 +417,17 @@ const slidesData = ref([
   &__designer {
     color: $text-color2;
     margin-bottom: 7.0428%;
-    margin-top: 20.68844%;
+    margin-top: 10.34422%;
+    // margin-top: 20.68844%;
     font-size: 1.375rem;
-    font-family: $font-Noto;
-
+    // font-family: $font-Noto;
     @include max-media(768) {
       font-size: 0.625rem;
     }
   }
 
   &__nameEn {
-    margin-top: 10.6523%;
+    margin-top: 3.8735%;
     // margin-top: 121px;
     margin-bottom: 1%;
     font-size: 1.3125rem;
@@ -297,17 +438,22 @@ const slidesData = ref([
   }
 
   &__nameCn {
-    margin-bottom: 10.6523%;
+    // margin-bottom: 10.6523%;
+    margin-bottom: 3.8735%;
     font-size: 1.3125rem;
-
     @include max-media(768) {
       font-size: 0.875rem;
     }
+  }
+  &__icon {
+    margin-bottom: 3.8735%;
   }
 
   &__photoCn {
     font-size: 1rem;
     margin-bottom: 1.5846%;
+    color: $text-color3;
+    font-family: $font-Noto;
 
     @include max-media(768) {
       font-size: 0.625rem;
@@ -318,6 +464,7 @@ const slidesData = ref([
     font-size: 1rem;
     margin-bottom: 13.0293%;
     font-family: $font-Noto;
+    color: $text-color3;
 
     @include max-media(768) {
       font-size: 0.625rem;
@@ -331,8 +478,10 @@ const slidesData = ref([
 
     &__one {
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 400;
+      text-align: justify;
       margin-bottom: 5.0611%;
+      line-height: 33.504px;
 
       &:last-child {
         margin-bottom: 15.8161%;
@@ -349,6 +498,7 @@ const slidesData = ref([
     font-family: $font-Noto;
     color: $text-color3;
     margin-bottom: 11.7806%;
+    letter-spacing: 0.867px;
   }
 }
 

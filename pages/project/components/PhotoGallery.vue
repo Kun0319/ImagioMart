@@ -125,7 +125,8 @@ import "swiper/css/scrollbar";
 
 <style lang="scss" scoped>
 .title {
-  font-size: 1.3125rem;
+  // font-size: 1.3125rem;
+  font-size: 1rem;
   color: $text-color3;
   letter-spacing: 1.56px;
   margin-top: 13.31%;

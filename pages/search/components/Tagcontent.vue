@@ -215,7 +215,7 @@ const groupedData = computed(() => {
     <div class="grid grid-cols-12 gap-4">
       <div
         v-if="filteredData.length"
-        class="col-span-4 justify-self-center project__text"
+        class="col-span-8 justify-self-center project__text"
       >
         <p class="results">
           {{ filteredData.length }} results for
@@ -224,7 +224,7 @@ const groupedData = computed(() => {
           </button>
         </p>
       </div>
-      <div class="col-span-6"></div>
+      <div class="col-span-4"></div>
       <!-- 遍歷分組數據 -->
       <div
         v-for="(items, category) in groupedData"
@@ -269,9 +269,9 @@ const groupedData = computed(() => {
 }
 .photo {
   width: 100%;
-  max-width: 459px;
+  max-width: 26.57vw;
   height: 100%;
-  max-height: 311px;
+  min-height: 18vw;
 }
 
 // 分組標題樣式

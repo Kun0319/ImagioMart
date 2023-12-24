@@ -38,18 +38,19 @@ const props = defineProps({
 
   height: 100%;
   @include min-media(768) {
-    margin-bottom: 36.0923%;
+    // margin-bottom: 36.0923%;
+    margin-bottom: 10%;
     max-width: 310px;
   }
 
   @include max-media(1024) {
     width: 100%;
-    height: 100%;
+    // height: 100%;
   }
 
   &__pic {
     width: 100%;
-    height: 100%;
+    // height: 100%;
     // max-width: 310px;
     max-height: 210px;
 

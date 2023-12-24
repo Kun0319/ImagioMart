@@ -156,7 +156,12 @@ watch(
 
 .photo {
   width: 100%;
-  // height: 311px;
+  // height: 100%;
+  // width: 459px;
+  max-height: 311px;
+  @include max-media(768) {
+    height: 100px;
+  }
 }
 
 .text {
@@ -192,9 +197,9 @@ watch(
     @include max-media(768) {
       font-size: 0.5rem;
       line-height: 15.36px;
-      white-space: nowrap;
+      // white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+      // text-overflow: ellipsis;
     }
   }
 }

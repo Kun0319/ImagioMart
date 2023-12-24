@@ -18,20 +18,30 @@ const projectId = route.params.ProjectShowcase;
     >
       <template #tags>
         <div class="tags-container">
-          <TagButton :tag="'All(23)'" class="tag-button" />
-          <TagButton :tag="'Furniture(5)'" class="tag-button" />
-          <TagButton :tag="'Dining(6)'" class="tag-button" />
-          <TagButton :tag="'Bath(5)'" class="tag-button" />
-          <TagButton :tag="'Kitchen(6)'" class="tag-button" />
-          <TagButton :tag="'Wellness(5)'" class="tag-button" />
-          <TagButton :tag="'Wall(5)'" class="tag-button" />
-          <TagButton :tag="'Floor(6)'" class="tag-button" />
-        </div>
-      </template>
-      <template #icon2>
-        <div class="icon">
-          <i class="pi pi-heart mx-3"></i>
-          <i class="pi pi-share-alt"></i>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'All'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Furniture'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Dining'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Bath'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Kitchen'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Wellness'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Wall'" />
+          </nuxt-link>
+          <nuxt-link to="/search/Dining" class="tag-button">
+            <TagButton :tag="'Floor'" />
+          </nuxt-link>
         </div>
       </template>
     </BreadcrumbLine>

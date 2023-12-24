@@ -126,7 +126,7 @@ const mobilemenuStyle = computed(() => {
               :key="childIndex"
             >
               <nuxt-link :to="childItem.link">{{
-                isChinese ? childItem.nameCn : childItem.nameEn
+                isChinese ? childItem.nameEn : childItem.nameCn
               }}</nuxt-link>
             </div>
           </div>
@@ -294,7 +294,8 @@ header {
 
   li {
     position: relative;
-    font-size: 0.8rem;
+    // font-size: 0.95rem;
+    font-size: 0.875rem;
     font-family: $Yantramanav;
 
     &:hover {
@@ -351,7 +352,7 @@ header {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease-in-out;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
 
     a {
       display: block;

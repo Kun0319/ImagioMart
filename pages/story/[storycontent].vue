@@ -1,7 +1,9 @@
 <script setup>
 import StoryRelatedProject from "./components/StoryRelatedProject.vue";
 import StoryNavigation from "./components/StoryNavigation.vue";
-// import StoryPaginationAdvertise from "./components/StoryPaginationAdvertise.vue";
+definePageMeta({
+  layout: "innerpage",
+});
 const slidesData = ref([
   {
     imageUrl:
@@ -27,9 +29,11 @@ const slidesData = ref([
 ]);
 </script>
 <template>
-  <NuxtLayout>
+  <NuxtLayout
+    :breadcrumbText="'Home &nbsp;/&nbsp; Story &nbsp;/&nbsp; Furniture'"
+  >
     <div class="filter__relative">
-      <BreadcrumbLine
+      <!-- <BreadcrumbLine
         text="Home&nbsp; /&nbsp; Project&nbsp; /&nbsp; furniture"
         :showIcon="true"
         :showTags="true"
@@ -45,42 +49,55 @@ const slidesData = ref([
         <template #tags>
           <div class="tags-container">
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'All(23)'" />
+              <TagButton :tag="'All'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Furniture(5)'" />
+              <TagButton :tag="'Furniture'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Dining(6)'" />
+              <TagButton :tag="'Dining'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Bath(5)'" />
+              <TagButton :tag="'Bath'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Kitchen(6)'" />
+              <TagButton :tag="'Kitchen'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wellness(5)'" />
+              <TagButton :tag="'Wellness'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wall(5)'" />
+              <TagButton :tag="'Wall'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Floor(6)'" />
+              <TagButton :tag="'Floor'" />
             </nuxt-link>
           </div>
         </template>
-        <template #icon2>
-          <div class="icon">
-            <i class="pi pi-heart mx-3"></i>
-            <i class="pi pi-share-alt"></i>
-          </div>
-        </template>
-      </BreadcrumbLine>
+      </BreadcrumbLine> -->
     </div>
     <div class="inner-wrap">
       <ImageGrid>
-        <template v-slot:title> </template>
+        <!-- <template v-slot:title>
+          <div class="slot-wrapper">
+            <div class="flex items-center">
+              <p class="title--text__one">Scope｜129｜Brazil</p>
+              <i class="pi pi-heart mx-3 ml-auto"></i>
+              <i class="pi pi-share-alt"></i>
+            </div>
+            <div class="title--text__two">
+              <p>House Pokrinniemi, Hämeenlinna, Finland</p>
+              <p>芬蘭海門林納　雪地之家</p>
+            </div>
+            <p class="title--text__three">文字．影像提供：SHANG XIA 上下</p>
+            <div>
+              <img
+                src="~/assets/images/projectcontent1.png"
+                alt=""
+                class="w-full"
+              />
+            </div></div
+        ></template> -->
         <template v-slot:image1>
           <div class="col-span-12">
             <img
@@ -211,12 +228,14 @@ const slidesData = ref([
   justify-content: space-between;
   // margin-bottom: 5%;
 }
+
 // 暫時
 :deep(.line) {
   @include max-media(768) {
     margin-top: 35.5174%;
   }
 }
+
 .photo {
   width: 100%;
 }

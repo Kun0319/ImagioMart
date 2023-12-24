@@ -4,15 +4,23 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="test">
-    <NuxtLayout>
+  <div class="rwd-wrap">
+    <NuxtLayout
+      :breadcrumbText="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
+    >
       <div class="inner-wrap">
-        <p class="text__one">Furniture｜Inside Stories｜issue 150</p>
-        <p class="text__two">House Pokrinniemi, Hämeenlinna, Finland</p>
-        <p class="text__two">
-          NO.1 義大利原裝傢俱品牌 NATUZZI 拉圖誌 歡慶來台 18 年 強勢進駐台南
-        </p>
-        <p class="text__three">文字．影像提供：SHANG XIA 上下</p>
+        <div class="flex items-center">
+          <p class="title--text__one">Furniture｜Inside Stories｜issue 150</p>
+          <i class="pi pi-heart mx-3 ml-auto"></i>
+          <i class="pi pi-share-alt"></i>
+        </div>
+        <div class="title--text__two">
+          <p>House Pokrinniemi, Hämeenlinna, Finland</p>
+          <p>
+            NO.1 義大利原裝傢俱品牌 NATUZZI 拉圖誌 歡慶來台 18 年 強勢進駐台南
+          </p>
+        </div>
+        <p class="title--text__three">文字．影像提供：SHANG XIA 上下</p>
         <img
           src="https://www.figma.com/file/Cl1dT31sCYUc7LwFrjXl9R/image/9e4e22f13b2809b9fd461144a0f374106e7f6969"
           alt=""
@@ -123,30 +131,41 @@ definePageMeta({
         </div>
       </div>
       <div class="gallery inner-wrap">
-        <p class="md:hidden col-span-12 gallery__title">RELATED NEWS</p>
-        <div class="col-span-6 justify-self-start">
+        <!-- <p class="col-span-12 gallery__title">RELATED NEWS</p> -->
+        <p class="col-span-12 gallery__title">其他新訊</p>
+        <div class="col-span-4 justify-self-start">
           <img
             src="https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1704067200&Signature=AceQQLhORZPHg3CJFQjcqJBX2qsdELlFg8iRa0PUozSQiswm8ijGxy2Oc-DCK3T0BoYvYKm-btFIsr8RCv1wkivtfw7dVkFjdTNsjh5jxYM9gu7IyJ1JFJdO1LJhmoyH6B1XKqaGmwUzkyuHyLDL~eKrMuEIs4VV0ELZVlbei4MQnJk53alsSuAxPqSw4NuazcM3gr58tyVvRWMwqk3TzAcqTL9rPfuRQEPWFH5ga6hhOJZngBmbfdNWxHn~6Hk9rIxKHi4Cs6X-TTGAn4eLzdVPBwaj1TH6s4BD8SZTYbRrJedxLsjuCClAwFqR9uHaOAK3xdEVWfXUhSIANz0TIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
             class="gallery__img"
           />
           <p class="md:hidden gallery__one">2023.10.01</p>
-          <p class="gallery__two">MORQ Room of Family Wan...</p>
-          <p class="gallery__three">比利時安特衛普 貝利之家</p>
+          <!-- <p class="gallery__two">MORQ Room of Family Wan...</p> -->
+          <p class="gallery__three">墨西哥米卻肯｜拉彼達之家</p>
         </div>
-        <div class="col-span-6 justify-self-end">
+        <div class="col-span-4 justify-self-end">
           <img
             src="https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             alt=""
             class="gallery__img"
           />
           <p class="md:hidden gallery__one">2023.10.01</p>
-          <p class="gallery__two">MORQ Room of Family Wan...</p>
-          <p class="gallery__three">西澳大利亞珀斯 隱園</p>
+          <!-- <p class="gallery__two">MORQ Room of Family Wan...</p> -->
+          <p class="gallery__three">墨西哥米卻肯｜拉彼達之家</p>
+        </div>
+        <div class="col-span-4 justify-self-end">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt=""
+            class="gallery__img"
+          />
+          <p class="md:hidden gallery__one">2023.10.01</p>
+          <!-- <p class="gallery__two">MORQ Room of Family Wan...</p> -->
+          <p class="gallery__three">墨西哥米卻肯｜拉彼達之家</p>
         </div>
         <div class="col-span-12 flex justify-around gallery__arrow">
-          <p class="gallery__older">Older</p>
-          <p class="gallery__newer">Newer</p>
+          <p class="gallery__older"></p>
+          <p class="gallery__newer"></p>
         </div>
       </div>
     </NuxtLayout>
@@ -160,7 +179,7 @@ definePageMeta({
   // margin-bottom: 5%;
 }
 // 暫時
-.test {
+.rwd-wrap {
   @include max-media(768) {
     margin-top: 20%;
   }
@@ -171,39 +190,10 @@ definePageMeta({
     padding-right: 0;
   }
 }
+
 .text {
   padding-left: 12.2298%;
   padding-right: 12.2298%;
-
-  &__one {
-    font-size: 0.875rem;
-    margin-bottom: 2.2889%;
-    color: $text-color2;
-    @include max-media(768) {
-      font-size: 0.625rem;
-    }
-  }
-
-  &__two {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1.6%;
-    @include max-media(768) {
-      font-size: 0.875rem;
-    }
-  }
-
-  &__three {
-    font-size: 0.8125rem;
-    letter-spacing: 0.51px;
-    line-height: 24.96px;
-    margin-top: 2.2889%;
-    margin-bottom: 5.1941%;
-    color: $text-color3;
-    @include max-media(768) {
-      font-size: 0.5625rem;
-    }
-  }
 
   &__content {
     @extend .text;
@@ -308,8 +298,8 @@ definePageMeta({
 
   &__title {
     font-size: 1rem;
-    margin-bottom: 6%;
-    font-family: $font-Noto;
+    // margin-bottom: 6%;
+    // font-family: $font-Noto;
   }
 
   &__one {
@@ -332,11 +322,13 @@ definePageMeta({
   }
 
   &__three {
-    font-size: 1.125rem;
+    // font-size: 1.125rem;
+    font-size: 1.3125rem;
     letter-spacing: 0.51px;
     line-height: 24.96px;
     margin-top: 2.2889%;
     margin-bottom: 5.1941%;
+    color: $text-color3;
 
     @include max-media(768) {
       font-size: 0.75rem;

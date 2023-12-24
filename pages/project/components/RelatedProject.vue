@@ -40,21 +40,25 @@
 <style lang="scss" scoped>
 .RelatedProject {
   margin-bottom: 13.57%;
+  @include max-media(768) {
+    margin-left: -10.4469%;
+    margin-right: -10.4469%;
+  }
 }
 .image {
   width: 100%;
-  height: 210px;
+  max-height: 210px;
   max-width: 310px;
   @include max-media(768) {
-    width: 157px;
-    height: 100px;
+    max-width: 157px;
+    max-height: 100px;
   }
 }
 .text {
   color: $text-color3;
   font-size: 1rem;
   &__title {
-    font-size: 1.3125rem;
+    font-size: 1rem;
     line-height: 30.18px;
     margin-bottom: 3.7694%;
     // font-family: $font-Noto;
@@ -66,11 +70,20 @@
     font-size: 0.625rem;
     margin-bottom: 3.5%;
     font-family: $font-Noto;
+    @include max-media(768) {
+      font-size: 0.625rem;
+    }
   }
   &__two {
     margin-bottom: 2%;
+    @include max-media(768) {
+      font-size: 1rem;
+    }
   }
   &__three {
+    @include max-media(768) {
+      font-size: 1rem;
+    }
   }
 }
 // 12/13箭頭暫時樣式

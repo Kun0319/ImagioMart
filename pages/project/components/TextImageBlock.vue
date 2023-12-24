@@ -1,11 +1,15 @@
 <script setup></script>
 <template lang="">
-  <p class="text__one">Scope｜129｜Brazil</p>
-  <div class="text__two">
+  <div class="flex items-center">
+    <p class="title--text__one">Scope｜129｜Brazil</p>
+    <i class="pi pi-heart mx-3 ml-auto"></i>
+    <i class="pi pi-share-alt"></i>
+  </div>
+  <div class="title--text__two">
     <p>House Pokrinniemi, Hämeenlinna, Finland</p>
     <p>巴西里約熱內盧 RS公寓</p>
   </div>
-  <p class="text__three">Studio Arthur Casas</p>
+  <p class="title--text__three">Studio Arthur Casas</p>
 
   <div class="">
     <img src="~/assets/images/projectcontent1.png" alt="" class="w-full" />
@@ -48,11 +52,7 @@
     </p>
   </div>
   <div class="">
-    <img
-      src="~/assets/images/projectcontent3.png"
-      alt=""
-      class="w-full md:mb-16 mb-8"
-    />
+    <img src="~/assets/images/projectcontent3.png" alt="" class="w-full mb-4" />
     <img src="~/assets/images/projectcontent4.png" alt="" class="w-full" />
     <p class="text__en">
       The RS Apartment, surrounded by a 360º view of the Ipanema beach, is a
@@ -76,33 +76,6 @@
 
 <style lang="scss" scoped>
 .text {
-  &__one {
-    color: $text-color2;
-    font-size: 0.875rem;
-    font-family: $font-Noto;
-  }
-
-  &__two {
-    margin-top: 2.428%;
-    margin-bottom: 4.101%;
-    // font-size: 1rem;
-    font-size: 1.3125rem;
-    letter-spacing: 0.51px;
-
-    @include max-media(768) {
-      font-size: 0.875rem;
-    }
-  }
-
-  &__three {
-    color: #000000cc;
-    font-size: 0.75rem;
-    color: $text-color3;
-    text-decoration: underline;
-    font-family: $font-Noto;
-    margin-bottom: 5.105%;
-  }
-
   &__en {
     font-family: $font-Noto;
     margin-top: 11.825%;

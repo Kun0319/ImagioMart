@@ -29,28 +29,28 @@ const toggleFilterMenu = () => {
         <template #tags>
           <div class="md:flex hidden">
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'All(23)'" />
+              <TagButton :tag="'All'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Furniture(5)'" />
+              <TagButton :tag="'Furniture'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Dining(6)'" />
+              <TagButton :tag="'Dining'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Bath(5)'" />
+              <TagButton :tag="'Bath'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Kitchen(6)'" />
+              <TagButton :tag="'Kitchen'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wellness(5)'" />
+              <TagButton :tag="'Wellness'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wall(5)'" />
+              <TagButton :tag="'Wall'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Floor(6)'" />
+              <TagButton :tag="'Floor'" />
             </nuxt-link>
             <!-- 篩選按鈕 -->
             <div
@@ -91,7 +91,6 @@ const toggleFilterMenu = () => {
 }
 :deep(.line) {
   margin-top: 4.7357%;
-  margin-bottom: 0%;
 }
 
 .tag-button {

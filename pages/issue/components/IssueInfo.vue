@@ -110,7 +110,7 @@ watch(width, (newWidth) => {
 
 <style lang="scss" scoped>
 .issue {
-  margin-top: 7.75%;
+  margin-top: 12.3734%;
   margin-bottom: 9.72%;
 }
 

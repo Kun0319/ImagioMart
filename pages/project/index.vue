@@ -186,7 +186,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
 
 :deep(.line) {
   margin-top: 4.7357%;
-  margin-bottom: 10.24%;
+  // margin-bottom: 10.24%;
 }
 
 .rwd-margin {

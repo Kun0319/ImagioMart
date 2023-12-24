@@ -1,18 +1,22 @@
 <script setup></script>
 <template>
-  <slot name="title">
+  <!-- <slot name="title">
     <div class="slot-wrapper">
-      <p class="text__one">Scope｜129｜Brazil</p>
-      <div class="text__two">
+      <div class="flex items-center">
+        <p class="title--text__one">Scope｜129｜Brazil</p>
+        <i class="pi pi-heart mx-3 ml-auto"></i>
+        <i class="pi pi-share-alt"></i>
+      </div>
+      <div class="title--text__two">
         <p>House Pokrinniemi, Hämeenlinna, Finland</p>
         <p>芬蘭海門林納　雪地之家</p>
       </div>
-      <p class="text__three">文字．影像提供：SHANG XIA 上下</p>
+      <p class="title--text__three">文字．影像提供：SHANG XIA 上下</p>
       <div>
         <img src="~/assets/images/projectcontent1.png" alt="" class="w-full" />
       </div>
     </div>
-  </slot>
+  </slot> -->
   <div class="grid grid-cols-12 md:gap-8 gap-4">
     <slot name="image1">
       <div class="col-span-12">

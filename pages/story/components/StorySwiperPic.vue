@@ -81,10 +81,6 @@ import { Scrollbar, Autoplay } from "swiper/modules";
   </div>
 </template>
 <style lang="scss" scoped>
-.swiperpic {
-  margin-top: 10%;
-}
-
 .project__text {
   @include min-media(1024) {
     margin-left: 10%;

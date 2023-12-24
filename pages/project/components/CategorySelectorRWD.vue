@@ -4,7 +4,7 @@ import { useGlobalStore } from "@/stores/global.js";
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");
 const titles = ref({
-  categories: { en: "Categories", cn: "類別" },
+  categories: { en: "Categories", cn: "案例類別" },
   recentPosts: { en: "Recent Post", cn: "本週最新" },
   archive: { en: "Archive", cn: "年度精選" },
   popularTags: { en: "Popular Tags", cn: "熱門主題" },

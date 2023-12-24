@@ -57,6 +57,36 @@ const peopleopinion = ref([
     imageUrl: pic1,
     // "https://s3-alpha-sig.figma.com/img/d784/1682/c9760b6dffcbca25943d09ff67224e19?Expires=1702857600&Signature=fr0AiEO1QMlnQlHSe5RQtq2-AZOax778tRezRSwQ-jjAhJMiStYFMLtezXwO1cdDvpnsM38uhoQEZ56EUUMq6JbSXoF5HhkfpxH3qcAhAy0Zf~S9HYRnh7jYxMUHmJvmHpCgJjHla7xmDfR70l5NkdbMDRT9JnJb8nWt2tH~jN55lmn~8Zt8HtVtSvrD8mPmjS2b0lnkYaUIOcxBecBNSeSfSzmX72isxz0o6PIO27WcK54kWUkZ6bvQ8SOCabTVI8OnUrHi04zf-N14bRf0sG8hJPA20W9Y9XxOMnZNte0kzB2~umB-efIyT-mPSUvNSBjCL5DtUixFU2wgqf905Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
+  {
+    nameEn: "Patrick Norguet",
+    nameCn: "派屈克．諾蓋",
+    opinionEn:
+      "You cannot understand good design if you do not understand people. ",
+    opinionEnPeo: "Dieter Rams",
+    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+    imageUrl: pic3,
+    // "https://s3-alpha-sig.figma.com/img/7925/cbfe/6546d4a97adb89c599ab10e0dc442252?Expires=1702857600&Signature=lieMstKF4-VBFAp0Mi4vHPNclHR2KMUO0M1pz2cBcvPkUxrSHe~2vtgeyEUzdgQVoqLWQyhVS47XRXi1Ygu2xQt8cKd-d1WhbJDqtPwhBI~gPTSOB30c-DNpZzZld68-uFXKl06HPTVqbhKlgkyLyKWJSlTeGHGANli47Lra204iCcLqCPRph-JeAVOpaD2RmA5X4y~O8~8GtJ6gDtyweqsuZtnsb9hPiRdzDqyZ4txozQuxAMX4h4TPRUJB2TYr93ahcHuswC3aOpMTrYPLbHjUFKKJwqNvsGl~XKoTwVoLLLwPGFdYGmYFsg-dCQ57vyrUBxvA8tAt64OJIhRx0w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+  },
+  {
+    nameEn: "Patrick Norguet",
+    nameCn: "派屈克．諾蓋",
+    opinionEn:
+      "You cannot understand good design if you do not understand people. ",
+    opinionEnPeo: "Dieter Rams",
+    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+    imageUrl: pic4,
+    // "https://s3-alpha-sig.figma.com/img/68d0/2994/e74193bec00974ae150c6082132429b6?Expires=1702857600&Signature=LTzz-SvPnq3ojwKOtfc-oZT4vrUAgm7i02pL-n9Jj0rTbDQiLYxk6kZfcLfFy8W5bSquwtCHN1Plc2B~XCRDZBW6AZ0caT2AFTBPU8M2r3UUgqPgRUZKflJVlADuKfBJEdYSnWfpytoVWJjt3ekA5p3H-OWTqqTtA6cdY2y6ATiNNZPD1SzCTf4kl~7Y1H9Kv9LR2rQeJKDUUgZ8gtHJhLd9xAaHjkhiZvgdNFOBDZgBdUX2sogY7x0b7TGHNuoinf~OWmYPujO8iqtonJluzvp0zIrPldgJLNB5DZEPAPC1-IFCfcoHgFR9DG6R01FeJh-B3YrRUh9EwkB4mYH-EA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+  },
+  {
+    nameEn: "Patrick Norguet",
+    nameCn: "派屈克．諾蓋",
+    opinionEn:
+      "You cannot understand good design if you do not understand people. ",
+    opinionEnPeo: "Dieter Rams",
+    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+    imageUrl: pic1,
+    // "https://s3-alpha-sig.figma.com/img/d784/1682/c9760b6dffcbca25943d09ff67224e19?Expires=1702857600&Signature=fr0AiEO1QMlnQlHSe5RQtq2-AZOax778tRezRSwQ-jjAhJMiStYFMLtezXwO1cdDvpnsM38uhoQEZ56EUUMq6JbSXoF5HhkfpxH3qcAhAy0Zf~S9HYRnh7jYxMUHmJvmHpCgJjHla7xmDfR70l5NkdbMDRT9JnJb8nWt2tH~jN55lmn~8Zt8HtVtSvrD8mPmjS2b0lnkYaUIOcxBecBNSeSfSzmX72isxz0o6PIO27WcK54kWUkZ6bvQ8SOCabTVI8OnUrHi04zf-N14bRf0sG8hJPA20W9Y9XxOMnZNte0kzB2~umB-efIyT-mPSUvNSBjCL5DtUixFU2wgqf905Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+  },
 ]);
 </script>
 <template>
@@ -109,6 +139,11 @@ const peopleopinion = ref([
 .opinion {
   margin-top: 12.062%;
   margin-bottom: 19.098%;
+
+  @include max-media(768) {
+
+    margin-top:31.0318%
+  }
 }
 
 .photo {
@@ -197,6 +232,7 @@ const peopleopinion = ref([
     @include max-media(1200) {
       width: 80%;
     }
+
     @include max-media(768) {
       display: none;
     }
@@ -216,6 +252,7 @@ const peopleopinion = ref([
 
 .text {
   @apply flex-col md:col-span-6 md:col-start-6 col-span-12 self-end md:text-left text-center;
+
   &__rwd {
     margin-top: 7.3991%;
     margin-bottom: 12.5786%;
@@ -257,7 +294,7 @@ const peopleopinion = ref([
   &__opinionCn {
     font-size: 0.875rem;
     margin-top: 4.2903%;
-    margin-bottom:13.0496%;
+    margin-bottom: 13.0496%;
 
     @include max-media(768) {
       text-align: left;
@@ -272,5 +309,4 @@ const peopleopinion = ref([
       margin-bottom: 9.8884%;
     }
   }
-}
-</style>
+}</style>

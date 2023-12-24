@@ -30,28 +30,28 @@ const toggleFilterMenu = () => {
         <template #tags>
           <div class="tags-container">
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'All(23)'" />
+              <TagButton :tag="'All'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Furniture(5)'" />
+              <TagButton :tag="'Furniture'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Dining(6)'" />
+              <TagButton :tag="'Dining'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Bath(5)'" />
+              <TagButton :tag="'Bath'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Kitchen(6)'" />
+              <TagButton :tag="'Kitchen'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wellness(5)'" />
+              <TagButton :tag="'Wellness'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wall(5)'" />
+              <TagButton :tag="'Wall'" />
             </nuxt-link>
             <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Floor(6)'" />
+              <TagButton :tag="'Floor'" />
             </nuxt-link>
             <!-- 篩選按鈕 -->
             <div class="icon-container" @click="toggleFilterMenu">
@@ -77,8 +77,14 @@ const toggleFilterMenu = () => {
       <StoryInfo />
       <StoryInfo />
       <StoryInfo />
+      <StoryInfo />
+      <StoryInfo />
+      <StoryInfo />
+      <StoryInfo />
     </div>
-    <Paginator />
+    <div class="rwd-wrap">
+      <Paginator />
+    </div>
     <div class="grid-cols-12 gap-12 md:grid hidden advertise inner-wrap">
       <div class="col-span-4" v-for="n in 6" :key="n">
         <LittleAdvertise />
@@ -90,7 +96,7 @@ const toggleFilterMenu = () => {
 <style lang="scss" scoped>
 :deep(.line) {
   margin-top: 4.7357%;
-  margin-bottom: 0%;
+
   @include max-media(768) {
     // margin-bottom: 24%;
   }
@@ -106,7 +112,6 @@ const toggleFilterMenu = () => {
   flex-wrap: wrap;
   @include max-media(1024) {
     justify-content: start;
-
     @include max-media(500) {
       justify-content: space-around;
     }
@@ -146,7 +151,7 @@ const toggleFilterMenu = () => {
 }
 
 .overlay {
-  @include max-media(1024) {
+  @include max-media(768) {
     position: fixed;
     top: 0;
     left: 0;

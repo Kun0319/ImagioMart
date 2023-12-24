@@ -46,14 +46,16 @@ const groupedFilterList = computed(() => {
   display: flex;
   align-items: self-start;
   border: 1px solid #a1a1a1;
-  width: 30%;
+  width: 35%;
   background-color: white;
   padding-top: 2%;
   z-index: 40;
   height: 100%;
-  @include max-media(1024) {
+  margin-top: -6.5773%;
+  @include max-media(768) {
     width: 100%;
     flex-direction: column;
+    margin-top: 35%;
   }
 }
 
@@ -78,7 +80,7 @@ const groupedFilterList = computed(() => {
   margin: 0 10px;
   height: 14rem;
   margin-top: 9px;
-  @include max-media(1024) {
+  @include max-media(768) {
     display: none;
   }
 }
