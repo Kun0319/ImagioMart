@@ -32,10 +32,10 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
           </div>
         </div>
         <div class="index__gallery">
-          <div class="md:col-span-6 col-span-12 md:order-2 order-1">
+          <div class="md:col-span-6 col-span-12">
             <img src="~/assets/images/index2.jpeg" alt="" class="w-full" />
           </div>
-          <div class="text md:order-1 order-2">
+          <div class="text">
             <p class="text__en">Villa Butter, Gotland, Sweden</p>
             <p class="text__tc">瑞典哥特蘭島巴特別墅</p>
           </div>
