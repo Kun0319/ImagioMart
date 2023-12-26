@@ -115,8 +115,8 @@ const mobilemenuStyle = computed(() => {
         >
           <nuxt-link :to="item.link" class="menu__title">
             <div class="ins">
-              <span class="en">{{ isChinese ? item.name : item.nameZh }}</span>
-              <span class="tw">{{ isChinese ? item.nameZh : item.name }}</span>
+              <span class="tw">{{ isChinese ? item.name : item.nameZh }}</span>
+              <span class="en">{{ isChinese ? item.nameZh : item.name }}</span>
             </div>
           </nuxt-link>
           <div class="menu__drop" v-if="item.children">
@@ -126,7 +126,7 @@ const mobilemenuStyle = computed(() => {
               :key="childIndex"
             >
               <nuxt-link :to="childItem.link">{{
-                isChinese ? childItem.nameEn : childItem.nameCn
+                isChinese ? childItem.nameCn : childItem.nameEn
               }}</nuxt-link>
             </div>
           </div>
@@ -151,13 +151,13 @@ const mobilemenuStyle = computed(() => {
             ><img src="@/assets/icon/member.svg" alt=""
           /></nuxt-link>
         </div>
-        <div class="feature__icon">
+        <div class="feature__icon" @click="globalStore.toggleShoppingCart">
           <img src="@/assets/icon/bag.svg" alt="" />
         </div>
         <div class="feature__icon" @click="globalStore.toggleLanguage">
           <!-- <img src="../assets/icon/chinese.svg" alt="" /> -->
-          <img v-if="isChinese" src="../assets/icon/chinese.svg" alt="中文" />
-          <img v-else src="../assets/icon/english.svg" alt="English" />
+          <img v-if="isChinese" src="../assets/icon/english.svg" alt="中文" />
+          <img v-else src="../assets/icon/chinese.svg" alt="English" />
         </div>
       </div>
     </div>
@@ -217,7 +217,7 @@ const mobilemenuStyle = computed(() => {
             <nuxt-link to="/login"
               ><img src="@/assets/icon/member.svg" alt="" class=""
             /></nuxt-link>
-            <nuxt-link to="/login"
+            <nuxt-link to="/checkout"
               ><img src="@/assets/icon/bag.svg" alt="" class=""
             /></nuxt-link>
             <nuxt-link to=""

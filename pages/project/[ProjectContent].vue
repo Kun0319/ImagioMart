@@ -5,46 +5,17 @@ import PhotoGallery from "./components/PhotoGallery.vue";
 import RelatedProject from "./components/RelatedProject.vue";
 
 import { useRoute } from "vue-router";
+definePageMeta({
+  layout: "innerpage",
+});
 
 const route = useRoute();
 const projectId = route.params.ProjectShowcase;
 </script>
-<template lang="">
-  <NuxtLayout>
-    <BreadcrumbLine
-      text="Home&nbsp; /&nbsp; Project&nbsp; /&nbsp; furniture"
-      :showIcon="true"
-      :showTags="true"
-    >
-      <template #tags>
-        <div class="tags-container">
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'All'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Furniture'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Dining'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Bath'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Kitchen'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Wellness'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Wall'" />
-          </nuxt-link>
-          <nuxt-link to="/search/Dining" class="tag-button">
-            <TagButton :tag="'Floor'" />
-          </nuxt-link>
-        </div>
-      </template>
-    </BreadcrumbLine>
+<template>
+  <NuxtLayout
+    :breadcrumbText="'Home&nbsp; /&nbsp; Project&nbsp; /&nbsp; furniture'"
+  >
     <div class="inner-wrap">
       <TextImageBlock />
       <ImageGallery />
@@ -54,9 +25,14 @@ const projectId = route.params.ProjectShowcase;
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
+:deep(.icon__one) {
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 5%;
+}
 .icon {
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   margin-top: 2.37%;
 }
 

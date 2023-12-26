@@ -66,7 +66,6 @@ const clickyear = () => {
         {{ category.name }} ({{ category.count }})
       </button>
     </div>
-
     <!-- 本週最新 -->
     <div class="grid">
       <p class="selector__title">
@@ -80,7 +79,6 @@ const clickyear = () => {
         {{ post.name }}
       </button>
     </div>
-
     <!--年度精選-->
     <div class="">
       <p class="selector__title">
@@ -88,7 +86,7 @@ const clickyear = () => {
       </p>
       <div v-for="archive in archives" :key="archive.year" @click="clickyear">
         <button class="selector__options selectorbutton">
-          {{ archive.year }}
+          {{ archive.year }}&nbsp;+
         </button>
         <div v-for="month in archive.months" :key="month.name">
           <button
@@ -100,18 +98,15 @@ const clickyear = () => {
         </div>
       </div>
     </div>
-
     <!-- 熱門主題 -->
     <div class="grid grid-cols-12 gap-4 no-border-bottom">
       <p class="selector__title col-span-12">
         {{ isChinese ? titles.popularTags.cn : titles.popularTags.en }}
       </p>
-
       <button v-for="tag in popularTags" :key="tag" class="button col-span-6">
         {{ tag }}
       </button>
     </div>
-
     <div class="card">
       <img src="~/assets/images/projectcard.svg" alt="" class="card-image" />
       <div class="card-description">

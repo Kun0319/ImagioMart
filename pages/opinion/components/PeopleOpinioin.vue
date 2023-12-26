@@ -91,8 +91,12 @@ const peopleopinion = ref([
 </script>
 <template>
   <nuxt-link to="/opinion/1">
-    <div v-for="person in peopleopinion" :key="person.id" class="opinion flex grid grid-cols-12 gap-4">
-      <div class="photo__container md:col-span-5 col-span-12  ">
+    <div
+      v-for="person in peopleopinion"
+      :key="person.id"
+      class="opinion flex grid grid-cols-12 gap-4"
+    >
+      <div class="photo__container md:col-span-5 col-span-12">
         <img :src="person.imageUrl" alt="" class="photo" />
         <div class="overlay">
           <p class="text__designer">industrial designer｜工業設計師</p>
@@ -114,19 +118,21 @@ const peopleopinion = ref([
         </div>
         <!-- 觀點 想法 -->
         <p class="text__opinionEn text-left">
-          “{{ person.opinionEn }}”<span class="text__opinionEnPeo md:hidden">&nbsp; &nbsp;—{{ person.opinionEnPeo
-          }}</span>
+          “{{ person.opinionEn }}”<span class="text__opinionEnPeo md:hidden"
+            >&nbsp; &nbsp;—{{ person.opinionEnPeo }}</span
+          >
         </p>
 
         <p class="text__opinionEnPeo md:block hidden">
           &nbsp; &nbsp;—{{ person.opinionEnPeo }}
         </p>
         <p class="text__opinionCn">
-          「{{ person.opinionCn }} 」<span class="md:inline-block hidden">—{{ person.nameCn }}</span>
-        <p class="md:hidden">—{{ person.nameCn }}</p>
+          「{{ person.opinionCn }} 」<span class="md:inline-block hidden"
+            >—{{ person.nameCn }}</span
+          >
         </p>
 
-
+        <p class="md:hidden">—{{ person.nameCn }}</p>
 
         <!-- More -->
         <button class="more">MORE+</button>
@@ -141,8 +147,7 @@ const peopleopinion = ref([
   margin-bottom: 19.098%;
 
   @include max-media(768) {
-
-    margin-top:31.0318%
+    margin-top: 31.0318%;
   }
 }
 
@@ -156,20 +161,18 @@ const peopleopinion = ref([
   display: block;
   object-fit: cover;
 
-  @include max-media(1024) {}
+  @include max-media(1024) {
+  }
 
   @include max-media(768) {
     max-height: 269px;
     max-width: 191px;
-
   }
 
   &__container {
     display: flex;
     justify-content: center;
   }
-
-
 
   &__container {
     position: relative;
@@ -227,7 +230,7 @@ const peopleopinion = ref([
     top: 50%;
     left: 0px;
     width: 90%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
     @include max-media(1200) {
       width: 80%;
@@ -272,7 +275,7 @@ const peopleopinion = ref([
 
   &__nameCn {
     font-size: 1rem;
-    margin-bottom: 3.7540%;
+    margin-bottom: 3.754%;
 
     @include max-media(768) {
       font-size: 0.875rem;
@@ -309,4 +312,5 @@ const peopleopinion = ref([
       margin-bottom: 9.8884%;
     }
   }
-}</style>
+}
+</style>

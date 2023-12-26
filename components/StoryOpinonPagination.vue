@@ -57,6 +57,7 @@ defineProps({
   font-family: $font-Noto;
   font-size: 1rem;
   margin-left: 15%;
+  margin-top: 4.5%;
   margin-bottom: 4.5%;
 
   @include max-media(575) {

@@ -2,9 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@pinia/nuxt", "nuxt-swiper", "nuxt-primevue"],
-  swiper: {
-    modules: ["navigation", "pagination", "effect-creative"],
-  },
   css: ["@/assets/styles/main.scss"],
   vite: {
     css: {

@@ -66,4 +66,8 @@ import "swiper/css/pagination";
 .PaginationAdvertise {
   margin-bottom: 39.804%;
 }
+.photo {
+  max-width: 210px;
+  max-height: 142px;
+}
 </style>

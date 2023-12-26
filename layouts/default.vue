@@ -3,6 +3,7 @@
     <HeaderSearch />
     <Navbar />
     <ReturnTop />
+    <ShoppingCart />
     <main class="margin">
       <slot />
     </main>

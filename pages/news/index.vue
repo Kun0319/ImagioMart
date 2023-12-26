@@ -322,8 +322,8 @@ definePageMeta({
   }
 
   &__three {
-    // font-size: 1.125rem;
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
+    // font-size: 1.3125rem;
     letter-spacing: 0.51px;
     line-height: 24.96px;
     margin-top: 2.2889%;
@@ -331,7 +331,7 @@ definePageMeta({
     color: $text-color3;
 
     @include max-media(768) {
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
   }
 

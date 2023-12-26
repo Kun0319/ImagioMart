@@ -142,15 +142,16 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
         <SwiperPic />
         <div class="grid grid-cols-12 gap-4">
           <div
-            class="md:col-span-9 col-span-full grid grid-cols-10 gap-4 rwd-margin"
+            class="md:col-span-9 col-span-full grid grid-cols-12 gap-4 rwd-margin"
           >
             <!-- 子組件 -->
             <div
               v-for="project in projects"
               :key="project.id"
               :class="[
-                project.id % 2 !== 0 ? 'md:col-start-1' : 'md:col-start-6',
-                ' md:block hidden col-span-5  ',
+                project.id % 2 !== 0 ? 'md:col-start-1' : 'md:col-start-7',
+                ' md:block hidden col-span-6  ',
+                'justify-self-center',
               ]"
             >
               <ProjectShowcase :project="project" />
@@ -191,7 +192,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
 
 .rwd-margin {
   @include max-media(768) {
-    margin-top: 38.8457%;
+    margin-top: 31.0318%;
   }
 }
 

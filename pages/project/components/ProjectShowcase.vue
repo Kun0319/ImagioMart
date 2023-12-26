@@ -33,10 +33,11 @@ const props = defineProps({
   // max-width: 310px;
   // max-height: 210px;
 }
+
 .projectpic {
   width: 100%;
+  height: 90%;
 
-  height: 100%;
   @include min-media(768) {
     // margin-bottom: 36.0923%;
     margin-bottom: 10%;
@@ -50,9 +51,10 @@ const props = defineProps({
 
   &__pic {
     width: 100%;
-    // height: 100%;
+    height: 100%;
     // max-width: 310px;
     max-height: 210px;
+    // 圖片縮放
 
     @include min-media(1024) {
       max-width: 310px;

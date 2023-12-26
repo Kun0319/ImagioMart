@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <!-- <slot name="title">
+  <slot name="title">
     <div class="slot-wrapper">
       <div class="flex items-center">
         <p class="title--text__one">Scope｜129｜Brazil</p>
@@ -16,7 +16,7 @@
         <img src="~/assets/images/projectcontent1.png" alt="" class="w-full" />
       </div>
     </div>
-  </slot> -->
+  </slot>
   <div class="grid grid-cols-12 md:gap-8 gap-4">
     <slot name="image1">
       <div class="col-span-12">

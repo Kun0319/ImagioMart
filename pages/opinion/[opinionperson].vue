@@ -1,11 +1,16 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
+
 import { useRoute } from "vue-router";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Scrollbar } from "swiper/modules";
+
+import { Scrollbar, Mousewheel } from "swiper/modules";
 import RelatedOpinion from "./components/RelatedOpinion.vue";
+// import { Swiper, SwiperSlide } from "swiper/vue";
+
 import "swiper/css";
 import "swiper/css/scrollbar";
+
+// 安装 Swiper 模块
 
 definePageMeta({
   layout: "innerpage",
@@ -55,7 +60,6 @@ const slidesData = ref([
     projectLocation: "派屈克．諾蓋",
   },
 ]);
-const breadcrumbText = "Home/Story/Furniture";
 </script>
 
 <template>
@@ -230,134 +234,116 @@ const breadcrumbText = "Home/Story/Furniture";
             </div>
           </div>
         </div>
+        <!-- <p class="title">PHOTO GALLERY</p> -->
+        <p class="title">其他圖片</p>
 
         <Swiper
-          direction="'vertical'"
-          :modules="[Scrollbar]"
+          :direction="'vertical'"
+          :modules="[Scrollbar, Mousewheel]"
           :scrollbar="{ hide: false }"
-          :slidesPerView="1"
+          :mousewheel="true"
           :class="'swiper'"
+          :slidesPerView="2.3"
+          :spaceBetween="30"
         >
           <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
+            <div class="grid grid-cols-12 gap-8">
               <div class="col-span-3">
                 <img
                   src="~/assets/images/PhotoGallery1.png"
                   alt=""
-                  class="photo"
+                  class="photo__swiper"
                 />
               </div>
               <div class="col-span-3">
                 <img
                   src="~/assets/images/PhotoGallery2.png"
                   alt=""
-                  class="photo"
+                  class="photo__swiper"
                 />
               </div>
               <div class="col-span-3">
                 <img
                   src="~/assets/images/PhotoGallery3.png"
                   alt=""
-                  class="photo"
+                  class="photo__swiper"
                 />
               </div>
               <div class="col-span-3">
                 <img
                   src="~/assets/images/PhotoGallery4.png"
                   alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery5.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery6.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery7.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery8.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-            </div>
-            <div class="grid grid-cols-12 gap-4 mt-4">
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery1.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery2.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery3.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery4.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery5.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery6.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery7.png"
-                  alt=""
-                  class="photo"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery8.png"
-                  alt=""
-                  class="photo"
+                  class="photo__swiper"
                 />
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide> </SwiperSlide>
+          <SwiperSlide>
+            <div class="grid grid-cols-12 gap-8">
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery5.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery6.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery7.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery8.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div class="grid grid-cols-12 gap-8">
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery5.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery6.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery7.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+              <div class="col-span-3">
+                <img
+                  src="~/assets/images/PhotoGallery8.png"
+                  alt=""
+                  class="photo__swiper"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
         </Swiper>
+
         <div class="md:block hidden">
           <RelatedOpinion />
         </div>
@@ -374,12 +360,30 @@ const breadcrumbText = "Home/Story/Furniture";
 </template>
 
 <style lang="scss" scoped>
+.swiper {
+  height: 35vw;
+  // margin-bottom: 5%;
+  // padding-left: 2.5%;
+  // padding-right: 1%;
+  --swiper-scrollbar-sides-offset: 0%;
+
+  @include max-media(768) {
+    height: 150px;
+  }
+}
+
+.swiper-slide {
+  // height: 300px !important;
+  // margin-bottom: 20vh;
+}
+
 // 暫時
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;
   // margin-bottom: 5%;
 }
+
 .rwd-wrap {
   @include max-media(768) {
     margin-top: 20%;
@@ -390,10 +394,19 @@ const breadcrumbText = "Home/Story/Furniture";
   height: 100%;
   width: 100%;
 
+  &__swiper {
+    // width: 227.78px;
+    // height: 227.78px;
+    width: 13.18vw;
+    height: 13.18vw;
+    object-fit: cover;
+  }
+
   &__people {
     width: 27.78vw;
     height: 37.5vw;
     object-fit: contain;
+
     @include max-media(768) {
       min-width: 225px;
     }
@@ -413,13 +426,27 @@ const breadcrumbText = "Home/Story/Furniture";
   }
 }
 
+.title {
+  // font-size: 1.3125rem;
+  font-size: 1rem;
+  color: $text-color3;
+  letter-spacing: 1.56px;
+  // margin-top: 13.31%;
+  margin-bottom: 7.287%;
+
+  @include max-media(768) {
+    font-size: 0.875rem;
+  }
+}
+
 .text {
   &__designer {
     color: $text-color2;
     margin-bottom: 7.0428%;
-    margin-top: 10.34422%;
+    // margin-top: 10.34422%;
     // margin-top: 20.68844%;
     font-size: 1.375rem;
+
     // font-family: $font-Noto;
     @include max-media(768) {
       font-size: 0.625rem;
@@ -441,10 +468,12 @@ const breadcrumbText = "Home/Story/Furniture";
     // margin-bottom: 10.6523%;
     margin-bottom: 3.8735%;
     font-size: 1.3125rem;
+
     @include max-media(768) {
       font-size: 0.875rem;
     }
   }
+
   &__icon {
     margin-bottom: 3.8735%;
   }

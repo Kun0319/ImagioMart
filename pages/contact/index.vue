@@ -15,7 +15,7 @@ const submitForm = () => {
 <template>
   <NuxtLayout>
     <div class="contact-form-container">
-      <p class="text__title">聯絡我們</p>
+      <p class="text__title">Contact us</p>
       <form @submit.prevent="submitForm">
         <div class="form-group">
           <label for="name"> *姓名</label>
@@ -107,9 +107,11 @@ const submitForm = () => {
   &__info {
     font-size: 0.875rem;
     margin-bottom: 10.3682%;
+    line-height: 30.296px;
     @include max-media(768) {
       margin-bottom: 10.3682%;
       font-size: 0.625rem;
+      line-height: 21.64px;
     }
   }
 }
@@ -121,7 +123,7 @@ const submitForm = () => {
 }
 
 .form-group {
-  margin-bottom: 11.262%;
+  margin-bottom: 5.3628%;
 
   &__input {
     border: 0;

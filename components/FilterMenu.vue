@@ -49,6 +49,7 @@ const groupedFilterList = computed(() => {
   width: 35%;
   background-color: white;
   padding-top: 2%;
+  padding-bottom: 1%;
   z-index: 40;
   height: 100%;
   margin-top: -6.5773%;

@@ -1,6 +1,6 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 </script>
@@ -9,67 +9,110 @@ import "swiper/css/scrollbar";
   <div class="">
     <p class="title">PHOTO GALLERY</p>
     <Swiper
-      direction="'vertical'"
-      :modules="[Scrollbar]"
+      :direction="'vertical'"
+      :modules="[Scrollbar, Mousewheel]"
       :scrollbar="{ hide: false }"
-      :slidesPerView="1"
+      :mousewheel="true"
       :class="'swiper'"
+      :slidesPerView="2.3"
+      :spaceBetween="30"
     >
       <SwiperSlide>
-        <div class="grid grid-cols-12 gap-4">
+        <div class="grid grid-cols-12 gap-8">
           <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery1.png" alt="" class="photo" />
+            <img
+              src="~/assets/images/PhotoGallery1.png"
+              alt=""
+              class="photo__swiper"
+            />
           </div>
           <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery2.png" alt="" class="photo" />
+            <img
+              src="~/assets/images/PhotoGallery2.png"
+              alt=""
+              class="photo__swiper"
+            />
           </div>
           <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery3.png" alt="" class="photo" />
+            <img
+              src="~/assets/images/PhotoGallery3.png"
+              alt=""
+              class="photo__swiper"
+            />
           </div>
           <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery4.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery5.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery6.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery7.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery8.png" alt="" class="photo" />
-          </div>
-        </div>
-        <div class="grid grid-cols-12 gap-4 mt-4">
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery1.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery2.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery3.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery4.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery5.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery6.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery7.png" alt="" class="photo" />
-          </div>
-          <div class="col-span-3">
-            <img src="~/assets/images/PhotoGallery8.png" alt="" class="photo" />
+            <img
+              src="~/assets/images/PhotoGallery4.png"
+              alt=""
+              class="photo__swiper"
+            />
           </div>
         </div>
       </SwiperSlide>
-      <SwiperSlide> </SwiperSlide>
+      <SwiperSlide>
+        <div class="grid grid-cols-12 gap-8">
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery5.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery6.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery7.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery8.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div class="grid grid-cols-12 gap-8">
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery5.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery6.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery7.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+          <div class="col-span-3">
+            <img
+              src="~/assets/images/PhotoGallery8.png"
+              alt=""
+              class="photo__swiper"
+            />
+          </div>
+        </div>
+      </SwiperSlide>
     </Swiper>
     <!-- load more 按鈕 -->
     <div class="load">
@@ -140,11 +183,21 @@ import "swiper/css/scrollbar";
 .photo {
   width: 100%;
   height: 100%;
+  &__swiper {
+    // width: 227.78px;
+    // height: 227.78px;
+    width: 13.18vw;
+    height: 13.18vw;
+    object-fit: cover;
+  }
 }
 
 .swiper {
-  height: 500px;
-  margin-bottom: 13.6535%;
+  height: 35vw;
+  // margin-bottom: 5%;
+  // padding-left: 2.5%;
+  // padding-right: 1%;
+  --swiper-scrollbar-sides-offset: 0%;
 
   @include max-media(768) {
     height: 150px;

@@ -80,7 +80,8 @@
     max-width: 309px;
     font-size: 1rem;
     line-height: 30.18px;
-    margin-bottom: 3.7694%;
+    margin-bottom: 20.9694%;
+    margin-top: 13.0718%;
     justify-self: center;
 
     @include max-media(768) {

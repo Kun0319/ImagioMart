@@ -47,6 +47,7 @@
 }
 .image {
   width: 100%;
+  height: 100%;
   max-height: 210px;
   max-width: 310px;
   @include max-media(768) {

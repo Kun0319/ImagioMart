@@ -20,6 +20,7 @@ const props = defineProps({
     <HeaderSearch />
     <Navbar />
     <ReturnTop />
+    <ShoppingCart />
     <div class="filter__relative">
       <BreadcrumbLine :text="breadcrumbText" :showTags="true" :showIcon="true">
         <template #icon>
@@ -109,6 +110,10 @@ const props = defineProps({
     }
   }
 }
+:deep(.icon__one) {
+  display: flex;
+  justify-content: space-between;
+}
 .icon {
   display: flex;
   justify-content: flex-end;
@@ -118,6 +123,11 @@ const props = defineProps({
 .tag-button {
   margin-top: 3.35%;
   margin-bottom: 3.698%;
+  @include max-media(768) {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    min-height: 17px;
+  }
 }
 
 .tags-container {
@@ -135,9 +145,6 @@ const props = defineProps({
       justify-content: start;
     }
   }
-}
-:deep(.line) {
-  // margin-bottom: 0%;
 }
 
 .overlay {
