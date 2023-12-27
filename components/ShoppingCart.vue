@@ -95,8 +95,9 @@ const globalStore = useGlobalStore();
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   max-width: 480px;
-  // width: 27.78vw;
-  min-width: none;
+  // width: 100%;
+  // max-height: 100vh;
+  width: 27.78vw;
   // height: 915px;
   padding-left: 2.2047%;
   padding-right: 2.2047%;
@@ -104,7 +105,6 @@ const globalStore = useGlobalStore();
   padding-bottom: 2.5%;
   margin-top: 55px;
   position: fixed;
-  // right: 100%;
   top: 0;
   z-index: 50;
   transition: right 0.5s ease-in-out;
@@ -150,15 +150,18 @@ const globalStore = useGlobalStore();
 
 .photo {
   width: 100%;
-  height: 180px;
+  height: 100%;
+  max-height: 180px;
   object-fit: cover;
 }
 
 .button {
   border-radius: 0;
   // padding: 3% 10%;
-  width: 183px;
-  height: 45px;
+  max-width: 183px;
+  // height: 45px;
+  width: 10.59vw;
+  height: 2.6vw;
 
   &__container {
     margin-top: 5%;

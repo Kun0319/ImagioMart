@@ -59,6 +59,10 @@ const handleCanShowUpdate = (newCanShow) => {
 .inner-wrap {
   padding-left: 20.2649%;
   padding-right: 20.2649%;
+  @include max-media(768) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .welcome {

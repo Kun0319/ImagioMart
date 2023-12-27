@@ -18,6 +18,7 @@ import cover from "~/assets/images/SearchCover.png";
 <style lang="scss" scoped>
 .paginator {
   margin-bottom: 20%;
+  margin-top: 0;
 }
 
 .pagination-advertise {

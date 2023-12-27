@@ -100,7 +100,6 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
           :slidesPerView="1"
           :class="'swiper'"
         >
-          <!-- Autoplay -->
           <SwiperSlide>
             <div class="grid grid-cols-12 gap-4">
               <div class="md:col-span-5 col-span-6">

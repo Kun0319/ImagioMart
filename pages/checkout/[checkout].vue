@@ -55,12 +55,23 @@ function validateInput(selectorId, event) {
           <!-- 勾選運送 -->
           <div class="flex justify-around shipping__container">
             <div>
-              <input type="checkbox" name="宅配" />
-              <label for="">宅配</label>
+              <input
+                type="radio"
+                id="homeDelivery"
+                name="shippingMethod"
+                value="宅配"
+              />
+              <label for="homeDelivery">宅配</label>
             </div>
             <div>
-              <input type="checkbox" name="超商取貨" checked />
-              <label for="">超商取貨</label>
+              <input
+                type="radio"
+                id="storePickup"
+                name="shippingMethod"
+                value="超商取貨"
+                checked
+              />
+              <label for="storePickup">超商取貨</label>
             </div>
           </div>
           <!-- 勾選運送 -->

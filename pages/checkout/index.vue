@@ -258,6 +258,7 @@ function validateInput(selectorId, event) {
     max-width: 845px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+
     @include max-media(768) {
       border-top: none;
     }
@@ -273,6 +274,7 @@ function validateInput(selectorId, event) {
     line-height: 17.76px;
     font-weight: 400;
     margin-top: 4.8673%;
+
     @include max-media(768) {
       font-size: 0.875rem;
     }
@@ -283,11 +285,13 @@ function validateInput(selectorId, event) {
     line-height: 17.76px;
     margin-top: 21.6733%;
     margin-bottom: 26.7137%;
+
     @include max-media(768) {
       font-size: 0.75rem;
       margin-top: 10%;
     }
   }
+
   &__color {
     @extend .shopcart__price;
     margin-top: -15%;
@@ -299,23 +303,28 @@ function validateInput(selectorId, event) {
     line-height: 24px;
     letter-spacing: 0.051px;
     margin-bottom: 6.04838%;
+
     @include max-media(768) {
       font-size: 0.75rem;
     }
   }
+
   &__date {
     font-size: 0.75rem;
     color: $text-color3;
     line-height: 13.32px;
+
     @include max-media(768) {
       font-size: 0.625rem;
     }
   }
+
   &__del {
     font-size: 0.875rem;
     text-decoration: underline;
     line-height: 15.54px;
     text-align: center;
+
     @include max-media(768) {
       font-size: 0.75rem;
     }
@@ -348,6 +357,7 @@ function validateInput(selectorId, event) {
     margin-top: 5%;
   }
 }
+
 // 數字選擇器
 .quantity-selector {
   // display: flex;
