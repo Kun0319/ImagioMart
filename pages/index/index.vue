@@ -60,7 +60,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
         <!-- News -->
         <div class="news">
-          <div class="md:col-span-6 col-span-12 order-2">
+          <div class="md:col-span-6 col-span-12 md:order-1 order-2">
             <p class="text__title md:block hidden">NEWS</p>
             <div class="news__span">
               <span class="news__span__num">01</span>
@@ -84,7 +84,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
               <button class="btn__more">MORE+</button>
             </div>
           </div>
-          <div class="md:col-span-6 col-span-12 justify-self-center order-1">
+          <div
+            class="md:col-span-6 col-span-12 justify-self-center md:order-2 order-1"
+          >
             <p class="text__title text-center md:hidden">NEWS</p>
             <img src="~/assets/images/index5.png" alt="" class="photo__news" />
           </div>
@@ -193,6 +195,94 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
           :slidesPerView="1"
           :class="'swiper'"
         >
+          <SwiperSlide>
+            <div class="grid grid-cols-12 gap-4">
+              <div class="md:col-span-5 col-span-12 justify-self-center">
+                <img
+                  src="@/assets/images/opinion4.webp"
+                  alt=""
+                  class="photo__opinion"
+                />
+              </div>
+              <div class="md:col-span-6 col-span-12 flex-col self-center">
+                <p class="text__nameEn">Patrick Norguet</p>
+                <p class="text__nameCn">派屈克．諾蓋</p>
+                <!-- icon -->
+                <div class="line-container">
+                  <div class="line__opinion"></div>
+                  <!-- <div>
+                    <i class="pi pi-heart mx-3"></i>
+                    <i class="pi pi-share-alt"></i>
+                  </div>  -->
+                </div>
+                <p class="text__opinionEn text-left">
+                  “You cannot understand good design if you do not understand
+                  people.”
+                  <span class="text__opinionEnPeo md:hidden block"
+                    >&nbsp; &nbsp;—Dieter Rams</span
+                  >
+                </p>
+
+                <p class="text__opinionEnPeo md:block hidden">
+                  &nbsp; &nbsp;—Dieter Rams
+                </p>
+                <p class="text__opinionCn">
+                  「無法瞭解人，就無法瞭解何謂好的設計」
+                  <span class="md:inline-block hidden">—派屈克．諾蓋</span>
+                </p>
+
+                <p class="md:hidden text-center">—派屈克．諾蓋</p>
+                <!-- More -->
+                <div class="flex md:justify-start justify-center">
+                  <button class="btn__more">MORE+</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div class="grid grid-cols-12 gap-4">
+              <div class="md:col-span-5 col-span-12 justify-self-center">
+                <img
+                  src="@/assets/images/opinion4.webp"
+                  alt=""
+                  class="photo__opinion"
+                />
+              </div>
+              <div class="md:col-span-6 col-span-12 flex-col self-center">
+                <p class="text__nameEn">Patrick Norguet</p>
+                <p class="text__nameCn">派屈克．諾蓋</p>
+                <!-- icon -->
+                <div class="line-container">
+                  <div class="line__opinion"></div>
+                  <!-- <div>
+                    <i class="pi pi-heart mx-3"></i>
+                    <i class="pi pi-share-alt"></i>
+                  </div>  -->
+                </div>
+                <p class="text__opinionEn text-left">
+                  “You cannot understand good design if you do not understand
+                  people.”
+                  <span class="text__opinionEnPeo md:hidden block"
+                    >&nbsp; &nbsp;—Dieter Rams</span
+                  >
+                </p>
+
+                <p class="text__opinionEnPeo md:block hidden">
+                  &nbsp; &nbsp;—Dieter Rams
+                </p>
+                <p class="text__opinionCn">
+                  「無法瞭解人，就無法瞭解何謂好的設計」
+                  <span class="md:inline-block hidden">—派屈克．諾蓋</span>
+                </p>
+
+                <p class="md:hidden text-center">—派屈克．諾蓋</p>
+                <!-- More -->
+                <div class="flex md:justify-start justify-center">
+                  <button class="btn__more">MORE+</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
           <SwiperSlide>
             <div class="grid grid-cols-12 gap-4">
               <div class="md:col-span-5 col-span-12 justify-self-center">
@@ -511,6 +601,10 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
     &__num {
       margin-right: 8px;
+      font-size: 1.3125rem;
+      @include max-media(768) {
+        font-size: 0.75rem;
+      }
     }
   }
 }

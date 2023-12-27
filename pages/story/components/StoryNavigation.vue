@@ -1,13 +1,28 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation } from "swiper/modules";
-
+// 顏色選擇器
 const colors = ["#d53331", "#41b4bb", "#84b3d5", "#2f6db6"]; // 顏色
 const selectedColorIndex = ref(null); // 用于跟踪選中的颜色索引
 
+// 顏色選擇器
 function selectColor(index) {
   selectedColorIndex.value = index;
-  // 更新圖片或執行其他操作
+}
+// 數量選擇器
+const quantity = ref(1);
+function decreaseValue() {
+  if (quantity.value > 0) {
+    quantity.value--;
+  }
+}
+
+function increaseValue() {
+  quantity.value++;
+}
+
+function validateInput(event) {
+  quantity.value = parseInt(event.target.value.replace(/[^0-9]/g, ""), 10) || 0;
 }
 </script>
 
@@ -58,9 +73,14 @@ function selectColor(index) {
 
         <!-- 數量選擇器 -->
         <div class="quantity-selector col-span-6 order-3">
-          <button class="decrease" onclick="decreaseValue()">-</button>
-          <input type="number" id="quantity" value="1" />
-          <button class="increase" onclick="increaseValue()">+</button>
+          <button class="decrease" @click="decreaseValue">-</button>
+          <input
+            type="text"
+            id="quantity"
+            :value="quantity"
+            @input="validateInput"
+          />
+          <button class="increase" @click="increaseValue">+</button>
         </div>
         <div class="shopcart col-span-6 order-4">
           <button class="info__shopcart md:hidden block">ADD TO CART</button>
@@ -202,7 +222,7 @@ function selectColor(index) {
   cursor: pointer;
 }
 
-.quantity-selector input[type="number"] {
+.quantity-selector input[type="text"] {
   text-align: center;
   border: none;
   width: 30px;

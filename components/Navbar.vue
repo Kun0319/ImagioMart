@@ -217,7 +217,7 @@ const mobilemenuStyle = computed(() => {
             <nuxt-link to="/login"
               ><img src="@/assets/icon/member.svg" alt="" class=""
             /></nuxt-link>
-            <nuxt-link to="/checkout"
+            <nuxt-link to="/" @click="globalStore.toggleShoppingCart"
               ><img src="@/assets/icon/bag.svg" alt="" class=""
             /></nuxt-link>
             <nuxt-link to=""

@@ -94,7 +94,9 @@ const globalStore = useGlobalStore();
 .shopcart {
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 480px;
+  max-width: 480px;
+  // width: 27.78vw;
+  min-width: none;
   // height: 915px;
   padding-left: 2.2047%;
   padding-right: 2.2047%;
@@ -106,7 +108,9 @@ const globalStore = useGlobalStore();
   top: 0;
   z-index: 50;
   transition: right 0.5s ease-in-out;
-
+  @include max-media(768) {
+    width: 372px;
+  }
   &__my {
     font-size: 1.3125rem;
     font-weight: 700;
