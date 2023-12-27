@@ -138,11 +138,11 @@ const props = defineProps({
     justify-content: start;
 
     @include max-media(500) {
-      justify-content: space-around;
+      justify-content: start;
     }
 
     @include max-media(396) {
-      justify-content: start;
+      justify-content: space-around;
     }
   }
 }

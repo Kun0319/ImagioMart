@@ -27,8 +27,10 @@ const groupedFilterList = computed(() => {
 });
 </script>
 <template>
-  <div class="category-grid flex-row">
-    <!-- <p>{{ FilterTotal.name }} ({{ FilterTotal.count }})</p> -->
+  <div class="category-title">
+    <p>{{ FilterTotal.name }} ({{ FilterTotal.count }})</p>
+  </div>
+  <div class="category-grid">
     <template v-for="(group, index) in groupedFilterList" :key="index">
       <ul class="category-column">
         <li v-for="filter in group" :key="filter.name" class="category-item">
@@ -53,6 +55,7 @@ const groupedFilterList = computed(() => {
   z-index: 40;
   height: 100%;
   margin-top: -6.5773%;
+
   @include max-media(768) {
     width: 100%;
     flex-direction: column;
@@ -66,8 +69,10 @@ const groupedFilterList = computed(() => {
   padding-left: 10%;
   color: $text-color3;
   width: 100%;
+
   @include max-media(768) {
     grid-template-rows: repeat(auto-fill, auto);
+    // flex-direction: column;
   }
 }
 
@@ -81,8 +86,14 @@ const groupedFilterList = computed(() => {
   margin: 0 10px;
   height: 14rem;
   margin-top: 9px;
+
   @include max-media(768) {
     display: none;
   }
+}
+
+.category-title {
+  width: 100%;
+  padding: 1%;
 }
 </style>

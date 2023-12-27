@@ -173,7 +173,7 @@ const mobilemenuStyle = computed(() => {
       </div>
       <button
         class="mobile-menu-button"
-        @click="globalStore.toggleHamburgerMenu()"
+        @click="globalStore.toggleHamburgerMenu"
         title="選單按鈕"
       >
         <div class="line" :class="{ cross1: globalStore.showMeun }"></div>
@@ -217,7 +217,12 @@ const mobilemenuStyle = computed(() => {
             <nuxt-link to="/login"
               ><img src="@/assets/icon/member.svg" alt="" class=""
             /></nuxt-link>
-            <nuxt-link to="/" @click="globalStore.toggleShoppingCart"
+            <nuxt-link
+              to="/"
+              @click="
+                globalStore.toggleShoppingCart(),
+                  globalStore.toggleHamburgerMenu()
+              "
               ><img src="@/assets/icon/bag.svg" alt="" class=""
             /></nuxt-link>
             <nuxt-link to=""

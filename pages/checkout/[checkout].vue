@@ -21,6 +21,21 @@ function validateInput(selectorId, event) {
   const value = parseInt(event.target.value.replace(/[^0-9]/g, ""), 10) || 0;
   quantities[selectorId] = value;
 }
+
+const selectedOption = ref(null);
+
+// 更新选中状态的函数
+const updateSelection = (value) => {
+  if (selectedOption.value === value) {
+    // 如果选项已经被选中，则取消选中
+    selectedOption.value = null;
+  } else {
+    // 否则，设置为当前选中的选项
+    selectedOption.value = value;
+  }
+};
+const selectedInvoiceType = ref("");
+const selectedSubOption = ref("");
 </script>
 <template lang="">
   <NuxtLayout>
@@ -40,11 +55,11 @@ function validateInput(selectorId, event) {
             <input type="text" id="fullname" placeholder="全名" class="input" />
           </div>
           <div class="input-group">
-            <label for="">*</label>
+            <label for="" class="required">*</label>
             <input type="text" placeholder="電子郵件" class="input" />
           </div>
           <div class="input-group">
-            <label for="">*</label>
+            <label for="" class="required">*</label>
             <input
               type="number"
               placeholder="手機號碼(請輸入純數字不含空格)"
@@ -53,54 +68,156 @@ function validateInput(selectorId, event) {
           </div>
           <p class="info__title">運送方式</p>
           <!-- 勾選運送 -->
-          <div class="flex justify-around shipping__container">
-            <div>
-              <input
-                type="radio"
-                id="homeDelivery"
-                name="shippingMethod"
-                value="宅配"
-              />
-              <label for="homeDelivery">宅配</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="storePickup"
-                name="shippingMethod"
-                value="超商取貨"
-                checked
-              />
-              <label for="storePickup">超商取貨</label>
+          <div class="flex shipping__container justify-center">
+            <div class="flex justify-between w-8/12">
+              <div>
+                <input
+                  type="checkbox"
+                  :checked="selectedOption === 'option1'"
+                  @change="updateSelection('option1')"
+                />
+                宅配
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  :checked="selectedOption === 'option2'"
+                  @change="updateSelection('option2')"
+                />
+                超商取貨
+              </div>
             </div>
           </div>
           <!-- 勾選運送 -->
-
-          <div class="input-group">
-            <label for="" class="input__shipping">*</label>
-            <input type="text" placeholder="7-11 / 全家" class="input" />
+          <!-- 超商 -->
+          <div v-if="selectedOption === 'option2'">
+            <div class="input-group">
+              <label for="storeSelect" class="input__shipping">*</label>
+              <select id="storeSelect" class="input">
+                <option value="" class="input__option" disabled selected hidden>
+                  7-11 / 全家
+                </option>
+                <option value="sevenEleven" class="input__option">7-11</option>
+                <option value="familyMart" class="input__option">全家</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="" class="input__shipping">*</label>
+              <input type="text" placeholder="門市名稱" class="input" />
+            </div>
           </div>
-          <div class="input-group">
-            <label for="" class="input__shipping">*</label>
-            <input type="text" placeholder="門市名稱" class="input" />
-          </div>
+          <!-- 宅配 -->
           <!-- 發票區塊 -->
           <p class="info__title">發票開立</p>
-          <div>
-            <input type="checkbox" name="" checked />
-            <label for="">個人</label>
+          <!-- 個人雲端 -->
+          <div class="flex flex-col gap-6 input__invoice">
+            <div>
+              <input
+                type="checkbox"
+                id="personalCloud"
+                :checked="selectedInvoiceType === 'personalCloud'"
+                @change="
+                  selectedInvoiceType =
+                    selectedInvoiceType === 'personalCloud'
+                      ? ''
+                      : 'personalCloud'
+                "
+              />
+              <label for="personalCloud">個人雲端發票</label>
+              <div
+                class="flex justify-center"
+                v-if="selectedInvoiceType === 'personalCloud'"
+              >
+                <div
+                  v-if="selectedInvoiceType === 'personalCloud'"
+                  class="flex justify-between w-8/12 mt-4"
+                >
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="mobileBarcode"
+                      :checked="selectedSubOption === 'mobileBarcode'"
+                      @change="
+                        selectedSubOption =
+                          selectedSubOption === 'mobileBarcode'
+                            ? ''
+                            : 'mobileBarcode'
+                      "
+                    />
+                    <label for="mobileBarcode" class="input__invoice__text"
+                      >手機條碼</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="citizenCertificate"
+                      :checked="selectedSubOption === 'citizenCertificate'"
+                      @change="
+                        selectedSubOption =
+                          selectedSubOption === 'citizenCertificate'
+                            ? ''
+                            : 'citizenCertificate'
+                      "
+                    />
+                    <label for="citizenCertificate" class="input__invoice__text"
+                      >自然人憑證</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 個人雲端 -->
+            <!-- 個人紙本 -->
+            <div>
+              <input
+                type="checkbox"
+                id="personalPaper"
+                :checked="selectedInvoiceType === 'personalPaper'"
+                @change="
+                  selectedInvoiceType =
+                    selectedInvoiceType === 'personalPaper'
+                      ? ''
+                      : 'personalPaper'
+                "
+              />
+              <label for="personalPaper">個人紙本發票證明聯</label>
+            </div>
+            <div>
+              <p class="input__invoice__text">
+                我們將於收貨七天後寄出紙本證明聯，敬請妥善保存。
+              </p>
+            </div>
+            <!-- 公司統編 -->
+            <div>
+              <input
+                type="checkbox"
+                id="companyElectronic"
+                :checked="selectedInvoiceType === 'companyElectronic'"
+                @change="
+                  selectedInvoiceType =
+                    selectedInvoiceType === 'companyElectronic'
+                      ? ''
+                      : 'companyElectronic'
+                "
+              />
+              <label for="companyElectronic">公司戶電子發票證明聯</label>
+            </div>
+            <div
+              class="flex w-full"
+              v-if="selectedInvoiceType === 'companyElectronic'"
+            >
+              <label for="" class="required">*</label>
+              <input type="text" placeholder="統一編號" class="input" />
+            </div>
+            <p class="input__invoice__text">
+              我們將於收貨七天後電子證明聯，敬請妥善保存。
+            </p>
           </div>
-          <div>
-            <input type="checkbox" name="" />
-            <label for="">公司</label>
-          </div>
-          <div class="input-group">
-            <label for="">*</label>
-            <input type="text" placeholder="統一編號" class="input" />
-          </div>
-          <!-- 發票區塊 -->
+          <!-- 公司統編 -->
+
           <!-- 付款區塊 -->
-          <p class="info__title">付款方式</p>
+          <p class="info__title mt-8">付款方式</p>
           <div class="flex">
             <div>
               <input type="checkbox" name="" checked />
@@ -114,7 +231,7 @@ function validateInput(selectorId, event) {
           <!-- 付款區塊 -->
           <textarea
             placeholder="Message"
-            class="form-group__input h-32"
+            class="form-group__input h-32 mt-8"
             required
           ></textarea>
           <div>
@@ -219,7 +336,9 @@ function validateInput(selectorId, event) {
               <p>總計</p>
               <p>NT$660</p>
             </div>
-            <button class="button w-full">訂單確認</button>
+            <div class="flex justify-center">
+              <button class="button md:w-full w-2/5">訂單確認</button>
+            </div>
           </div>
         </div>
       </div>
@@ -227,6 +346,10 @@ function validateInput(selectorId, event) {
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
+// 必填符號間距
+.required {
+  padding-right: 2.5%;
+}
 .tabs {
   margin-bottom: 0;
 }
@@ -243,6 +366,7 @@ function validateInput(selectorId, event) {
 
     @include max-media(768) {
       margin-top: 0;
+      margin-bottom: 28.7452%;
     }
   }
 
@@ -260,8 +384,8 @@ function validateInput(selectorId, event) {
     border-right: 1px solid #000000;
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
     @include max-media(768) {
       border-right: 0;
     }
@@ -287,6 +411,9 @@ function validateInput(selectorId, event) {
     display: flex;
     justify-content: flex-end;
   }
+  &.input option {
+    color: $text-color3;
+  }
 
   &::placeholder {
     color: #cecece;
@@ -306,6 +433,23 @@ function validateInput(selectorId, event) {
   //   運送input
   &__shipping {
     padding-left: 10%;
+    padding-right: 2.5%;
+  }
+  // 發票字樣
+  &__invoice {
+    font-size: 1rem;
+    color: $text-color3;
+    @include max-media(768) {
+      font-size: 0.75rem;
+    }
+    &__text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      letter-spacing: 0.016px;
+      @include max-media(768) {
+        font-size: 0.625rem;
+      }
+    }
   }
 }
 
@@ -315,6 +459,9 @@ function validateInput(selectorId, event) {
     margin-bottom: 9.5315%;
     font-weight: 400;
     color: $text-color3;
+    @include max-media(768) {
+      font-size: 0.875rem;
+    }
   }
 }
 
@@ -372,6 +519,9 @@ function validateInput(selectorId, event) {
   letter-spacing: 0.016px;
   color: $text-color3;
   margin-bottom: 4.8297%;
+  @include max-media(768) {
+    font-size: 0.875rem;
+  }
 
   &__margin {
     margin-top: auto;
@@ -391,5 +541,8 @@ function validateInput(selectorId, event) {
   color: #000000;
   font-weight: 700;
   height: 45px;
+  @include max-media(768) {
+    font-size: 0.625rem;
+  }
 }
 </style>

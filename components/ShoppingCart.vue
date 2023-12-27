@@ -98,7 +98,6 @@ const globalStore = useGlobalStore();
   // width: 100%;
   // max-height: 100vh;
   width: 27.78vw;
-  // height: 915px;
   padding-left: 2.2047%;
   padding-right: 2.2047%;
   padding-top: 2.5%;
@@ -109,7 +108,8 @@ const globalStore = useGlobalStore();
   z-index: 50;
   transition: right 0.5s ease-in-out;
   @include max-media(768) {
-    width: 372px;
+    min-width: 372px;
+    min-height: 709px;
   }
   &__my {
     font-size: 1.3125rem;
@@ -162,6 +162,8 @@ const globalStore = useGlobalStore();
   // height: 45px;
   width: 10.59vw;
   height: 2.6vw;
+  min-width: 142px;
+  min-height: 35px;
 
   &__container {
     margin-top: 5%;
