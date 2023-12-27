@@ -23,7 +23,7 @@ defineProps({
 
   @include max-media(768) {
     // margin-top: 15px;
-    min-width: 393px;
+    // min-width: 393px;
     min-height: 148px;
   }
 }

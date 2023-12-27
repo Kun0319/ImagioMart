@@ -1,6 +1,7 @@
 <script setup>
 import PeopleOpinioin from "./components/PeopleOpinioin.vue";
 import cover from "~/assets/images/opinion.png";
+import FilterMenu from "~/components/FilterMenu.vue";
 
 const FilterMenuOpen = ref(false);
 
@@ -85,6 +86,10 @@ const toggleFilterMenu = () => {
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
+// 消除FilterMenu共用組件margin-top
+.filter__menu {
+  margin-top: 6.5773%;
+}
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;

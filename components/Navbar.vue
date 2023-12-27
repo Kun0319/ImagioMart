@@ -139,6 +139,7 @@ const mobilemenuStyle = computed(() => {
         <div
           class="feature__icon feature__icon__search"
           @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
+          title="搜尋"
         >
           <img
             @click="globalStore.toggleSearchBar"
@@ -147,14 +148,22 @@ const mobilemenuStyle = computed(() => {
           />
         </div>
         <div class="feature__icon">
-          <nuxt-link to="/login"
+          <nuxt-link to="/login" title="IW會員中心"
             ><img src="@/assets/icon/member.svg" alt=""
           /></nuxt-link>
         </div>
-        <div class="feature__icon" @click="globalStore.toggleShoppingCart">
+        <div
+          class="feature__icon"
+          @click="globalStore.toggleShoppingCart"
+          title="購物車"
+        >
           <img src="@/assets/icon/bag.svg" alt="" />
         </div>
-        <div class="feature__icon" @click="globalStore.toggleLanguage">
+        <div
+          class="feature__icon"
+          @click="globalStore.toggleLanguage"
+          title="切換語言"
+        >
           <!-- <img src="../assets/icon/chinese.svg" alt="" /> -->
           <img v-if="isChinese" src="../assets/icon/english.svg" alt="中文" />
           <img v-else src="../assets/icon/chinese.svg" alt="English" />
