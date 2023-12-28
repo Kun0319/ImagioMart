@@ -271,7 +271,8 @@ const groupedData = computed(() => {
   width: 100%;
   max-width: 26.57vw;
   height: 100%;
-  min-height: 18vw;
+  // min-height: 18vw;
+  aspect-ratio: 16/10;
 }
 
 // 分組標題樣式

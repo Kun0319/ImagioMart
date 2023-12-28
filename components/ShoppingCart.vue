@@ -19,7 +19,7 @@ const globalStore = useGlobalStore();
         @click="globalStore.toggleShoppingCart"
       />
     </div>
-    <div class="shopcart__items first-item">
+    <div class="shopcart__items">
       <p class="col-span-12 shopcart__category">期刊</p>
       <div class="col-span-5">
         <img
@@ -48,7 +48,7 @@ const globalStore = useGlobalStore();
         <p class="">TWD$300</p>
       </div>
     </div>
-    <div class="shopcart__items">
+    <div class="shopcart__items last-item">
       <p class="col-span-12 shopcart__category">選物</p>
       <div class="col-span-5">
         <img
@@ -107,10 +107,9 @@ const globalStore = useGlobalStore();
   top: 0;
   z-index: 50;
   transition: right 0.5s ease-in-out;
-  @include max-media(768) {
-    min-width: 372px;
-    min-height: 709px;
-  }
+  min-width: 372px;
+  min-height: 709px;
+
   &__my {
     font-size: 1.3125rem;
     font-weight: 700;
@@ -124,8 +123,8 @@ const globalStore = useGlobalStore();
     border-bottom: 1px solid #e8e8e8;
     margin-bottom: 9.7347%;
 
-    &.first-item {
-      border-bottom: none;
+    &.last-item {
+      border-top: none;
     }
   }
 
@@ -134,17 +133,27 @@ const globalStore = useGlobalStore();
     line-height: 15.54px;
     font-weight: 400;
     margin-top: 4.8673%;
+    @include max-media(768) {
+      font-size: 0.75rem;
+    }
   }
 
   &__name {
     font-size: 1rem;
     line-height: 24px;
+    @include max-media(768) {
+      font-size: 0.75rem;
+    }
   }
 
   &__price {
     font-size: 1rem;
     line-height: 24px;
     letter-spacing: 0.051px;
+    margin-bottom: 10%;
+    @include max-media(768) {
+      font-size: 0.75rem;
+    }
   }
 }
 
