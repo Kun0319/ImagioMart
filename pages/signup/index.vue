@@ -1,4 +1,19 @@
-<script setup></script>
+<script setup>
+import { useRouter } from "vue-router";
+const selected = ref("");
+const router = useRouter();
+const updateSelection = (choice) => {
+  if (selected.value === choice) {
+    selected.value = ""; // 如果當前選項已選，則取消選擇
+  } else {
+    selected.value = choice; // 否則設置為當前選擇
+  }
+};
+
+const handleSubmit = () => {
+  router.push("/login");
+};
+</script>
 <template>
   <div>
     <NuxtLayout>
@@ -19,14 +34,26 @@
               <div class="flex signup__text">
                 <p class="mr-10 mb-10">我要註冊</p>
                 <div class="mr-10">
-                  <input type="checkbox" id="reader" />
+                  <input
+                    type="checkbox"
+                    id="reader"
+                    :checked="selected === 'reader'"
+                    @change="updateSelection('reader')"
+                  />
                   <label for="reader">讀者</label>
                 </div>
                 <div class="">
-                  <input type="checkbox" id="designer" />
+                  <input
+                    type="checkbox"
+                    id="designer"
+                    :checked="selected === 'designer'"
+                    @change="updateSelection('designer')"
+                  />
                   <label for="designer"
                     >設計師
-                    <nuxt-link to="/" class="">投稿須知</nuxt-link></label
+                    <nuxt-link to="/" class=""
+                      ><span class="underline ml-2">投稿須知</span></nuxt-link
+                    ></label
                   >
                 </div>
               </div>
@@ -42,6 +69,14 @@
                 >
                 <input type="text" id="name" class="form-input" />
               </div>
+              <!-- 工作室/事務所名稱 -->
+              <div class="form-group" v-if="selected === 'designer'">
+                <label for="userInput" class="form-label signup__text required">
+                  工作室/事務所名稱</label
+                >
+                <input type="text" id="userInput" class="form-input" />
+              </div>
+              <!-- 工作室/事務所名稱 -->
               <!-- 電話 -->
               <div class="form-group">
                 <label for="phone" class="form-label signup__text required"
@@ -136,7 +171,7 @@
                   >
                 </div>
               </div>
-              <button class="signup__btn">送出</button>
+              <button class="signup__btn" @click="handleSubmit">送出</button>
             </form>
           </div>
         </div>
@@ -159,6 +194,7 @@
       margin-top: 24.4947%;
     }
   }
+
   &__description {
     margin-bottom: 9.6273%;
 
@@ -192,9 +228,11 @@
 
   &__text {
     font-size: 1rem;
+
     @include max-media(768) {
       font-size: 0.75rem;
     }
+
     &::before {
       content: "*";
       color: rgb(0, 0, 0);
@@ -226,6 +264,7 @@
     text-align: left;
     flex-direction: column;
     margin-bottom: 40px;
+
     & label {
       &::before {
         content: "*";
@@ -246,6 +285,7 @@
   color: $text-color3;
   text-decoration: underline;
 }
+
 // 隱私條款
 .privacypolicy {
   font-size: 0.75rem;
@@ -257,11 +297,13 @@
     margin-bottom: 11.2451%;
   }
 }
+
 // 勾選
 .radio-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15.3325%;
+
   @include max-media(768) {
     margin-bottom: 23.8824%;
   }
@@ -285,6 +327,7 @@
   // font-size: 1rem;
   color: $text-color3;
   line-height: 24px;
+
   @include max-media(768) {
     font-size: 0.625rem;
   }
@@ -300,6 +343,7 @@
   height: 16px;
   background: white;
   border: 1px solid #000;
+
   @include max-media(768) {
     width: 12px;
     height: 12px;
@@ -318,6 +362,7 @@
   width: 5px;
   border-bottom: 2px solid #000;
   border-right: 2px solid #000;
+
   @include max-media(768) {
     top: 25%;
     left: 4px;

@@ -1,14 +1,26 @@
 <script setup>
+// 通知父组件
+const emit = defineEmits(["update:selectedTab"]);
 const selectedTab = ref(0);
+// 切換設計師
+// const emit = defineEmits(["update:canShow"]);
+
+// 切換設計師
+// const selectTab = (index) => {
+//   selectedTab.value = index;
+// };
+// 通知父组件
 const selectTab = (index) => {
   selectedTab.value = index;
+  emit("update:selectedTab", index); // 新增：通知父组件当前选中的标签索引
 };
+// 切換設計師
 const props = defineProps({
   canShow: Boolean,
 });
-const emit = defineEmits(["update:canShow"]);
 
-const canShowSubmissionTab = ref(props.canShow);
+// const canShowSubmissionTab = ref(props.canShow);
+
 const tabs = computed(() => {
   const baseTabs = [
     { label: "個人資料" },
@@ -24,10 +36,10 @@ const tabs = computed(() => {
 // 假設這是一個響應式參數，用於決定是否顯示 "作品投稿"
 // const canShowSubmissionTab = ref(false);
 
-const toggleTabVisibility = () => {
-  canShowSubmissionTab.value = !canShowSubmissionTab.value;
-  emit("update:canShow", canShowSubmissionTab.value);
-};
+// const toggleTabVisibility = () => {
+//   canShowSubmissionTab.value = !canShowSubmissionTab.value;
+//   emit("update:canShow", canShowSubmissionTab.value);
+// };
 </script>
 <template>
   <div class="tabs">
@@ -64,9 +76,12 @@ const toggleTabVisibility = () => {
 .tabs {
   display: flex;
   border-bottom: 3px solid #e0e0e0;
-  margin-bottom: 16.059%;
+  margin-bottom: 9.3775%;
   width: 100%;
   justify-content: space-around;
+  @include max-media(768) {
+    margin-bottom: 15.3092%;
+  }
 }
 
 .tab {

@@ -49,7 +49,7 @@ const globalStore = useGlobalStore();
       </div>
     </div>
     <div class="shopcart__items last-item">
-      <p class="col-span-12 shopcart__category">選物</p>
+      <p class="col-span-12 shopcart__category__nomargintop">選物</p>
       <div class="col-span-5">
         <img
           src="https://s3-alpha-sig.figma.com/img/87f0/103d/f9422d1ac4c0abb0148e40cbafcb7436?Expires=1704067200&Signature=jj~Jw8LWXupezgiam~686RtkNMOgmiC4HIEkj9xetEv6AIiPE0CTP0-GNIDyJpCZLPvbiNepklKXvLlnKtuebjF6S5ftZ4-EZghAaihciLEQBhdGoifLauqYY8kiVA-sjqMOAPF3qEO7E1ggcPVNBnRtDPGC-VekNWHP1l66CehRolSltVW9WvcnJOaK45TQjw8CR77LOsm0DWzJu7PzWbjp7SAxHUPbQ9QOUjS8tSQ04W1mRXe5I56D--1nRN~03xZGHD6CBTmaQLS3gw-STwuNOI16UEfhGyqVIJsmN1BeHPYcwpeIKrTRS71-UVeRowtd3hWn-AHUTO1cYUyvKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -94,21 +94,23 @@ const globalStore = useGlobalStore();
 .shopcart {
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  max-width: 480px;
-  // width: 100%;
-  // max-height: 100vh;
-  width: 27.78vw;
-  padding-left: 2.2047%;
-  padding-right: 2.2047%;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  width: 25vw;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 2%;
   margin-top: 55px;
   position: fixed;
   top: 0;
   z-index: 50;
   transition: right 0.5s ease-in-out;
+  max-width: 480px;
+  max-height: 100vh;
+  // min-height: 709px;
   min-width: 372px;
-  min-height: 709px;
+  @include max-media(768) {
+    max-height: 100vh;
+  }
 
   &__my {
     font-size: 1.3125rem;
@@ -133,14 +135,22 @@ const globalStore = useGlobalStore();
     line-height: 15.54px;
     font-weight: 400;
     margin-top: 4.8673%;
+
     @include max-media(768) {
       font-size: 0.75rem;
+    }
+
+    // 第二類型的category消除margin-top
+    &__nomargintop {
+      @extend .shopcart__category;
+      margin-top: 0;
     }
   }
 
   &__name {
     font-size: 1rem;
     line-height: 24px;
+
     @include max-media(768) {
       font-size: 0.75rem;
     }
@@ -151,6 +161,7 @@ const globalStore = useGlobalStore();
     line-height: 24px;
     letter-spacing: 0.051px;
     margin-bottom: 10%;
+
     @include max-media(768) {
       font-size: 0.75rem;
     }
@@ -160,7 +171,7 @@ const globalStore = useGlobalStore();
 .photo {
   width: 100%;
   height: 100%;
-  max-height: 180px;
+  max-height: 165px;
   object-fit: cover;
 }
 

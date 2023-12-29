@@ -190,7 +190,7 @@ const clickyear = () => {
   // > div:not(:first-child .card) {
   //   padding-top: 20%;
   // }
-  > div:not(:first-child .card) {
+  > div:not(:first-child):not(.card) {
     padding-top: 20%;
   }
 }

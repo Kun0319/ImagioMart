@@ -37,7 +37,7 @@ const menuLists = ref([
   {
     link: "../news",
     name: "News",
-    nameZh: "新訊",
+    nameZh: "最新訊息",
     hover: ref(false),
   },
   {
@@ -60,7 +60,7 @@ const menuLists = ref([
   {
     link: "../",
     name: "Competition",
-    nameZh: "競賽",
+    nameZh: "全球競賽",
     hover: ref(false),
     click: ref(false),
     children: [
@@ -333,7 +333,7 @@ header {
   &__title {
     display: flex;
     white-space: nowrap;
-    letter-spacing: 0.035rem;
+    // letter-spacing: 0.035rem;
     line-height: 50px;
     overflow: hidden;
 

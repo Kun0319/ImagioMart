@@ -3,6 +3,7 @@
 import cover from "~/assets/images/indexbg.png";
 import { Scrollbar, Autoplay } from "swiper/modules";
 import Magazine from "../issue/components/Magazine.vue";
+import "swiper/swiper-bundle.css";
 import picone from "~/assets/images/indexmagzineone.png";
 import pictwo from "~/assets/images/indexmagzinetwo.png";
 const magazines = Array.from({ length: 1 }, (_, index) => ({
@@ -15,7 +16,6 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 <template>
   <div>
     <NuxtLayout>
-      <ShoppingCart />
       <!-- 封面 -->
       <div>
         <Banner :imgSrc="cover" class="cover" />
@@ -28,12 +28,16 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
             <p class="text__tc">瑞典哥特蘭島巴特別墅</p>
           </div>
           <div class="md:col-span-6 col-span-12 md:order-2 order-1">
-            <img src="~/assets/images/index1.png" alt="" class="w-full" />
+            <img src="~/assets/images/index1.png" alt="" class="w-full photo" />
           </div>
         </div>
         <div class="index__gallery">
           <div class="md:col-span-6 col-span-12">
-            <img src="~/assets/images/index2.jpeg" alt="" class="w-full" />
+            <img
+              src="~/assets/images/index2.jpeg"
+              alt=""
+              class="w-full photo"
+            />
           </div>
           <div class="text">
             <p class="text__en">Villa Butter, Gotland, Sweden</p>
@@ -46,7 +50,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
             <p class="text__tc">瑞典哥特蘭島巴特別墅</p>
           </div>
           <div class="md:col-span-6 col-span-12 md:order-2 order-1">
-            <img src="~/assets/images/index3.png" alt="" class="w-full" />
+            <img src="~/assets/images/index3.png" alt="" class="w-full photo" />
           </div>
         </div>
         <!-- 廣告 -->
@@ -94,15 +98,15 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         <!-- Story -->
         <p class="text__title text-center">STORY</p>
         <swiper
-          :modules="[Scrollbar, Autoplay]"
+          :modules="[Scrollbar]"
           :scrollbar="{ hide: false, draggable: true }"
-          :autoplay="{ delay: 2000, disableOnInteraction: false }"
+          :autoplay="{ delay: 20000, disableOnInteraction: false }"
           :slidesPerView="1"
           :class="'swiper'"
         >
           <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
-              <div class="md:col-span-5 col-span-6">
+            <div class="grid grid-cols-12 gap-4 justify-items-center">
+              <div class="col-span-6">
                 <img
                   src="~/assets/images/index6.png"
                   alt=""
@@ -111,10 +115,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
                 <div class="text-center">
                   <p class="text__story--one">僕人建築空間整合</p>
                   <p class="text__story--two">Cooking and art</p>
-                  <p class="text__story--three">烹飪．藝術</p>
                 </div>
               </div>
-              <div class="md:col-span-5 md:col-end-13 col-span-6">
+              <div class="col-span-6">
                 <img
                   src="~/assets/images/index7.png"
                   alt=""
@@ -123,14 +126,13 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
                 <div class="text-center">
                   <p class="text__story--one">王郁婷室內設計</p>
                   <p class="text__story--two">Cooking and art</p>
-                  <p class="text__story--three">使命與初衷</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
-              <div class="md:col-span-5 col-span-6">
+            <div class="grid grid-cols-12 gap-4 justify-items-center">
+              <div class="col-span-6">
                 <img
                   src="~/assets/images/index6.png"
                   alt=""
@@ -139,10 +141,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
                 <div class="text-center">
                   <p class="text__story--one">僕人建築空間整合</p>
                   <p class="text__story--two">Cooking and art</p>
-                  <p class="text__story--three">烹飪．藝術</p>
                 </div>
               </div>
-              <div class="md:col-span-5 md:col-end-13 col-span-6">
+              <div class="col-span-6">
                 <img
                   src="~/assets/images/index7.png"
                   alt=""
@@ -151,14 +152,13 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
                 <div class="text-center">
                   <p class="text__story--one">王郁婷室內設計</p>
                   <p class="text__story--two">Cooking and art</p>
-                  <p class="text__story--three">使命與初衷</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
-              <div class="md:col-span-5 col-span-6">
+            <div class="grid grid-cols-12 gap-4 justify-items-center">
+              <div class="col-span-6">
                 <img
                   src="~/assets/images/index6.png"
                   alt=""
@@ -167,10 +167,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
                 <div class="text-center">
                   <p class="text__story--one">僕人建築空間整合</p>
                   <p class="text__story--two">Cooking and art</p>
-                  <p class="text__story--three">烹飪．藝術</p>
                 </div>
               </div>
-              <div class="md:col-span-5 md:col-end-13 col-span-6">
+              <div class="col-span-6">
                 <img
                   src="~/assets/images/index7.png"
                   alt=""
@@ -179,16 +178,16 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
                 <div class="text-center">
                   <p class="text__story--one">王郁婷室內設計</p>
                   <p class="text__story--two">Cooking and art</p>
-                  <p class="text__story--three">使命與初衷</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
+          <!-- <div class="swiper-scrollbar"></div> -->
         </swiper>
         <!-- Opinion -->
         <p class="text__title text-center">OPINION</p>
         <swiper
-          :modules="[Scrollbar]"
+          :modules="[Scrollbar, Autoplay]"
           :scrollbar="{ hide: false, draggable: true }"
           :autoplay="{ delay: 2000, disableOnInteraction: false }"
           :slidesPerView="1"
@@ -416,7 +415,6 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   &__en {
     color: $text-color3;
     line-height: 22.47px;
-    letter-spacing: 1.071px;
   }
 
   &__tc {
@@ -529,6 +527,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
 //圖片樣式
 .photo {
+  aspect-ratio: 3/2;
   &__advertise {
     width: 100%;
     height: auto;
@@ -541,7 +540,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   }
 
   &__story {
+    @extend .photo;
     width: 100%;
+    max-width: 513px;
     height: 16.15vw;
     object-fit: cover;
 
@@ -627,6 +628,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 .swiper {
   --swiper-scrollbar-sides-offset: 0%;
   --swiper-scrollbar-size: 6px;
+
   padding-bottom: 9.3055%;
   margin-bottom: 21.157%;
 
@@ -637,7 +639,11 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     margin-right: -10.4469%;
   }
 }
-
+// .swiper-scrollbar {
+//   width: 100% !important;
+//   max-width: 600px;
+//   margin: auto;
+// }
 // opinion線
 .line {
   &-container {

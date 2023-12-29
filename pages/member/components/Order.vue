@@ -1,20 +1,7 @@
 <script setup>
-import TabMenu from "./components/TabMenu.vue";
-
-const orders = [
-  {
-    id: "2112312344",
-    date: "2023-12-10",
-    amount: "NT$3,140",
-    status: "已成交",
-  },
-  {
-    id: "2112312345",
-    date: "2023-12-11",
-    amount: "NT$1,560",
-    status: "已取消",
-  },
-];
+const props = defineProps({
+  orders: Array,
+});
 
 const canShow = ref(false);
 
@@ -23,36 +10,28 @@ const handleCanShowUpdate = (newCanShow) => {
 };
 </script>
 <template>
-  <NuxtLayout>
-    <div class="flex flex-col items-center inner-wrap">
-      <p class="welcome">歡迎, 讀者 ANN</p>
-      <button class="logout">登出</button>
-      <TabMenu :canShow="canShow" @update:canShow="handleCanShowUpdate" />
-      <table class="order">
-        <thead>
-          <tr>
-            <th>訂單編號</th>
-            <th>訂購日期</th>
-            <th>總計</th>
-            <th>訂單狀態</th>
-            <th>訂單內容</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="order in orders" :key="order.id">
-            <td data-label="訂單編號">{{ order.id }}</td>
-            <td data-label="訂購日期">{{ order.date }}</td>
-            <td data-label="總計" class="price">{{ order.amount }}</td>
-            <td data-label="訂單狀態">{{ order.status }}</td>
-            <td data-label="訂單內容">
-              <button @click="viewOrder(order.id)" class="browse">瀏覽</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- <button @click="handleCanShowUpdate">切換設計師</button> -->
-  </NuxtLayout>
+  <table class="order">
+    <thead>
+      <tr>
+        <th>訂單編號</th>
+        <th>訂購日期</th>
+        <th>總計</th>
+        <th>訂單狀態</th>
+        <th>訂單內容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="order in orders" :key="order.id">
+        <td data-label="訂單編號">{{ order.id }}</td>
+        <td data-label="訂購日期">{{ order.date }}</td>
+        <td data-label="總計" class="price">{{ order.amount }}</td>
+        <td data-label="訂單狀態">{{ order.status }}</td>
+        <td data-label="訂單內容">
+          <button @click="viewOrder(order.id)" class="browse">瀏覽</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <style lang="scss" scoped>

@@ -107,6 +107,22 @@ const selectedSubOption = ref("");
             </div>
           </div>
           <!-- 宅配 -->
+          <div v-if="selectedOption === 'option1'">
+            <div class="input-group">
+              <label for="storeSelect" class="input__shipping">*</label>
+              <select id="storeSelect" class="input">
+                <option value="" class="input__option" disabled selected hidden>
+                  7-11 / 全家
+                </option>
+                <option value="sevenEleven" class="input__option">7-11</option>
+                <option value="familyMart" class="input__option">全家</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="" class="input__shipping">*</label>
+              <input type="text" placeholder="門市名稱" class="input" />
+            </div>
+          </div>
           <!-- 發票區塊 -->
           <p class="info__title">發票開立</p>
           <!-- 個人雲端 -->
