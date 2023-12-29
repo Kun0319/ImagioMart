@@ -34,7 +34,12 @@ const handleSubmit = () => {
           <label for="web" class="form-label designer__text required">
             事務所網址</label
           >
-          <input type="text" id="web" class="form-input" />
+          <input
+            type="text"
+            id="web"
+            class="form-input"
+            placeholder="http://"
+          />
         </div>
         <!-- 聯絡信箱 -->
         <div class="form-group">
@@ -44,7 +49,12 @@ const handleSubmit = () => {
           >
             聯絡信箱</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input
+            type="text"
+            id="userInput"
+            class="form-input"
+            placeholder="email"
+          />
         </div>
         <!--  -->
         <div class="form-group">
@@ -72,7 +82,12 @@ const handleSubmit = () => {
           >
             案例進度</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <select id="caseProgress" class="form-input">
+            <option value="" selected disabled hidden>請選擇</option>
+            <option value="completed">完工</option>
+            <option value="concept">概念</option>
+            <option value="other">其他</option>
+          </select>
         </div>
         <div class="form-group">
           <label
@@ -81,7 +96,12 @@ const handleSubmit = () => {
           >
             案例所在地</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input
+            type="text"
+            id="userInput"
+            class="form-input"
+            placeholder="國家 / 城市"
+          />
         </div>
         <div class="form-group">
           <!-- (10-今年+10) -->
@@ -91,7 +111,12 @@ const handleSubmit = () => {
           >
             完工年份</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input
+            type="text"
+            id="userInput"
+            class="form-input"
+            placeholder="Choose"
+          />
         </div>
         <div class="form-group">
           <label
@@ -100,20 +125,30 @@ const handleSubmit = () => {
           >
             上傳圖檔</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input
+            type="text"
+            id="userInput"
+            class="form-input"
+            placeholder="72 dpi / 2000pixel以下 / 5mb以內 / 30張以內/ jpg png 圖片檔"
+          />
         </div>
         <div class="form-group">
           <label for="userInput" class="form-label designer__text required">
             雲端連結</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input
+            type="text"
+            id="userInput"
+            class="form-input"
+            placeholder="http://"
+          />
         </div>
         <div class="form-group">
           <label for="userInput" class="form-label designer__text required">
             作品敘述</label
           >
           <textarea
-            placeholder="Message"
+            placeholder="1000 字以內"
             class="form__textarea"
             required
           ></textarea>
@@ -122,11 +157,7 @@ const handleSubmit = () => {
           <label for="userInput" class="form-label designer__text required">
             備註</label
           >
-          <textarea
-            placeholder="Message"
-            class="form__textarea-two h-3"
-            required
-          ></textarea>
+          <textarea class="form__textarea-two h-3" required></textarea>
         </div>
         <div class="flex designer__text__last">
           <p>投稿作品須 1-2 週審核期，屆時將以 Email 通知您是否採用，謝謝。</p>
@@ -229,7 +260,10 @@ const handleSubmit = () => {
     border-left: 1px solid rgba(0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0);
     border-radius: 0 !important;
-
+    &::placeholder {
+      padding-left: 0.5rem;
+      font-size: 0.875rem;
+    }
     &__phone {
       @extend .form-input;
       width: 30%;
@@ -303,5 +337,10 @@ const handleSubmit = () => {
 .link {
   color: $text-color3;
   text-decoration: underline;
+}
+textarea {
+  &::placeholder {
+    padding-left: 0.5rem;
+  }
 }
 </style>

@@ -5,6 +5,7 @@ import Order from "./components/Order.vue";
 import PersonalInfo from "./components/PersonalInfo.vue";
 import DesignSubmission from "./components/DesignSubmission.vue";
 import UserFavorites from "./components/UserFavorites.vue";
+import VisitedItems from "./components/VisitedItems.vue";
 const canShow = ref(true);
 const selectedTab = ref(0);
 const updateSelectedTab = (index) => {
@@ -40,6 +41,7 @@ const goshop = () => {
       <PersonalInfo v-if="selectedTab === 0" />
       <Order v-if="selectedTab === 1" :orders="orders" />
       <UserFavorites v-if="selectedTab === 2" />
+      <VisitedItems v-if="selectedTab === 3" />
       <DesignSubmission v-if="selectedTab === 4" />
 
       <div class="hidden">
@@ -56,6 +58,7 @@ const goshop = () => {
 .inner-wrap {
   padding-left: 20.2649%;
   padding-right: 20.2649%;
+
   @include max-media(768) {
     padding-left: 0;
     padding-right: 0;

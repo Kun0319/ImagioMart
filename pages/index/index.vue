@@ -415,6 +415,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   &__en {
     color: $text-color3;
     line-height: 22.47px;
+    font-size: 1.1875rem;
   }
 
   &__tc {
