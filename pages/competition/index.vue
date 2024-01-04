@@ -1,6 +1,6 @@
 <script setup>
 import Advertise from "../issue/components/Advertise.vue";
-import bg from "~/images/CompetitionBg.png";
+import bg from "@/public/images/CompetitionBg.png";
 definePageMeta({
   layout: "innerpage",
 });

@@ -1,7 +1,7 @@
 <script setup>
-import bg from "~/images/CompetitionBg.png";
+import bg from "@/public/images/CompetitionBg.png";
 import { useGlobalStore } from "@/stores/global.js";
-import pic from "~/images/competitionthree.png";
+import pic from "@/public/images/competitioncontent.png";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");
@@ -10,19 +10,19 @@ definePageMeta({
 });
 const relatedProjects = [
   {
-    imageUrl: "/images/competitioncontent.png",
+    imageUrl: pic,
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "台中黃宅",
   },
   {
-    imageUrl: "/images/competitionthree.png",
+    imageUrl: pic,
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "中國深圳黃宅",
   },
   {
-    imageUrl: "/images/competitioneight.png",
+    imageUrl: pic,
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "藍鯨 Villa",
@@ -56,7 +56,11 @@ const slidesData = ref([
   >
     <div class="flex flex-col content-center items-center w-full inner-wrap">
       <div class="photo__container">
-        <img src="~/images/competitioncontent.png" alt="" class="photo" />
+        <img
+          src="../../public/images/competitioncontent.png"
+          alt=""
+          class="photo"
+        />
       </div>
       <div class="w-full text__wrap">
         <div>
