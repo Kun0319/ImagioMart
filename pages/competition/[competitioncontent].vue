@@ -10,7 +10,7 @@ definePageMeta({
 });
 const relatedProjects = [
   {
-    imageUrl: "/images/CompetitionContent.png",
+    imageUrl: "/images/competitioncontent.png",
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "台中黃宅",
@@ -56,7 +56,7 @@ const slidesData = ref([
   >
     <div class="flex flex-col content-center items-center w-full inner-wrap">
       <div class="photo__container">
-        <img src="@/images/CompetitionContent.png" alt="" class="photo" />
+        <img src="~/images/competitioncontent.png" alt="" class="photo" />
       </div>
       <div class="w-full text__wrap">
         <div>
