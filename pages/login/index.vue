@@ -30,13 +30,12 @@ const login = () => {
         <div class="flex flex-row login__login">
           <button @click="login" class="login__btn">登入</button>
           <div class="ml-auto login__signup">
-            <nuxt-link to="/signup">會員註冊/</nuxt-link>
+            <nuxt-link to="/signup">會員註冊 / </nuxt-link>
             <nuxt-link to="/forgotpassword">忘記密碼</nuxt-link>
           </div>
         </div>
+        <p>使用社群帳號登入</p>
         <div class="login__social">
-          <p>使用社群帳號登入</p>
-
           <img
             src="~/assets/icon/login_fb.svg"
             alt=""
@@ -82,7 +81,7 @@ const login = () => {
   &__title {
     font-size: 1.3125rem;
     font-weight: 400;
-    margin-top: 30.3084%;
+    margin-top: 15.1542%;
 
     @include max-media(768) {
       margin-top: 24.4947%;
@@ -101,7 +100,8 @@ const login = () => {
     border: 1px solid #00000050;
     background-color: white;
     padding: 2.5% 10%;
-    font-size: 0.625rem;
+    font-size: 0.875rem;
+    font-family: $font-NotoSerif;
   }
 
   &__login {
@@ -115,8 +115,14 @@ const login = () => {
   &__social {
     margin-bottom: 20.1461%;
     line-height: 45px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40%;
+    margin-right: 40%;
 
     &__icon {
+      // max-width: 24px;
+      max-height: 24px;
     }
   }
 }
@@ -124,7 +130,7 @@ const login = () => {
 .line {
   border-bottom: 3px solid #000;
   margin-top: 8.2011%;
-  margin-bottom: 14.441%;
+  margin-bottom: 10%;
 }
 
 .link {
@@ -156,7 +162,9 @@ const login = () => {
 
   &-email {
     @extend .input;
-    margin-bottom: 8.7359%;
+    // margin-bottom: 8.7359%;
+    margin-bottom: 4.36795%;
+    // margin-bottom: 8.2011%;
 
     &__text {
       font-size: 1rem;
@@ -166,7 +174,8 @@ const login = () => {
 
   &-password {
     @extend .input;
-    margin-bottom: 11.4102%;
+    margin-bottom: 8.2011%;
+    // margin-bottom: 5.7051%;
 
     &__text {
       font-size: 1rem;

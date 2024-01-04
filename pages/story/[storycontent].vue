@@ -31,50 +31,6 @@ const slidesData = ref([
     <NuxtLayout
       :breadcrumbText="'Home &nbsp; / &nbsp; Story &nbsp; / &nbsp; Furniture'"
     >
-      <div class="filter__relative">
-        <!-- <BreadcrumbLine
-        text="Home&nbsp; /&nbsp; Project&nbsp; /&nbsp; furniture"
-        :showIcon="true"
-        :showTags="true"
-      >
-        <template #icon>
-          <img
-            src="~/assets/icon/sliders.svg"
-            alt=""
-            class="md:hidden flex relative"
-            @click="toggleFilterMenu"
-          />
-        </template>
-        <template #tags>
-          <div class="tags-container">
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'All'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Furniture'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Dining'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Bath'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Kitchen'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wellness'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Wall'" />
-            </nuxt-link>
-            <nuxt-link to="/search/Dining" class="tag-button">
-              <TagButton :tag="'Floor'" />
-            </nuxt-link>
-          </div>
-        </template>
-      </BreadcrumbLine> -->
-      </div>
       <div class="inner-wrap">
         <ImageGrid>
           <template v-slot:title>
@@ -223,6 +179,9 @@ const slidesData = ref([
 </template>
 
 <style lang="scss" scoped>
+.Filtericon-container {
+  display: none;
+}
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;
@@ -233,7 +192,7 @@ const slidesData = ref([
 
 .rwd-wrap {
   @include max-media(768) {
-    margin-top: 20%;
+    margin-top: 15%;
   }
 }
 .photo {

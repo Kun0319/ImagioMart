@@ -170,8 +170,6 @@ function validateInput(event) {
     @extend .text;
     font-family: $font-Noto;
     font-size: 1.125rem;
-
-    letter-spacing: 5.508px;
     margin-bottom: 5%;
   }
 
@@ -179,7 +177,6 @@ function validateInput(event) {
     @extend .text;
     font-family: $font-Noto;
     font-size: 1.125rem;
-    letter-spacing: 5.508px;
   }
 }
 

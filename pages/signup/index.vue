@@ -188,7 +188,8 @@ const handleSubmit = () => {
   &__title {
     font-size: 1.3125rem;
     font-weight: 400;
-    margin-top: 30.3084%;
+    // margin-top: 30.3084%;
+    margin-top: 15.1542%;
 
     @include max-media(768) {
       margin-top: 24.4947%;
@@ -251,6 +252,9 @@ const handleSubmit = () => {
     border-left: 1px solid rgba(0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0);
     border-radius: 0 !important;
+    &::placeholder {
+      padding-left: 1%;
+    }
 
     &__phone {
       @extend .form-input;
@@ -336,7 +340,8 @@ const handleSubmit = () => {
 .custom-radio::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 55%;
+  // top: 8px;
   left: 0;
   transform: translateY(-50%);
   width: 16px;

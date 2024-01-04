@@ -18,18 +18,13 @@ const categoryList = ref([
   { name: "Wall", count: 10 },
   { name: "Floor", count: 10 },
 ]);
-
 const recentPosts = ref([
-  { name: "MORQ Room of Family..." },
-  { name: "西澳大利亞珀斯 隱園" },
-  { name: "MORQ Room of Family..." },
-  { name: "西澳大利亞珀斯 隱園" },
-  { name: "MORQ Room of Family..." },
-  { name: "西澳大利亞珀斯 隱園" },
-  { name: "MORQ Room of Family..." },
-  { name: "西澳大利亞珀斯 隱園" },
-  { name: "MORQ Room of Family..." },
-  { name: "西澳大利亞珀斯 隱園" },
+  { nameEn: "MORQ Room of Family...", nameCn: "西澳大利亞珀斯 隱園" },
+  { nameEn: "MORQ Room of Family...", nameCn: "西澳大利亞珀斯 隱園" },
+  { nameEn: "MORQ Room of Family...", nameCn: "西澳大利亞珀斯 隱園" },
+  { nameEn: "MORQ Room of Family...", nameCn: "西澳大利亞珀斯 隱園" },
+  { nameEn: "MORQ Room of Family...", nameCn: "西澳大利亞珀斯 隱園" },
+  { nameEn: "MORQ Room of Family...", nameCn: "西澳大利亞珀斯 隱園" },
 ]);
 
 const archives = ref([
@@ -52,8 +47,8 @@ const clickyear = () => {
 </script>
 <template lang="">
   <div class="col-start-10 col-span-3 selector grid">
-    <!-- 類別 -->
-    <div class="grid">
+    <!--  案例類別 -->
+    <div class="flex flex-col selector__category">
       <!-- 標題 -->
       <p class="selector__title">
         {{ isChinese ? titles.categories.cn : titles.categories.en }}
@@ -67,34 +62,34 @@ const clickyear = () => {
       </button>
     </div>
     <!-- 本週最新 -->
-    <div class="grid">
+    <div class="selector__category">
       <p class="selector__title">
         {{ isChinese ? titles.recentPosts.cn : titles.recentPosts.en }}
       </p>
-      <button
+      <nuxt-link
         v-for="post in recentPosts"
         :key="post.name"
         class="selector__recent selectorbutton"
       >
-        {{ post.name }}
-      </button>
+        <div>{{ post.nameEn }}</div>
+        <div>{{ post.nameCn }}</div>
+      </nuxt-link>
     </div>
     <!--年度精選-->
-    <div class="">
+    <div class="selector__category">
       <p class="selector__title">
         {{ isChinese ? titles.archive.cn : titles.archive.en }}
       </p>
       <div v-for="archive in archives" :key="archive.year" @click="clickyear">
         <button class="selector__options selectorbutton">
-          {{ archive.year }}&nbsp;+
+          {{ archive.year }} &nbsp;+
         </button>
-        <div v-for="month in archive.months" :key="month.name">
-          <button
-            class="selector__options__month selectorbutton"
-            v-show="monthlist"
-          >
-            {{ isChinese ? month.nameCn : month.nameEn }}({{ month.count }})
-          </button>
+        <div v-for="month in archive.months" :key="month.name" class="">
+          <nuxt-link v-show="monthlist"
+            ><div class="selector__options__month selectorbutton">
+              {{ isChinese ? month.nameCn : month.nameEn }}({{ month.count }})
+            </div>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -116,11 +111,17 @@ const clickyear = () => {
     </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .selector {
   color: $text-color3;
   font-size: 1.125rem;
 
+  &__category {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
   &__title {
     letter-spacing: 1.008px;
     padding-bottom: 15%;

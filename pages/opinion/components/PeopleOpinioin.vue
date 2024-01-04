@@ -143,7 +143,7 @@ const peopleopinion = ref([
 
 <style lang="scss" scoped>
 .opinion {
-  margin-top: 12.062%;
+  // margin-top: 12.062%;
   margin-bottom: 19.098%;
 
   @include max-media(768) {

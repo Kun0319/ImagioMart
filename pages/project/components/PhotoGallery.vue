@@ -3,11 +3,17 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Scrollbar, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
+
+import { useGlobalStore } from "@/stores/global.js";
+
+const globalStore = useGlobalStore();
+const isChinese = computed(() => globalStore.language === "CN");
 </script>
 // PhotoGallery
 <template>
   <div class="">
-    <p class="title">PHOTO GALLERY</p>
+    <p v-if="isChinese" class="title">相關圖片</p>
+    <p v-else class="title">PHOTO GALLERY</p>
     <Swiper
       :direction="'vertical'"
       :modules="[Scrollbar, Mousewheel]"

@@ -28,12 +28,15 @@ const props = defineProps({
 </template>
 <style lang="scss" scoped>
 .photo {
+  aspect-ratio: 3/2;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   // max-width: 310px;
   // max-height: 210px;
 }
-
+.pi {
+  font-weight: 700;
+}
 .projectpic {
   width: 100%;
   height: 90%;
@@ -46,12 +49,10 @@ const props = defineProps({
 
   @include max-media(1024) {
     width: 100%;
-    // height: 100%;
   }
 
   &__pic {
     width: 100%;
-    height: 100%;
     // max-width: 310px;
     max-height: 210px;
     // 圖片縮放

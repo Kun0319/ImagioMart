@@ -4,6 +4,10 @@ import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { useGlobalStore } from "@/stores/global.js";
+
+const globalStore = useGlobalStore();
+const isChinese = computed(() => globalStore.language === "CN");
 defineProps({
   slidesData: {
     type: Array,
@@ -12,31 +16,44 @@ defineProps({
 });
 </script>
 <template>
-  <div class="title">
-    <slot name="title">RELATED PROJECT</slot>
-  </div>
-  <swiper
-    ref="mySwiper"
-    :slides-per-view="1"
-    :navigation="true"
-    :pagination="{ clickable: true }"
-    :modules="[Pagination, Navigation]"
-    class="myswiper"
-  >
-    <swiper-slide v-for="(slide, index) in slidesData" :key="index">
-      <div class="flex flex-col items-center">
-        <div class="LittleAdvertise flex flex-col justify-center">
-          <img :src="slide.imageUrl" alt="" class="photo" />
-          <p class="text__one">{{ slide.company }}</p>
-          <p class="text__two">{{ slide.projectName }}</p>
-          <p class="text__three">{{ slide.projectLocation }}</p>
+  <div class="container">
+    <div class="title">
+      <slot name="title">
+        <p v-if="isChinese" class="md:block hidden text__title">延伸閱讀</p>
+        <p v-else class="md:block hidden text__title">RELATED PROJECT</p>
+      </slot>
+    </div>
+    <swiper
+      ref="mySwiper"
+      :slides-per-view="1"
+      :navigation="true"
+      :pagination="{ clickable: true }"
+      :modules="[Pagination, Navigation]"
+      class="myswiper"
+    >
+      <swiper-slide v-for="(slide, index) in slidesData" :key="index">
+        <div class="flex flex-col items-center">
+          <div class="LittleAdvertise flex flex-col justify-center">
+            <img :src="slide.imageUrl" alt="" class="photo" />
+            <p class="text__one">{{ slide.company }}</p>
+            <p class="text__two">{{ slide.projectName }}</p>
+            <p class="text__three">{{ slide.projectLocation }}</p>
+          </div>
         </div>
-      </div>
-    </swiper-slide>
-  </swiper>
+      </swiper-slide>
+    </swiper>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+.container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  @include max-media(768) {
+    display: block;
+  }
+}
 .LittleAdvertise {
   margin-bottom: 50px;
   align-items: flex-start;
@@ -107,6 +124,7 @@ defineProps({
     --swiper-navigation-sides-offset: 0px;
   }
 }
+
 .text {
   color: $text-color3;
   font-size: 1rem;

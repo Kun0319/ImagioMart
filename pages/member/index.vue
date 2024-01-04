@@ -6,7 +6,7 @@ import PersonalInfo from "./components/PersonalInfo.vue";
 import DesignSubmission from "./components/DesignSubmission.vue";
 import UserFavorites from "./components/UserFavorites.vue";
 import VisitedItems from "./components/VisitedItems.vue";
-const canShow = ref(true);
+
 const selectedTab = ref(0);
 const updateSelectedTab = (index) => {
   selectedTab.value = index;
@@ -27,16 +27,21 @@ const orders = [
 ];
 const router = useRouter();
 
-const goshop = () => {
-  router.push("/member/order");
+const globalStore = useGlobalStore();
+const canShow = computed(() => globalStore.hasSubmitted);
+const logout = () => {
+  globalStore.setSubmissionStatus(false);
+  router.push("/member");
 };
 </script>
 <template>
   <NuxtLayout>
     <div class="flex flex-col items-center inner-wrap">
-      <p class="welcome" v-if="selectedTab === 4">歡迎, 設計師 ANN</p>
+      <p class="welcome" v-if="canShow">歡迎, 設計師 ANN</p>
       <p class="welcome" v-else>歡迎, 讀者 ANN</p>
-      <button class="logout">登出</button>
+
+      <button class="logout" @click="logout">登出</button>
+      <button class="btn__submit" v-if="canShow">案例投稿</button>
       <TabMenu @update:selectedTab="updateSelectedTab" :can-show="canShow" />
       <PersonalInfo v-if="selectedTab === 0" />
       <Order v-if="selectedTab === 1" :orders="orders" />
@@ -108,6 +113,12 @@ const goshop = () => {
     display: flex;
     justify-content: center;
     margin-bottom: 38.3307%;
+  }
+  &__submit {
+    @extend .btn;
+    @extend .btn__link;
+    margin-bottom: 9.145%;
+    margin-top: -7.5%;
   }
 }
 </style>

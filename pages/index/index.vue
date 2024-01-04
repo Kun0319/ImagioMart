@@ -1,24 +1,44 @@
 <script setup>
 // window.location.href = "/issue";
 import cover from "~/assets/images/indexbg.png";
-import { Scrollbar, Autoplay } from "swiper/modules";
+import { Scrollbar, Autoplay, Pagination } from "swiper/modules";
 import Magazine from "../issue/components/Magazine.vue";
 import "swiper/swiper-bundle.css";
 import picone from "~/assets/images/indexmagzineone.png";
 import pictwo from "~/assets/images/indexmagzinetwo.png";
+import "swiper/css/pagination";
+// import useSeo from "./seo";
 const magazines = Array.from({ length: 1 }, (_, index) => ({
   id: index,
   name: `Magazine ${index + 1}`,
   imageUrl: "~/assets/images/Magazine.svg",
 }));
+// useSeo();
 </script>
 
 <template>
   <div>
     <NuxtLayout>
+      <Popup />
       <!-- 封面 -->
-      <div>
-        <Banner :imgSrc="cover" class="cover" />
+      <div class="cover__container">
+        <!-- <Banner :imgSrc="cover" class="cover" /> -->
+        <swiper
+          :pagination="{ clickable: true }"
+          :modules="[Pagination]"
+          :spaceBetween="100"
+          class="cover"
+        >
+          <swiper-slide
+            ><img src="~/assets/images/indexbg.png" alt="" class="cover__photo"
+          /></swiper-slide>
+          <swiper-slide
+            ><img src="~/assets/images/indexbg.png" alt="" class="cover__photo"
+          /></swiper-slide>
+          <swiper-slide
+            ><img src="~/assets/images/indexbg.png" alt="" class="cover__photo"
+          /></swiper-slide>
+        </swiper>
       </div>
       <!-- 畫廊 -->
       <div class="inner-wrap">
@@ -97,235 +117,240 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         </div>
         <!-- Story -->
         <p class="text__title text-center">STORY</p>
-        <swiper
-          :modules="[Scrollbar]"
-          :scrollbar="{ hide: false, draggable: true }"
-          :autoplay="{ delay: 20000, disableOnInteraction: false }"
-          :slidesPerView="1"
-          :class="'swiper'"
-        >
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4 justify-items-center">
-              <div class="col-span-6">
-                <img
-                  src="~/assets/images/index6.png"
-                  alt=""
-                  class="photo__story"
-                />
-                <div class="text-center">
-                  <p class="text__story--one">僕人建築空間整合</p>
-                  <p class="text__story--two">Cooking and art</p>
+        <div class="swiper__wrap">
+          <swiper
+            :modules="[Scrollbar]"
+            :scrollbar="{ hide: false, draggable: true }"
+            :autoplay="{ delay: 2000, disableOnInteraction: false }"
+            :slidesPerView="1"
+            :class="'swiperscrollbar'"
+          >
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6 justify-self-start">
+                  <img
+                    src="~/assets/images/index6.png"
+                    alt=""
+                    class="photo__story"
+                  />
+                  <div class="text-center">
+                    <p class="text__story--one">僕人建築空間整合</p>
+                    <p class="text__story--two">Cooking and art</p>
+                  </div>
+                </div>
+                <div class="col-span-6 col-end-13 justify-self-end">
+                  <img
+                    src="~/assets/images/index7.png"
+                    alt=""
+                    class="photo__story"
+                  />
+                  <div class="text-center">
+                    <p class="text__story--one">王郁婷室內設計</p>
+                    <p class="text__story--two">Cooking and art</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-span-6">
-                <img
-                  src="~/assets/images/index7.png"
-                  alt=""
-                  class="photo__story"
-                />
-                <div class="text-center">
-                  <p class="text__story--one">王郁婷室內設計</p>
-                  <p class="text__story--two">Cooking and art</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6 justify-self-start">
+                  <img
+                    src="~/assets/images/index6.png"
+                    alt=""
+                    class="photo__story"
+                  />
+                  <div class="text-center">
+                    <p class="text__story--one">僕人建築空間整合</p>
+                    <p class="text__story--two">Cooking and art</p>
+                  </div>
+                </div>
+                <div class="col-span-6 col-end-13 justify-self-end">
+                  <img
+                    src="~/assets/images/index7.png"
+                    alt=""
+                    class="photo__story"
+                  />
+                  <div class="text-center">
+                    <p class="text__story--one">王郁婷室內設計</p>
+                    <p class="text__story--two">Cooking and art</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4 justify-items-center">
-              <div class="col-span-6">
-                <img
-                  src="~/assets/images/index6.png"
-                  alt=""
-                  class="photo__story"
-                />
-                <div class="text-center">
-                  <p class="text__story--one">僕人建築空間整合</p>
-                  <p class="text__story--two">Cooking and art</p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6 justify-self-start">
+                  <img
+                    src="~/assets/images/index6.png"
+                    alt=""
+                    class="photo__story"
+                  />
+                  <div class="text-center">
+                    <p class="text__story--one">僕人建築空間整合</p>
+                    <p class="text__story--two">Cooking and art</p>
+                  </div>
+                </div>
+                <div class="col-span-6 col-end-13 justify-self-end">
+                  <img
+                    src="~/assets/images/index7.png"
+                    alt=""
+                    class="photo__story"
+                  />
+                  <div class="text-center">
+                    <p class="text__story--one">王郁婷室內設計</p>
+                    <p class="text__story--two">Cooking and art</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-span-6">
-                <img
-                  src="~/assets/images/index7.png"
-                  alt=""
-                  class="photo__story"
-                />
-                <div class="text-center">
-                  <p class="text__story--one">王郁婷室內設計</p>
-                  <p class="text__story--two">Cooking and art</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4 justify-items-center">
-              <div class="col-span-6">
-                <img
-                  src="~/assets/images/index6.png"
-                  alt=""
-                  class="photo__story"
-                />
-                <div class="text-center">
-                  <p class="text__story--one">僕人建築空間整合</p>
-                  <p class="text__story--two">Cooking and art</p>
-                </div>
-              </div>
-              <div class="col-span-6">
-                <img
-                  src="~/assets/images/index7.png"
-                  alt=""
-                  class="photo__story"
-                />
-                <div class="text-center">
-                  <p class="text__story--one">王郁婷室內設計</p>
-                  <p class="text__story--two">Cooking and art</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <!-- <div class="swiper-scrollbar"></div> -->
-        </swiper>
+            </SwiperSlide>
+
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </swiper>
+        </div>
         <!-- Opinion -->
-        <p class="text__title text-center">OPINION</p>
-        <swiper
-          :modules="[Scrollbar, Autoplay]"
-          :scrollbar="{ hide: false, draggable: true }"
-          :autoplay="{ delay: 2000, disableOnInteraction: false }"
-          :slidesPerView="1"
-          :class="'swiper'"
-        >
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
-              <div class="md:col-span-5 col-span-12 justify-self-center">
-                <img
-                  src="@/assets/images/opinion4.webp"
-                  alt=""
-                  class="photo__opinion"
-                />
-              </div>
-              <div class="md:col-span-6 col-span-12 flex-col self-center">
-                <p class="text__nameEn">Patrick Norguet</p>
-                <p class="text__nameCn">派屈克．諾蓋</p>
-                <!-- icon -->
-                <div class="line-container">
-                  <div class="line__opinion"></div>
-                  <!-- <div>
+        <p class="text__title__opinion text-center">OPINION</p>
+        <div class="swiper__wrap">
+          <swiper
+            :modules="[Scrollbar, Autoplay]"
+            :scrollbar="{ hide: false, draggable: true }"
+            :autoplay="{ delay: 2000, disableOnInteraction: false }"
+            :slidesPerView="1"
+            :class="'swiperscrollbar'"
+          >
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-4">
+                <div class="md:col-span-5 col-span-12 justify-self-center">
+                  <img
+                    src="@/assets/images/opinion4.webp"
+                    alt=""
+                    class="photo__opinion"
+                  />
+                </div>
+                <div class="md:col-span-6 col-span-12 flex-col self-center">
+                  <p class="text__nameEn">Patrick Norguet</p>
+                  <p class="text__nameCn">派屈克．諾蓋</p>
+                  <!-- icon -->
+                  <div class="line-container">
+                    <div class="line__opinion"></div>
+                    <!-- <div>
                     <i class="pi pi-heart mx-3"></i>
                     <i class="pi pi-share-alt"></i>
                   </div>  -->
-                </div>
-                <p class="text__opinionEn text-left">
-                  “You cannot understand good design if you do not understand
-                  people.”
-                  <span class="text__opinionEnPeo md:hidden block"
-                    >&nbsp; &nbsp;—Dieter Rams</span
-                  >
-                </p>
+                  </div>
+                  <p class="text__opinionEn text-left">
+                    “You cannot understand good design if you do not understand
+                    people.”
+                    <span class="text__opinionEnPeo md:hidden block"
+                      >&nbsp; &nbsp;—Dieter Rams</span
+                    >
+                  </p>
 
-                <p class="text__opinionEnPeo md:block hidden">
-                  &nbsp; &nbsp;—Dieter Rams
-                </p>
-                <p class="text__opinionCn">
-                  「無法瞭解人，就無法瞭解何謂好的設計」
-                  <span class="md:inline-block hidden">—派屈克．諾蓋</span>
-                </p>
+                  <p class="text__opinionEnPeo md:block hidden">
+                    &nbsp; &nbsp;—Dieter Rams
+                  </p>
+                  <p class="text__opinionCn">
+                    「無法瞭解人，就無法瞭解何謂好的設計」
+                    <span class="md:inline-block hidden">—派屈克．諾蓋</span>
+                  </p>
 
-                <p class="md:hidden text-center">—派屈克．諾蓋</p>
-                <!-- More -->
-                <div class="flex md:justify-start justify-center">
-                  <button class="btn__more">MORE+</button>
+                  <p class="md:hidden text-center">—派屈克．諾蓋</p>
+                  <!-- More -->
+                  <div class="flex md:justify-start justify-center">
+                    <button class="btn__more">MORE+</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
-              <div class="md:col-span-5 col-span-12 justify-self-center">
-                <img
-                  src="@/assets/images/opinion4.webp"
-                  alt=""
-                  class="photo__opinion"
-                />
-              </div>
-              <div class="md:col-span-6 col-span-12 flex-col self-center">
-                <p class="text__nameEn">Patrick Norguet</p>
-                <p class="text__nameCn">派屈克．諾蓋</p>
-                <!-- icon -->
-                <div class="line-container">
-                  <div class="line__opinion"></div>
-                  <!-- <div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-4">
+                <div class="md:col-span-5 col-span-12 justify-self-center">
+                  <img
+                    src="@/assets/images/opinion4.webp"
+                    alt=""
+                    class="photo__opinion"
+                  />
+                </div>
+                <div class="md:col-span-6 col-span-12 flex-col self-center">
+                  <p class="text__nameEn">Patrick Norguet</p>
+                  <p class="text__nameCn">派屈克．諾蓋</p>
+                  <!-- icon -->
+                  <div class="line-container">
+                    <div class="line__opinion"></div>
+                    <!-- <div>
                     <i class="pi pi-heart mx-3"></i>
                     <i class="pi pi-share-alt"></i>
                   </div>  -->
-                </div>
-                <p class="text__opinionEn text-left">
-                  “You cannot understand good design if you do not understand
-                  people.”
-                  <span class="text__opinionEnPeo md:hidden block"
-                    >&nbsp; &nbsp;—Dieter Rams</span
-                  >
-                </p>
+                  </div>
+                  <p class="text__opinionEn text-left">
+                    “You cannot understand good design if you do not understand
+                    people.”
+                    <span class="text__opinionEnPeo md:hidden block"
+                      >&nbsp; &nbsp;—Dieter Rams</span
+                    >
+                  </p>
 
-                <p class="text__opinionEnPeo md:block hidden">
-                  &nbsp; &nbsp;—Dieter Rams
-                </p>
-                <p class="text__opinionCn">
-                  「無法瞭解人，就無法瞭解何謂好的設計」
-                  <span class="md:inline-block hidden">—派屈克．諾蓋</span>
-                </p>
+                  <p class="text__opinionEnPeo md:block hidden">
+                    &nbsp; &nbsp;—Dieter Rams
+                  </p>
+                  <p class="text__opinionCn">
+                    「無法瞭解人，就無法瞭解何謂好的設計」
+                    <span class="md:inline-block hidden">—派屈克．諾蓋</span>
+                  </p>
 
-                <p class="md:hidden text-center">—派屈克．諾蓋</p>
-                <!-- More -->
-                <div class="flex md:justify-start justify-center">
-                  <button class="btn__more">MORE+</button>
+                  <p class="md:hidden text-center">—派屈克．諾蓋</p>
+                  <!-- More -->
+                  <div class="flex md:justify-start justify-center">
+                    <button class="btn__more">MORE+</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-4">
-              <div class="md:col-span-5 col-span-12 justify-self-center">
-                <img
-                  src="@/assets/images/opinion4.webp"
-                  alt=""
-                  class="photo__opinion"
-                />
-              </div>
-              <div class="md:col-span-6 col-span-12 flex-col self-center">
-                <p class="text__nameEn">Patrick Norguet</p>
-                <p class="text__nameCn">派屈克．諾蓋</p>
-                <!-- icon -->
-                <div class="line-container">
-                  <div class="line__opinion"></div>
-                  <!-- <div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-4">
+                <div class="md:col-span-5 col-span-12 justify-self-center">
+                  <img
+                    src="@/assets/images/opinion4.webp"
+                    alt=""
+                    class="photo__opinion"
+                  />
+                </div>
+                <div class="md:col-span-6 col-span-12 flex-col self-center">
+                  <p class="text__nameEn">Patrick Norguet</p>
+                  <p class="text__nameCn">派屈克．諾蓋</p>
+                  <!-- icon -->
+                  <div class="line-container">
+                    <div class="line__opinion"></div>
+                    <!-- <div>
                     <i class="pi pi-heart mx-3"></i>
                     <i class="pi pi-share-alt"></i>
                   </div>  -->
-                </div>
-                <p class="text__opinionEn text-left">
-                  “You cannot understand good design if you do not understand
-                  people.”
-                  <span class="text__opinionEnPeo md:hidden block"
-                    >&nbsp; &nbsp;—Dieter Rams</span
-                  >
-                </p>
+                  </div>
+                  <p class="text__opinionEn text-left">
+                    “You cannot understand good design if you do not understand
+                    people.”
+                    <span class="text__opinionEnPeo md:hidden block"
+                      >&nbsp; &nbsp;—Dieter Rams</span
+                    >
+                  </p>
 
-                <p class="text__opinionEnPeo md:block hidden">
-                  &nbsp; &nbsp;—Dieter Rams
-                </p>
-                <p class="text__opinionCn">
-                  「無法瞭解人，就無法瞭解何謂好的設計」
-                  <span class="md:inline-block hidden">—派屈克．諾蓋</span>
-                </p>
+                  <p class="text__opinionEnPeo md:block hidden">
+                    &nbsp; &nbsp;—Dieter Rams
+                  </p>
+                  <p class="text__opinionCn">
+                    「無法瞭解人，就無法瞭解何謂好的設計」
+                    <span class="md:inline-block hidden">—派屈克．諾蓋</span>
+                  </p>
 
-                <p class="md:hidden text-center">—派屈克．諾蓋</p>
-                <!-- More -->
-                <div class="flex md:justify-start justify-center">
-                  <button class="btn__more">MORE+</button>
+                  <p class="md:hidden text-center">—派屈克．諾蓋</p>
+                  <!-- More -->
+                  <div class="flex md:justify-start justify-center">
+                    <button class="btn__more">MORE+</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </swiper>
+            </SwiperSlide>
+          </swiper>
+        </div>
         <!-- magazine  -->
         <p class="text__title text-center">MAGAZINE</p>
         <div class="magazine grid grid-cols-12 gap-4">
@@ -382,13 +407,23 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
 <style lang="scss" scoped>
 .cover {
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 100vw;
+  width: 92.5926vw;
   height: 30.21vw;
   display: flex;
   justify-content: center;
+  margin-left: -4.5%;
+  margin-right: -5%;
   align-items: center;
+
+  --swiper-pagination-bullet-inactive-color: #d9d9d9 !important;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+
+  &__container {
+    width: 100vw;
+  }
+  &__photo {
+    width: 100%;
+  }
 }
 
 .index {
@@ -432,6 +467,11 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     @include max-media(768) {
       font-size: 1rem;
     }
+
+    &__opinion {
+      @extend .text__title;
+      margin-bottom: 9.0676%;
+    }
   }
 
   // news文字樣式
@@ -473,8 +513,8 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   // opinion文字樣式
   &__nameEn {
     font-size: 1rem;
-    // margin-bottom: 2%;
-    margin-bottom: 0.6865rem;
+    margin-bottom: 2%;
+    // margin-bottom: 0.6865rem;
 
     @include max-media(768) {
       font-size: 0.75rem;
@@ -493,8 +533,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   }
 
   &__opinionEn {
-    margin-top: 8.7593%;
+    margin-top: 7.5%;
     font-style: italic;
+
     @include max-media(768) {
       text-align: center;
     }
@@ -504,6 +545,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     margin-top: 0.25rem;
 
     font-style: italic;
+
     @include max-media(768) {
       text-align: center;
     }
@@ -511,8 +553,8 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
   &__opinionCn {
     font-size: 0.875rem;
-    margin-top: 4.2903%;
-    margin-bottom: 13.0496%;
+    // margin-top: 4.2903%;
+    // margin-bottom: 13.0496%;
 
     @include max-media(768) {
       text-align: center;
@@ -529,12 +571,14 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 //圖片樣式
 .photo {
   aspect-ratio: 3/2;
+
   &__advertise {
     width: 100%;
     height: auto;
   }
 
   &__news {
+    @extend .photo;
     width: 100%;
     max-width: 437px;
     object-fit: cover;
@@ -543,8 +587,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   &__story {
     @extend .photo;
     width: 100%;
-    max-width: 513px;
-    height: 16.15vw;
+    max-width: 426px;
+    aspect-ratio: 3/2;
+    // height: 16.15vw;
     object-fit: cover;
 
     @include max-media(768) {
@@ -555,9 +600,10 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
   &__opinion {
     // max-width: 307px;
-    height: 17.77vw;
-    /* 四舍五入到小数点后两位 */
-    width: 12.62vw;
+    height: 24.65278vw;
+    width: 17.43056vw;
+    max-height: 355px;
+    max-width: 251px;
     object-fit: cover;
 
     @include max-media(768) {
@@ -567,10 +613,11 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   }
 
   &__exhibition {
-    width: 49.77vw;
-    height: 19.1vw;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     max-width: 860px;
+
     @include max-media(768) {
       min-width: 320px;
       min-height: 125px;
@@ -582,6 +629,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     height: 19.1vw;
     object-fit: cover;
     max-width: 860px;
+
     @include max-media(768) {
       min-width: 320px;
       min-height: 125px;
@@ -603,6 +651,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     &__num {
       margin-right: 8px;
       font-size: 1.3125rem;
+
       @include max-media(768) {
         font-size: 0.75rem;
       }
@@ -626,12 +675,17 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 }
 
 // Story
-.swiper {
+.swiperscrollbar {
   --swiper-scrollbar-sides-offset: 0%;
   --swiper-scrollbar-size: 6px;
 
   padding-bottom: 9.3055%;
   margin-bottom: 21.157%;
+
+  &__wrap {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
 
   @include max-media(768) {
     // padding-left: -10.4469%;
@@ -640,6 +694,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     margin-right: -10.4469%;
   }
 }
+
 // .swiper-scrollbar {
 //   width: 100% !important;
 //   max-width: 600px;
@@ -662,8 +717,12 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     display: inline-block;
     top: 50%;
     left: 0px;
-    width: 90%;
+    width: 85%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+    @include max-media(1440) {
+      width: 100%;
+    }
 
     @include max-media(1200) {
       width: 80%;
@@ -679,9 +738,11 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 // magazine
 .magazine {
   margin-bottom: 21.5688%;
+
   @include max-media(768) {
     margin-bottom: 62.4515%;
   }
+
   &__container {
     margin-top: -20.67%;
     // height: 1vw;

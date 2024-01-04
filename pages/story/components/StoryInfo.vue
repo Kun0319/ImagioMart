@@ -6,7 +6,7 @@
         <img src="../../../assets/images/story1.svg" alt="" class="photo" />
       </div>
       <div
-        class="flex flex-col project__text justify-end gap-4 md:col-span-6 col-span-12"
+        class="flex flex-col project__text justify-center gap-4 md:col-span-6 col-span-12"
       >
         <div class="md:hidden flex">
           <span class="mr-auto story__text">易雅居</span>
@@ -35,6 +35,7 @@
   height: 100%;
   max-width: 517px;
   max-height: 347px;
+  aspect-ratio: 3/2;
 }
 .story {
   &__info {
@@ -74,6 +75,13 @@
       text-align: justify;
       max-height: 80px;
       overflow: hidden;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 限制在兩行 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 文字超出部分顯示省略號 */
+      white-space: normal; /* 換行 */
 
       @include max-media(768) {
         font-size: 0.625rem;

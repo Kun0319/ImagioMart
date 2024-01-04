@@ -1,8 +1,22 @@
-<script setup></script>
+<script setup>
+import { useGlobalStore } from "@/stores/global.js";
+
+const globalStore = useGlobalStore();
+const isChinese = computed(() => globalStore.language === "CN");
+</script>
 
 <template lang="">
   <div class="cover grid grid-cols-12 mt-32 gap-4">
     <p
+      v-if="isChinese"
+      class="cover__title md:col-start-2 col-start-1 md:col-span-5 col-span-6 md:w-11/12 md:justify-self-center"
+    >
+      封面故事
+    </p>
+
+    <!-- 如果不是中文 -->
+    <p
+      v-else
       class="cover__title md:col-start-2 col-start-1 md:col-span-5 col-span-6 md:w-11/12 md:justify-self-center"
     >
       COVER STORY

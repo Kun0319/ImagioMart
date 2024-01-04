@@ -9,103 +9,125 @@ const isRwdMenuOpen = ref(false);
 const toggleRwdMenu = () => {
   isRwdMenuOpen.value = !isRwdMenuOpen.value;
 };
+
+// 假swiper 待API
+const ImageArray = [
+  {
+    url: "/images/SwiperPic.svg", // 圖片路徑
+    title: "ANA Studio", // 圖片標題
+    description: "Cooking and art", // 圖片描述
+    descriptionZh: "西澳大利亞珀斯 隱園", // 圖片描述
+  },
+  {
+    url: "/images/SwiperPic.svg", // 圖片路徑
+    title: "ANA Studio", // 圖片標題
+    description: "Cooking and art", // 圖片描述
+    descriptionZh: "西澳大利亞珀斯 隱園", // 圖片描述
+  },
+  {
+    url: "/images/SwiperPic.svg", // 圖片路徑
+    title: "ANA Studio", // 圖片標題
+    description: "Cooking and art", // 圖片描述
+    descriptionZh: "西澳大利亞珀斯 隱園", // 圖片描述
+  },
+];
 // 假project 待API
 const projects = [
   {
     id: "1",
     name: "Project A",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/133c/aae5/b5c0d95ffc5aaf1bba7bf39ccc61c2e1?Expires=1704067200&Signature=bDP7PQYQB~KZAX3DkAvHHVGwwGn3lFpEatoaRt8hacUGOQQ69cdyH0rgMYJHMUyJGQVzcxA1rt-AAXfswYxSZNaVhlQ2iil6SrqCYIcx51kNy-CdJFFc0MplvyWs6slIqo3Vn9Jvrt7MBY4WD-LYECtwXGzO9e18PPfbDcisxdre2yOJH-A9ESwyUtg6y5PAxTHfNp9-W78IY3x1B17cvk4wScqPIXxgTMKDbHT3ofaAyK7p~oPV9MIxLaYRMzMba1lNCqkazjAy1I9OrjbRc4YRg-zeu2QdVMzGnqGytp77PGv5dvjVsrymdmMrE8i15eFKXX7-hBIaysJmA-tqNA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1705276800&Signature=euKVEwX2JjmgRN7IXOffLr33LF3jITFiJzBrabAp8lTJ~btDn7lJJyMPZwTyBY3eoSnAlp5PFOPW2OQpRq3NCfVHCZq5Xc2IMK9NXRQhUFVHHPE2w8cgvAvRXEHcvOAw0YJaFSEakR-UeY712X~48mvZDFxpKm6zgh3PzLadZNfpf6V1qaGPXolrodujlEGali-JHPOMthufmzO9xuegC~vAcQRb4hkxf7rR7XqMeH8MeFmhDirshC8JYw79a3~4DwmT9F4e~q0HgJwi1zB-U0-FzeMlplmjN9C9CU1-OjPB0yXHxY~U5UlTzDH6CJTBFs~SCmeXGrKlNmQO8IFj-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: "2",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1704067200&Signature=X4JQ76l07kYYyqBTqpcuIpd~4n6von01779UYYBt6Vm6lOGdrJqru~s1XMQZ87ilS3-YRwYF6Zjc--A~KyO0uKr3GU46VC8UDmhCYjNCtseBWV51xkIqMt~fzgDWjG7j2-szHnsEThhZgJj2pG8kX2qO8wa73k61wAj3onGwwXuyPle4Ml1Xv6K0fAFbdtsBGMDTPkQYshG6nSe9DV5SAGeY5vcAXxBAAUa7Rt-un~UbqvJGwBNwfVmYXTtntVvOD-ltiIiDqcKR1Pr1XdNev03aBuECrDUdcCePeZC9~yUZXPv8zzAGG3~GIOPZ8R6gMdzhBJyi8yOCaOQ7n9FxIg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1705276800&Signature=euKVEwX2JjmgRN7IXOffLr33LF3jITFiJzBrabAp8lTJ~btDn7lJJyMPZwTyBY3eoSnAlp5PFOPW2OQpRq3NCfVHCZq5Xc2IMK9NXRQhUFVHHPE2w8cgvAvRXEHcvOAw0YJaFSEakR-UeY712X~48mvZDFxpKm6zgh3PzLadZNfpf6V1qaGPXolrodujlEGali-JHPOMthufmzO9xuegC~vAcQRb4hkxf7rR7XqMeH8MeFmhDirshC8JYw79a3~4DwmT9F4e~q0HgJwi1zB-U0-FzeMlplmjN9C9CU1-OjPB0yXHxY~U5UlTzDH6CJTBFs~SCmeXGrKlNmQO8IFj-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: "3",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ojlHFki1jzsqREbwLbFiF3EiHZYssw28YTW3EpkJqB6OHy4OarNzJHoH9mnsHBLwLznDLCqGZwY9p0rePFjL3EbwOcMVXQGMXlvisALTqle54GjvMfJZA3hhb1~IHkZHeiTqjSN8VFZoXNOi1v52xu-tOWAQXWxk0TdPjXkqL3okdSEbZAZIhOFD4z7Uchy6uuNWqSlgcPimWWNx3vh~FQnGfU51JjRnGMVQ2lh5Ulz3b5D7NPbT0AbhLdEySkl9L1ccJBJcET0-Zw8SrhTK2vZQgJ8z70pNo2EiVKS65Wtm7AFUq9a6Reaa~Vqw9~h81gLGgfEWNKIOn0mDxVGC~Q__",
   },
   {
     id: "4",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/d171/25f7/a79ff4c276ef76dccb32f40c761e3fa4?Expires=1704067200&Signature=BpSDrVybNVTPw3FZ2p3SUaFDFVw9rgG5G1SDny5-AM1W8sg1byUd74SCJQBS42gzZy1JQsPRlOPxjJTnofBn0R9ipEqFRpLy8n8ytCvhYvgoll0QXFvs0nJQH6qlXhqF--cui4iVGVnnfh~qP2eCA~w3RXZGE3~B~yryaDWI68XM6aQ5xSNj8GkjN0~GorvCnDkXff-LwDRNV9CHZDovit1DHBKhF7NvfdfwiWJgQ47GPNQTM-r-xCOESbsjHmoI9AfqoZpAhKpM22NfoAPnc3eeIkQ-mBG821OJFUMLFWvU79zvwy5UQ1ozlwYhB4SXk5gF318EuFH2ktyqLNOJ1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1705276800&Signature=M5DXAzIJfoFRxwvmt9lBbOzAPHLMgQIBqeI9WooIm1gV~-nHsyWJNQo~pUh0cL7XMENGV0huNrIJZrl6adm7Axjt9S~gU6NhdHjupTm0LHAsLVeeoNEQwxnIB3air47K2grQwwLIuaw9-ezH7e24cvXJTzgp6-knQVRubtUQhJDkHaT3B7qPWR-PBaAUjI0Fa0-9D-OTyrf4~glwlEh5bB2u4j0XUbAjhuZ4O2EOY6oeWzFqAESxde9AJfcSJsQG~VOgTtoN~pXx3kVBLG9A2uxZpREYx1KkJ2Rr-tCZ7AtZQUPCwEhK2pF6mnrlQ0EqIpxOTT-RaRcodgL4c6-tBw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: "5",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/3e1c/e8e7/bfe5fe2c18e02b697cf526a6f564455a?Expires=1704067200&Signature=K20ZxgMtGIbOHm7X1mtlERGL4Kb2pfG4feVqzYB-e3xNAIObkd-p5pD0AUXzF8qhQ7l5eNsEkC0ifMi3Y7olN4Pu7WvkzCPVuBr3PCb17rsOVMiTwS2u9YMo2f7Eb~4BEHbbxsROEzpRP9x9yptbRxpwztmcYCXMS5i7W45qGiUi02kFMjrDM32rhNDWO~S9bUobgMAaXqHzUYi-1yekeWoxOonkOs3VXLbIqD2~X~ghlaFleXHgFo8DeI~c1Yg7uIfgIADkhJY8zC3lmsTDjz7KwyrDwMkZZsR4LFg9dwk3jofTHem6A3bucCnnygQT27CFQ6pvLA~cvuV1jblzAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "6",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1704067200&Signature=AceQQLhORZPHg3CJFQjcqJBX2qsdELlFg8iRa0PUozSQiswm8ijGxy2Oc-DCK3T0BoYvYKm-btFIsr8RCv1wkivtfw7dVkFjdTNsjh5jxYM9gu7IyJ1JFJdO1LJhmoyH6B1XKqaGmwUzkyuHyLDL~eKrMuEIs4VV0ELZVlbei4MQnJk53alsSuAxPqSw4NuazcM3gr58tyVvRWMwqk3TzAcqTL9rPfuRQEPWFH5ga6hhOJZngBmbfdNWxHn~6Hk9rIxKHi4Cs6X-TTGAn4eLzdVPBwaj1TH6s4BD8SZTYbRrJedxLsjuCClAwFqR9uHaOAK3xdEVWfXUhSIANz0TIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "7",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/347f/4785/ec22566614e99f57dd7e88f129b9e188?Expires=1704067200&Signature=JV~SYXFjaBPvT~nFURG7E4aUKzX~O6wrxlB6GF3Fv23gQo3lN~Zzf3v~E4AC-J2-N4JnmWaptGHQ3tsobehSMNKQ--rosyhGBMVLXI-m0EFXx5uCLUuovcu-g9p5kB5wpOZ320cOGp2P6d1tXJLJ7jToD5DrrARiKYeejSqAUsp4JXW3Gz92HhWu5wd37aA9MMuI5h4U2F9Xt079bOHDVkdg9fLspKUUo5jZ16X9SivSfWp1l~BGxnRGmTJ2wo8oBOslfGkxrWKE7mGi1YvNFy7bJLDivl69tfTb3vtKMxWhBQhz~KzHYUkPc0DtCDN0L0NRkIyAmYJSeNADeBOjGw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "8",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/3e1c/e8e7/bfe5fe2c18e02b697cf526a6f564455a?Expires=1704067200&Signature=K20ZxgMtGIbOHm7X1mtlERGL4Kb2pfG4feVqzYB-e3xNAIObkd-p5pD0AUXzF8qhQ7l5eNsEkC0ifMi3Y7olN4Pu7WvkzCPVuBr3PCb17rsOVMiTwS2u9YMo2f7Eb~4BEHbbxsROEzpRP9x9yptbRxpwztmcYCXMS5i7W45qGiUi02kFMjrDM32rhNDWO~S9bUobgMAaXqHzUYi-1yekeWoxOonkOs3VXLbIqD2~X~ghlaFleXHgFo8DeI~c1Yg7uIfgIADkhJY8zC3lmsTDjz7KwyrDwMkZZsR4LFg9dwk3jofTHem6A3bucCnnygQT27CFQ6pvLA~cvuV1jblzAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "9",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1704067200&Signature=AceQQLhORZPHg3CJFQjcqJBX2qsdELlFg8iRa0PUozSQiswm8ijGxy2Oc-DCK3T0BoYvYKm-btFIsr8RCv1wkivtfw7dVkFjdTNsjh5jxYM9gu7IyJ1JFJdO1LJhmoyH6B1XKqaGmwUzkyuHyLDL~eKrMuEIs4VV0ELZVlbei4MQnJk53alsSuAxPqSw4NuazcM3gr58tyVvRWMwqk3TzAcqTL9rPfuRQEPWFH5ga6hhOJZngBmbfdNWxHn~6Hk9rIxKHi4Cs6X-TTGAn4eLzdVPBwaj1TH6s4BD8SZTYbRrJedxLsjuCClAwFqR9uHaOAK3xdEVWfXUhSIANz0TIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "10",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1704067200&Signature=Q-4GGt~v7DeVSwyukbVMxwNDA89NBGuAN~PVrxep2mSpsj3p35ALJ42sncsrdnhZmKmygoAkxH9rggRbvJfxelSXOmXXrkyPW4hrSLQCCCQPl0YRuvhgbuzpnI-odmCZqxHLaVxS84wj7cCJCtsYIbzoxuX4eyPLZEQdk56ucbq1FGB4NScDNSecrfk7nkPFm98~sVavQfQ4nPuM5vFqT~0JxuBF1B73dgVjniQB8an-mTsL6F6BUNGtUFM0tWLlx-Ya4fpYQnbNuOALYqhmSO1KRymPOi1lV1IychunczRcmXeEhCr8cgSYd96GBjaMJwpD5pWqLh8HMXmcuUkJOQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1705276800&Signature=euKVEwX2JjmgRN7IXOffLr33LF3jITFiJzBrabAp8lTJ~btDn7lJJyMPZwTyBY3eoSnAlp5PFOPW2OQpRq3NCfVHCZq5Xc2IMK9NXRQhUFVHHPE2w8cgvAvRXEHcvOAw0YJaFSEakR-UeY712X~48mvZDFxpKm6zgh3PzLadZNfpf6V1qaGPXolrodujlEGali-JHPOMthufmzO9xuegC~vAcQRb4hkxf7rR7XqMeH8MeFmhDirshC8JYw79a3~4DwmT9F4e~q0HgJwi1zB-U0-FzeMlplmjN9C9CU1-OjPB0yXHxY~U5UlTzDH6CJTBFs~SCmeXGrKlNmQO8IFj-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
   },
   {
     id: "11",
     name: "Project A",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/133c/aae5/b5c0d95ffc5aaf1bba7bf39ccc61c2e1?Expires=1704067200&Signature=bDP7PQYQB~KZAX3DkAvHHVGwwGn3lFpEatoaRt8hacUGOQQ69cdyH0rgMYJHMUyJGQVzcxA1rt-AAXfswYxSZNaVhlQ2iil6SrqCYIcx51kNy-CdJFFc0MplvyWs6slIqo3Vn9Jvrt7MBY4WD-LYECtwXGzO9e18PPfbDcisxdre2yOJH-A9ESwyUtg6y5PAxTHfNp9-W78IY3x1B17cvk4wScqPIXxgTMKDbHT3ofaAyK7p~oPV9MIxLaYRMzMba1lNCqkazjAy1I9OrjbRc4YRg-zeu2QdVMzGnqGytp77PGv5dvjVsrymdmMrE8i15eFKXX7-hBIaysJmA-tqNA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "12",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1704067200&Signature=X4JQ76l07kYYyqBTqpcuIpd~4n6von01779UYYBt6Vm6lOGdrJqru~s1XMQZ87ilS3-YRwYF6Zjc--A~KyO0uKr3GU46VC8UDmhCYjNCtseBWV51xkIqMt~fzgDWjG7j2-szHnsEThhZgJj2pG8kX2qO8wa73k61wAj3onGwwXuyPle4Ml1Xv6K0fAFbdtsBGMDTPkQYshG6nSe9DV5SAGeY5vcAXxBAAUa7Rt-un~UbqvJGwBNwfVmYXTtntVvOD-ltiIiDqcKR1Pr1XdNev03aBuECrDUdcCePeZC9~yUZXPv8zzAGG3~GIOPZ8R6gMdzhBJyi8yOCaOQ7n9FxIg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "13",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "14",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/d171/25f7/a79ff4c276ef76dccb32f40c761e3fa4?Expires=1704067200&Signature=BpSDrVybNVTPw3FZ2p3SUaFDFVw9rgG5G1SDny5-AM1W8sg1byUd74SCJQBS42gzZy1JQsPRlOPxjJTnofBn0R9ipEqFRpLy8n8ytCvhYvgoll0QXFvs0nJQH6qlXhqF--cui4iVGVnnfh~qP2eCA~w3RXZGE3~B~yryaDWI68XM6aQ5xSNj8GkjN0~GorvCnDkXff-LwDRNV9CHZDovit1DHBKhF7NvfdfwiWJgQ47GPNQTM-r-xCOESbsjHmoI9AfqoZpAhKpM22NfoAPnc3eeIkQ-mBG821OJFUMLFWvU79zvwy5UQ1ozlwYhB4SXk5gF318EuFH2ktyqLNOJ1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "15",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/3e1c/e8e7/bfe5fe2c18e02b697cf526a6f564455a?Expires=1704067200&Signature=K20ZxgMtGIbOHm7X1mtlERGL4Kb2pfG4feVqzYB-e3xNAIObkd-p5pD0AUXzF8qhQ7l5eNsEkC0ifMi3Y7olN4Pu7WvkzCPVuBr3PCb17rsOVMiTwS2u9YMo2f7Eb~4BEHbbxsROEzpRP9x9yptbRxpwztmcYCXMS5i7W45qGiUi02kFMjrDM32rhNDWO~S9bUobgMAaXqHzUYi-1yekeWoxOonkOs3VXLbIqD2~X~ghlaFleXHgFo8DeI~c1Yg7uIfgIADkhJY8zC3lmsTDjz7KwyrDwMkZZsR4LFg9dwk3jofTHem6A3bucCnnygQT27CFQ6pvLA~cvuV1jblzAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
   {
     id: "16",
     name: "Project B",
     imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1704067200&Signature=AceQQLhORZPHg3CJFQjcqJBX2qsdELlFg8iRa0PUozSQiswm8ijGxy2Oc-DCK3T0BoYvYKm-btFIsr8RCv1wkivtfw7dVkFjdTNsjh5jxYM9gu7IyJ1JFJdO1LJhmoyH6B1XKqaGmwUzkyuHyLDL~eKrMuEIs4VV0ELZVlbei4MQnJk53alsSuAxPqSw4NuazcM3gr58tyVvRWMwqk3TzAcqTL9rPfuRQEPWFH5ga6hhOJZngBmbfdNWxHn~6Hk9rIxKHi4Cs6X-TTGAn4eLzdVPBwaj1TH6s4BD8SZTYbRrJedxLsjuCClAwFqR9uHaOAK3xdEVWfXUhSIANz0TIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
   },
 ];
 // 小螢幕前7個
@@ -130,6 +152,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
         </template>
         <!-- 類別按鈕 -->
       </BreadcrumbLine>
+
       <div
         v-show="isRwdMenuOpen"
         class="rwd-menu-overlay"
@@ -139,7 +162,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
         <CategorySelectorRWD />
       </div>
       <div class="inner-wrap">
-        <SwiperPic />
+        <SwiperPic :images="ImageArray" />
         <div class="grid grid-cols-12 gap-4">
           <div
             class="md:col-span-9 col-span-full grid grid-cols-12 gap-4 rwd-margin"
@@ -150,16 +173,9 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
               :key="project.id"
               :class="[
                 project.id % 2 !== 0 ? 'md:col-start-1' : 'md:col-start-7',
-                ' md:block hidden col-span-6  ',
-                'justify-self-center',
+                '  md:col-span-6  col-span-12 ',
+                'md:justify-self-center',
               ]"
-            >
-              <ProjectShowcase :project="project" />
-            </div>
-            <div
-              v-for="project in firstSevenProjects"
-              :key="`mobile-${project.id}`"
-              class="md:hidden col-span-12"
             >
               <ProjectShowcase :project="project" />
             </div>
@@ -176,18 +192,16 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
 <style lang="scss" scoped>
 // 12/20
 :deep(.icon__one) {
-  display: flex;
-  justify-content: space-between;
+  @include max-media(768) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   // margin-bottom: 2rem;
 }
 
 :deep(.line__text) {
-  margin-bottom: 1.7551%;
-}
-
-:deep(.line) {
-  margin-top: 4.7357%;
-  // margin-bottom: 10.24%;
+  // margin-bottom: 1.7551%;
 }
 
 .rwd-margin {
@@ -197,9 +211,9 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
 }
 
 .rwd-menu {
-  display: block;
+  display: none;
   position: absolute;
-  top: 200px;
+  top: 225px;
   right: 0;
   width: 90%;
   padding: 5%;
@@ -207,6 +221,10 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
   background-color: rgb(255, 255, 255);
   z-index: 200;
   box-shadow: 0px 13px 2.799999952316284px 0px #00000040;
+
+  @include max-media(768) {
+    display: block;
+  }
 
   &-overlay {
     position: fixed;

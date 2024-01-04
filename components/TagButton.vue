@@ -22,8 +22,10 @@ const props = defineProps({
   font-size: 0.75rem;
   text-align: center;
   padding: 0.5rem 1rem;
+
   @include max-media(768) {
     font-size: 0.5rem;
+    min-width: 75px;
   }
 }
 </style>

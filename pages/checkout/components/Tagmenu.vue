@@ -63,7 +63,7 @@ const toggleTabVisibility = () => {
 // }
 .tabs {
   display: flex;
-  border-bottom: 3px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
   margin-bottom: 16.059%;
   width: 100%;
   justify-content: space-around;
@@ -90,7 +90,7 @@ const toggleTabVisibility = () => {
   /* 與底線對齊 */
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background-color: black;
   transition: all 0.3s ease;
   /* 黑色指示條 */

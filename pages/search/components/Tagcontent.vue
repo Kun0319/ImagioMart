@@ -215,7 +215,7 @@ const groupedData = computed(() => {
     <div class="grid grid-cols-12 gap-4">
       <div
         v-if="filteredData.length"
-        class="col-span-8 justify-self-start project__text"
+        class="md:col-span-8 col-span-12 justify-self-start project__text"
       >
         <p class="results">
           {{ filteredData.length }} results for

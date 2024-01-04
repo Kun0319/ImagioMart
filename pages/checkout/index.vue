@@ -42,12 +42,14 @@ function validateInput(selectorId, event) {
         <TabMenu class="md:hidden" />
         <div class="grid grid-cols-12 gap-4">
           <div class="shopcart__category col-span-full">
-            <p class="col-span-6">期刊</p>
-            <p class="col-span-4 md:block hidden">數量</p>
-            <p class="col-span-2 text-center md:block hidden">小計</p>
+            <p class="col-span-5">期刊</p>
+            <p class="col-span-4 md:block hidden text-center">數量</p>
+            <p class="col-span-3 text-center md:block hidden text-center">
+              小計
+            </p>
           </div>
           <div class="shopcart__items first-item">
-            <div class="md:col-span-3 col-span-5">
+            <div class="md:col-span-2 col-span-5">
               <img
                 src="https://s3-alpha-sig.figma.com/img/a455/a214/b6ecf3505b538faadba1023e1aa5ca30?Expires=1704067200&Signature=K6TczBBD7I8G9r8XMKLpFc7bOvlilygrpT45OpV42alnPk60aNuol0LfToz8f6TUFpkL5S7ikhm2qoFNPNuHsGsFb02gUbzHpPdu~QuRR4wY-MXcN4zA9El39JWt6X~PrShAYZknPZWMFJREgSAMJGZ~O28DiFMFProsa0chN~T7LDUlf0~BBBhNXT0h2DaaJG5b3yuOQ8WZXZ1qr5ttz6-AC5skZEmY5rfWLf6MRxZd9WQXwbqVxzgIBVjGCh-GsjBAy0nssxCoWyUAA0rQBDtHkU7-VGlfl2Z4FwQXgegF1Fd59n-ZYavKJujIFFeE~6GGBtKHM1DDl6rNigMDhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 alt=""
@@ -123,7 +125,7 @@ function validateInput(selectorId, event) {
 
           <button
             @click="goToCheckout"
-            class="button md:col-end-13 md:col-span-6 col-span-12"
+            class="button md:col-end-13 md:col-span-5 col-span-12"
           >
             結帳
           </button>
@@ -213,16 +215,12 @@ function validateInput(selectorId, event) {
             <p class="ml-auto">NT$300</p>
           </div>
           <button
-            class="button md:col-end-13 md:col-span-6 col-span-12"
+            class="button md:col-end-13 md:col-span-5 col-span-12"
             @click="goToCheckout"
           >
             結帳
           </button>
         </div>
-
-        <!-- <div class="flex justify-between button__container">
-          <button class="button">繼續購物</button>
-        </div> -->
       </div>
     </div>
   </NuxtLayout>
@@ -233,10 +231,13 @@ function validateInput(selectorId, event) {
   // height: 915px;
   width: 100%;
   max-width: 845px;
-  margin-top: 55px;
+  margin-top: 6.024%;
+
   &__container {
-    margin-bottom: 11.3517%;
-    margin-top: 12.0481%;
+    margin-bottom: 3.7607%;
+    @include max-media(768) {
+      margin-bottom: 63.074%;
+    }
   }
 
   &__my {
@@ -244,7 +245,7 @@ function validateInput(selectorId, event) {
     font-weight: 700;
     line-height: 23.31px;
     margin-bottom: 4.3966%;
-    border-bottom: 3px solid #000000;
+    border-bottom: 2px solid #000000;
     padding-bottom: 4.5034%;
   }
 
@@ -332,12 +333,14 @@ function validateInput(selectorId, event) {
 }
 
 .photo {
-  //   width: 100%;
+  width: 100%;
+  height: 100%;
+  max-width: 133px;
+  max-height: 181px;
   // display: block;
-  // width: 133px;
-  // height: 180px;
-  width: 7.7vw;
-  height: 10.42vw;
+
+  // width: 7.7vw;
+  // height: 10.42vw;
   //   object-fit: contain;
 
   @include max-media(768) {
@@ -352,6 +355,10 @@ function validateInput(selectorId, event) {
   // padding: 3% 10%;
   //   width: 183px;
   height: 45px;
+  margin-bottom: 31.8527%;
+  @include max-media(768) {
+    margin-bottom: 0%;
+  }
 
   &__container {
     margin-top: 5%;

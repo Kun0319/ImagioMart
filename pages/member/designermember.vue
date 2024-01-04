@@ -2,15 +2,16 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-const canShow = ref(false);
+// const canShow = ref(false);
 const router = useRouter();
 const handleSubmit = async () => {
-  // 更新 canShow.value
-  canShow.value = true;
-  // 導航到 /member 頁面
+  event.preventDefault(); // 防止表单默认提交行为
+  const globalStore = useGlobalStore();
+  globalStore.setSubmissionStatus(true);
   await router.push("/member");
 };
 </script>
+
 <template lang="">
   <NuxtLayout>
     <div class="designer">
@@ -84,6 +85,7 @@ const handleSubmit = async () => {
     font-family: $font-NotoSerif;
     font-size: 1rem;
     margin-bottom: 43.3232%;
+
     @include max-media(768) {
       font-size: 0.75rem;
     }

@@ -4,10 +4,15 @@ import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { useGlobalStore } from "@/stores/global.js";
+
+const globalStore = useGlobalStore();
+const isChinese = computed(() => globalStore.language === "CN");
 </script>
 <template>
   <div class="title">
-    <p>RELATED PROJECT</p>
+    <p v-if="isChinese">延伸閱讀</p>
+    <p v-else>RELATED PROJECT</p>
   </div>
   <swiper
     ref="mySwiper"

@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+const globalStore = useGlobalStore();
+const canShow = computed(() => globalStore.hasSubmitted);
+</script>
 
 <template lang="">
   <div class="personalinfo">
@@ -14,17 +17,19 @@
       <div class="personalinfo__content">xxxxxx@gmail.com</div>
       <div class="personalinfo__content">．．．．．．．．．</div>
     </div>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-6">
       <button class="btn"><img src="~/assets/icon/pen.svg" alt="" /></button>
       <button class="btn"><img src="~/assets/icon/pen.svg" alt="" /></button>
-      <button class="btn"><img src="~/assets/icon/pen.svg" alt="" /></button>
+      <button class="btn invisible">
+        <img src="~/assets/icon/pen.svg" alt="" />
+      </button>
       <button class="btn"><img src="~/assets/icon/pen.svg" alt="" /></button>
     </div>
   </div>
 
   <div>
-    <button class="button">
-      <nuxt-link to="member/designermember">成為設計師會員會員</nuxt-link>
+    <button class="button" v-if="canShow === false">
+      <nuxt-link to="member/designermember">成為設計師會員</nuxt-link>
     </button>
   </div>
   <div class="personalinfo__checkbox__container">
@@ -121,8 +126,8 @@
   font-family: $font-NotoSerif;
 
   img {
-    width: 29px;
-    height: 29px;
+    width: 25px;
+    height: 25px;
   }
 }
 </style>

@@ -94,12 +94,8 @@ const toggleFilterMenu = () => {
   display: flex;
   justify-content: space-between;
 }
-:deep(.line) {
-  margin-top: 4.7357%;
-}
 
 .tag-button {
-  margin-top: 3.35%;
   margin-bottom: 3.698%;
 
   @include max-media(769) {
@@ -122,9 +118,9 @@ const toggleFilterMenu = () => {
   }
 }
 
-:deep(.line) {
-  margin-bottom: 0%;
-}
+// :deep(.line) {
+//   margin-bottom: 0%;
+// }
 
 .advertise {
   margin-top: 30.7421%;

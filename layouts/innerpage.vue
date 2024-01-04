@@ -1,6 +1,6 @@
 <script setup>
 import { computed, inject } from "vue";
-
+// import cover from "~/assets/images/newsbg.png";
 const FilterMenuOpen = ref(false);
 
 const toggleFilterMenu = () => {
@@ -12,6 +12,9 @@ const props = defineProps({
     type: String,
     default: "Home /News/Furniture",
   },
+  cover: {
+    type: String,
+  },
 });
 </script>
 
@@ -22,6 +25,7 @@ const props = defineProps({
     <ReturnTop />
     <ShoppingCart />
     <div class="filter__relative">
+      <Banner :imgSrc="cover" />
       <BreadcrumbLine :text="breadcrumbText" :showTags="true" :showIcon="true">
         <template #icon>
           <img
@@ -31,7 +35,7 @@ const props = defineProps({
             @click="toggleFilterMenu"
           />
         </template>
-        <!-- 類別按鈕 -->
+        <!-- 類別按鈕 -->v-if="cover"
         <template #tags>
           <div class="tags-container md:flex hidden">
             <nuxt-link to="/search/Dining" class="tag-button">
@@ -73,12 +77,6 @@ const props = defineProps({
             </div>
           </div>
         </template>
-        <!-- <template #icon2>
-          <div class="icon" v-show="!FilterMenuOpen">
-            <i class="pi pi-heart mx-3"></i>
-            <i class="pi pi-share-alt"></i>
-          </div>
-        </template> -->
       </BreadcrumbLine>
     </div>
     <div class="filter__menu" v-show="FilterMenuOpen">
@@ -121,7 +119,7 @@ const props = defineProps({
 }
 
 .tag-button {
-  margin-top: 3.35%;
+  // margin-top: 1%;
   margin-bottom: 3.698%;
   @include max-media(768) {
     margin-top: 1.5%;

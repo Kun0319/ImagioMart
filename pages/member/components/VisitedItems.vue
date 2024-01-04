@@ -163,7 +163,7 @@
 }
 
 .text {
-  align-self: flex-end;
+  align-self: center;
 
   &__title {
     font-size: 1rem;

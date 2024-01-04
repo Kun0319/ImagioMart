@@ -29,11 +29,12 @@ const tabs = computed(() => {
     { label: "瀏覽紀錄" },
   ];
   if (props.canShow) {
-    baseTabs.push({ label: "作品投稿" });
+    baseTabs.push({ label: "投稿紀錄" });
   }
   return baseTabs;
 });
-// 假設這是一個響應式參數，用於決定是否顯示 "作品投稿"
+
+// 假設這是一個響應式參數，用於決定是否顯示 "投稿紀錄"
 // const canShowSubmissionTab = ref(false);
 
 // const toggleTabVisibility = () => {
@@ -79,6 +80,7 @@ const tabs = computed(() => {
   margin-bottom: 9.3775%;
   width: 100%;
   justify-content: space-around;
+
   @include max-media(768) {
     margin-bottom: 15.3092%;
   }
@@ -91,6 +93,7 @@ const tabs = computed(() => {
   text-align: center;
   font-size: 1rem;
   padding-bottom: 5.6265%;
+
   @include max-media(768) {
     font-size: 0.875rem;
   }

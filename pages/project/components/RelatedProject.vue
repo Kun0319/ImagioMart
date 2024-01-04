@@ -1,8 +1,14 @@
-<script setup></script>
+<script setup>
+import { useGlobalStore } from "@/stores/global.js";
+
+const globalStore = useGlobalStore();
+const isChinese = computed(() => globalStore.language === "CN");
+</script>
 <template>
   <div class="RelatedProject">
     <div>
-      <p class="md:block hidden text__title">RELATED PROJECT</p>
+      <p v-if="isChinese" class="md:block hidden text__title">延伸閱讀</p>
+      <p v-else class="md:block hidden text__title">RELATED PROJECT</p>
       <p class="md:hidden text-center text__title">RELATED</p>
     </div>
     <div class="grid grid-cols-12 gap-4 justify-center">

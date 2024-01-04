@@ -12,6 +12,6 @@
 </template>
 <style lang="scss" scoped>
 .margin {
-  margin-top: 55px;
+  // margin-top: 55px;
 }
 </style>

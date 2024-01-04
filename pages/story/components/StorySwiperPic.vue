@@ -14,7 +14,7 @@ import { Scrollbar, Autoplay } from "swiper/modules";
         <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">
           <img
             src="~/assets/images/storyswiper.png"
-            class="lg:col-span-8 col-span-12 w-full"
+            class="lg:col-span-8 col-span-12 w-full photo"
           />
           <!-- 文字區塊 -->
           <div
@@ -35,7 +35,7 @@ import { Scrollbar, Autoplay } from "swiper/modules";
         <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">
           <img
             src="~/assets/images/storyswiper.png"
-            class="lg:col-span-8 col-span-12 w-full"
+            class="lg:col-span-8 col-span-12 w-full photo"
           />
           <div
             class="flex flex-col project__text justify-end lg:col-start-9 lg:col-span-4 col-span-12"
@@ -55,7 +55,7 @@ import { Scrollbar, Autoplay } from "swiper/modules";
         <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">
           <img
             src="~/assets/images/storyswiper.png"
-            class="lg:col-span-8 col-span-12 w-full"
+            class="lg:col-span-8 col-span-12 photo"
           />
           <div
             class="flex flex-col project__text justify-end lg:col-start-9 lg:col-span-4 col-span-12"
@@ -81,6 +81,12 @@ import { Scrollbar, Autoplay } from "swiper/modules";
   </div>
 </template>
 <style lang="scss" scoped>
+.photo {
+  aspect-ratio: 3/2;
+  width: 100%;
+  max-width: 740px;
+  // max-height: 460px;
+}
 .project__text {
   @include min-media(1024) {
     margin-left: 10%;

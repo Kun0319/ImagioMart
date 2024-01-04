@@ -30,11 +30,15 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .line {
-  margin-top: 9.0285%;
+  // margin-top: 9.0285%;
+  margin-top: 4.7357%;
+  // margin-top: 7.9116%;
   margin-bottom: 7.9116%;
 
   &__text {
     font-size: 0.75rem;
+    // margin-bottom: 3.3499%;
+    margin-bottom: 2.3117%;
   }
 
   &__icon {

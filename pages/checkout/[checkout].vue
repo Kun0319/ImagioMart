@@ -241,7 +241,7 @@ const selectedSubOption = ref("");
             </div>
             <div>
               <input type="checkbox" name="" />
-              <label for="">Apple Pay</label>
+              <label for="">超商繳費代碼</label>
             </div>
           </div>
           <!-- 付款區塊 -->
@@ -392,7 +392,7 @@ const selectedSubOption = ref("");
     font-weight: 700;
     line-height: 23.31px;
     margin-bottom: 4.3966%;
-    border-bottom: 3px solid #000000;
+    border-bottom: 2px solid #000000;
     padding-bottom: 4.5034%;
   }
 

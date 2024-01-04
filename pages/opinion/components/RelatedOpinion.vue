@@ -4,13 +4,13 @@
     <div class="grid grid-cols-12 gap-4 justify-center">
       <div class="col-span-4 text__title">
         <!-- <p class="text__title">RELATED OPINION</p> -->
-        <p class="">相關人物</p>
+        <p class="">延伸閱讀</p>
       </div>
       <div class="col-span-4"></div>
       <div class="col-span-4"></div>
       <div class="md:col-span-4 col-span-6 text">
         <img
-          src="https://s3-alpha-sig.figma.com/img/52cc/17b4/7c42a94884c97b6cd85a6a8a10d18a94?Expires=1704067200&Signature=JrwRlZKAOSX4iAtHtxy4PrhBevuFuT-0j2V-lIHvVghtkUDHKYVpOODw-VkC-BW0pOblaai4R5-ZJTiinQ2xYqNR3sEJzhK3avH~d-Jg-C-6xcnpv213MOvXKYlL~CtoUQoCCHI~p2WZhgL0cAM6ANOXk8hHhag4I8eKy8NvYsttutabLsSEx8JBMpA-Cyudm3Rc9euHUWZZJzcSMAJWcBpXWhNfaTkgqD5EHpGv36qqGd95WYFYdkvrm4zxo8ml5DZi~O90tqk5gUNx-LnEpUWTJ1sCQ18~Wz4fXw1o7E0dlzmGhyZ4QaNQ0HYWk1VtztHkl7IHL4md0KEgIp53Lg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          src="https://s3-alpha-sig.figma.com/img/52cc/17b4/7c42a94884c97b6cd85a6a8a10d18a94?Expires=1705276800&Signature=FyP5HUN6UCQzThJWDmKjZZEqytnE55eaAkRJXi6RwYtKPMlyeSjYeWXGGNjdjJBXrg-NjZjQasa53qGfzOV~3810PFVRg-F2ImhGzHdbBXeVUp9Mf5HJK5WStw1yFq8PvYVrOBd65eFv0NrJb~br3Bnkl2HYBcV5Enx2m5P9CguhBFYqeebR4fAuOeZQzlnjKIZ8oL4T~z~9foxhLTPas1T8mfJcAGbz~O-19xfxpXzrl20q7Snyponl8Q8jEW4aBstMi48lhgkzUC83l2zkZtbZGkfEeVs-ovA42pN~-IVsK6xpqnZzZ15mBvk8rFNx86GykZbUSwVVNYNowB-0Ig__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt=""
           class="image"
         />
@@ -21,7 +21,7 @@
       </div>
       <div class="md:col-span-4 col-span-6 text">
         <img
-          src="https://s3-alpha-sig.figma.com/img/7925/cbfe/6546d4a97adb89c599ab10e0dc442252?Expires=1704067200&Signature=TWUe6tFON-fsZZ4oGE3XQrzqlpHxUDF1STo45a0N0TjsVFfRSfOU8HPagHGfTq1IBCmWfouol47UzsmNaCVeAzgChxMh4gWavVy9lG6-TU6rPKhuGT8y5vE8n2kmf0u4VDIEYMyr4eAMzizMtE3z1Ys1tzoszLhJEQRwd~4t4kVMtycWjg7CSFLpjk6gocytzgdFJyXZJvCXgGYQX6sGiDvOHznb1ePx0IWuEhwPPI2gVlvc6xwh1Pqmvhh~6p8W3eIezGsYcFmoEOSPZLls4ONWbdDE9aXQHCSxG~gt-9OGJon6blBJTG4ItRTaDrMZUaoy1~y8~OuPsNOOn0r8Qw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          src="https://s3-alpha-sig.figma.com/img/7925/cbfe/6546d4a97adb89c599ab10e0dc442252?Expires=1705276800&Signature=jICKFzQYkfMZTS2hmfffqKSS7ZwFqEW57yMoxSbg03az0qyhC0PXWkmxXG2xcM6hxiYmgf2KsNwko0aL2o~PYwjsSIJ74qn~5SI4QfktiaiLGfnnihqSdL5XknYvwF2HBM0tIQnkDbj1NzuSYiR~uvfCtyYcoN9yqDbX2nHcwqhzrYsGKu531MJuYywZGKW6diVWLfCVXztKK0InNPbkAXgKsQgmXWd00RbZPcvrEjn8kIbXMWnUFZBd94A9H4b4J~BnCvmCFnhmcPCp0HkgvWBDc1KI1nTqZn0MVqS0vmEW7r6ikXa7swrLg3rF4gt2GBQWgsFS5dXJ9r1FVSLN7Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt=""
           class="image"
         />
@@ -32,7 +32,7 @@
       </div>
       <div class="md:col-span-4 col-span-6 text">
         <img
-          src="https://s3-alpha-sig.figma.com/img/68d0/2994/e74193bec00974ae150c6082132429b6?Expires=1704067200&Signature=pzwMyntqHuLWcuk2j9-6mMrURNVM~JByoM2py2Cy2pQeSNEBre-uquv67Me~ZrtUNksVpTWX3niag0KeFp6nq3fWjpFohtFj4ycP~H1fYodF0D0A-CRYK0FKDSM7Rg1AbA267UP0nwLPTvmkvL7QYP1sx5Zw12MN~pqGVCYC2nEx8t7X9VdX8qGZa7twtaXzgykv4PsQW4FKr61hJ84hnr67KI-UEnzqoJ2n2Vo8V7uedKkPdljUM0fK5XGxqPxDE6zhgE8PRW8LWp9KXXTUAZw1UfiKvuU9MvUW1CUwAbU3Iz2yW3-nflu-z7g2FECPr7mu7be60cpRRLeZabL9RA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          src="https://s3-alpha-sig.figma.com/img/68d0/2994/e74193bec00974ae150c6082132429b6?Expires=1705276800&Signature=ZaQC4ei6iJegYgZHpCaL53sSeKGsZF8LdCtoCcBHm4kU6AZ5pJASBuSE3ehjqjn6gTarMPsixW6Gh~4-RMRjMs6xoDfUoYnyxM-8slxL5AQmWrpEZ57DxShAkWN75HNoX7zLeBTAL1G3JeOE39O41-F4RvkZfM4UUtA-DwgLJLlnKYA3PPwHSWupPHhwgGfYJXUU9Hb9enk-zp4uS~nHYiZa1P3QnqdHDaA4G66y~GFXGGU3fuRMFjusa2JoEplox5~zpXaZMusb6Q711AaF4mOAUh-s8C12~DTy4LL4S-td08GXi-Sa4GGxkiCJANsvu8uWwS8DzXy70urqIIcgog__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt=""
           class="image"
         />

@@ -54,10 +54,6 @@ const toggleFilterMenu = () => {
               <TagButton :tag="'Floor'" />
             </nuxt-link>
             <!-- 篩選按鈕 -->
-            <div class="icon-container" @click="toggleFilterMenu">
-              <img src="~/assets/icon/Filter.svg" alt="Filter" class="icon" />
-              <span>Filter&nbsp;&nbsp;▾</span>
-            </div>
           </div>
         </template>
       </BreadcrumbLine>
@@ -94,14 +90,6 @@ const toggleFilterMenu = () => {
   </NuxtLayout>
 </template>
 <style lang="scss" scoped>
-:deep(.line) {
-  margin-top: 4.7357%;
-
-  @include max-media(768) {
-    // margin-bottom: 24%;
-  }
-}
-
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;
@@ -121,7 +109,7 @@ const toggleFilterMenu = () => {
   }
 
   .tag-button {
-    margin-top: 3.35%;
+    // margin-top: 3.35%;
     margin-bottom: 3.698%;
     font-size: 0.6875rem;
 

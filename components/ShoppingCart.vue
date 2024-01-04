@@ -1,6 +1,10 @@
 <script setup>
 import { useGlobalStore } from "@/stores/global.js";
 const globalStore = useGlobalStore();
+const router = useRouter();
+const goToCheckout = () => {
+  router.push("/checkout");
+};
 </script>
 <template>
   <div
@@ -37,9 +41,9 @@ const globalStore = useGlobalStore();
           <p>TWD$300</p>
           <div class="quantity-selector">
             <!-- 數量選擇器 -->
-            <button class="decrease" onclick="decreaseValue()">-</button>
+            <!-- <button class="decrease" onclick="decreaseValue()">-</button> -->
             <input type="number" id="quantity" value="1" />
-            <button class="increase" onclick="increaseValue()">+</button>
+            <!-- <button class="increase" onclick="increaseValue()">+</button> -->
           </div>
         </div>
       </div>
@@ -67,9 +71,9 @@ const globalStore = useGlobalStore();
           <p>TWD$300</p>
           <div class="quantity-selector">
             <!-- 數量選擇器 -->
-            <button class="decrease" onclick="decreaseValue()">-</button>
+            <!-- <button class="decrease" onclick="decreaseValue()">-</button> -->
             <input type="number" id="quantity" value="1" />
-            <button class="increase" onclick="increaseValue()">+</button>
+            <!-- <button class="increase" onclick="increaseValue()">+</button> -->
           </div>
         </div>
       </div>
@@ -78,15 +82,17 @@ const globalStore = useGlobalStore();
         <p class="">TWD$300</p>
       </div>
     </div>
-    <div class="flex justify-between button__container">
+    <div class="flex justify-around button__container">
       <button class="button" @click="globalStore.toggleShoppingCart">
         繼續購物
       </button>
-      <nuxt-link to="/checkout"
-        ><button class="button" @click="globalStore.toggleShoppingCart">
-          結帳
-        </button></nuxt-link
+
+      <button
+        class="button"
+        @click="globalStore.toggleShoppingCart(), goToCheckout()"
       >
+        結帳
+      </button>
     </div>
   </div>
 </template>
@@ -97,7 +103,7 @@ const globalStore = useGlobalStore();
   width: 25vw;
   padding-left: 2%;
   padding-right: 2%;
-  padding-top: 1%;
+  padding-top: 2%;
   padding-bottom: 2%;
   margin-top: 55px;
   position: fixed;
@@ -108,6 +114,7 @@ const globalStore = useGlobalStore();
   max-height: 100vh;
   // min-height: 709px;
   min-width: 372px;
+
   @include max-media(768) {
     max-height: 100vh;
   }
@@ -180,13 +187,19 @@ const globalStore = useGlobalStore();
   // padding: 3% 10%;
   max-width: 183px;
   // height: 45px;
-  width: 10.59vw;
+  width: 45%;
   height: 2.6vw;
+  max-width: 183px;
+  max-height: 45px;
+  padding: 0%;
   min-width: 142px;
   min-height: 35px;
 
   &__container {
     margin-top: 5%;
+    @include max-media(768) {
+      padding-bottom: 10%;
+    }
   }
 }
 
