@@ -1,7 +1,7 @@
 <script setup>
-import bg from "../../public/images/CompetitionBg.png";
+import bg from "../../assets/images/CompetitionBg.png";
 import { useGlobalStore } from "@/stores/global.js";
-import pic from "../../public/images/competitioncontent.png";
+import pic from "../../assets/images/competitioncontent.png";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");
@@ -56,8 +56,9 @@ const slidesData = ref([
   >
     <div class="flex flex-col content-center items-center w-full inner-wrap">
       <div class="photo__container">
+        <!-- @/images/competitioncontent.png?? -->
         <img
-          src="../../public/images/competitioncontent.png"
+          src="../../assets/images/competitioncontent.png"
           alt=""
           class="photo"
         />
