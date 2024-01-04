@@ -1,7 +1,7 @@
 <script setup>
-import bg from "@/public/images/CompetitionBg.png";
+import bg from "../../public/images/CompetitionBg.png";
 import { useGlobalStore } from "@/stores/global.js";
-import pic from "@/public/images/competitioncontent.png";
+import pic from "../../public/images/competitioncontent.png";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");
