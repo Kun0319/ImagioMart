@@ -77,12 +77,18 @@ const props = defineProps({
 .swiper-navigation {
   width: 50%;
   // justify-self: center;
-  // justify-self: end;
+  justify-self: end;
   position: relative;
   padding-top: 50%;
   text-align: center;
   // margin-bottom: 2%;
   --swiper-navigation-sides-offset: 0px;
+  @include max-media(1440) {
+    padding-top: 100%;
+  }
+  @include max-media(1024) {
+    padding-top: 200%;
+  }
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {

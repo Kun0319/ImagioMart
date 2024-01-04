@@ -10,19 +10,19 @@ definePageMeta({
 });
 const relatedProjects = [
   {
-    imageUrl: pic,
+    imageUrl: "/images/CompetitionContent.png",
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "台中黃宅",
   },
   {
-    imageUrl: pic,
+    imageUrl: "/images/competitionthree.png",
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "中國深圳黃宅",
   },
   {
-    imageUrl: pic,
+    imageUrl: "/images/competitioneight.png",
     companyName: "Design",
     projectName: "Huang's House, Taichung",
     projectLocation: "藍鯨 Villa",

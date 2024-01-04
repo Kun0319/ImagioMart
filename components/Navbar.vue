@@ -64,8 +64,8 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "../", name: "IW" },
-      { link: "../", name: "GLOBAL" },
+      { link: "../", nameEn: "IW", nameCn: "全球競賽" },
+      { link: "../", nameEn: "GLOBAL", nameCn: "IW競賽" },
     ],
   },
 ]);
