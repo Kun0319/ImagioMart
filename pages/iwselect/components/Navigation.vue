@@ -174,6 +174,7 @@ function validateInput(event) {
     margin-top: 6.616%;
     // margin-bottom: 19.3856%;
     margin-bottom: 14.9218%;
+
     @include max-media(768) {
       border-bottom: 1px solid #00000070;
     }
@@ -188,12 +189,20 @@ function validateInput(event) {
     font-size: 0.875rem;
     font-family: $font-Noto;
     margin-bottom: 1rem;
+
+    @include max-media(768) {
+      font-size: 0.5rem;
+    }
   }
 
   &__two {
     font-family: "Times New Roman", Times, serif;
     font-size: 1.3125rem;
     margin-bottom: 5.5957%;
+
+    @include max-media(768) {
+      font-size: 0.75rem;
+    }
   }
 
   &__three {
@@ -205,8 +214,10 @@ function validateInput(event) {
     line-height: 192%;
     letter-spacing: 0.816px;
     border-right: 1px solid #000000;
+
     @include max-media(768) {
       border-right: none;
+      font-size: 0.75rem;
     }
   }
 
@@ -216,7 +227,7 @@ function validateInput(event) {
     margin-bottom: 15%;
 
     @include max-media(768) {
-      font-size: 1.0625rem;
+      font-size: 1rem;
     }
   }
 
@@ -226,6 +237,10 @@ function validateInput(event) {
     font-size: 1.125rem;
     margin-bottom: 5%;
     font-weight: 400;
+
+    @include max-media(768) {
+      font-size: 1rem;
+    }
   }
 
   &__info {
@@ -233,6 +248,10 @@ function validateInput(event) {
     font-family: $font-Noto;
     font-size: 1.125rem;
     font-weight: 400;
+
+    @include max-media(768) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -249,10 +268,12 @@ function validateInput(event) {
     // align-content: center;
   }
 }
+
 .selector {
   display: flex;
   justify-content: space-around;
 }
+
 .color-option {
   cursor: pointer;
   width: 25px;
@@ -274,6 +295,7 @@ function validateInput(event) {
   width: 100px;
   margin-bottom: 39%;
   margin-top: 10%;
+
   @include max-media(768) {
     margin-bottom: 0%;
   }
@@ -292,14 +314,16 @@ function validateInput(event) {
 }
 
 .product-card {
-  @apply md:flex grid grid-cols-12  flex-col md:justify-self-end  justify-between md:col-span-3 col-span-12;
+  @apply md:flex grid grid-cols-12 flex-col md:justify-self-end justify-between md:col-span-3 col-span-12;
 }
 
 .shopcart {
   @apply justify-self-end;
 }
+
 .info {
   margin-top: 15.9014%;
+
   &__shopcart {
     font-size: 0.8125rem;
     font-size: clamp(0.75rem, 1vw, 0.8125rem);
@@ -308,6 +332,9 @@ function validateInput(event) {
     height: 2.604vw;
     min-width: 117px;
     min-height: 41px;
+    @include max-media(768) {
+      font-size: 0.625rem;
+    }
   }
 }
 </style>

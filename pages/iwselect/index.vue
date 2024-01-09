@@ -133,6 +133,10 @@ const RwdMenuShow = () => {
 .advertise {
   margin-top: 26.9389%;
   margin-bottom: 24.0338%;
+  @include max-media(768) {
+    margin-top: 12.0082%;
+    margin-bottom: 40%;
+  }
 }
 .photo__advertise {
   width: 66.158vw;

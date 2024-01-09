@@ -56,6 +56,7 @@
 
     @include max-media(768) {
       margin-bottom: 11.25%;
+      font-size: 0.75rem;
     }
   }
 
@@ -67,12 +68,16 @@
 
     @include max-media(768) {
       margin-bottom: 14.61%;
+      font-size: 0.75rem;
     }
   }
 
   &__four {
     font-size: 0.8125rem;
     padding-right: 5%;
+    @include max-media(768) {
+      font-size: 0.625rem;
+    }
   }
 
   &__wrap {

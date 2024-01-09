@@ -1,6 +1,15 @@
 <script setup>
 import bg from "../../assets/images/CompetitionBg.png";
 import PersonnelCard from "./components/PersonnelCard.vue";
+import Popup from "./components/Popup.vue";
+const isPopupVisible = ref(false);
+
+const openPopup = () => {
+  isPopupVisible.value = true;
+};
+const closePopup = () => {
+  isPopupVisible.value = false;
+};
 
 const winners = [
   {
@@ -73,7 +82,9 @@ const winners = [
           :imageSrc="winner.imageSrc"
           :name="winner.name"
           :nameZh="winner.nameZh"
+          @click.stop="openPopup"
         />
+        <Popup v-if="isPopupVisible" @close="closePopup" />
       </div>
     </div>
   </NuxtLayout>

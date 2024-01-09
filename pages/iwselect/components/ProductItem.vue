@@ -68,6 +68,9 @@
     line-height: 23.76px;
     margin-top: 16.1591%;
     margin-bottom: 20%;
+    @include max-media(768) {
+      font-size: 0.75rem;
+    }
 
     &__en {
       @extend .text__one;
@@ -86,6 +89,9 @@
     line-height: 24px;
     letter-spacing: 0.816px;
     margin-bottom: 4px;
+    @include max-media(768) {
+      font-size: 0.625rem;
+    }
   }
 
   &__three {
@@ -93,6 +99,9 @@
     font-size: 0.9375rem;
     line-height: 150%;
     letter-spacing: 0.765px;
+    @include max-media(768) {
+      font-size: 0.625rem;
+    }
   }
 }
 

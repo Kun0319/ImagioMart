@@ -77,7 +77,7 @@ defineProps({
 }
 
 .title {
-  font-family: $font-Noto;
+  // font-family: $font-Noto;
   font-size: 1rem;
   margin-left: 15%;
   margin-top: 4.5%;
