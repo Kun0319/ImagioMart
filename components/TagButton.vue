@@ -24,8 +24,9 @@ const props = defineProps({
   padding: 0.5rem 1rem;
 
   @include max-media(768) {
+    padding: 0.5rem 1.3rem;
     font-size: 0.5rem;
-    min-width: 75px;
+    letter-spacing: 0.408px;
   }
 }
 </style>

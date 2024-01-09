@@ -1,10 +1,11 @@
 @import "_reset.scss";
 @import "_setting.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400&family=Kanit:wght@300;400&family=Noto+Sans+TC:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap");
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Noto+Sans:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,300;0,500;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,300;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -260,12 +261,11 @@ button {
         }
 
         @include max-media(396) {
-            justify-content: start;
+            justify-content: space-between;
         }
     }
 
     .tag-button {
-        // margin-top: 3.35%;
         margin-bottom: 3.698%;
         font-size: 0.6875rem;
 
@@ -361,3 +361,13 @@ button {
         margin-bottom: 5.105%;
     }
 }
+
+// icon one
+.icon__one {
+    display: flex;
+    justify-content: space-between;
+
+    @include max-media(768) {
+    margin-bottom: 9.1855%;
+    }
+  }

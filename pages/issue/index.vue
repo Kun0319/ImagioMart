@@ -4,23 +4,37 @@ import IssueLine from "./components/IssueLine.vue";
 import Magazine from "./components/Magazine.vue";
 import Paginator from "../../components/Paginator.vue";
 import Advertise from "./components/Advertise.vue";
+
 const magazines = Array.from({ length: 12 }, (_, index) => ({
   id: index,
   name: `Magazine ${index + 1}`,
   imageUrl: "~/assets/images/Magazine.svg",
 }));
+
+// 獲取資料
+const {
+  data: fetchedData,
+  pending,
+  error,
+} = useFetch("https://iw-api.d-blueprint.com/api/issues/1");
+
+// const {
+//   data: fetchedData,
+//   pending,
+//   error,
+// } = await useAsyncData(() => {
+//   return $fetch("https://iw-api.d-blueprint.com/api/issues/1");
+// });
 </script>
 
-<template lang="">
+<template>
   <NuxtLayout>
-    <IssueInfo />
+    <IssueInfo :childData="fetchedData" />
+
     <IssueLine />
     <div class="grid grid-cols-12 gap-6">
-      <!-- <Magazine
-        v-for="n in 12"
-        :key="n"
-        :class="{ 'special-style': n === 3 }"
-      /> -->
+      <!--
+  <Magazine v-for="n in 12" :key="n" :class="{ 'special-style': n === 3 }" /> -->
       <Magazine v-for="item in magazines" :key="item.id" :magazine="item" />
     </div>
     <Paginator />

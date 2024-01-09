@@ -54,13 +54,13 @@ const slidesData = ref([
               </div></div
           ></template>
           <template v-slot:image1>
-            <div class="col-span-12">
+            <!-- <div class="col-span-12">
               <img
                 class="photo"
                 src="https://s3-alpha-sig.figma.com/img/515c/1494/15d88ebd44350053cdb8065016089ddd?Expires=1703462400&Signature=Ptre4dzsRwLKO~bsokixbpKH5K-sUKTBkQWqnoB5AiQlMy0rF-C0LS~8AfHzkXdSOsyYWu3Opfzia7lkiRFlmqJgftgTfTasasDXpAH9epmZUzHTlNkPL5BfzFB2VUPciqLsnNp57BhrMKF~lm9GkXV3GhP6q84vRB-6hBZMMfi1EzLVLbWnqpHJPMOx~coQxgdPVhmqt1ZPQORKgfjHZb2rJsCmAxbhfRdvoH0Tv5031OZaxeqYgpP8IIYr2m5gXKUhO-anhTSi~swjPA4FoP19nMeQwmcJUuzYNJS~KsIrxnyJUIKj9G4B8T-xb6XK~4S0s74eaU4fC1FUIJJlfQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 alt=""
               />
-            </div>
+            </div> -->
           </template>
           <template v-slot:image2>
             <div class="col-span-12 hidden">
@@ -88,13 +88,13 @@ const slidesData = ref([
             </div>
           </template>
           <template v-slot:image4>
-            <div class="col-span-12">
+            <!-- <div class="col-span-12">
               <img
                 class="photo"
                 src="https://s3-alpha-sig.figma.com/img/4401/048c/a425d03b615c980d9833fea929b1537a?Expires=1703462400&Signature=I6gt1LwwvAqjrKvcLAWAU4vSKrXlisctlPJYq~MXN05ZVINbCo~UsM26l7ZIHlI5x-OW0CmJdambg-FIUmLhtm6TcEI3cErswIBes4pcsO93As5imXhTqtPpiA7cOoS8vMbdA68NDjkEi~p0thkfLOl1ISu6Ssl1SWhVYdW9wvNmZXudzU~HiKyvSJSt400VFEEolP-oPUkH-4aZLAi0lS3oRf1FU9VC7T296CDCefLkxbTVgr1JNzk8OZgPXo5xnQBiFC1QEu85SGRd5eeunBaBWMpml97o7ewAhYv0OGwW6K~9T~DAugcXYnNKvNZ714yEhuriKJnrX8-p1JMQ9g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 alt=""
               />
-            </div>
+            </div> -->
           </template>
         </ImageGrid>
         <div class="text__wrap">
@@ -206,7 +206,6 @@ const slidesData = ref([
 }
 
 .tag-button {
-  margin-top: 3.35%;
   margin-bottom: 3.698%;
 }
 

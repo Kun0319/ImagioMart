@@ -40,7 +40,9 @@ const stopImageSwitch = () => {
     intervalId.value = null;
   }
 };
-
+const props = defineProps({
+  childData: Object, // 根据实际数据类型进行调整
+});
 // 如果當前螢幕寬度大於768，則啟動切換
 onMounted(() => {
   if (width.value > 768) {
@@ -58,10 +60,14 @@ watch(width, (newWidth) => {
     handleMouseOut();
   }
 });
+
+// onMounted(() => {
+// console.log(props.childData.data.info);
+// });
 </script>
 
 <template>
-  <div class="issue grid grid-cols-10 gap-4">
+  <div class="issue grid grid-cols-10 gap-4" v-if="childData">
     <!-- Magazine Info -->
     <article
       class="flex info md:col-span-5 lg:col-span-6 col-span-full md:order-none order-1 md:text-start text-center md:justify-self-center"
@@ -69,13 +75,21 @@ watch(width, (newWidth) => {
       <div class="flex flex-col md:items-start items-center">
         <p class="info__new">Jun.27 / 2023 出刊消息</p>
         <div class="flex flex-col md:max-w-full lg:w-auto w-9/12"></div>
-        <p class="info__month">IW傢飾 11月號 / 2023 第153期</p>
-        <p class="info__content">
+        <p class="info__month">
+          {{ props.childData.data.info.en_title }} /
+          {{ props.childData.data.info.subtitle }}
+        </p>
+        <!-- <p class="info__content">
           本期雙封面精選<br />
           墨西哥米卻肯．拉彼達之家<br />
           義大利．2023 威尼斯建築雙年展：一個循環的故事
-        </p>
-        <p class="info__price">NT$300</p>
+        </p> -->
+        <p
+          class="info__content"
+          v-html="props.childData.data.info.description"
+        ></p>
+        <p class="info__price">NT${{ props.childData.data.info.price }}</p>
+        <!-- <p class="info__price">NT$300</p> -->
         <a href="/" class="info__shopcart">ADD TO CART</a>
       </div>
     </article>
@@ -116,12 +130,15 @@ watch(width, (newWidth) => {
 
 .info {
   white-space: nowrap;
+
   &__new {
     line-height: 2rem;
   }
+
   &__month {
     padding: 0;
   }
+
   &__shopcart {
     @include max-media(769) {
       margin-bottom: 16.28%;
@@ -147,6 +164,7 @@ watch(width, (newWidth) => {
 
   &__swpier {
     width: 100%;
+
     @include max-media(768) {
       padding-bottom: 10%;
     }
@@ -155,6 +173,7 @@ watch(width, (newWidth) => {
       display: flex;
       justify-content: center;
       align-items: center;
+
       > img {
         width: 290px;
         height: 100%;
@@ -164,6 +183,7 @@ watch(width, (newWidth) => {
         margin-bottom: 7%;
       }
     }
+
     @include min-media(768) {
       display: none;
     }

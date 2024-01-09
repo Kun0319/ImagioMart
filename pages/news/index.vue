@@ -123,6 +123,7 @@ const projects = [
   <NuxtLayout
     :breadcrumbText="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
     :cover="bg"
+    customText="NEWS"
   >
     <div class="content inner-wrap">
       <DesignShowcase
@@ -159,5 +160,10 @@ const projects = [
 .advertise {
   margin-top: 5.4375%;
   margin-bottom: 24.0338%;
+}
+.photo__advertise {
+  max-width: 50.54vw;
+  width: 100%;
+  height: auto;
 }
 </style>

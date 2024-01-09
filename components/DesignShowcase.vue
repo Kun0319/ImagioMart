@@ -27,6 +27,7 @@ const props = defineProps({
         </p>
         <p class="project__text__two">{{ project.title }}</p>
         <p class="project__text__three">{{ project.location }}</p>
+        <p class="project__text__four">{{ project.deadline }}</p>
       </div>
     </nuxt-link>
   </div>
@@ -75,7 +76,18 @@ const props = defineProps({
 
     &__one {
       margin-top: 5%;
-      margin-bottom: 6.456%;
+      margin-bottom: 2.8396%;
+    }
+    &__two {
+      margin-bottom: 2%;
+      font-size: 1.3125rem;
+    }
+    &__three {
+      margin-bottom: 2.8396%;
+      font-size: 1.125rem;
+    }
+    &__four {
+      margin-bottom: 2.8396%;
     }
   }
 }

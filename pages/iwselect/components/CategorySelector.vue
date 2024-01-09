@@ -64,38 +64,7 @@ const clickyear = () => {
         {{ category.name }} ({{ category.count }})
       </button>
     </div>
-    <!-- 本週最新 -->
-    <div class="selector__category">
-      <p class="selector__title">
-        {{ isChinese ? titles.recentPosts.cn : titles.recentPosts.en }}
-      </p>
-      <nuxt-link
-        v-for="post in recentPosts"
-        :key="post.name"
-        class="selector__recent selectorbutton"
-      >
-        <div>{{ post.nameEn }}</div>
-        <div>{{ post.nameCn }}</div>
-      </nuxt-link>
-    </div>
-    <!--年度精選-->
-    <div class="selector__category">
-      <p class="selector__title">
-        {{ isChinese ? titles.archive.cn : titles.archive.en }}
-      </p>
-      <div v-for="archive in archives" :key="archive.year" @click="clickyear">
-        <button class="selector__options selectorbutton">
-          {{ archive.year }} &nbsp;+
-        </button>
-        <div v-for="month in archive.months" :key="month.name" class="">
-          <nuxt-link v-show="monthlist"
-            ><div class="selector__options__month selectorbutton">
-              {{ isChinese ? month.nameCn : month.nameEn }}({{ month.count }})
-            </div>
-          </nuxt-link>
-        </div>
-      </div>
-    </div>
+
     <!-- 熱門主題 -->
     <div class="grid grid-cols-12 gap-4 no-border-bottom">
       <p class="selector__title col-span-12">
@@ -106,10 +75,10 @@ const clickyear = () => {
       </button>
     </div>
     <div class="card">
-      <img src="~/assets/images/projectcard.svg" alt="" class="card-image" />
+      <img src="~/assets/images/projectcard2.jpeg" alt="" class="card-image" />
       <div class="card-description">
-        <h2>BOURBON & SANDALWOOD</h2>
-        <h2>EAU DE TOILETTE</h2>
+        <p>BOURBON & SANDALWOOD</p>
+        <p>EAU DE TOILETTE</p>
       </div>
     </div>
   </div>
@@ -193,29 +162,36 @@ const clickyear = () => {
 
 // 廣告卡片樣式
 .card {
-  // width: 220px;
   border: 1px solid #ccc;
-  // border-radius: 8px;
+  position: relative;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 50%;
+  width: 15.68vw;
+  height: 23.03vw;
+  min-width: 271px;
+  min-height: 384px;
+  @include max-media(768) {
+    justify-self: center;
+  }
 }
 
 .card-image {
   width: 100%;
+  height: 100%;
   display: block;
 }
 
 .card-description {
-  padding: 16px;
-  background-color: #000;
-  color: #fff;
+  position: absolute;
+  padding-left: 9.6842%;
   font-family: $font-Noto;
-}
-
-.card-description h2 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  font-size: clamp(10px, 1vw, 16px);
+  left: 0;
+  top: 75%;
+  width: 100%;
+  font-weight: 700;
 }
 </style>

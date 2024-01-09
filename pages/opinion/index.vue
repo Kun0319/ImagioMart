@@ -90,6 +90,7 @@ const toggleFilterMenu = () => {
 .filter__menu {
   margin-top: 6.5773%;
 }
+
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;

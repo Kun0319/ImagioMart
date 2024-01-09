@@ -95,36 +95,6 @@ const toggleFilterMenu = () => {
   justify-content: space-between;
 }
 
-.tags-container {
-  display: flex;
-  flex-wrap: wrap;
-  @include max-media(1024) {
-    justify-content: start;
-    @include max-media(500) {
-      justify-content: space-around;
-    }
-    @include max-media(396) {
-      justify-content: start;
-    }
-  }
-
-  .tag-button {
-    // margin-top: 3.35%;
-    margin-bottom: 3.698%;
-    font-size: 0.6875rem;
-
-    @include max-media(769) {
-      display: flex;
-      font-size: 0.5rem;
-      padding-top: 1.5%;
-      padding-bottom: 1.5%;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 1%;
-      margin-right: 1%;
-    }
-  }
-}
 .icon {
   margin-right: 10%;
   &-container {

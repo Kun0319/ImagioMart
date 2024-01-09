@@ -25,7 +25,8 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         <!-- <Banner :imgSrc="cover" class="cover" /> -->
         <swiper
           :pagination="{ clickable: true }"
-          :modules="[Pagination]"
+          :modules="[Pagination, Autoplay]"
+          :autoplay="{ delay: 2000, disableOnInteraction: false }"
           :spaceBetween="100"
           class="cover"
         >
@@ -119,7 +120,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         <p class="text__title text-center">STORY</p>
         <div class="swiper__wrap">
           <swiper
-            :modules="[Scrollbar]"
+            :modules="[Scrollbar, Autoplay]"
             :scrollbar="{ hide: false, draggable: true }"
             :autoplay="{ delay: 2000, disableOnInteraction: false }"
             :slidesPerView="1"
@@ -406,12 +407,19 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 </template>
 
 <style lang="scss" scoped>
+.inner-wrap {
+  @include max-media(768) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .cover {
   width: 92.5926vw;
   height: 30.21vw;
   display: flex;
   justify-content: center;
-  margin-left: -4.5%;
+
+  margin-left: -5%;
   margin-right: -5%;
   align-items: center;
 
@@ -419,7 +427,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   --swiper-pagination-bullet-inactive-opacity: 1;
 
   &__container {
-    width: 100vw;
+    // width: 100vw;
   }
   &__photo {
     width: 100%;
@@ -777,5 +785,13 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 // COMPETITIONS
 .competitions {
   margin-bottom: 13.0928%;
+  @include max-media(768) {
+    margin-bottom: 49.2957%;
+  }
+}
+
+.swiper__wrap {
+  padding-left: 9%;
+  padding-right: 9%;
 }
 </style>

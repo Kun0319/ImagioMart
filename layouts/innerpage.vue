@@ -15,6 +15,9 @@ const props = defineProps({
   cover: {
     type: String,
   },
+  customText: {
+    type: String,
+  },
 });
 </script>
 
@@ -25,7 +28,7 @@ const props = defineProps({
     <ReturnTop />
     <ShoppingCart />
     <div class="filter__relative">
-      <Banner :imgSrc="cover" />
+      <Banner :imgSrc="cover" :customText="customText" />
       <BreadcrumbLine :text="breadcrumbText" :showTags="true" :showIcon="true">
         <template #icon>
           <img
@@ -108,10 +111,12 @@ const props = defineProps({
     }
   }
 }
+
 :deep(.icon__one) {
   display: flex;
   justify-content: space-between;
 }
+
 .icon {
   display: flex;
   justify-content: flex-end;
@@ -121,6 +126,7 @@ const props = defineProps({
 .tag-button {
   // margin-top: 1%;
   margin-bottom: 3.698%;
+
   @include max-media(768) {
     margin-top: 1.5%;
     margin-bottom: 1.5%;

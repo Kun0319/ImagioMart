@@ -41,7 +41,7 @@ const menuLists = ref([
     hover: ref(false),
   },
   {
-    link: "../",
+    link: "/iwselect",
     name: "IW Select",
     nameZh: "傢飾選物",
     hover: ref(false),
@@ -64,8 +64,12 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "../", nameEn: "IW", nameCn: "全球競賽" },
-      { link: "../", nameEn: "GLOBAL", nameCn: "IW競賽" },
+      { link: "/competition", nameEn: "IW", nameCn: "全球競賽" },
+      {
+        link: "/competition/iwcompetition",
+        nameEn: "GLOBAL",
+        nameCn: "IW競賽",
+      },
     ],
   },
 ]);

@@ -34,64 +34,74 @@ const projects = [
     id: "project-1",
     imageUrl: "/images/competitionone.png",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-2",
     imageUrl: "/images/competitiontwo.png",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-3",
     imageUrl: "/images/competitionthree.png",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-4",
     imageUrl: "/images/competitionfour.png",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-5",
     imageUrl: "/images/competitionfive.jpeg",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-6",
     imageUrl: "/images/competitionsix.jpeg",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-7",
     imageUrl: "/images/competitionseven.png",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
   {
     id: "project-8",
     imageUrl: "/images/competitioneight.png",
     studioName: "2023.09.23｜Industrial designer",
-    title: "Patrick Norguet",
-    location: "派屈克．諾蓋",
+    title: "The Legendary Highway 14 Tower",
+    location: "國際家俱比賽",
+    deadline: "Deadline: december 31st, 2023",
   },
 ];
 </script>
 <template>
   <NuxtLayout
-    :breadcrumbText="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp; Furniture'"
+    :breadcrumbText="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp;Current '"
     :cover="bg"
+    customText="CURRENT 
+COMPETITIONS"
   >
     <div class="inner-wrap">
       <SwiperPic :images="ImageArray" />
@@ -125,10 +135,12 @@ const projects = [
 .paginator {
   margin-left: -10%;
   margin-right: -10%;
+
   @include max-media(768) {
     margin-bottom: 28.7044%;
   }
 }
+
 .advertise {
   @include max-media(768) {
     margin-bottom: 42.6687%;
