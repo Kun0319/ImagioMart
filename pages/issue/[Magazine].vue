@@ -11,14 +11,16 @@ const magazineName = route.params.Magazine;
 
 <template lang="">
   <NuxtLayout>
-    <BreadcrumbLine text="Home &nbsp; / &nbsp; Issue" :showIcon="true">
-      <template #icon2>
-        <div class="icon">
-          <i class="pi pi-heart mx-3"></i>
-          <i class="pi pi-share-alt"></i>
-        </div>
-      </template>
-    </BreadcrumbLine>
+    <div class="margin">
+      <BreadcrumbLine text="Home &nbsp; / &nbsp; Issue" :showIcon="true">
+        <template #icon2>
+          <div class="icon">
+            <i class="pi pi-heart mx-3"></i>
+            <i class="pi pi-share-alt"></i>
+          </div>
+        </template>
+      </BreadcrumbLine>
+    </div>
     <!-- <MagazineLine /> -->
     <MagazineIntroduce />
     <MagazinePic />
@@ -35,5 +37,8 @@ const magazineName = route.params.Magazine;
   justify-content: flex-end;
   margin-top: -6.8%;
   margin-bottom: 2.752%;
+}
+.margin {
+  margin-top: 8.20371%;
 }
 </style>
