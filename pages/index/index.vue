@@ -147,7 +147,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
             class="md:col-span-6 col-span-12 justify-self-center md:order-2 order-1"
           >
             <p class="text__title text-center md:hidden">NEWS</p>
-            <img src="~/assets/images/index5.png" alt="" class="photo__news" />
+            <img src="~/assets/images/index5.jpg" alt="" class="photo__news" />
           </div>
         </div>
         <!-- Story -->
@@ -414,14 +414,18 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         <p class="text__title text-center">EXHIBITION</p>
         <div class="exhibition w-full flex justify-center">
           <img
-            src="../../assets/images/indexEXHIBITION.png"
+            src="../../assets/images/indexEXHIBITION.jpg"
             alt=""
             class="photo__exhibition"
           />
         </div>
         <!-- 廣告 -->
-        <div class="grid-cols-12 gap-12 md:grid hidden advertise inner-wrap">
-          <div class="col-span-4" v-for="n in 6" :key="n">
+        <div class="grid-cols-12 gap-4 md:grid hidden advertise">
+          <div
+            class="col-span-4 flex justify-self-center"
+            v-for="n in 6"
+            :key="n"
+          >
             <LittleAdvertise />
           </div>
         </div>
@@ -680,7 +684,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-width: 860px;
+    // max-width: 860px;
 
     @include max-media(768) {
       min-width: 320px;
