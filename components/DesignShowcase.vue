@@ -51,7 +51,7 @@ const props = defineProps({
 
   @include min-media(768) {
     // margin-bottom: 36.0923%;
-    margin-bottom: 10%;
+    margin-bottom: 26.4569%;
     width: 26.5625vw;
     // max-width: 310px;
   }

@@ -142,6 +142,7 @@ COMPETITIONS"
 }
 
 .advertise {
+  margin-bottom: 18.57557%;
   @include max-media(768) {
     margin-bottom: 42.6687%;
   }

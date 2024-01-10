@@ -215,6 +215,6 @@ const slidesData = ref([
 }
 
 .pagination {
-  margin-bottom: 1%;
+  margin-bottom: 57.2565%;
 }
 </style>
