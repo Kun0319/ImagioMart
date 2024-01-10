@@ -23,6 +23,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
       <!-- 封面 -->
       <div class="cover__container">
         <!-- <Banner :imgSrc="cover" class="cover" /> -->
+        <!-- Autoplay -->
         <swiper
           :pagination="{ clickable: true }"
           :modules="[Pagination, Autoplay]"
@@ -30,15 +31,48 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
           :spaceBetween="100"
           class="cover"
         >
-          <swiper-slide
-            ><img src="~/assets/images/indexbg.png" alt="" class="cover__photo"
-          /></swiper-slide>
-          <swiper-slide
-            ><img src="~/assets/images/indexbg.png" alt="" class="cover__photo"
-          /></swiper-slide>
-          <swiper-slide
-            ><img src="~/assets/images/indexbg.png" alt="" class="cover__photo"
-          /></swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img
+                src="~/assets/images/indexbg.png"
+                alt=""
+                class="cover__photo"
+              />
+
+              <div class="text__cover">
+                <p>Villa Butter, Gotland, Sweden</p>
+                <p>瑞典哥特蘭島巴特別墅</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img
+                src="~/assets/images/indexbg.png"
+                alt=""
+                class="cover__photo"
+              />
+
+              <div class="text__cover">
+                <p>Villa Butter, Gotland, Sweden</p>
+                <p>瑞典哥特蘭島巴特別墅</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img
+                src="~/assets/images/indexbg.png"
+                alt=""
+                class="cover__photo"
+              />
+
+              <div class="text__cover">
+                <p>Villa Butter, Gotland, Sweden</p>
+                <p>瑞典哥特蘭島巴特別墅</p>
+              </div>
+            </div>
+          </swiper-slide>
         </swiper>
       </div>
       <!-- 畫廊 -->
@@ -413,6 +447,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     padding-right: 0;
   }
 }
+
 .cover {
   width: 92.5926vw;
   height: 30.21vw;
@@ -429,6 +464,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   &__container {
     // width: 100vw;
   }
+
   &__photo {
     width: 100%;
   }
@@ -453,6 +489,26 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
   @include max-media(768) {
     font-size: 1rem;
+  }
+  &__cover {
+    color: #fff;
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    font-size: 1.125rem;
+    font-size: clamp(0.625rem, 1.5vw, 1.125rem);
+    @include max-media(1440) {
+      top: 75%;
+      font-size: 0.625rem;
+    }
+    @include max-media(768) {
+      top: 70%;
+      font-size: 0.625rem;
+    }
+    @include max-media(500) {
+      top: 55%;
+      font-size: 0.625rem;
+    }
   }
 
   &__en {
@@ -785,6 +841,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 // COMPETITIONS
 .competitions {
   margin-bottom: 13.0928%;
+
   @include max-media(768) {
     margin-bottom: 49.2957%;
   }
