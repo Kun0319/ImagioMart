@@ -7,22 +7,23 @@ const handleIframeClick = () => {
 </script>
 <template lang="">
   <div class="LittleAdvertise flex justify-center" @click="handleIframeClick">
-    <div class="youtube-container">
-      <!-- <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" /> -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/-Jros0sg3CM?si=zGZH85-dgabFIwHf"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        class="photo"
-        @click="handleIframeClick"
-      ></iframe>
+    <!-- <div class="youtube-container"> -->
+    <!-- <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" /> -->
 
-      <!-- <div class="overlay"></div> -->
-    </div>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/_GuOjXYl5ew?si=mjkle4bCdmvtlMYI"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      class="photo"
+      @click="handleIframeClick"
+    ></iframe>
+
+    <!-- <div class="overlay"></div> -->
+    <!-- </div> -->
     <img
       src="../assets/icon/play.svg"
       alt=""
@@ -47,6 +48,7 @@ const handleIframeClick = () => {
   width: 17.94vw;
   height: 12.15vw;
   // max-width: 310px;
+  // aspect-ratio: 3/2;
   aspect-ratio: 16/9;
 }
 .overlay {
