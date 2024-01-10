@@ -1,4 +1,5 @@
 <script setup>
+import RelatedProject from "./components/RelatedProject.vue";
 import bg from "../../assets/images/CompetitionBg.png";
 import { useGlobalStore } from "@/stores/global.js";
 import pic from "../../assets/images/competitioncontent.png";
@@ -142,10 +143,15 @@ const slidesData = ref([
       <div class="md:block hidden w-full">
         <RelatedProject :projects="relatedProjects">
           <template #title>
-            <p class="text__title__morecompetition" v-if="isChinese">
-              更多比賽
+            <p
+              class="text__title__morecompetition col-span-12"
+              v-if="isChinese"
+            >
+              其他競賽資訊
             </p>
-            <p class="text__title__morecompetition" v-else>MORE COMPETITION</p>
+            <p class="text__title__morecompetition col-span-12" v-else>
+              MORE COMPETITION
+            </p>
           </template>
         </RelatedProject>
       </div>
