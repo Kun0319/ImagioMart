@@ -39,7 +39,7 @@ const props = defineProps({
 }
 .projectpic {
   width: 100%;
-  height: 90%;
+  // height: ;
 
   @include min-media(768) {
     // margin-bottom: 36.0923%;
@@ -53,8 +53,7 @@ const props = defineProps({
 
   &__pic {
     width: 100%;
-    // max-width: 310px;
-    max-height: 210px;
+
     // 圖片縮放
 
     @include min-media(1024) {

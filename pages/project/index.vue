@@ -159,7 +159,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
         @click="toggleRwdMenu"
       ></div>
       <div v-show="isRwdMenuOpen" class="rwd-menu">
-        <CategorySelectorRWD />
+        <CategorySelector />
       </div>
       <div class="inner-wrap">
         <SwiperPic :images="ImageArray" />

@@ -42,8 +42,9 @@ const closePopup = () => {
   width: 65vw;
   height: 50vw;
   min-width: 500px;
-  max-width: 71.1875rem;
-  max-height: 54.25rem;
+  max-width: 800px;
+  max-height: 600px;
+
   position: relative;
   box-shadow: 7px 4px 14px 0px rgba(0, 0, 0, 0.25);
   border-radius: 23px;
@@ -81,6 +82,10 @@ const closePopup = () => {
   object-fit: cover;
   width: 17.7674vw;
   height: 17.7674vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 85px;
+  min-height: 85px;
 }
 
 .overlay {
@@ -122,8 +127,8 @@ const closePopup = () => {
     }
   }
   &__four {
-    font-size: 1.25rem;
-    font-size: clamp(0.625rem, 1.5vw, 1.25rem);
+    font-size: 1rem;
+    font-size: clamp(0.625rem, 1.5vw, 1rem);
     font-weight: 300;
     line-height: 209.4%;
     @include max-media(768) {

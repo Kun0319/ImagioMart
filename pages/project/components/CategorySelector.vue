@@ -174,10 +174,10 @@ const clickyear = () => {
   }
 
   > div:not(.card) {
-    padding-bottom: 10%;
+    padding-bottom: 15%;
 
     @include min-media(1024) {
-      padding-bottom: 20%;
+      padding-bottom: 15%;
     }
   }
 
