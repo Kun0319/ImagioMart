@@ -122,7 +122,7 @@ const clickyear = () => {
   &__category {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
   }
 
   &__title {
@@ -138,8 +138,10 @@ const clickyear = () => {
     &__month {
       @extend .selector__options;
       padding-left: 1.5rem;
-      padding-top: 4.9734%;
-      padding-bottom: 4.9734%;
+      // padding-top: 4.9734%;
+      // padding-bottom: 4.9734%;
+      padding-top: 2.4867%;
+      padding-bottom: 2.4867%;
     }
   }
 
@@ -187,7 +189,7 @@ const clickyear = () => {
   //   padding-top: 20%;
   // }
   > div:not(:first-child):not(.card) {
-    padding-top: 20%;
+    padding-top: 15%;
   }
 }
 
