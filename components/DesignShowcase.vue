@@ -28,7 +28,7 @@ const props = defineProps({
         </p>
         <p class="project__text__two">{{ project.title }}</p>
         <p class="project__text__three">{{ project.en_title }}</p>
-        <!-- <p class="project__text__four">{{ project.deadline }}</p> -->
+        <p class="project__text__four">{{ project.deadline }}</p>
       </div>
     </nuxt-link>
   </div>

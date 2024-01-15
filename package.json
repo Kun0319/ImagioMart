@@ -23,7 +23,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.18.1",
-    "nuxt": "^3.8.0",
+    "nuxt": "3.9.0",
     "nuxt-primevue": "^0.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
@@ -42,6 +42,8 @@
     "primeicons": "^6.0.1",
     "primevue": "^3.37.0",
     "v-image-magnifier": "^1.1.1"
+  
+
   },
   "description": "Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.",
   "version": "1.0.0",

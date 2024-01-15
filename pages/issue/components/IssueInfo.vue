@@ -112,7 +112,7 @@ watch(width, (newWidth) => {
           :slides-per-view="1"
           :pagination="{ clickable: true }"
           :modules="[SwiperPagination]"
-          :class="'pic__swpier '"
+          :class="'pic__swiper '"
         >
           <SwiperSlide><img :src="imgSrc" alt="" /></SwiperSlide>
           <SwiperSlide> <img :src="hoverSrc" alt="" /></SwiperSlide>
@@ -162,9 +162,8 @@ watch(width, (newWidth) => {
     }
   }
 
-  &__swpier {
+  &__swiper {
     width: 100%;
-
     @include max-media(768) {
       padding-bottom: 10%;
     }

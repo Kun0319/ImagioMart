@@ -17,10 +17,15 @@ const {
   data: fetchedData,
   pending,
   error,
-} = useFetch("https://iw-api.d-blueprint.com/api/issues/11");
+  refresh,
+} = await useFetch("https://iw-api.d-blueprint.com/api/issues/11");
 // 雜誌列表
 
-const { data: dataFromApi2, error: errorApi2 } = useFetch(
+const {
+  data: dataFromApi2,
+  error: errorApi2,
+  refresh: refresh2,
+} = await useFetch(
   "https://iw-api.d-blueprint.com/api/issues?sorting=sort&direction=asc&page=1&per_page=15&type=iw",
 );
 
@@ -33,14 +38,11 @@ watch([dataFromApi2, errorApi2], () => {
         name: item.title,
         subtitle: item.subtitle,
         imageUrl: item.imageUrl,
-        // item.images.length > 0
-        //   ? item.images[0]
-        //   : "~/assets/images/Magazine.svg",
         price: item.price,
       };
     });
 
-    // console.log(magazines.value);
+    console.log(magazines.value);
   }
 });
 

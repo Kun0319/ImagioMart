@@ -24,7 +24,10 @@ if (!error.value && data.value) {
       <div class="inner-wrap">
         <div class="flex items-center">
           <!-- <p class="title--text__one">Furniture｜Inside Stories｜issue 150</p> -->
-          <p class="title--text__one">{{ nescontent.issue_name }}</p>
+          <p class="title--text__one">
+            {{ nescontent.publish_date }}&nbsp; ｜&nbsp;
+            {{ nescontent.category }}&nbsp; ｜&nbsp; {{ nescontent.issue_name }}
+          </p>
 
           <i class="pi pi-heart mx-3 ml-auto"></i>
           <i class="pi pi-share-alt"></i>
