@@ -1,14 +1,16 @@
 <script setup>
 import { Scrollbar, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-// import "swiper/css/scrollbar";
+
+import "swiper/css/scrollbar";
 const props = defineProps({
   images: Array, // 假設 images 是一個包含圖片資訊的陣列
 });
 const mySwiper = ref(null);
+
 onMounted(() => {
   if (mySwiper.value) {
-    mySwiper.value.setGrabCursor(true);
+    mySwiper.value = !mySwiper.value;
   }
 });
 </script>
@@ -19,6 +21,7 @@ onMounted(() => {
       :scrollbar="{ hide: false, draggable: true }"
       :autoplay="{ delay: 2000, disableOnInteraction: false }"
       :slidesPerView="1"
+      ref="mySwiper"
     >
       <SwiperSlide v-for="(image, index) in images" :key="index">
         <!-- 這裡假設每個 image 對象有 url、title 和 description 三個屬性 -->

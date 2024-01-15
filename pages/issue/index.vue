@@ -25,7 +25,7 @@ const {
   data: dataFromApi2,
   error: errorApi2,
   refresh: refresh2,
-} = await useFetch(
+} = useFetch(
   "https://iw-api.d-blueprint.com/api/issues?sorting=sort&direction=asc&page=1&per_page=15&type=iw",
 );
 
@@ -42,7 +42,7 @@ watch([dataFromApi2, errorApi2], () => {
       };
     });
 
-    console.log(magazines.value);
+    // console.log(magazines.value);
   }
 });
 
