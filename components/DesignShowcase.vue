@@ -10,24 +10,25 @@ const props = defineProps({
     required: true,
   },
 });
+// console.log(props.project.image);
 </script>
 
 <template>
   <div class="projectpic flex flex-col">
     <nuxt-link :to="`${baseRoute}/${project.id}`">
       <div class="projectpic__pic">
-        <img :src="project.imageUrl" alt="" class="photo" />
+        <img :src="project.image?.link" alt="" class="photo" />
       </div>
       <div class="project__text">
         <p class="flex project__text__one">
-          {{ project.studioName }}
+          {{ project.publish_date }}
           <span class="ml-auto"></span>
           <i class="pi pi-heart mx-3"></i>
           <i class="pi pi-share-alt"></i>
         </p>
         <p class="project__text__two">{{ project.title }}</p>
-        <p class="project__text__three">{{ project.location }}</p>
-        <p class="project__text__four">{{ project.deadline }}</p>
+        <p class="project__text__three">{{ project.en_title }}</p>
+        <!-- <p class="project__text__four">{{ project.deadline }}</p> -->
       </div>
     </nuxt-link>
   </div>

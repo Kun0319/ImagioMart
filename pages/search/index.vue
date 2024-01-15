@@ -66,13 +66,11 @@ const route = useRoute();
 
 onMounted(() => {
   const searchQuery = route.query.q;
-  console.log("Search Query: ", searchQuery); // 調試搜尋查詢
 
   if (searchQuery) {
     searchResults.value = mockData.filter((item) =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()),
     );
-    console.log("Search Results: ", searchResults.value); // 調試搜尋結果
   }
 });
 watch(

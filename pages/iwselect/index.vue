@@ -71,7 +71,7 @@ const RwdMenuShow = () => {
             <Paginator />
           </div>
         </div>
-        <div class="col-span-3 md:block hidden">
+        <div class="md:col-span-3 md:block hidden">
           <CategorySelector />
         </div>
         <div

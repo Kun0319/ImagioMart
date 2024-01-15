@@ -108,12 +108,13 @@ const handleCanShowUpdate = (newCanShow) => {
 
 .order td {
   text-align: center;
-  padding: 8px;
+  // padding: 8px;
   padding-bottom: 6.3298%;
 }
 
 .order th {
   text-align: center;
+  // padding: 10px;
   padding-bottom: 9.3775%;
 }
 .browse {

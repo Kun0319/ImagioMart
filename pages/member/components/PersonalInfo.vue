@@ -26,12 +26,15 @@ const canShow = computed(() => globalStore.hasSubmitted);
       <button class="btn"><img src="~/assets/icon/pen.svg" alt="" /></button>
     </div>
   </div>
-
-  <div>
+  <div class="self-start button__container">
+    <button class="button">
+      <nuxt-link to="member/designermember">會員制度</nuxt-link>
+    </button>
     <button class="button" v-if="canShow === false">
       <nuxt-link to="member/designermember">成為設計師會員</nuxt-link>
     </button>
   </div>
+
   <div class="personalinfo__checkbox__container">
     <div class="personalinfo__checkbox">
       <input type="checkbox" />
@@ -81,13 +84,16 @@ const canShow = computed(() => globalStore.hasSubmitted);
   }
 
   &__checkbox {
-    @extend .personalinfo;
-    justify-content: flex-start;
+    // @extend .personalinfo;
+    padding-left: 17.7001%;
     margin-bottom: 1.8755%;
+    // font-size: 0.875rem;
+
     color: $text-color3;
 
     @include max-media(768) {
       font-size: 0.75rem;
+      padding-left: 0%;
     }
 
     &__container {
@@ -113,9 +119,16 @@ const canShow = computed(() => globalStore.hasSubmitted);
   font-weight: 700;
   font-size: 0.875rem;
   margin-bottom: 22.2593%;
+
   @include max-media(768) {
     margin-bottom: 48.9705%;
     font-size: 0.625rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 17.7001%;
   }
 }
 

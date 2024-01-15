@@ -53,7 +53,7 @@ const handleSubmit = () => {
             type="text"
             id="userInput"
             class="form-input"
-            placeholder="email"
+            placeholder="電子信箱"
           />
         </div>
         <!--  -->
@@ -115,7 +115,7 @@ const handleSubmit = () => {
             type="text"
             id="userInput"
             class="form-input"
-            placeholder="Choose"
+            placeholder="選擇"
           />
         </div>
         <div class="form-group">
@@ -129,7 +129,7 @@ const handleSubmit = () => {
             type="text"
             id="userInput"
             class="form-input"
-            placeholder="72 dpi / 2000pixel以下 / 5mb以內 / 30張以內/ jpg png 圖片檔"
+            placeholder="30張以內/ .jpg .png "
           />
         </div>
         <div class="form-group">
@@ -256,14 +256,16 @@ const handleSubmit = () => {
     border: none;
     height: 2rem;
     outline: none;
-    padding-left: 0;
+    padding-left: 10px;
     border-left: 1px solid rgba(0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0);
     border-radius: 0 !important;
+    color: $text-color3;
     &::placeholder {
-      padding-left: 0.5rem;
+      // padding-left: 0.5rem;
       font-size: 0.875rem;
     }
+
     &__phone {
       @extend .form-input;
       width: 30%;

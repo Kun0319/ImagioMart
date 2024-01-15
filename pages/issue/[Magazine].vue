@@ -4,9 +4,6 @@ import MagazineIntroduce from "./components/MagazineIntroduce.vue";
 import MagazinePic from "./components/MagazinePic.vue";
 import MagazineCoverStory from "./components/MagazineCoverStory.vue";
 import { useRoute } from "vue-router";
-
-const route = useRoute();
-const magazineName = route.params.Magazine;
 </script>
 
 <template lang="">

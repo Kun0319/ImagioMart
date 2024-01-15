@@ -248,12 +248,13 @@ const handleSubmit = () => {
     border: none;
     height: 2rem;
     outline: none;
-    padding-left: 0;
+    padding-left: 10px;
     border-left: 1px solid rgba(0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0);
     border-radius: 0 !important;
+
     &::placeholder {
-      padding-left: 1%;
+      // padding-left: 1%;
     }
 
     &__phone {

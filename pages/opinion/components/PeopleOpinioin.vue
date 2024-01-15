@@ -5,100 +5,131 @@ import pic3 from "@/assets/images/opinion3.jpg";
 import pic4 from "@/assets/images/opinion4.webp";
 import pic5 from "@/assets/images/opinion5.jpeg";
 
-const peopleopinion = ref([
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic1,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic2,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic3,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic4,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic1,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic3,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic4,
-  },
-  {
-    nameEn: "Patrick Norguet",
-    nameCn: "派屈克．諾蓋",
-    opinionEn:
-      "You cannot understand good design if you do not understand people. ",
-    opinionEnPeo: "Dieter Rams",
-    opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
-    imageUrl: pic1,
-  },
-]);
+// const peopleopinion = ref([
+//   {
+//     nameEn: data.value.data.list[0].entitle,
+//     nameCn: data.value.data.list[0].title,
+//     opinionEn: data.value.data.list[0].description,
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: data.value.data.list[0].image.link,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic1,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic2,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic3,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic4,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic1,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic3,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic4,
+//   },
+//   {
+//     nameEn: "Patrick Norguet",
+//     nameCn: "派屈克．諾蓋",
+//     opinionEn:
+//       "You cannot understand good design if you do not understand people. ",
+//     opinionEnPeo: "Dieter Rams",
+//     opinionCn: "無法瞭解人，就無法瞭解何謂好的設計",
+//     imageUrl: pic1,
+//   },
+// ]);
+// api獲取資料
+const peopleopinion = ref([]);
+const { data, error } = await useFetch(
+  "https://iw-api.d-blueprint.com/api/opinions?sorting=sort&direction=asc&page=1&per_page=15",
+);
+
+if (data.value) {
+  peopleopinion.value = data.value.data.list; // 假设 data.value 是您需要的数组
+  console.log(peopleopinion.value[0].description);
+}
+// const chineseName = peopleopinion.value[0].title;
+// const englishName = peopleopinion.value[0].en_title;
+// function modifyDescription(description) {
+//   return description
+//     .replace("people. ”", `people.” <br/>—${englishName}`)
+//     .replace("好的設計 」", `好的設計」 — ${chineseName}`);
+// }
 </script>
 <template>
-  <nuxt-link to="/opinion/1">
-    <div
-      v-for="person in peopleopinion"
-      :key="person.id"
-      class="opinion flex grid grid-cols-12 gap-4"
-    >
+  <nuxt-link
+    v-for="person in peopleopinion"
+    :key="person.id"
+    :to="`/opinion/${person.en_title.replace(/\s+/g, '-')}`"
+  >
+    <div class="opinion flex grid grid-cols-12 gap-4">
       <div class="photo__container md:col-span-5 col-span-12">
-        <img :src="person.imageUrl" alt="" class="photo" />
+        <img :src="person.image.link" alt="" class="photo" />
         <div class="overlay">
-          <p class="text__designer">industrial designer｜工業設計師</p>
+          <p class="text__designer">
+            {{ person.subtitle }}
+          </p>
+          <!-- <p class="text__designer">industrial designer｜工業設計師</p> -->
         </div>
       </div>
 
       <div class="text">
         <!-- 名字 -->
-        <p class="text__designer md:hidden">industrial designer｜工業設計師</p>
-        <p class="text__nameEn">{{ person.nameEn }}</p>
-        <p class="text__nameCn">{{ person.nameCn }}</p>
+        <!-- <p class="text__designer md:hidden">industrial designer｜工業設計師</p> -->
+        <p class="text__designer md:hidden">{{ person.subtitle }}</p>
+        <p class="text__nameEn">{{ person.en_title }}</p>
+        <p class="text__nameCn">{{ person.title }}</p>
+        <!-- <p class="text__nameEn">{{ person.nameEn }}</p>
+        <p class="text__nameCn">{{ person.nameCn }}</p> -->
         <!-- icon -->
         <div class="line-container">
           <div class="line__opinion"></div>
@@ -108,20 +139,24 @@ const peopleopinion = ref([
           </div>
         </div>
         <!-- 觀點 想法 -->
-        <p class="text__opinionEn text-left">
-          “{{ person.opinionEn }}”<span class="text__opinionEnPeo md:hidden"
-            >&nbsp; &nbsp;—{{ person.opinionEnPeo }}</span
-          >
-        </p>
 
+        <!-- <p
+          class="text__opinionEn text-left"
+          v-html="modifyDescription(person.description)"
+        ></p> -->
+        <p class="text__opinionEn text-left" v-html="person.description"></p>
+
+        <!-- <span class="text__opinionEnPeo"
+          >&nbsp; &nbsp;—{{ person.en_title }}</span
+        >
         <p class="text__opinionEnPeo md:block hidden">
           &nbsp; &nbsp;—{{ person.opinionEnPeo }}
-        </p>
-        <p class="text__opinionCn">
-          「{{ person.opinionCn }} 」<span class="md:inline-block hidden"
-            >—{{ person.nameCn }}</span
+        </p> -->
+        <!-- <p class="text__opinionCn">
+          「{{ person.description }} 」<span class="md:inline-block hidden"
+            >—{{ person.title }}</span
           >
-        </p>
+        </p> -->
 
         <p class="md:hidden">—{{ person.nameCn }}</p>
 
@@ -223,6 +258,9 @@ const peopleopinion = ref([
     width: 90%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
+    @include max-media(1440) {
+      width: 85%;
+    }
     @include max-media(1200) {
       width: 80%;
     }
@@ -277,6 +315,8 @@ const peopleopinion = ref([
     font-size: 0.875rem;
     margin-top: 8.7593%;
     font-style: italic;
+    // 沒有加上中文跟名稱時
+    margin-bottom: 13.0496%;
   }
 
   &__opinionEnPeo {

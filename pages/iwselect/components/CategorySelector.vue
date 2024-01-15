@@ -91,7 +91,7 @@ const clickyear = () => {
   &__category {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
   }
 
   &__title {
@@ -169,10 +169,12 @@ const clickyear = () => {
   margin-bottom: 50%;
   width: 15.68vw;
   height: 23.03vw;
-  min-width: 271px;
-  min-height: 384px;
+  // min-width: 271px;
+  // min-height: 384px;
   @include max-media(768) {
     justify-self: center;
+    min-width: 260px;
+    min-height: 412px;
   }
 }
 

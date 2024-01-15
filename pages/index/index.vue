@@ -244,13 +244,13 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         </div>
         <!-- Opinion -->
         <p class="text__title__opinion text-center">OPINION</p>
-        <div class="swiper__wrap">
+        <div class="swiper__wrap__opinion">
           <swiper
             :modules="[Scrollbar, Autoplay]"
             :scrollbar="{ hide: false, draggable: true }"
             :autoplay="{ delay: 2000, disableOnInteraction: false }"
             :slidesPerView="1"
-            :class="'swiperscrollbar'"
+            :class="'swiperscrollbar__opinion'"
           >
             <SwiperSlide>
               <div class="grid grid-cols-12 gap-4">
@@ -500,9 +500,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     top: 85%;
     left: 2%;
     font-size: 1.125rem;
-    font-size: clamp(0.625rem, 1.5vw, 1.125rem);
-    @include max-media(1440) {
-      top: 75%;
+    font-size: clamp(0.625rem, 1vw, 1.125rem);
+    @include max-media(1024) {
+      top: 80%;
       font-size: 0.625rem;
     }
     @include max-media(768) {
@@ -670,6 +670,12 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     // max-width: 307px;
     height: 24.65278vw;
     width: 17.43056vw;
+
+    width: 11.62vw;
+    height: 16.44vw;
+
+    // width: 13.07vw;
+    // height: 18.49vw;
     max-height: 355px;
     max-width: 251px;
     object-fit: cover;
@@ -749,6 +755,10 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 
   padding-bottom: 9.3055%;
   margin-bottom: 21.157%;
+  &__opinion {
+    @extend .swiperscrollbar;
+    --swiper-scrollbar-sides-offset: 8%;
+  }
 
   &__wrap {
     padding-left: 9%;
@@ -854,5 +864,12 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
 .swiper__wrap {
   padding-left: 9%;
   padding-right: 9%;
+
+  &__opinion {
+    // padding-left: 11.387%;
+    // padding-right: 11.387%;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
 }
 </style>

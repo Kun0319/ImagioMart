@@ -18,7 +18,7 @@ const menuLists = ref([
   {
     link: "/story",
     name: "Story",
-    nameZh: "設計故事",
+    nameZh: "品牌故事",
     hover: ref(false),
     click: ref(false),
     children: [

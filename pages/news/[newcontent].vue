@@ -1,7 +1,20 @@
 <script setup>
+import { useRoute } from "vue-router";
 definePageMeta({
   layout: "innerpage",
 });
+const nescontent = ref(null);
+const route = useRoute();
+
+// console.log(route.params.opinionperson);
+const { data, error } = await useFetch(
+  `https://iw-api.d-blueprint.com/api/reports/${route.params.newcontent}`,
+);
+if (!error.value && data.value) {
+  nescontent.value = data.value.data.info;
+  // console.log(data.value.data.info);
+  // console.log(nescontent.value);
+}
 </script>
 <template>
   <div class="rwd-wrap">
@@ -10,17 +23,25 @@ definePageMeta({
     >
       <div class="inner-wrap">
         <div class="flex items-center">
-          <p class="title--text__one">Furniture｜Inside Stories｜issue 150</p>
+          <!-- <p class="title--text__one">Furniture｜Inside Stories｜issue 150</p> -->
+          <p class="title--text__one">{{ nescontent.issue_name }}</p>
+
           <i class="pi pi-heart mx-3 ml-auto"></i>
           <i class="pi pi-share-alt"></i>
         </div>
         <div class="title--text__two">
-          <p>House Pokrinniemi, Hämeenlinna, Finland</p>
-          <p>
+          <!-- <p>House Pokrinniemi, Hämeenlinna, Finland</p> -->
+          <!-- <p>
             NO.1 義大利原裝傢俱品牌 NATUZZI 拉圖誌 歡慶來台 18 年 強勢進駐台南
+          </p> -->
+          <!-- <p class="title--text__three">文字．影像提供：SHANG XIA 上下</p> -->
+
+          <p>{{ nescontent.en_title }}</p>
+          <p>
+            {{ nescontent.title }}
           </p>
         </div>
-        <p class="title--text__three">文字．影像提供：SHANG XIA 上下</p>
+        <p class="title--text__three">{{ nescontent.subtitle }}</p>
         <img
           src="https://www.figma.com/file/Cl1dT31sCYUc7LwFrjXl9R/image/9e4e22f13b2809b9fd461144a0f374106e7f6969"
           alt=""

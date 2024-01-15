@@ -45,7 +45,7 @@ const slidesData = ref([
                 <p>芬蘭海門林納　雪地之家</p>
               </div>
               <p class="title--text__three">文字．影像提供：SHANG XIA 上下</p>
-              <div>
+              <div class="cover__container">
                 <img
                   src="~/assets/images/projectcontent1.png"
                   alt=""
@@ -179,6 +179,9 @@ const slidesData = ref([
 </template>
 
 <style lang="scss" scoped>
+.cover__container {
+  margin-bottom: 5.54626%;
+}
 .Filtericon-container {
   display: none;
 }

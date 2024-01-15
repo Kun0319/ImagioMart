@@ -73,11 +73,11 @@ watch(width, (newWidth) => {
       class="flex info md:col-span-5 lg:col-span-6 col-span-full md:order-none order-1 md:text-start text-center md:justify-self-center"
     >
       <div class="flex flex-col md:items-start items-center">
-        <p class="info__new">Jun.27 / 2023 出刊消息</p>
+        <!-- <p class="info__new">Jun.27 / 2023 出刊消息</p> -->
+        <p class="info__new">{{ props.childData.data.info.category }}</p>
         <div class="flex flex-col md:max-w-full lg:w-auto w-9/12"></div>
         <p class="info__month">
-          {{ props.childData.data.info.en_title }} /
-          {{ props.childData.data.info.subtitle }}
+          {{ props.childData.data.info.title }}
         </p>
         <!-- <p class="info__content">
           本期雙封面精選<br />

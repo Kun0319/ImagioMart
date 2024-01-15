@@ -10,7 +10,7 @@ const handleIframeClick = () => {
     <!-- <div class="youtube-container"> -->
     <!-- <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" /> -->
 
-    <iframe
+    <!-- <iframe
       width="560"
       height="315"
       src="https://www.youtube.com/embed/_GuOjXYl5ew?si=mjkle4bCdmvtlMYI"
@@ -20,7 +20,7 @@ const handleIframeClick = () => {
       allowfullscreen
       class="photo"
       @click="handleIframeClick"
-    ></iframe>
+    ></iframe> -->
 
     <!-- <div class="overlay"></div> -->
     <!-- </div> -->
@@ -46,7 +46,8 @@ const handleIframeClick = () => {
 .photo {
   width: 100%;
   width: 17.94vw;
-  height: 12.15vw;
+  // height: 12.15vw;
+  height: auto;
   // max-width: 310px;
   // aspect-ratio: 3/2;
   aspect-ratio: 16/9;

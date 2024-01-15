@@ -2,6 +2,18 @@
 import VueMagnifier from "@websitebeaver/vue-magnifier";
 import "@websitebeaver/vue-magnifier/styles.css";
 import pic from "@/assets/images/magazine_mockup_1.svg";
+const route = useRoute();
+const magazineId = route.params.Magazine;
+const { data, error } = await useFetch(
+  `https://iw-api.d-blueprint.com/api/issues/${magazineId}`,
+);
+const blocks = data.value.data.info.content;
+// console.log(data.value.data.info.content[4].data.image_lft.link);
+// const magnifierPhotoBlocks = blocks.filter(
+//   (block) => block.type === "block_magnifier_photo",
+// );
+
+// console.log(blocks);
 </script>
 
 <!-- 需要改成自動帶入資料圖片 -->
@@ -20,6 +32,7 @@ import pic from "@/assets/images/magazine_mockup_1.svg";
       </client-only>
       <!-- <img src="@/assets/images/magazine_mockup_ 1.svg" alt="" /> -->
     </div>
+
     <div class="photo">
       <img src="@/assets/images/magazine_mockup_2.svg" alt="" class="w-full" />
     </div>
@@ -34,6 +47,20 @@ import pic from "@/assets/images/magazine_mockup_1.svg";
       <i class="pi pi-heart mx-3"></i> <i class="pi pi-share-alt"></i>
     </div>
   </div>
+  <!-- 測試區塊 -->
+  <!-- <div v-for="(block, index) in magnifierPhotoBlocks" :key="index"> -->
+  <!-- 左邊圖片 -->
+  <!-- <img
+      :src="`https://iw-api.d-blueprint.com${block.data.image_lft.link}`"
+      :alt="block.data.image_lft.alt"
+    /> -->
+  <!-- 右邊圖片 -->
+  <!-- <img
+      :src="`https://iw-api.d-blueprint.com${block.data.image_rgt.link}`"
+      :alt="block.data.image_rgt.alt"
+    /> -->
+  <!-- </div> -->
+  <!-- 測試區塊 -->
 </template>
 
 <style lang="scss" scoped>
@@ -45,6 +72,7 @@ import pic from "@/assets/images/magazine_mockup_1.svg";
     margin-bottom: 24.4947%;
   }
 }
+
 .photo:last-of-type {
   margin-bottom: 0;
 }

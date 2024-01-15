@@ -148,7 +148,7 @@ const login = () => {
 
   &::placeholder {
     color: #cecece;
-    padding-left: 1%;
+    // padding-left: 1%;
     align-content: center;
 
     @include max-media(1024) {
@@ -164,6 +164,8 @@ const login = () => {
     @extend .input;
     // margin-bottom: 8.7359%;
     margin-bottom: 4.36795%;
+    padding-left: 10px;
+
     // margin-bottom: 8.2011%;
 
     &__text {
@@ -175,6 +177,8 @@ const login = () => {
   &-password {
     @extend .input;
     margin-bottom: 8.2011%;
+    padding-left: 10px;
+
     // margin-bottom: 5.7051%;
 
     &__text {

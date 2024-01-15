@@ -14,7 +14,8 @@ import { useGlobalStore } from "@/stores/global.js";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");
-
+const route = useRoute();
+const opinionData = ref(null);
 definePageMeta({
   layout: "innerpage",
 });
@@ -63,6 +64,15 @@ const slidesData = ref([
     projectLocation: "派屈克．諾蓋",
   },
 ]);
+
+const enTitleProcessed = route.params.opinionperson; // 假设路由参数名为 enTitle
+// console.log(route.params.opinionperson);
+const { data, error } = await useFetch(
+  `https://iw-api.d-blueprint.com/api/opinions/${enTitleProcessed}`,
+);
+if (!error.value && data.value) {
+  opinionData.value = data.value.data.info;
+}
 </script>
 
 <template>
@@ -72,16 +82,22 @@ const slidesData = ref([
     >
       <div class="inner-wrap">
         <div class="flex flex-col items-center">
-          <p class="text__designer">Industrial designer｜工業設計師</p>
+          <!-- <p class="text__designer">Industrial designer｜工業設計師</p> -->
+          <p class="text__designer">
+            {{ opinionData.subtitle }}
+          </p>
+
           <img
-            src="https://s3-alpha-sig.figma.com/img/f89d/ec49/1a3b1fa09ea0b02c0cfae9c791ac7127?Expires=1705276800&Signature=m7SiV1kVY9BtPfVhi9F7XAQT7kqg5bueca55md3bycGdWEorn7hmHA7KQ1EojVAe01ojY9ij6V~IeAEpyjl6J85RuDrc~c8fZe5J6~5Og7IFypQpPGkRAXEr7f-c-DMoMBvUqxHPk7aPzbeORrxNXKc~FesIFVVNmxUThQECjwNg-yChzvtlJYmurx5PuVwSTNLyCX2tydOXbh-vSB7LDWACcYk4oMNa4WaXdnh1p4BZ6QRDob~CDr5a87l5LnovG4KCyzRWA8PAoaq1xbj3ngLUjmVSwRFKzpuesb0LWZoHeBoJ3Bj4UKD~f6sP20F9d2akNonjV9rnHr2R2svalg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            src="~/assets/images/opinioncontent.png"
             alt=""
             class="photo__people"
           />
-          <p class="text__nameEn">Patrick Norguet</p>
+          <!-- <p class="text__nameEn">Patrick Norguet</p>
           <p class="text__nameCn">派屈克．諾蓋</p>
-
-          <p class="text__photoCn">影像：派屈克．諾蓋提供 ｜ 採訪：洪雅琪</p>
+          <p class="text__photoCn">影像：派屈克．諾蓋提供 ｜ 採訪：洪雅琪</p> -->
+          <p class="text__nameEn">{{ opinionData.en_title }}</p>
+          <p class="text__nameCn">{{ opinionData.title }}</p>
+          <p class="text__photoCn">{{ opinionData.notes }}</p>
           <div class="text__photoEn text-center">
             <p>Photo：Courtesy by Patrick Norguet</p>
             <p>Interview：Grace Hung</p>
@@ -91,7 +107,7 @@ const slidesData = ref([
           </div>
         </div>
         <div class="flex flex-col text__content">
-          <p class="text__content__one">
+          <!-- <p class="text__content__one">
             1969年生於法國都爾，在西班牙ESDi設計學院畢業後，他參與了兩大奢侈品牌
             Yves Saint-Laurent 和 Louis Vuitton
             的櫥窗設計項目，並藉此經歷成功奠基他對於品牌識別及展示型態的考究，更將其經驗運用在臨時建築或裝置上。2000年，派屈克因個人首件設計作品雛形「彩虹椅（Rainbow
@@ -105,20 +121,16 @@ const slidesData = ref([
           </p>
           <p class="text__content__one">
             對他而言，好的設計更貼近歷久不衰。在過度消費的時代裡，設計的價值必須重新獲得整個生產與製造過程的信譽與尊嚴，並不僅是美觀的附屬品。因此，他會與團隊及客戶一起整合許多資訊，以提出滿足當前和未來需求的創意或產品。但是，這目標不單靠理性數據或市場調查便可實現，更須連結長久以來世人積累的文化、歷史和藝術，讓下一代年輕人明瞭，世界並不是從TikTok的誕生開始的，我們有幸生活在一個文化豐富的世界，歷史橫跨各大洲，這才是一切創作素材的起源與基礎。
-          </p>
+          </p> -->
+          <p
+            class="text__content__one"
+            v-html="opinionData.content[0].data?.content"
+          ></p>
         </div>
         <div>
-          <img
-            src="https://s3-alpha-sig.figma.com/img/f0fd/fd7e/642e6af1885ea8b8057ccc04849e17d1?Expires=1705276800&Signature=MYs~ROEqxKpneRFZEMIx8cOBMy8qqirQf9-2OVYt74Fus2fxKUmLkm8VV6G7RdsAIR1oD9zjShJTHXQWqlp6ZlnMW6pRYPgGocMwlKaBoZhTWn9KiuO8qNMZ7roqd6fH0jz11nuexOh3F5LVc7D2KoIYM9vh2y1Y5VbLHBY3TTDrkY~vsksFSc2odiHNCZOYRNDE~W6RgVd7rXQahF0fuqN2bUia1zGO2nvGeIjl8MiYLPpXC9prR5oP7TmR5Jk3h~3879DVjJpxZ44nhQJS44Wg4bQ8auoWfpN6yJhBngJ9pcUDs8EaE6lbXHx6EIK4KTm0nkd58SvOmekVEl88AA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-            class="photo"
-          />
+          <img src="~/assets/images/opinioncontent1.png" alt="" class="photo" />
           <p class="decorItems__text">Cappellini＿Rainbow Chair</p>
-          <img
-            src="https://s3-alpha-sig.figma.com/img/53d9/2437/cba8ff10aa77674a70a15a8fcd5956f2?Expires=1705276800&Signature=Ri5XI29--hZk92Z6llSVT2oAhMxYEPY9iG89QThkMZpsf-6hYL6Zksna3RTpXNvHHUN43cbi6ZoJZZ68wIFzCRXMaZpCVPtwYN7ntr1~OpgRzcDXsbwCc9OJwd1nFbB7qV2qL1m8UNzaZVXL78Na1fiGN2LMc~r8OhjuFj0QdJROXyhw4ETuqqI2YoUGmAsWzmj9VTFD7qCe2GYX8xkZoOmBDXDFyF4yewPJjeC6HYcCM8-Z2Z~jsCfD66EVJFYpgZfy9PaBns52VeiFJNS3UFBP4ECcJSgM9C2QhqYXekbDyDGp~lv5xwhIoyrljb4LoqWlK3OKZxq7MrseNQf6mw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-            class="photo"
-          />
+          <img src="~/assets/images/opinioncontent2.png" alt="" class="photo" />
           <p class="decorItems__text decorItems__text--photo">
             Flaminia＿LUX lamp
           </p>

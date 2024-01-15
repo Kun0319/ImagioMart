@@ -5,26 +5,48 @@ import Magazine from "./components/Magazine.vue";
 import Paginator from "../../components/Paginator.vue";
 import Advertise from "./components/Advertise.vue";
 
-const magazines = Array.from({ length: 12 }, (_, index) => ({
-  id: index,
-  name: `Magazine ${index + 1}`,
-  imageUrl: "~/assets/images/Magazine.svg",
-}));
+// const magazines = Array.from({ length: 12 }, (_, index) => ({
+//   id: index,
+//   name: `Magazine ${index + 1}`,
+//   imageUrl: "~/assets/images/Magazine.svg",
+// }));
+const magazines = ref([]);
 
 // 獲取資料
 const {
   data: fetchedData,
   pending,
   error,
-} = useFetch("https://iw-api.d-blueprint.com/api/issues/1");
+} = useFetch("https://iw-api.d-blueprint.com/api/issues/11");
+// 雜誌列表
 
-// const {
-//   data: fetchedData,
-//   pending,
-//   error,
-// } = await useAsyncData(() => {
-//   return $fetch("https://iw-api.d-blueprint.com/api/issues/1");
-// });
+const { data: dataFromApi2, error: errorApi2 } = useFetch(
+  "https://iw-api.d-blueprint.com/api/issues?sorting=sort&direction=asc&page=1&per_page=15&type=iw",
+);
+
+watch([dataFromApi2, errorApi2], () => {
+  if (!errorApi2.value && dataFromApi2.value && dataFromApi2.value.data.list) {
+    magazines.value = dataFromApi2.value.data.list.map((item) => {
+      // console.log(item);
+      return {
+        id: item.id,
+        name: item.title,
+        subtitle: item.subtitle,
+        imageUrl: item.imageUrl,
+        // item.images.length > 0
+        //   ? item.images[0]
+        //   : "~/assets/images/Magazine.svg",
+        price: item.price,
+      };
+    });
+
+    // console.log(magazines.value);
+  }
+});
+
+// console.log(magazines.value);
+// console.log(dataFromApi2.value?.data.list[0].id);
+// console.log(dataFromApi2.value?.data?.list.length);
 </script>
 
 <template>
@@ -35,7 +57,14 @@ const {
     <div class="grid grid-cols-12 gap-6">
       <!--
   <Magazine v-for="n in 12" :key="n" :class="{ 'special-style': n === 3 }" /> -->
+      <!-- <Magazine v-for="item in magazines" :key="item.id" :magazine="item" /> -->
       <Magazine v-for="item in magazines" :key="item.id" :magazine="item" />
+
+      <!-- <Magazine
+        v-for="dataFromApi2 in dataFromApi2.value?.data?.list.length"
+        :key="dataFromApi2.value?.data.list[0].id"
+        :magazine="item"
+      /> -->
     </div>
     <Paginator />
     <Advertise />
@@ -63,7 +92,6 @@ const {
   // background-color: #ffffff;
   // box-shadow: -10px 5px 10px 5px rgba(0, 0, 0, 0.1);
   color: rgb(0, 0, 0);
-
   @include max-media(768) {
     top: 20%;
   }

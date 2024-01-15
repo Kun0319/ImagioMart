@@ -13,16 +13,12 @@ const toggleFilterMenu = () => {
   <NuxtLayout>
     <div class="filter__relative">
       <Banner :imgSrc="cover" />
-      <BreadcrumbLine
-        text="Home&nbsp; /&nbsp; Opinion "
-        :showTags="true"
-        :showIcon="true"
-      >
+      <BreadcrumbLine text="Home&nbsp; /&nbsp; Opinion " :showTags="true">
         <template #icon>
           <img
             src="~/assets/icon/sliders.svg"
             alt=""
-            class="xl:hidden block relative"
+            class="md:hidden block relative"
             @click="toggleFilterMenu"
           />
         </template>
@@ -54,26 +50,26 @@ const toggleFilterMenu = () => {
               <TagButton :tag="'Floor'" />
             </nuxt-link>
             <!-- 篩選按鈕 -->
-            <div
+            <!-- <div
               class="icon-container justify-self-end md:flex hidden"
               @click="toggleFilterMenu"
             >
               <img src="~/assets/icon/Filter.svg" alt="Filter" class="icon" />
               <span>Filter&nbsp;&nbsp;▾</span>
-            </div>
+            </div> -->
           </div>
         </template>
       </BreadcrumbLine>
     </div>
     <!-- 篩選選單 -->
-    <div class="filter__menu" v-show="FilterMenuOpen">
+    <!-- <div class="filter__menu" v-show="FilterMenuOpen">
       <div
         v-show="FilterMenuOpen"
         class="overlay"
         @click="toggleFilterMenu"
       ></div>
       <FilterMenu />
-    </div>
+    </div> -->
     <div class="inner-wrap">
       <PeopleOpinioin />
     </div>
