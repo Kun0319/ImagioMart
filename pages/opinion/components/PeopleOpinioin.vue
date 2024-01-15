@@ -95,7 +95,7 @@ const { data, error } = await useFetch(
 
 if (data.value) {
   peopleopinion.value = data.value.data.list; // 假设 data.value 是您需要的数组
-  console.log(peopleopinion.value[0].description);
+  // console.log(peopleopinion.value[0].description);
 }
 // const chineseName = peopleopinion.value[0].title;
 // const englishName = peopleopinion.value[0].en_title;

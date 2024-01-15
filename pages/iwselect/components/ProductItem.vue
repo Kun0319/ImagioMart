@@ -15,7 +15,8 @@
           <p class="text__two">售價 NT$450</p>
           <p class="text__three">會員價 NT$300</p>
         </div>
-        <button class="btn" @click.stop="addToCart">加入購物車</button>
+        <button class="btn">加入購物車</button>
+        <!-- @click.stop="addToCart" -->
       </div>
     </div>
   </nuxt-link>
