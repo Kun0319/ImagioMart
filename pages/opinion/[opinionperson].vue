@@ -97,11 +97,11 @@ if (!error.value && data.value) {
           <p class="text__photoCn">影像：派屈克．諾蓋提供 ｜ 採訪：洪雅琪</p> -->
           <p class="text__nameEn">{{ opinionData.en_title }}</p>
           <p class="text__nameCn">{{ opinionData.title }}</p>
-          <p class="text__photoCn">{{ opinionData.notes }}</p>
-          <div class="text__photoEn text-center">
+          <p class="text__photoCn text-center" v-html="opinionData.notes"></p>
+          <!-- <div class="text__photoEn text-center">
             <p>Photo：Courtesy by Patrick Norguet</p>
             <p>Interview：Grace Hung</p>
-          </div>
+          </div> -->
           <div class="text__icon">
             <i class="pi pi-heart mx-3"></i> <i class="pi pi-share-alt"></i>
           </div>
@@ -471,6 +471,7 @@ if (!error.value && data.value) {
     margin-bottom: 1.5846%;
     color: $text-color3;
     font-family: $font-Noto;
+    line-height: 148%;
 
     @include max-media(768) {
       font-size: 0.625rem;

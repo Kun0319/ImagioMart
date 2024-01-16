@@ -215,7 +215,7 @@ const handleSubmit = () => {
     border: 1px solid #00000050;
     background-color: white;
     padding: 2.5% 10%;
-    font-family: $font-NotoSerif;
+    // font-family: $font-NotoSerif;
     font-size: 1rem;
     margin-bottom: 43.3232%;
 

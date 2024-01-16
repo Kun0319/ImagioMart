@@ -133,7 +133,7 @@ const clickyear = () => {
   &__options {
     letter-spacing: 0.714px;
     // padding-bottom: 1.875rem;
-    font-family: $font-NotoSerif;
+    font-family: $font-Noto;
 
     &__month {
       @extend .selector__options;
@@ -161,7 +161,7 @@ const clickyear = () => {
     justify-content: center;
     color: $text-color3;
     font-size: 0.875rem;
-    font-family: $font-NotoSerif;
+    // font-family: $font-NotoSerif;
   }
 
   .button {

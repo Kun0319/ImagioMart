@@ -44,19 +44,13 @@ function validateInput(selectorId, event) {
           <div class="shopcart__category col-span-full">
             <p class="col-span-5">期刊</p>
             <p class="col-span-4 md:block hidden text-center">數量</p>
-            <p class="col-span-3 text-center md:block hidden text-center">
-              小計
-            </p>
+            <p class="col-span-3 md:block hidden text-right">小計</p>
           </div>
           <div class="shopcart__items first-item">
-            <div class="md:col-span-2 col-span-5">
+            <div class="md:col-span-3 col-span-5">
               <!-- https://s3-alpha-sig.figma.com/img/a455/a214/b6ecf3505b538faadba1023e1aa5ca30?Expires=1704067200&Signature=K6TczBBD7I8G9r8XMKLpFc7bOvlilygrpT45OpV42alnPk60aNuol0LfToz8f6TUFpkL5S7ikhm2qoFNPNuHsGsFb02gUbzHpPdu~QuRR4wY-MXcN4zA9El39JWt6X~PrShAYZknPZWMFJREgSAMJGZ~O28DiFMFProsa0chN~T7LDUlf0~BBBhNXT0h2DaaJG5b3yuOQ8WZXZ1qr5ttz6-AC5skZEmY5rfWLf6MRxZd9WQXwbqVxzgIBVjGCh-GsjBAy0nssxCoWyUAA0rQBDtHkU7-VGlfl2Z4FwQXgegF1Fd59n-ZYavKJujIFFeE~6GGBtKHM1DDl6rNigMDhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 -->
-              <img
-                src="https://s3-alpha-sig.figma.com/img/a455/a214/b6ecf3505b538faadba1023e1aa5ca30?Expires=1704067200&Signature=K6TczBBD7I8G9r8XMKLpFc7bOvlilygrpT45OpV42alnPk60aNuol0LfToz8f6TUFpkL5S7ikhm2qoFNPNuHsGsFb02gUbzHpPdu~QuRR4wY-MXcN4zA9El39JWt6X~PrShAYZknPZWMFJREgSAMJGZ~O28DiFMFProsa0chN~T7LDUlf0~BBBhNXT0h2DaaJG5b3yuOQ8WZXZ1qr5ttz6-AC5skZEmY5rfWLf6MRxZd9WQXwbqVxzgIBVjGCh-GsjBAy0nssxCoWyUAA0rQBDtHkU7-VGlfl2Z4FwQXgegF1Fd59n-ZYavKJujIFFeE~6GGBtKHM1DDl6rNigMDhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt=""
-                class="photo"
-              />
+              <img src="~/assets/images/shopcart1.png" alt="" class="photo" />
             </div>
             <div class="md:col-span-3 col-span-7 flex flex-col">
               <div class="flex justify-between shopcart__name">
@@ -134,17 +128,13 @@ function validateInput(selectorId, event) {
         </div>
         <div class="grid grid-cols-12 gap-4">
           <div class="shopcart__category col-span-full">
-            <p class="col-span-6 md:mt-0 mt-16">選物</p>
-            <p class="col-span-4 md:block hidden">數量</p>
-            <p class="col-span-2 text-center md:block hidden">小計</p>
+            <p class="col-span-5 md:mt-0 mt-16">選物</p>
+            <p class="col-span-4 md:block hidden text-center">數量</p>
+            <p class="col-span-3 md:block hidden text-right">小計</p>
           </div>
           <div class="shopcart__items first-item">
             <div class="md:col-span-3 col-span-5">
-              <img
-                src="https://s3-alpha-sig.figma.com/img/87f0/103d/f9422d1ac4c0abb0148e40cbafcb7436?Expires=1704067200&Signature=jj~Jw8LWXupezgiam~686RtkNMOgmiC4HIEkj9xetEv6AIiPE0CTP0-GNIDyJpCZLPvbiNepklKXvLlnKtuebjF6S5ftZ4-EZghAaihciLEQBhdGoifLauqYY8kiVA-sjqMOAPF3qEO7E1ggcPVNBnRtDPGC-VekNWHP1l66CehRolSltVW9WvcnJOaK45TQjw8CR77LOsm0DWzJu7PzWbjp7SAxHUPbQ9QOUjS8tSQ04W1mRXe5I56D--1nRN~03xZGHD6CBTmaQLS3gw-STwuNOI16UEfhGyqVIJsmN1BeHPYcwpeIKrTRS71-UVeRowtd3hWn-AHUTO1cYUyvKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                alt=""
-                class="photo"
-              />
+              <img src="~/assets/images/shopcart2.jpeg" alt="" class="photo" />
             </div>
             <div class="md:col-span-3 col-span-7 flex flex-col">
               <div class="flex justify-between shopcart__name">

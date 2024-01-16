@@ -145,17 +145,12 @@ if (data.value) {
           v-html="modifyDescription(person.description)"
         ></p> -->
         <p class="text__opinionEn text-left" v-html="person.description"></p>
-
+        <p class="text__opinionCn" v-html="person.en_description"></p>
         <!-- <span class="text__opinionEnPeo"
           >&nbsp; &nbsp;—{{ person.en_title }}</span
         >
         <p class="text__opinionEnPeo md:block hidden">
           &nbsp; &nbsp;—{{ person.opinionEnPeo }}
-        </p> -->
-        <!-- <p class="text__opinionCn">
-          「{{ person.description }} 」<span class="md:inline-block hidden"
-            >—{{ person.title }}</span
-          >
         </p> -->
 
         <p class="md:hidden">—{{ person.nameCn }}</p>
@@ -261,6 +256,7 @@ if (data.value) {
     @include max-media(1440) {
       width: 85%;
     }
+
     @include max-media(1200) {
       width: 80%;
     }

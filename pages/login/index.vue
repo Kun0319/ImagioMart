@@ -101,7 +101,7 @@ const login = () => {
     background-color: white;
     padding: 2.5% 10%;
     font-size: 0.875rem;
-    font-family: $font-NotoSerif;
+    // font-family: $font-NotoSerif;
   }
 
   &__login {

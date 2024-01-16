@@ -26,10 +26,7 @@ const canShow = computed(() => globalStore.hasSubmitted);
       <button class="btn"><img src="~/assets/icon/pen.svg" alt="" /></button>
     </div>
   </div>
-  <div class="self-start button__container">
-    <button class="button">
-      <nuxt-link to="member/designermember">會員制度</nuxt-link>
-    </button>
+  <div class="button__container">
     <button class="button" v-if="canShow === false">
       <nuxt-link to="member/designermember">成為設計師會員</nuxt-link>
     </button>
@@ -118,7 +115,7 @@ const canShow = computed(() => globalStore.hasSubmitted);
   color: black;
   font-weight: 700;
   font-size: 0.875rem;
-  margin-bottom: 22.2593%;
+  margin-bottom: 5.5485%;
 
   @include max-media(768) {
     margin-bottom: 48.9705%;
@@ -126,9 +123,10 @@ const canShow = computed(() => globalStore.hasSubmitted);
   }
   &__container {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center;
+    width: 100%;
     padding-left: 17.7001%;
+    padding-right: 17.7001%;
   }
 }
 
@@ -136,7 +134,7 @@ const canShow = computed(() => globalStore.hasSubmitted);
 .btn {
   background-color: white;
   border: 0;
-  font-family: $font-NotoSerif;
+  // font-family: $font-NotoSerif;
 
   img {
     width: 25px;

@@ -30,9 +30,10 @@
 
 .photo {
   width: 16.2vw;
-  height: 24.31vw;
+  // height: 24.31vw;
   min-width: 154px;
-  min-height: 231px;
+  // min-height: 231px;
+  aspect-ratio: 4/5;
 
   &__container {
     position: relative;
@@ -117,6 +118,6 @@
   height: 2.6vw;
   min-width: 88px;
   min-height: 25px;
-  font-family: $font-NotoSerif;
+  // font-family: $font-NotoSerif;
 }
 </style>

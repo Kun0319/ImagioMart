@@ -6,6 +6,7 @@ import PersonalInfo from "./components/PersonalInfo.vue";
 import DesignSubmission from "./components/DesignSubmission.vue";
 import UserFavorites from "./components/UserFavorites.vue";
 import VisitedItems from "./components/VisitedItems.vue";
+import SubmissionHistory from "./components/SubmissionHistory.vue";
 
 const selectedTab = ref(0);
 const updateSelectedTab = (index) => {
@@ -25,6 +26,22 @@ const orders = [
     status: "已取消",
   },
 ];
+const submissions = [
+  {
+    id: "231208I23654",
+    date: "ANA Studio",
+    amount: "西澳大利亞珀斯 隱園",
+    date: "2023.12.11",
+    status: "已提交",
+  },
+  {
+    id: "231208I23654",
+    date: "ANA Studio",
+    amount: "西澳大利亞珀斯 隱園",
+    date: "2022.09.30",
+    status: "審核完成",
+  },
+];
 const router = useRouter();
 
 const globalStore = useGlobalStore();
@@ -32,6 +49,9 @@ const canShow = computed(() => globalStore.hasSubmitted);
 const logout = () => {
   globalStore.setSubmissionStatus(false);
   router.push("/member");
+};
+const handleSubmissionClick = () => {
+  selectedTab.value = 5; // 5 是 DesignSubmission 组件对应的索引
 };
 </script>
 <template>
@@ -41,13 +61,16 @@ const logout = () => {
       <p class="welcome" v-else>歡迎, 讀者 ANN</p>
 
       <button class="logout" @click="logout">登出</button>
-      <button class="btn__submit" v-if="canShow">案例投稿</button>
+      <button class="btn__submit" v-if="canShow" @click="handleSubmissionClick">
+        案例投稿
+      </button>
       <TabMenu @update:selectedTab="updateSelectedTab" :can-show="canShow" />
       <PersonalInfo v-if="selectedTab === 0" />
       <Order v-if="selectedTab === 1" :orders="orders" />
       <UserFavorites v-if="selectedTab === 2" />
       <VisitedItems v-if="selectedTab === 3" />
-      <DesignSubmission v-if="selectedTab === 4" />
+      <SubmissionHistory v-if="selectedTab === 4" :submissions="submissions" />
+      <DesignSubmission v-if="selectedTab === 5" />
 
       <div class="hidden">
         <p class="noorder">您還沒有任何訂單</p>
@@ -87,7 +110,7 @@ const logout = () => {
   line-height: 18px;
   font-weight: 700;
   letter-spacing: 0.51px;
-  font-family: $font-NotoSerif;
+  // font-family: $font-NotoSerif;
 }
 
 .noorder {
@@ -101,7 +124,7 @@ const logout = () => {
   font-weight: 700;
   background-color: white;
   border: 0;
-  font-family: $font-NotoSerif;
+  // font-family: $font-NotoSerif;
 
   &__link {
     font-size: 0.75rem;
@@ -114,6 +137,7 @@ const logout = () => {
     justify-content: center;
     margin-bottom: 38.3307%;
   }
+
   &__submit {
     @extend .btn;
     @extend .btn__link;

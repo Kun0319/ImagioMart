@@ -29,7 +29,6 @@ const props = defineProps({
   //   default: "auto", // 默认高度
   // },
 });
-// console.log(props.magazine.imageUrl);
 
 // const route = useRoute();
 // const magazineName = route.params.Magazine;
@@ -53,6 +52,9 @@ const props = defineProps({
       <!-- api獲取-->
       <p class="info__month">{{ props.magazine.subtitle }}</p>
       <p class="info__price">NT${{ props.magazine.price }}</p>
+      <p class="info__memberprice" v-if="props.magazine.member_price">
+        NT${{ props.magazine.member_price }}
+      </p>
       <button class="line-height-4 info__shopcart text-black-alpha-90">
         ADD TO CART
       </button>
@@ -62,17 +64,25 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .info {
-  &__price {
-    @include max-media(768) {
-      font-size: 0.4375rem;
-    }
-  }
-
   &__month {
     font-size: 0.875rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
 
+    @include max-media(768) {
+      font-size: 0.625rem;
+    }
+  }
+  &__price {
+    @include max-media(768) {
+      font-size: 0.4375rem;
+    }
+  }
+  &__memberprice {
+    color: #262525;
+    font-size: 0.9375rem;
+    line-height: 150%;
+    letter-spacing: 0.765px;
     @include max-media(768) {
       font-size: 0.625rem;
     }

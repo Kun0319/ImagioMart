@@ -1,7 +1,6 @@
 <script setup>
 import ProjectShowcase from "./components/ProjectShowcase.vue";
 import CategorySelector from "./components/CategorySelector.vue";
-import CategorySelectorRWD from "./components/CategorySelectorRWD.vue";
 import LoadMore from "./components/LoadMore.vue";
 import cover from "~/assets/images/ScopeBg.png";
 const isRwdMenuOpen = ref(false);
@@ -36,98 +35,82 @@ const projects = [
   {
     id: "1",
     name: "Project A",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1705276800&Signature=euKVEwX2JjmgRN7IXOffLr33LF3jITFiJzBrabAp8lTJ~btDn7lJJyMPZwTyBY3eoSnAlp5PFOPW2OQpRq3NCfVHCZq5Xc2IMK9NXRQhUFVHHPE2w8cgvAvRXEHcvOAw0YJaFSEakR-UeY712X~48mvZDFxpKm6zgh3PzLadZNfpf6V1qaGPXolrodujlEGali-JHPOMthufmzO9xuegC~vAcQRb4hkxf7rR7XqMeH8MeFmhDirshC8JYw79a3~4DwmT9F4e~q0HgJwi1zB-U0-FzeMlplmjN9C9CU1-OjPB0yXHxY~U5UlTzDH6CJTBFs~SCmeXGrKlNmQO8IFj-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    imageUrl: "/images/newthree.png",
   },
   {
     id: "2",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1705276800&Signature=euKVEwX2JjmgRN7IXOffLr33LF3jITFiJzBrabAp8lTJ~btDn7lJJyMPZwTyBY3eoSnAlp5PFOPW2OQpRq3NCfVHCZq5Xc2IMK9NXRQhUFVHHPE2w8cgvAvRXEHcvOAw0YJaFSEakR-UeY712X~48mvZDFxpKm6zgh3PzLadZNfpf6V1qaGPXolrodujlEGali-JHPOMthufmzO9xuegC~vAcQRb4hkxf7rR7XqMeH8MeFmhDirshC8JYw79a3~4DwmT9F4e~q0HgJwi1zB-U0-FzeMlplmjN9C9CU1-OjPB0yXHxY~U5UlTzDH6CJTBFs~SCmeXGrKlNmQO8IFj-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    imageUrl: "/images/newtwo.png",
   },
   {
     id: "3",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ojlHFki1jzsqREbwLbFiF3EiHZYssw28YTW3EpkJqB6OHy4OarNzJHoH9mnsHBLwLznDLCqGZwY9p0rePFjL3EbwOcMVXQGMXlvisALTqle54GjvMfJZA3hhb1~IHkZHeiTqjSN8VFZoXNOi1v52xu-tOWAQXWxk0TdPjXkqL3okdSEbZAZIhOFD4z7Uchy6uuNWqSlgcPimWWNx3vh~FQnGfU51JjRnGMVQ2lh5Ulz3b5D7NPbT0AbhLdEySkl9L1ccJBJcET0-Zw8SrhTK2vZQgJ8z70pNo2EiVKS65Wtm7AFUq9a6Reaa~Vqw9~h81gLGgfEWNKIOn0mDxVGC~Q__",
+    imageUrl: "/images/newtwo.png",
   },
   {
     id: "4",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1705276800&Signature=M5DXAzIJfoFRxwvmt9lBbOzAPHLMgQIBqeI9WooIm1gV~-nHsyWJNQo~pUh0cL7XMENGV0huNrIJZrl6adm7Axjt9S~gU6NhdHjupTm0LHAsLVeeoNEQwxnIB3air47K2grQwwLIuaw9-ezH7e24cvXJTzgp6-knQVRubtUQhJDkHaT3B7qPWR-PBaAUjI0Fa0-9D-OTyrf4~glwlEh5bB2u4j0XUbAjhuZ4O2EOY6oeWzFqAESxde9AJfcSJsQG~VOgTtoN~pXx3kVBLG9A2uxZpREYx1KkJ2Rr-tCZ7AtZQUPCwEhK2pF6mnrlQ0EqIpxOTT-RaRcodgL4c6-tBw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    imageUrl: "/images/newone.png",
   },
   {
     id: "5",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newone.png",
   },
   {
     id: "6",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newseven.jpeg",
   },
   {
     id: "7",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newseven.jpeg",
   },
   {
     id: "8",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newseven.jpeg",
   },
   {
     id: "9",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newtwo.png",
   },
   {
     id: "10",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/8d68/4de7/0402767522bc5f4f81ad080a141cff0d?Expires=1705276800&Signature=euKVEwX2JjmgRN7IXOffLr33LF3jITFiJzBrabAp8lTJ~btDn7lJJyMPZwTyBY3eoSnAlp5PFOPW2OQpRq3NCfVHCZq5Xc2IMK9NXRQhUFVHHPE2w8cgvAvRXEHcvOAw0YJaFSEakR-UeY712X~48mvZDFxpKm6zgh3PzLadZNfpf6V1qaGPXolrodujlEGali-JHPOMthufmzO9xuegC~vAcQRb4hkxf7rR7XqMeH8MeFmhDirshC8JYw79a3~4DwmT9F4e~q0HgJwi1zB-U0-FzeMlplmjN9C9CU1-OjPB0yXHxY~U5UlTzDH6CJTBFs~SCmeXGrKlNmQO8IFj-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    imageUrl: "/images/newtwo.png",
   },
   {
     id: "11",
     name: "Project A",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newfour.png",
   },
   {
     id: "12",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newfour.png",
   },
   {
     id: "13",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newfour.png",
   },
   {
     id: "14",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newthree.png",
   },
   {
     id: "15",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newtwo.png",
   },
   {
     id: "16",
     name: "Project B",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/39c8/2e9e/2032a7c60c5ed08c35a6464f6c7a008f?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=n61Cl-f5bI32GDUQz~EwOVX2qgsHRz3BmVvyWut6N0jis9QAQMBqsSDm5ud7V0fkQHQrIO8Xdxa8S601o74IC79xHTyP5sP1YeUq-bf-OHMy1dS6p-bJaH~N191ZP6L11iWCfppDQTrXVdo1RTukTvabZORJorqLtw0cZ7G9e3aB-ztu8sS~BMHQRvehYjyFwp81pZT7vWk9L6GP3ueogvCjnbtweMRFUQGY73Ge8M6TCpbbNES9z-EUOng9ZkRRYO4cybY1KUqcqOlTxvmF8sQdBKpTxqD1XYbm4Hewlqa3ceudUfxBTOArm0X4TlJAsxGwKKn0J5nrKZDiHCas3A__",
+    imageUrl: "/images/newone.png",
   },
 ];
 // 小螢幕前7個

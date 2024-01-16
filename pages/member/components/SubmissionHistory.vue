@@ -1,21 +1,8 @@
 <script setup>
-import TabMenu from "./components/TabMenu.vue";
+const props = defineProps({
+  submissions: Array,
+});
 
-const orders = [
-  {
-    id: "2112312344",
-    date: "2023-12-10",
-    amount: "NT$3,140",
-    status: "已成交",
-  },
-  {
-    id: "2112312345",
-    date: "2023-12-11",
-    amount: "NT$1,560",
-    status: "已取消",
-  },
-];
-// 切換設計師
 const canShow = ref(false);
 
 const handleCanShowUpdate = (newCanShow) => {
@@ -23,36 +10,28 @@ const handleCanShowUpdate = (newCanShow) => {
 };
 </script>
 <template>
-  <NuxtLayout>
-    <div class="flex flex-col items-center inner-wrap">
-      <p class="welcome">歡迎, 讀者 ANN</p>
-      <button class="logout">登出</button>
-      <TabMenu :canShow="canShow" @update:canShow="handleCanShowUpdate" />
-      <table class="order">
-        <thead>
-          <tr>
-            <th>訂單編號</th>
-            <th>訂購日期</th>
-            <th>總計</th>
-            <th>訂單狀態</th>
-            <th>訂單內容</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="order in orders" :key="order.id">
-            <td data-label="訂單編號">{{ order.id }}</td>
-            <td data-label="訂購日期">{{ order.date }}</td>
-            <td data-label="總計" class="price">{{ order.amount }}</td>
-            <td data-label="訂單狀態">{{ order.status }}</td>
-            <td data-label="訂單內容">
-              <button @click="viewOrder(order.id)" class="browse">瀏覽</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <button @click="handleCanShowUpdate">切換設計師</button>
-  </NuxtLayout>
+  <table class="submission">
+    <thead>
+      <tr>
+        <th>案件編號</th>
+        <th>事務所名稱</th>
+        <th>案名</th>
+        <th>投稿日期</th>
+        <th>案件審核進度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="submission in submissions" :key="submission.id">
+        <td data-label="案件編號">{{ submission.id }}</td>
+        <td data-label="事務所名稱">{{ submission.date }}</td>
+        <td data-label="案名" class="price">{{ submission.amount }}</td>
+        <td data-label="投稿日期">{{ submission.date }}</td>
+        <td data-label="案件審核進度">
+          {{ submission.status }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <style lang="scss" scoped>
@@ -89,7 +68,7 @@ const handleCanShowUpdate = (newCanShow) => {
   margin-bottom: 8.3225%;
 }
 
-.order {
+.submission {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 42.5506%;
@@ -127,14 +106,15 @@ const handleCanShowUpdate = (newCanShow) => {
   }
 }
 
-.order td {
+.submission td {
   text-align: center;
-  padding: 8px;
+  // padding: 8px;
   padding-bottom: 6.3298%;
 }
 
-.order th {
+.submission th {
   text-align: center;
+  // padding: 10px;
   padding-bottom: 9.3775%;
 }
 .browse {

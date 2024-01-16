@@ -133,7 +133,6 @@ if (!error.value && data.value) {
   <NuxtLayout
     :breadcrumbText="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
     :cover="bg"
-    :showFilterMenu="false"
     customText="NEWS"
   >
     <div class="content inner-wrap">

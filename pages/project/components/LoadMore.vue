@@ -28,7 +28,7 @@
     height: 45px;
     border: 0.5px solid rgba(0, 0, 0, 0.5);
     background-color: white;
-    font-family: $font-NotoSerif;
+    // font-family: $font-NotoSerif;
   }
 
   &__down {

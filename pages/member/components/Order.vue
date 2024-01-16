@@ -61,7 +61,7 @@ const handleCanShowUpdate = (newCanShow) => {
   line-height: 18px;
   font-weight: 700;
   letter-spacing: 0.51px;
-  font-family: $font-NotoSerif;
+  // font-family: $font-NotoSerif;
 }
 
 .tabs {
@@ -119,7 +119,7 @@ const handleCanShowUpdate = (newCanShow) => {
 }
 .browse {
   font-size: 0.75rem;
-  font-family: $font-NotoSerif;
+  // font-family: $font-NotoSerif;
   text-decoration: underline;
   font-weight: 700;
   background-color: white;

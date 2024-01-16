@@ -1,7 +1,7 @@
 <script setup>
 // window.location.href = "/issue";
 import cover from "~/assets/images/indexbg.png";
-import { Scrollbar, Autoplay, Pagination } from "swiper/modules";
+import { Scrollbar, Autoplay, Pagination, Navigation } from "swiper/modules";
 import Magazine from "../issue/components/Magazine.vue";
 import "swiper/swiper-bundle.css";
 import picone from "~/assets/images/indexmagzineone.png";
@@ -26,8 +26,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         <!-- Autoplay -->
         <swiper
           :pagination="{ clickable: true }"
-          :modules="[Pagination, Autoplay]"
+          :modules="[Pagination, Autoplay, Navigation]"
           :autoplay="{ delay: 2000, disableOnInteraction: false }"
+          :navigation="true"
           :spaceBetween="100"
           class="cover"
         >
@@ -463,7 +464,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
   align-items: center;
 
   --swiper-pagination-bullet-inactive-color: #d9d9d9 !important;
-  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: #d9d9d9 !important;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-navigation-color: #ffffff !important;
 
   &__container {
     // width: 100vw;
@@ -721,6 +724,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
     padding-bottom: 14px;
     margin-bottom: 2.5026%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &__num {
       margin-right: 8px;

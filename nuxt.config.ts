@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ["@pinia/nuxt", "nuxt-swiper", "nuxt-primevue", "nuxt-jsonld"],
+  modules: ["@pinia/nuxt", "nuxt-primevue", "nuxt-jsonld", "nuxt-swiper"],
+  css: ["primevue/resources/themes/lara-light-green/theme.css"],
   css: ["@/assets/styles/main.scss"],
+
   vite: {
     css: {
       preprocessorOptions: {

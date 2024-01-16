@@ -1,15 +1,30 @@
 <script setup>
 import Paginator from "primevue/paginator";
+const props = defineProps({
+  // totalRecords: { type: Number },
+  // rows: { type: Number },
+  // currentPage: { type: Number },
+  totalRecords: Number,
+  rows: Number,
+  currentPage: Number,
+});
+
+const emit = defineEmits(["update:page"]);
+
+const handlePageChange = (event) => {
+  emit("update:page", event.page + 1);
+};
 </script>
 <template>
   <div class="paginator">
     <Paginator
-      :rows="10"
-      :totalRecords="50"
+      :rows="rows"
+      :totalRecords="totalRecords"
+      :page="currentPage"
+      @page="handlePageChange"
       class="custom-paginator"
-      template="PrevPageLink PageLinks NextPageLink"
-    >
-    </Paginator>
+      template="PrevPageLink  PageLinks  NextPageLink"
+    ></Paginator>
   </div>
 </template>
 
@@ -17,10 +32,12 @@ import Paginator from "primevue/paginator";
 .custom-paginator .p-paginator .p-paginator-pages .p-paginator-page {
   font-size: 12px;
 }
+
 .paginator {
   margin-top: 12.09%;
   margin-bottom: 10.65%;
 }
+
 .custom-paginator
   .p-paginator
   .p-paginator-pages

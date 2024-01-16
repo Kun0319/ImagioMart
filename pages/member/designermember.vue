@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import MemberPopup from "./components/MemberPopup.vue";
 
 // const canShow = ref(false);
 const router = useRouter();
@@ -14,6 +15,7 @@ const handleSubmit = async () => {
 
 <template lang="">
   <NuxtLayout>
+    <MemberPopup />
     <div class="designer">
       <div class="designer__content">
         <!-- 會員登入 -->
@@ -63,7 +65,7 @@ const handleSubmit = async () => {
   &__title {
     font-size: 1.3125rem;
     font-weight: 400;
-    margin-top: 30.3084%;
+    margin-top: 10.0285%;
 
     @include max-media(768) {
       margin-top: 24.4947%;
@@ -82,7 +84,7 @@ const handleSubmit = async () => {
     border: 1px solid #00000050;
     background-color: white;
     padding: 2.5% 10%;
-    font-family: $font-NotoSerif;
+    // font-family: $font-NotoSerif;
     font-size: 1rem;
     margin-bottom: 43.3232%;
 
@@ -117,7 +119,7 @@ const handleSubmit = async () => {
     border: none;
     height: 2rem;
     outline: none;
-    padding-left: 0;
+    padding-left: 1%;
     border-left: 1px solid rgba(0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0);
     border-radius: 0 !important;
