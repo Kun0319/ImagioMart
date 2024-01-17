@@ -8,7 +8,7 @@ const handleIframeClick = () => {
 <template lang="">
   <div class="LittleAdvertise flex justify-center" @click="handleIframeClick">
     <!-- <div class="youtube-container"> -->
-    <!-- <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" /> -->
+    <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" />
 
     <!-- <iframe
       width="560"

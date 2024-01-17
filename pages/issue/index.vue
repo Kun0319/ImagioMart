@@ -51,7 +51,7 @@ const fetchMagazines = async (page) => {
   );
 
   if (!error.value && data.value) {
-    // 直接使用賦值操作更新 magazines
+    // 直接使用賦值操作更新 magazines 傳props
     magazines.value = data.value.data.list.map((item) => ({
       id: item.id,
       name: item.title,
@@ -65,7 +65,6 @@ const fetchMagazines = async (page) => {
 // 更新當前頁面
 const updateCurrentPage = async (newPage) => {
   currentPage.value = newPage;
-  console.log("Hi");
   // 重置 magazines
   magazines.value = [];
 

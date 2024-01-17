@@ -208,113 +208,113 @@ if (!error.value && data.value) {
         </div>
         <p v-if="isChinese" class="title">相關圖片</p>
         <p v-else class="title">PHOTO GALLERY</p>
-
-        <Swiper
-          :direction="'vertical'"
-          :modules="[Scrollbar, Mousewheel]"
-          :scrollbar="{ hide: false }"
-          :mousewheel="true"
-          :class="'swiper'"
-          :slidesPerView="2.3"
-          :spaceBetween="30"
-        >
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-8">
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery1.png"
-                  alt=""
-                  class="photo__swiper"
-                />
+        <client-Only>
+          <Swiper
+            :direction="'vertical'"
+            :modules="[Scrollbar, Mousewheel]"
+            :scrollbar="{ hide: false }"
+            :mousewheel="true"
+            :class="'swiper'"
+            :slidesPerView="2.3"
+            :spaceBetween="30"
+          >
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery1.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery2.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery3.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery4.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
               </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery2.png"
-                  alt=""
-                  class="photo__swiper"
-                />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery5.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery6.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery7.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery8.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
               </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery3.png"
-                  alt=""
-                  class="photo__swiper"
-                />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery5.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery6.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery7.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
+                <div class="col-span-3">
+                  <img
+                    src="~/assets/images/PhotoGallery8.png"
+                    alt=""
+                    class="photo__swiper"
+                  />
+                </div>
               </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery4.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-8">
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery5.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery6.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery7.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery8.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="grid grid-cols-12 gap-8">
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery5.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery6.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery7.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-              <div class="col-span-3">
-                <img
-                  src="~/assets/images/PhotoGallery8.png"
-                  alt=""
-                  class="photo__swiper"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide> </Swiper
+        ></client-Only>
         <div class="text__content">
           <div class="designer">
             <p>Designer: <span>Baletic Arch</span></p>

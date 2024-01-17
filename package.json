@@ -22,7 +22,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.18.1",
-    "nuxt": "^3.8.2",
+    "nuxt": "3.7.4",
     "nuxt-primevue": "^0.2.2",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",

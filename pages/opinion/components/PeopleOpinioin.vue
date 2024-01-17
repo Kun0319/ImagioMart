@@ -87,33 +87,64 @@ import pic5 from "@/assets/images/opinion5.jpeg";
 //     imageUrl: pic1,
 //   },
 // ]);
+const props = defineProps({
+  page: Number,
+});
 // api獲取資料
 const peopleopinion = ref([]);
-const { data, error } = await useFetch(
-  "https://iw-api.d-blueprint.com/api/opinions?sorting=sort&direction=asc&page=1&per_page=15",
+// const { data, error, refresh } = await useFetch(
+//   "https://iw-api.d-blueprint.com/api/opinions?sorting=sort&direction=asc&page=1&per_page=3",
+// );
+
+// if (data.value) {
+//   peopleopinion.value = data.value.data.list; // 假设 data.value 是您需要的数组
+// }
+
+// onMounted(async () => {
+//   await refresh();
+// });
+// console.log(peopleopinion.value.en_title);
+
+watch(
+  () => props.page,
+  (newPage) => {
+    fetchData(newPage);
+  },
 );
 
-if (data.value) {
-  peopleopinion.value = data.value.data.list; // 假设 data.value 是您需要的数组
-  // console.log(peopleopinion.value[0].description);
+async function fetchData(page) {
+  // 用nextTick()重新整理資料沒有回傳問題
+  await nextTick();
+  const { data, error } = await useFetch(
+    `https://iw-api.d-blueprint.com/api/opinions?sorting=sort&direction=asc&page=${page}&per_page=3`,
+  );
+  console.log(data.value.data.meta.total);
+  console.log(data.value.data.meta.per_page);
+  if (error.value) {
+    console.error("Error fetching data:", error.value);
+  } else {
+    peopleopinion.value = data.value.data.list;
+  }
 }
-// const chineseName = peopleopinion.value[0].title;
-// const englishName = peopleopinion.value[0].en_title;
-// function modifyDescription(description) {
-//   return description
-//     .replace("people. ”", `people.” <br/>—${englishName}`)
-//     .replace("好的設計 」", `好的設計」 — ${chineseName}`);
-// }
+onMounted(async () => {
+  await fetchData(props.page);
+});
 </script>
 <template>
   <nuxt-link
     v-for="person in peopleopinion"
     :key="person.id"
-    :to="`/opinion/${person.en_title.replace(/\s+/g, '-')}`"
+    :to="`/opinion/${person.en_title?.replace(/\s+/g, '-')}`"
   >
+    <!-- :to="
+      person.value?.en_title
+        ? `/opinion/${person.value.en_title.replace(/\s+/g, '-')}`
+        : '.'
+    " -->
     <div class="opinion flex grid grid-cols-12 gap-4">
       <div class="photo__container md:col-span-5 col-span-12">
-        <img :src="person.image.link" alt="" class="photo" />
+        <!-- <img :src="person.image.link" alt="" class="photo" /> -->
+        <img :src="person?.image?.link" alt="" class="photo" />
         <div class="overlay">
           <p class="text__designer">
             {{ person.subtitle }}
@@ -174,10 +205,10 @@ if (data.value) {
 
 .photo {
   width: 100%;
-  height: 531px;
+  // height: 100%;
   // height: 478px;
-  // max-width: 345px;
-  max-height: 27.65625vw;
+  max-width: 345px;
+  // max-height: 27.65625vw;
   max-width: 19.94792vw;
   display: block;
   object-fit: cover;

@@ -20,7 +20,7 @@ const props = defineProps({
   },
   showFilterMenu: {
     type: Boolean,
-    default: true, // 默认显示
+    default: true,
   },
 });
 </script>

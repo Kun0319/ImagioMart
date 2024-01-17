@@ -39,6 +39,7 @@ const props = defineProps({
     <div class="flex flex-col items-center">
       <nuxt-link :to="`/issue/${magazine.id}`" class="image-container">
         <img :src="pic" alt="" class="max-w-full object-cover" />
+
         <!-- <div v-if="props.magazine">NT${{ props.magazine.price }}</div> -->
         <!-- <img
           :src="props.magazine.imageUrl.link"

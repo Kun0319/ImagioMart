@@ -53,7 +53,7 @@ const menuLists = ref([
     hover: ref(false),
     click: ref(false),
     children: [
-      { link: "../", nameEn: "IW", nameCn: "IW" },
+      { link: "/issue", nameEn: "IW", nameCn: "IW" },
       { link: "../", nameEn: "DETAIL", nameCn: "DETAIL" },
     ],
   },

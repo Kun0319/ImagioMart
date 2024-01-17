@@ -8,6 +8,11 @@ const FilterMenuOpen = ref(false);
 const toggleFilterMenu = () => {
   FilterMenuOpen.value = !FilterMenuOpen.value;
 };
+// 分頁器
+const currentPage = ref(1);
+const updateCurrentPage = (newPage) => {
+  currentPage.value = newPage;
+};
 </script>
 <template>
   <NuxtLayout>
@@ -71,9 +76,14 @@ const toggleFilterMenu = () => {
       <FilterMenu />
     </div> -->
     <div class="inner-wrap">
-      <PeopleOpinioin />
+      <PeopleOpinioin :page="currentPage" />
     </div>
-    <Paginator />
+    <Paginator
+      :totalRecords="50"
+      :rows="8"
+      :page="currentPage.value"
+      @update:page="updateCurrentPage"
+    />
     <div class="advertise grid-cols-12 gap-12 md:grid hidden inner-wrap">
       <div class="col-span-4" v-for="n in 6" :key="n">
         <LittleAdvertise />
@@ -120,8 +130,8 @@ const toggleFilterMenu = () => {
 // }
 
 .advertise {
-  margin-top: 30.7421%;
-  margin-bottom: 26.1124%;
+  margin-top: 17.0624%;
+  margin-bottom: 20%;
 }
 
 .overlay {

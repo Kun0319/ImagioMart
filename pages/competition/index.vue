@@ -100,8 +100,7 @@ const projects = [
   <NuxtLayout
     :breadcrumbText="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp;Current '"
     :cover="bg"
-    customText="CURRENT 
-COMPETITIONS"
+    customText="CURRENT COMPETITIONS"
   >
     <div class="inner-wrap">
       <SwiperPic :images="ImageArray" />
