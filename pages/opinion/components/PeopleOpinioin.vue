@@ -144,7 +144,7 @@ onMounted(async () => {
     <div class="opinion flex grid grid-cols-12 gap-4">
       <div class="photo__container md:col-span-5 col-span-12">
         <!-- <img :src="person.image.link" alt="" class="photo" /> -->
-        <img :src="person?.image?.link" alt="" class="photo" />
+        <img :src="person?.image?.link" alt="iw opinion" class="photo" />
         <div class="overlay">
           <p class="text__designer">
             {{ person.subtitle }}
@@ -206,10 +206,10 @@ onMounted(async () => {
 .photo {
   width: 100%;
   // height: 100%;
-  // height: 478px;
+  height: 27.65625vw;
+
   max-width: 345px;
   // max-height: 27.65625vw;
-  max-width: 19.94792vw;
   display: block;
   object-fit: cover;
 
@@ -310,12 +310,12 @@ onMounted(async () => {
 }
 
 .text {
-  @apply flex-col md:col-span-6 md:col-start-6 col-span-12 self-end md:text-left text-center;
+  @apply flex-col md:col-span-6 md:col-start-6 col-span-12 self-center md:text-left text-center;
+  width: 100%;
 
   &__rwd {
     margin-top: 7.3991%;
     margin-bottom: 12.5786%;
-
     font-size: 0.625rem;
   }
 
