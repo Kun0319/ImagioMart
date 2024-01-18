@@ -125,7 +125,7 @@ const canShow = computed(() => globalStore.hasSubmitted);
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-left: 17.7001%;
+    padding-left: 10%;
     padding-right: 17.7001%;
   }
 }

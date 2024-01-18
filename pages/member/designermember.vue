@@ -15,7 +15,7 @@ const handleSubmit = async () => {
 
 <template lang="">
   <NuxtLayout>
-    <MemberPopup />
+    <!-- <MemberPopup /> -->
     <div class="designer">
       <div class="designer__content">
         <!-- 會員登入 -->

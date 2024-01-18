@@ -14,6 +14,7 @@ if (!error.value && data.value) {
   nescontent.value = data.value.data.info;
   // console.log(data.value.data.info);
   // console.log(nescontent.value);
+  // console.log(nescontent.value.data);
 }
 </script>
 <template>

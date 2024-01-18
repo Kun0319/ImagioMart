@@ -63,6 +63,7 @@ const mySwiper = ref(null);
   width: 100%;
   max-width: 740px;
   aspect-ratio: 3/2;
+  object-fit: cover;
   // max-height: 440px;
 }
 </style>

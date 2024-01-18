@@ -26,10 +26,10 @@ const goToCheckout = () => {
     <div class="shopcart__items__container">
       <div class="shopcart__items">
         <p class="col-span-12 shopcart__category">期刊</p>
-        <div class="col-span-5">
+        <div class="col-span-4">
           <img src="~/assets/images/shopcart1.png" alt="" class="photo" />
         </div>
-        <div class="col-span-7 flex flex-col justify-around">
+        <div class="col-span-8 flex flex-col justify-around">
           <div class="flex justify-between shopcart__name">
             <p>第151期2023 / 07&08月</p>
             <img src="../assets/icon/shoppingcartclose.svg" alt="" />
@@ -51,15 +51,16 @@ const goToCheckout = () => {
       </div>
       <div class="shopcart__items last-item">
         <p class="col-span-12 shopcart__category__nomargintop">選物</p>
-        <div class="col-span-5">
+        <div class="col-span-4">
           <img src="~/assets/images/shopcart2.jpeg" alt="" class="photo" />
         </div>
-        <div class="col-span-7 flex flex-col justify-around">
+        <div class="col-span-8 flex flex-col justify-around">
           <div class="flex justify-between shopcart__name">
             <p>Tabouret Haut 高腳圓凳</p>
             <img src="../assets/icon/shoppingcartclose.svg" alt="" />
           </div>
-          <p>黑色</p>
+          <p class="md:hidden">黑色</p>
+          <p class="block md:block hidden"></p>
           <div class="flex justify-between shopcart__price">
             <p>TWD$300</p>
             <div class="quantity-selector">
@@ -243,5 +244,10 @@ const goToCheckout = () => {
   @include max-media(768) {
     width: 0.75rem;
   }
+}
+.block {
+  width: 20px;
+  height: 20px;
+  background-color: black;
 }
 </style>

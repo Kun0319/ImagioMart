@@ -257,7 +257,7 @@ function validateInput(selectorId, event) {
     }
 
     &.first-item {
-      //   border-bottom: none;
+      // border-bottom: none;
     }
   }
 
