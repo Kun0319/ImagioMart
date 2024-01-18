@@ -370,7 +370,7 @@ const selectedSubOption = ref("");
 
   &__container {
     margin-bottom: 11.3517%;
-    margin-top: 12.0481%;
+    margin-top: 6%;
 
     @include max-media(768) {
       margin-top: 0;

@@ -6,7 +6,7 @@ import MemberPopup from "./components/MemberPopup.vue";
 // const canShow = ref(false);
 const router = useRouter();
 const handleSubmit = async () => {
-  event.preventDefault(); // 防止表单默认提交行为
+  event.preventDefault();
   const globalStore = useGlobalStore();
   globalStore.setSubmissionStatus(true);
   await router.push("/member");
