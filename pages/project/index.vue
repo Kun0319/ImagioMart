@@ -135,7 +135,6 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
         </template>
         <!-- 類別按鈕 -->
       </BreadcrumbLine>
-
       <div
         v-show="isRwdMenuOpen"
         class="rwd-menu-overlay"
@@ -146,7 +145,7 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
       </div>
       <div class="inner-wrap">
         <SwiperPic :images="ImageArray" />
-        <div class="grid grid-cols-12 2xl:gap-4 gap-8">
+        <div class="grid grid-cols-12 2xl:gap-4 gap-12">
           <div
             class="md:col-span-9 col-span-full grid grid-cols-12 gap-4 rwd-margin"
           >

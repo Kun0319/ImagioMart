@@ -124,7 +124,7 @@ const currentPage = ref(1);
 const fetchMagazines = async (page) => {
   await nextTick();
   const { data, pending, error } = await useFetch(
-    `https://iw-api.d-blueprint.com/api/reports?sorting=sort&direction=asc&page=${page}&per_page=1`,
+    `https://iw-api.d-blueprint.com/api/reports?sorting=sort&direction=asc&page=${page}&per_page=8`,
   );
   if (!error.value && data.value) {
     projects.value = data.value.data.list;

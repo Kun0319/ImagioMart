@@ -23,8 +23,8 @@ const props = defineProps({
         <p class="flex project__text__one">
           {{ project.publish_date }}
           <span class="ml-auto"></span>
-          <i class="pi pi-heart mx-3"></i>
-          <i class="pi pi-share-alt"></i>
+          <i class="pi pi-heart mx-3 self-center"></i>
+          <i class="pi pi-share-alt self-center"></i>
         </p>
         <p class="project__text__two">{{ project.title }}</p>
         <p class="project__text__three">{{ project.en_title }}</p>
