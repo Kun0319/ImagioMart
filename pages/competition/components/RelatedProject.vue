@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
   <div class="RelatedProject">
     <slot name="title"></slot>
-    <div class="grid grid-cols-12 gap-4 col-span-12">
+    <div class="grid grid-cols-12 xl:gap-20 gap-4 col-span-12">
       <div v-for="(project, index) in projects" :key="index" class="text">
         <img :src="project.imageUrl" alt="" class="image" />
         <p class="text__one">{{ project.companyName }}</p>
@@ -42,8 +42,8 @@ const props = defineProps({
   // height: 100%;
   // max-width: 310px;
   // max-height: 210px;
-  width: 17.9398vw;
-  height: 12.1528vw;
+  // width: 17.9398vw;
+  // height: 12.1528vw;
   aspect-ratio: 3/2;
 
   @include max-media(768) {
@@ -55,7 +55,8 @@ const props = defineProps({
 .text {
   color: $text-color3;
   font-size: 1rem;
-  width: 17.9398vw;
+  // width: 17.9398vw;
+  width: 100%;
   @apply md:flex hidden md:col-span-4 col-span-6 flex-col justify-self-center;
 
   &__title {

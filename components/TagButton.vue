@@ -17,7 +17,7 @@ const props = defineProps({
   background-color: white;
   border-radius: 46px;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
-  // font-family: $font-NotoSerif;
+  font-family: $font-NotoSerif;
   letter-spacing: 0.561px;
   font-size: 0.75rem;
   text-align: center;

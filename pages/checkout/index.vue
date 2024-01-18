@@ -47,12 +47,12 @@ function validateInput(selectorId, event) {
             <p class="col-span-3 md:block hidden text-right">小計</p>
           </div>
           <div class="shopcart__items first-item">
-            <div class="md:col-span-3 col-span-5">
+            <div class="md:col-span-2 col-span-5">
               <!-- https://s3-alpha-sig.figma.com/img/a455/a214/b6ecf3505b538faadba1023e1aa5ca30?Expires=1704067200&Signature=K6TczBBD7I8G9r8XMKLpFc7bOvlilygrpT45OpV42alnPk60aNuol0LfToz8f6TUFpkL5S7ikhm2qoFNPNuHsGsFb02gUbzHpPdu~QuRR4wY-MXcN4zA9El39JWt6X~PrShAYZknPZWMFJREgSAMJGZ~O28DiFMFProsa0chN~T7LDUlf0~BBBhNXT0h2DaaJG5b3yuOQ8WZXZ1qr5ttz6-AC5skZEmY5rfWLf6MRxZd9WQXwbqVxzgIBVjGCh-GsjBAy0nssxCoWyUAA0rQBDtHkU7-VGlfl2Z4FwQXgegF1Fd59n-ZYavKJujIFFeE~6GGBtKHM1DDl6rNigMDhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 -->
               <img src="~/assets/images/shopcart1.png" alt="" class="photo" />
             </div>
-            <div class="md:col-span-3 col-span-7 flex flex-col">
+            <div class="md:col-span-4 col-span-7 flex flex-col">
               <div class="flex justify-between shopcart__name">
                 <p>第151期2023 / 07&08月</p>
               </div>
@@ -133,10 +133,10 @@ function validateInput(selectorId, event) {
             <p class="col-span-3 md:block hidden text-right">小計</p>
           </div>
           <div class="shopcart__items first-item">
-            <div class="md:col-span-3 col-span-5">
+            <div class="md:col-span-2 col-span-5">
               <img src="~/assets/images/shopcart2.jpeg" alt="" class="photo" />
             </div>
-            <div class="md:col-span-3 col-span-7 flex flex-col">
+            <div class="md:col-span-4 col-span-7 flex flex-col">
               <div class="flex justify-between shopcart__name">
                 <p>Tabouret Haut 高腳圓凳</p>
               </div>
@@ -249,7 +249,7 @@ function validateInput(selectorId, event) {
     margin-bottom: 3.4368%;
     width: 100%;
     max-width: 845px;
-    padding-top: 2.5%;
+    padding-top: 5.2145%;
     padding-bottom: 2.5%;
 
     @include max-media(768) {
@@ -276,7 +276,7 @@ function validateInput(selectorId, event) {
   &__name {
     font-size: 1rem;
     line-height: 17.76px;
-    margin-top: 21.6733%;
+    margin-top: 0%;
     margin-bottom: 26.7137%;
 
     @include max-media(768) {

@@ -53,6 +53,7 @@
     line-height: 20.94px;
     font-weight: 700;
     color: black;
+    font-family: $font-NotoSerif;
 
     @include max-media(768) {
       margin-bottom: 11.25%;

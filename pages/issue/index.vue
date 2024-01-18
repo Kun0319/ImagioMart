@@ -47,7 +47,7 @@ const currentPage = ref(1);
 // 取得資料的方法
 const fetchMagazines = async (page) => {
   const { data, error } = await useFetch(
-    `https://iw-api.d-blueprint.com/api/issues?sorting=sort&direction=asc&page=${page}&per_page=6&type=iw`,
+    `https://iw-api.d-blueprint.com/api/issues?sorting=sort&direction=asc&page=${page}&per_page=8&type=iw`,
   );
 
   if (!error.value && data.value) {
@@ -66,7 +66,7 @@ const fetchMagazines = async (page) => {
 const updateCurrentPage = async (newPage) => {
   currentPage.value = newPage;
   // 重置 magazines
-  magazines.value = [];
+  // magazines.value = [];
 
   // 取得新頁面資料
   await fetchMagazines(newPage);

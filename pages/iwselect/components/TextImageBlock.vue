@@ -88,26 +88,27 @@
   &__en {
     font-family: $font-Noto;
     margin-top: 11.825%;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     // padding-left: 12.218%;
     // padding-right: 12.218%;
 
     @include max-media(768) {
       margin-top: 40%;
-      font-size: 0.625rem;
+      font-size: 0.75rem;
     }
   }
 
   &__cn {
     margin-top: 3.5171%;
     margin-bottom: 11.825%;
-    font-size: 0.875rem;
+    font-size: 1rem;
+    font-family: $font-Noto;
     // padding-left: 12.218%;
     // padding-right: 12.218%;
 
     @include max-media(768) {
       margin-top: 13.28%;
-      font-size: 0.625rem;
+      font-size: 0.75rem;
     }
   }
 }

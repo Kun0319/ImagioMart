@@ -500,6 +500,7 @@ if (!error.value && data.value) {
       text-align: justify;
       margin-bottom: 5.0611%;
       line-height: 33.504px;
+      font-family: $font-Noto;
 
       &:last-child {
         margin-bottom: 15.8161%;

@@ -118,6 +118,6 @@
   height: 2.6vw;
   min-width: 88px;
   min-height: 25px;
-  // font-family: $font-NotoSerif;
+  font-family: $font-NotoSerif;
 }
 </style>

@@ -120,14 +120,29 @@ definePageMeta({
 //   },
 // ];
 const projects = ref([]);
-const { data, pending, error } = await useFetch(
-  "https://iw-api.d-blueprint.com/api/reports?sorting=sort&direction=asc&page=1&per_page=15",
-);
-if (!error.value && data.value) {
-  projects.value = data.value.data.list;
-  // console.log(data.value.data.list);
-}
+const currentPage = ref(1);
+const fetchMagazines = async (page) => {
+  await nextTick();
+  const { data, pending, error } = await useFetch(
+    `https://iw-api.d-blueprint.com/api/reports?sorting=sort&direction=asc&page=${page}&per_page=1`,
+  );
+  if (!error.value && data.value) {
+    projects.value = data.value.data.list;
+    // console.log(data.value.data.list);
+  }
+};
 // console.log(projects.value);
+
+const updateCurrentPage = async (newPage) => {
+  currentPage.value = newPage;
+  // 重置 magazines
+
+  // 取得新頁面資料
+  await fetchMagazines(newPage);
+};
+onMounted(async () => {
+  await fetchMagazines(currentPage.value);
+});
 </script>
 <template>
   <NuxtLayout
@@ -148,7 +163,12 @@ if (!error.value && data.value) {
         "
       />
     </div>
-    <Paginator />
+    <Paginator
+      :totalRecords="50"
+      :rows="8"
+      :page="currentPage.value"
+      @update:page="updateCurrentPage"
+    />
     <div class="flex justify-center advertise">
       <img src="~/assets/images/index4.png" alt="" class="photo__advertise" />
     </div>
@@ -173,6 +193,7 @@ if (!error.value && data.value) {
 .advertise {
   margin-top: 5.4375%;
   margin-bottom: 24.0338%;
+
   // aspect-ratio: 3/1;
   @include max-media(768) {
     min-width: 65.39vw;

@@ -222,6 +222,7 @@ const isChinese = computed(() => globalStore.language === "CN");
   &__cn {
     line-height: 30.99px;
     margin-bottom: 8.5%;
+    font-family: $font-Noto;
 
     @include max-media(768) {
       margin-bottom: 17.57%;
@@ -267,7 +268,7 @@ const isChinese = computed(() => globalStore.language === "CN");
     font-size: 1rem;
     margin-bottom: 3.099%;
     line-height: 20.94px;
-    // font-family: $font-NotoSerif;
+    font-family: $font-NotoSerif;
 
     @include max-media(768) {
       margin-bottom: 11.25%;
@@ -309,7 +310,7 @@ const isChinese = computed(() => globalStore.language === "CN");
     height: 45px;
     border: 0.5px solid rgba(0, 0, 0, 0.5);
     background-color: white;
-    // font-family: $font-NotoSerif;
+    font-family: $font-NotoSerif;
   }
 }
 </style>

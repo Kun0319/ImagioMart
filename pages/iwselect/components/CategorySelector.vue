@@ -102,7 +102,8 @@ const clickyear = () => {
   &__options {
     letter-spacing: 0.714px;
     // padding-bottom: 1.875rem;
-    // font-family: $font-NotoSerif;
+    // font-family: $font-Noto;
+    font-family: $font-NotoSerif;
 
     &__month {
       @extend .selector__options;
@@ -111,12 +112,6 @@ const clickyear = () => {
       padding-bottom: 4.9734%;
     }
   }
-
-  &__recent {
-    // padding-bottom: 1rem;
-    // font-family: $font-NotoSerif;
-  }
-
   &__recent:nth-child(odd) {
     // padding-bottom: 1.875rem;
   }
@@ -138,6 +133,7 @@ const clickyear = () => {
     max-height: 30px;
     font-size: 0.75rem;
     padding: 5% 10%;
+    font-family: $font-NotoSerif;
   }
 
   > div:not(.card) {

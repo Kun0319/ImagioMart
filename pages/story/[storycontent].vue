@@ -244,6 +244,7 @@ const slidesData = ref([
     line-height: 33.5px;
     margin-bottom: 8.5%;
     font-size: 1rem;
+    font-family: $font-Noto;
 
     @include max-media(768) {
       margin-bottom: 17.57%;

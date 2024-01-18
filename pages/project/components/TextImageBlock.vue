@@ -90,6 +90,7 @@
   }
 
   &__cn {
+    font-family: $font-Noto;
     margin-top: 3.5171%;
     margin-bottom: 11.825%;
     font-size: 0.875rem;

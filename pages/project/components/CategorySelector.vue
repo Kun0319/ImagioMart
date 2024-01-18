@@ -147,7 +147,7 @@ const clickyear = () => {
 
   &__recent {
     // padding-bottom: 1rem;
-    // font-family: $font-NotoSerif;
+    font-family: $font-Noto;
   }
 
   &__recent:nth-child(odd) {
@@ -165,6 +165,7 @@ const clickyear = () => {
   }
 
   .button {
+    font-family: $font-Noto;
     text-align: center;
     width: 100%;
     max-width: 108px;

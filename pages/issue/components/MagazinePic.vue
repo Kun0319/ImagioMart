@@ -25,6 +25,7 @@ const magnifierPhotoBlocks = blocks.filter(
         <VueMagnifier
           :src="pic"
           mg-corner-bg-color="#e5e5e5"
+          height="100%"
           className="photo "
         />
       </client-only>
@@ -51,12 +52,43 @@ const magnifierPhotoBlocks = blocks.filter(
       :key="index"
       class="book__container"
     >
+      <client-only>
+        <!-- 套件src加冒號 -->
+
+        <div class="col-end-7 col-span-6">
+          <VueMagnifier
+            :src="`https://iw-api.d-blueprint.com${block.data.image_lft.link}`"
+            mg-corner-bg-color="#e5e5e5"
+            className="book__photo__left"
+            height="100%"
+          />
+        </div>
+      </client-only>
+      <client-only>
+        <!-- 套件src加冒號 -->
+        <div class="col-span-6">
+          <VueMagnifier
+            :src="`https://iw-api.d-blueprint.com${block.data.image_rgt.link}`"
+            mg-corner-bg-color="#e5e5e5"
+            className="book__photo__right"
+            height="100%"
+          />
+        </div>
+      </client-only>
+
       <!-- <img
       src="~/assets/images/issuebook.png"
       alt=""
       class="w-full col-span-full"
     /> -->
-      <!-- 左邊圖片 -->
+    </div>
+
+    <!-- 左邊圖片 -->
+    <div
+      v-for="(block, index) in magnifierPhotoBlocks"
+      :key="index"
+      class="book__container"
+    >
       <div class="col-end-7 col-span-6">
         <img
           :src="`https://iw-api.d-blueprint.com${block.data.image_lft.link}`"
@@ -73,7 +105,6 @@ const magnifierPhotoBlocks = blocks.filter(
         />
       </div>
     </div>
-
     <!-- 測試區塊 -->
   </div>
 </template>
@@ -114,9 +145,11 @@ const magnifierPhotoBlocks = blocks.filter(
   &__container {
     @apply grid grid-cols-12 gap-4;
     width: 100%;
+    height: 41.38vw;
+    // height: 715px;
     max-width: 1053px;
-    height: 715px;
-
+    max-height: 715px;
+    min-height: 344.156px;
     background-image: url("~/assets/images/issuebook.png");
     background-position: center;
     background-size: cover; /* 使背景图像覆盖整个元素，保持图像比例 */
@@ -127,17 +160,24 @@ const magnifierPhotoBlocks = blocks.filter(
     height: 100%;
     object-fit: cover;
     // padding: 50px;
+
     &__left {
       @extend .book__photo;
-      padding-left: 110px;
-      padding-top: 60px;
-      padding-bottom: 70px;
+      // padding-left: 110px;
+      // padding-top: 100px;
+      // padding-bottom: 100px;
+      padding-left: 21.2683%;
+      padding-top: 19.3348%;
+      padding-bottom: 19.3348%;
     }
     &__right {
       @extend .book__photo;
-      padding-right: 100px;
-      padding-top: 60px;
-      padding-bottom: 70px;
+      // padding-right: 100px;
+      // padding-top: 100px;
+      // padding-bottom: 100px;
+      padding-right: 19.3348%;
+      padding-top: 19.3348%;
+      padding-bottom: 19.3348%;
     }
   }
 }

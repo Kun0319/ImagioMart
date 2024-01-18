@@ -20,6 +20,7 @@ if (!error.value && data.value) {
   <div class="rwd-wrap">
     <NuxtLayout
       :breadcrumbText="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
+      :showFilterMenu="true"
     >
       <div class="inner-wrap">
         <div class="flex items-center">
@@ -59,11 +60,7 @@ if (!error.value && data.value) {
           400 坪最美傢俱購物空間，漫步於 NATUZZI
           拉圖誌台南旗艦店，宛如展開一場義大利藝術之旅。
         </p>
-        <img
-          src="https://s3-alpha-sig.figma.com/img/6731/93a8/b160d81bddfbfefb4a209f26f42c7efc?Expires=1704067200&Signature=Tjzkwyye0Au7aq~3HhC6XTRBYCd92zG8ARr94kQjF4yLsQkILVYfFkc3uWPNs5qGwMnNDBWHTOhsxQY~mDHRSv-Rj~FtpL1dqz1mu06bcxDH9ojl0tRB6ifrMV0Gi019VG2Aic5LV339LcK-6AYctGDP-8Fw5nLJaEGeX8kbXC9G41FT3ThS6OHlebbXGsCW5P8klbVRrwl5dtacMNA0J6Jr5oJ4aUTGi8PQ3T~j4T8zI2lwzvEviKkrg3mxPgEUtIw39K0KQKIY5AcZiS88zc5BAqXWM6-BbFg8Qf1FX6CS4jtWnRaKrEmbRUvlRbhTr-~cZ2lG4vaZSGTnW6DEqA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-          alt=""
-          class="w-full"
-        />
+        <img src="~/assets/images/newcontent1.png" alt="" class="w-full" />
         <p class="text__content">
           NATUZZI 拉圖誌集團是義大利設計和製造工藝的典範，來自於義大利南部
           PUGLIA
@@ -74,11 +71,7 @@ if (!error.value && data.value) {
           新奢華度假宅美學潮流。』此一最新概念店設計，全球目前僅有五家專賣店，完美演繹
           NATUZZI 讓自然融入家居生活，讓藝術在生活裡得以彰顯的獨特居家品味。
         </p>
-        <img
-          src="https://www.figma.com/file/Cl1dT31sCYUc7LwFrjXl9R/image/c0b2629bdcd30e49b4b0575a466fa08e71e8a0a2"
-          alt=""
-          class="w-full"
-        />
+        <img src="~/assets/images/newcontent2.png" alt="" class="w-full" />
         <p class="text__subtitle">全球唯五間NATUZZI拉圖誌旗艦店進駐台南</p>
         <p class="text__content no-margin-top">
           NATUZZI 拉圖誌深耕台灣市場 18
@@ -89,11 +82,7 @@ if (!error.value && data.value) {
           米蘭家具展中窺見，將自然度假休閒感引入居家生活儼然成為未來家居設計趨勢，NATUZZI
           拉圖誌台南旗艦店率先將奢華度假宅美學帶入台灣，打造門店裝潢設計、商品陳列、採用義大利度假勝地PUGLIA建築風格，細微至每一片地磚、每一盞燈飾、大理石餐桌上每一件裝飾藝品，包括沙發、扶手椅、餐桌、單椅、床架、櫃組，皆從「義大利」原裝進口，讓台灣消費者可一站購足義大利原裝家居品味，同時在選購時有百位義大利設計團隊建議專業諮詢與售後服務，回到家享受極致舒適的家居生活、營造新義式時尚生活態度。
         </p>
-        <img
-          src="https://s3-alpha-sig.figma.com/img/e075/af20/db08b7b718b3312a8b620f4526b7b2da?Expires=1704067200&Signature=Wht3qwHa4-lKHNjFI2eq~ayXl3IKKxzflYjOSrA0MNrjYKXDlJrbZ~aGH4F9wn24pB0G23Tt2ZHCq8JGJbBw-pkvzxv2oh3qr1q~5M0QPZAFKQovxhIFG1lxtrt3p0RMkmscAkYaIjTq3PE2tHr7PZc7hsgXMXSWm9K2WNCKDKYcNoEJSyjwb4u5LHa4H1dZ~BWqCKD~CuSwQXjvUWK-MEiCR~ugRiCoUmd-qR~oXbeYfm47oIyefq~NQVqUIHpTtrEOu1P35rZA8hwnuASRFSxjPBhMRXM2XK9D6liZK1GUs~ddghU2U21pTz4xCVhI-WN~HAmrKNLq7uJWOO8lEA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-          alt=""
-          class="w-full"
-        />
+        <img src="~/assets/images/newcontent3.png" alt="" class="w-full" />
         <p class="text__subtitle">大師經典雋永款與趨勢新作 各款沙發齊亮相</p>
         <p class="text__content no-margin-top">
           Natuzzi Italia 不僅擁有全球最具規模 120
@@ -109,11 +98,7 @@ if (!error.value && data.value) {
           TOP3 Galaxy
           沙發在簡約外表下隱藏了卓越舒適感，模組化設計可以根據居家空間量身打造，滿足各種空間與生活需求，輕鬆享受極致的乘坐體驗。
         </p>
-        <img
-          src="https://s3-alpha-sig.figma.com/img/a713/dda4/874f05bf6b2b6ec44dc99dc89da5cdb8?Expires=1704067200&Signature=kNonm8T~0sIB1W3diRcUKao1QC0nteFE9uE1xTU03gFGL6BChblLg9irOv2UfBhouoSQDESyjUa~jeHcJ0BpoCLBjxuTzGLzBjTPdObXSdOJlsIGqohocYuqFTS6y-QH~4kLouwG1qtrvN5LUj5BIGBSrl6RWd2rx2otRSP06syqrpRqHgGpQ5jS1a5urLg1yTB8S2RYIj9sja~PZE4x7AbHGMEh~P4L2nwSGKlGcyE5x9uPmFKAD4I1KCYOZobHUz~gHGS0tnhP0AIqOFl45WqY1w2oggD4I5rTTdlCjIt~e1VZRUIVPSU132lb27-m0v5xYeWxU8YUAdftoVXyrQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-          alt=""
-          class="w-full"
-        />
+        <img src="~/assets/images/newcontent4.png" alt="" class="w-full" />
         <p class="text__subtitle">
           百人設計團隊與多位國際設計名家 創造極致義式生活品味
         </p>
@@ -128,11 +113,7 @@ if (!error.value && data.value) {
           拉圖誌的優雅，彰顯設計與手工藝之美，居宅被賦予了全新的表情，NATUZZI
           台南旗艦店【新奢華度假宅美學】，值得親身走訪。
         </p>
-        <img
-          src="https://s3-alpha-sig.figma.com/img/db10/8968/5e836b2751d2f8814883c2931324e6aa?Expires=1704067200&Signature=cU~VMUuFXMocd2fhPtOaX07QDFOcdHka89XId6J4CNEzJgxareOifcoiQenfqefepjYUvFPojahXVptLXs1hatExJBZd1YmQG-ilwDR8-Dq91Prkeu4cvX-hx7k1RUytNbLJSsheElzrDQ3EfLt5LnoCWvbc-pKypSPUmq0j7ZmRJLltCpa4Y5OkjAEig6nK~eJUxZnJtCN9gvx85AQG-C0K3LGps71TDRSAZQao0NY4nMaZFp108k8BchIQZ40psvRPRQvcIT1V8ySI3Dwje8GR8L4D9QU6EUZ1BGrLlfqMtYToizWW-IgR-BaW-wdYENnFGmDkIeITmbHEJvGQFg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-          alt=""
-          class="w-full"
-        />
+        <img src="~/assets/images/newcontent5.png" alt="" class="w-full" />
         <div class="introduce__wrap">
           <div class="introduce">
             <p class="introduce__one">Brand</p>
@@ -159,7 +140,7 @@ if (!error.value && data.value) {
         <p class="col-span-12 gallery__title">其他新訊</p>
         <div class="col-span-4 justify-self-start">
           <img
-            src="https://s3-alpha-sig.figma.com/img/1418/7132/a717ed446cf44e8f3889a4f5a0fbf303?Expires=1704067200&Signature=AceQQLhORZPHg3CJFQjcqJBX2qsdELlFg8iRa0PUozSQiswm8ijGxy2Oc-DCK3T0BoYvYKm-btFIsr8RCv1wkivtfw7dVkFjdTNsjh5jxYM9gu7IyJ1JFJdO1LJhmoyH6B1XKqaGmwUzkyuHyLDL~eKrMuEIs4VV0ELZVlbei4MQnJk53alsSuAxPqSw4NuazcM3gr58tyVvRWMwqk3TzAcqTL9rPfuRQEPWFH5ga6hhOJZngBmbfdNWxHn~6Hk9rIxKHi4Cs6X-TTGAn4eLzdVPBwaj1TH6s4BD8SZTYbRrJedxLsjuCClAwFqR9uHaOAK3xdEVWfXUhSIANz0TIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            src="~/assets/images/RelatedProject2.png"
             alt=""
             class="gallery__img"
           />
@@ -169,7 +150,7 @@ if (!error.value && data.value) {
         </div>
         <div class="col-span-4 justify-self-end">
           <img
-            src="https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            src="~/assets/images/RelatedProject2.png"
             alt=""
             class="gallery__img"
           />
@@ -179,7 +160,7 @@ if (!error.value && data.value) {
         </div>
         <div class="col-span-4 justify-self-end">
           <img
-            src="https://s3-alpha-sig.figma.com/img/ee85/d08d/f553c6b6534b9463f62c166db74f6c81?Expires=1704067200&Signature=p3w1E7LlpmUR8QyxEgO7TvIRUijxx1v6Uhs3xJKE5aAUYy0XAc9C0S332RSrTfiQDheFhWs4m9AeBHCWMgwmnxrFrRQ~~9iGP0qnUeh2J5HwcsmjeWTQNgmVZ4Jq4HZl-XHLGo8sLs6t8xVZR-qF~Tj-TcMIFOkEYlSrXKRKwfEFWr3YsMFa4Aje2PBdFJVIAWAa~KXQamO1CEkuJMFuoK5AvyBdEgDBuSKdFVrUyNBEtnQmWWaxPonf1~qy1BaMDJTkw14CLyxjDDIJ7wMwxcj6kk~6-kGBq~DF51~PyxkTq6fn7ieQM6~WfDxZYdPX4hT0V2nSuJ1QcyTZ6BZASQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            src="~/assets/images/RelatedProject2.png"
             alt=""
             class="gallery__img"
           />
@@ -221,6 +202,7 @@ if (!error.value && data.value) {
 
   &__content {
     @extend .text;
+    font-family: $font-Noto;
     margin-bottom: 15.23%;
     font-size: 1rem;
     line-height: 33.504px;
@@ -278,6 +260,7 @@ if (!error.value && data.value) {
     line-height: 20.94px;
     font-weight: 700;
     color: black;
+    font-family: $font-NotoSerif;
 
     @include max-media(768) {
       margin-bottom: 11.25%;
@@ -307,7 +290,7 @@ if (!error.value && data.value) {
 }
 
 .gallery {
-  @apply grid grid-cols-12 gap-4 items-center;
+  @apply grid grid-cols-12 xl:gap-12 gap-4 items-center;
   @include max-media(768) {
     margin-bottom: 37.6607%;
     align-items: start;
