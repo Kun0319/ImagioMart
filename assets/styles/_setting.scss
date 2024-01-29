@@ -1,3 +1,5 @@
+// 基本設定(常用的變數)
+
 @function toRem($val) {
   $rem: (
     $val * 0.01) + rem;
@@ -78,4 +80,79 @@ $font-DFMingSrgb: "DFMingStd-W9";
 // 顏色
 $text-color: #000;
 $text-color2: #999696;
-$text-color3: #000000CC
+$text-color3: #000000CC;
+
+// @function toRem($val) {
+//   $rem: ($val * 0.01) + rem;
+//   @return $rem;
+// }
+
+// @mixin max-media($width) {
+//   @media (max-width: $width+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin min-media($width) {
+//   @media (min-width: $width+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin mm-media($minWidth, $maxWidth) {
+//   @media (min-width: $minWidth+"px") and (max-width: $maxWidth+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin max-height-media($Height) {
+//   @media (max-height: $Height+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin min-height-media($Height) {
+//   @media (min-height: $Height+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin mm-height-media($minHeight, $maxHeight) {
+//   @media (min-height: $minHeight+"px") and (max-height: $maxHeight+"px") {
+//     @content;
+//   }
+// }
+
+// @mixin dot-one-line {
+//   overflow: hidden;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+// }
+
+// @mixin dot-many-line($line: 2) {
+//   display: -webkit-box;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: $line;
+//   overflow: hidden;
+// }
+
+// @mixin grid($columns: 12, $gap: 24) {
+//   display: grid;
+//   grid-template-columns: repeat($columns, 1fr);
+//   column-gap: toRem($gap);
+// }
+
+// @mixin imgCover {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// .underline {
+//   text-decoration-line: underline;
+// }
+
+// .cursor-pointer {
+//   cursor: pointer;
+// }
