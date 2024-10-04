@@ -32,15 +32,19 @@ const props = defineProps({
     <ReturnTop />
     <ShoppingCart />
     <div class="filter__relative">
-      <Banner :imgSrc="cover" :customText="customText" />
-      <BreadcrumbLine :text="breadcrumbText" :showTags="true" :showIcon="true">
+      <Banner :img-src="cover" :custom-text="customText" />
+      <BreadcrumbLine
+        :text="breadcrumbText"
+        :show-tags="true"
+        :show-icon="true"
+      >
         <template #icon>
           <img
+            v-show="props.showFilterMenu"
             src="~/assets/icon/sliders.svg"
             alt=""
             class="md:hidden block relative"
             @click="toggleFilterMenu"
-            v-show="props.showFilterMenu"
           />
         </template>
         <!-- 類別按鈕 -->v-if="cover"
@@ -72,9 +76,9 @@ const props = defineProps({
             </nuxt-link>
             <!-- 篩選按鈕 -->
             <div
+              v-show="props.showFilterMenu"
               class="Filtericon-container justify-self-end md:flex hidden"
               @click="toggleFilterMenu"
-              v-show="props.showFilterMenu"
             >
               <img
                 src="~/assets/icon/Filter.svg"
@@ -88,7 +92,7 @@ const props = defineProps({
         </template>
       </BreadcrumbLine>
     </div>
-    <div class="filter__menu" v-show="FilterMenuOpen && props.showFilterMenu">
+    <div v-show="FilterMenuOpen && props.showFilterMenu" class="filter__menu">
       <div
         v-show="FilterMenuOpen"
         class="overlay"

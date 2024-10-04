@@ -30,8 +30,8 @@ function validateInput(event) {
   <swiper
     :navigation="true"
     :modules="[Navigation]"
-    :slidesPerView="1"
-    :spaceBetween="500"
+    :slides-per-view="1"
+    :space-between="500"
     class="mySwiper"
   >
     <swiper-slide
@@ -115,8 +115,8 @@ function validateInput(event) {
           <div class="quantity-selector">
             <button class="decrease" @click="decreaseValue">-</button>
             <input
-              type="text"
               id="quantity"
+              type="text"
               :value="quantity"
               @input="validateInput"
             />

@@ -114,7 +114,7 @@ const goBackToList = () => {
         <button class="pay__btn">結帳</button>
       </div>
     </div>
-    <table class="order" v-else>
+    <table v-else class="order">
       <thead>
         <tr>
           <th>訂單編號</th>
@@ -131,7 +131,7 @@ const goBackToList = () => {
           <td data-label="總計" class="price">{{ order.amount }}</td>
           <td data-label="訂單狀態">{{ order.status }}</td>
           <td data-label="訂單內容">
-            <button @click="viewOrder(order.id)" class="browse">瀏覽</button>
+            <button class="browse" @click="viewOrder(order.id)">瀏覽</button>
           </td>
         </tr>
       </tbody>

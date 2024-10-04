@@ -12,11 +12,11 @@ const RwdMenuShow = () => {
 <template>
   <NuxtLayout>
     <div class="filter__relative">
-      <Banner :imgSrc="cover" customText="IW SELECT" />
+      <Banner :img-src="cover" custom-text="IW SELECT" />
       <BreadcrumbLine
         text="Home &nbsp;/&nbsp; IW Select "
-        :showTags="true"
-        :showIcon="true"
+        :show-tags="true"
+        :show-icon="true"
       >
         <template #icon>
           <img

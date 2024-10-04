@@ -75,8 +75,8 @@ function validateInput(event) {
         <div class="quantity-selector col-span-6 order-3">
           <button class="decrease" @click="decreaseValue">-</button>
           <input
-            type="text"
             id="quantity"
+            type="text"
             :value="quantity"
             @input="validateInput"
           />

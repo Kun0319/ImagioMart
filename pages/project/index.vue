@@ -119,11 +119,11 @@ const firstSevenProjects = computed(() => projects.slice(0, 7));
 <template>
   <NuxtLayout>
     <div class="filter__relative">
-      <Banner :imgSrc="cover" />
+      <Banner :img-src="cover" />
       <BreadcrumbLine
         text="Home&nbsp; /&nbsp; Project &nbsp;/&nbsp; Scope"
-        :showTags="true"
-        :showIcon="true"
+        :show-tags="true"
+        :show-icon="true"
       >
         <template #icon>
           <img

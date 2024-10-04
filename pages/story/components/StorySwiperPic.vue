@@ -8,7 +8,7 @@ import { Scrollbar, Autoplay } from "swiper/modules";
       :modules="[Scrollbar, Autoplay]"
       :scrollbar="{ hide: false, draggable: true }"
       :autoplay="{ delay: 2000, disableOnInteraction: false }"
-      :slidesPerView="1"
+      :slides-per-view="1"
     >
       <SwiperSlide>
         <div class="swiperpic__scrollbar grid grid-cols-12 gap-4">

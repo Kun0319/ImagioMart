@@ -23,11 +23,11 @@ const mySwiper = ref(null);
   <div class="swiperpic">
     <client-only>
       <Swiper
+        ref="mySwiper"
         :modules="[Scrollbar, Autoplay]"
         :scrollbar="{ hide: false, draggable: true }"
         :autoplay="{ delay: 2000, disableOnInteraction: false }"
-        :slidesPerView="1"
-        ref="mySwiper"
+        :slides-per-view="1"
       >
         <SwiperSlide v-for="(image, index) in images" :key="index">
           <!-- 這裡假設每個 image 對象有 url、title 和 description 三個屬性 -->

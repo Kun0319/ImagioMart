@@ -13,10 +13,10 @@ const props = defineProps({
     <div class="mb-2">
       <div class="icon__one" :class="customClass">
         <p class="line__text">{{ text }}</p>
-        <slot name="icon" v-if="showIcon"></slot>
+        <slot v-if="showIcon" name="icon"></slot>
       </div>
       <!-- 显示年份选择器的插槽 -->
-      <slot name="year-selector" v-if="showYearSelector"></slot>
+      <slot v-if="showYearSelector" name="year-selector"></slot>
       <!-- 显示图标的插槽 -->
       <div v-if="showTags" class="tags">
         <slot name="tags"></slot>
@@ -24,7 +24,7 @@ const props = defineProps({
     </div>
   </div>
   <div class="icon__two">
-    <slot name="icon2" v-if="showIcon"></slot>
+    <slot v-if="showIcon" name="icon2"></slot>
   </div>
 </template>
 

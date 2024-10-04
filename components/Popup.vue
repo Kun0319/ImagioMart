@@ -19,7 +19,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
-  <div class="bg" v-if="isPopupVisible" @click="closePopup"></div>
+  <div v-if="isPopupVisible" class="bg" @click="closePopup"></div>
 </template>
 
 <style lang="scss" scoped>

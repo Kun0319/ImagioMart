@@ -20,9 +20,9 @@ const submitForm = () => {
         <div class="form-group">
           <label for="name"> *姓名</label>
           <input
-            type="text"
             id="name"
             v-model="form.name"
+            type="text"
             class="form-group__input"
             required
           />
@@ -31,9 +31,9 @@ const submitForm = () => {
         <div class="form-group">
           <label for="email">* 信箱</label>
           <input
-            type="email"
             id="email"
             v-model="form.email"
+            type="email"
             class="form-group__input"
             placeholder="email"
             required

@@ -28,7 +28,7 @@ const login = () => {
         />
         <!-- 登入 註冊 忘記密碼 -->
         <div class="flex flex-row login__login">
-          <button @click="login" class="login__btn">登入</button>
+          <button class="login__btn" @click="login">登入</button>
           <div class="ml-auto login__signup">
             <nuxt-link to="/register">會員註冊/</nuxt-link>
             <nuxt-link to="/forgot-password">忘記密碼</nuxt-link>

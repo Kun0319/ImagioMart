@@ -68,7 +68,7 @@ const winners = [
 <template>
   <NuxtLayout>
     <div class="top--margin">
-      <Banner :imgSrc="bg" customText="IW WINNERS" />
+      <Banner :img-src="bg" custom-text="IW WINNERS" />
       <BreadcrumbLine
         :text="'Home &nbsp;/&nbsp; IW Competion  &nbsp;/&nbsp;   Winners '"
       />
@@ -79,9 +79,9 @@ const winners = [
         <PersonnelCard
           v-for="winner in winners"
           :key="winner.id"
-          :imageSrc="winner.imageSrc"
+          :image-src="winner.imageSrc"
           :name="winner.name"
-          :nameZh="winner.nameZh"
+          :name-zh="winner.nameZh"
           @click.stop="openPopup"
         />
         <Popup v-if="isPopupVisible" @close="closePopup" />

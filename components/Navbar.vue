@@ -123,11 +123,11 @@ const mobilemenuStyle = computed(() => {
               <span class="en">{{ isChinese ? item.nameZh : item.name }}</span>
             </div>
           </nuxt-link>
-          <div class="menu__drop" v-if="item.children">
+          <div v-if="item.children" class="menu__drop">
             <div
-              class="menu__drop-item"
               v-for="(childItem, childIndex) in item.children"
               :key="childIndex"
+              class="menu__drop-item"
             >
               <nuxt-link :to="childItem.link">{{
                 isChinese ? childItem.nameCn : childItem.nameEn
@@ -142,13 +142,13 @@ const mobilemenuStyle = computed(() => {
       <div class="feature">
         <div
           class="feature__icon feature__icon__search"
-          @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
           title="搜尋"
+          @click="globalStore.isSearchVisible = !globalStore.isSearchVisible"
         >
           <img
-            @click="globalStore.toggleSearchBar"
             src="@/assets/icon/search.svg"
             alt=""
+            @click="globalStore.toggleSearchBar"
           />
         </div>
         <div class="feature__icon">
@@ -158,15 +158,15 @@ const mobilemenuStyle = computed(() => {
         </div>
         <div
           class="feature__icon"
-          @click="globalStore.toggleShoppingCart"
           title="購物車"
+          @click="globalStore.toggleShoppingCart"
         >
           <img src="@/assets/icon/bag.svg" alt="" />
         </div>
         <div
           class="feature__icon"
-          @click="globalStore.toggleLanguage"
           title="切換語言"
+          @click="globalStore.toggleLanguage"
         >
           <!-- <img src="../assets/icon/chinese.svg" alt="" /> -->
           <img v-if="isChinese" src="../assets/icon/english.svg" alt="中文" />
@@ -178,16 +178,16 @@ const mobilemenuStyle = computed(() => {
     <div class="header__mobile col-start-9 col-span-2 gap-5 justify-self-end">
       <div @click="globalStore.isSearchVisible = !globalStore.isSearchVisible">
         <img
-          @click="globalStore.toggleSearchBar"
           src="@/assets/icon/search.svg"
           alt=""
           class="feature__icon feature__icon__search"
+          @click="globalStore.toggleSearchBar"
         />
       </div>
       <button
         class="mobile-menu-button"
-        @click="globalStore.toggleHamburgerMenu"
         title="選單按鈕"
+        @click="globalStore.toggleHamburgerMenu"
       >
         <div class="line" :class="{ cross1: globalStore.showMeun }"></div>
         <div class="line" :class="{ cross2: globalStore.showMeun }"></div>
@@ -214,9 +214,9 @@ const mobilemenuStyle = computed(() => {
               <transition name="menu-expand">
                 <ul v-show="item.click && item.children" class="sub-menu">
                   <li
-                    class=""
                     v-for="(child, childIndex) in item.children"
                     :key="`child-${childIndex}`"
+                    class=""
                   >
                     <nuxt-link :to="child.link">{{
                       isChinese ? child.nameEn : child.nameCn

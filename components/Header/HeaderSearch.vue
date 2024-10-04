@@ -28,10 +28,10 @@ function onSearchButtonClick() {
     :style="{ top: globalStore.showSearch ? '0' : '-100%' }"
   >
     <input
+      v-model="searchQuery"
       type="text"
       placeholder="Search..."
       class="search__input mr-auto col-span-8 w-full"
-      v-model="searchQuery"
       @keyup.enter="onSearchButtonClick"
     />
     <div
@@ -45,9 +45,9 @@ function onSearchButtonClick() {
       />
       <img
         src="@/assets/icon/close.svg"
-        @click="globalStore.toggleSearchBar"
         alt=""
         class="ml-6"
+        @click="globalStore.toggleSearchBar"
       />
     </div>
   </div>

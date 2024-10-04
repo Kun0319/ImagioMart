@@ -27,7 +27,7 @@ const handleCanShowUpdate = (newCanShow) => {
     <div class="flex flex-col items-center inner-wrap">
       <p class="welcome">歡迎, 讀者 ANN</p>
       <button class="logout">登出</button>
-      <TabMenu :canShow="canShow" @update:canShow="handleCanShowUpdate" />
+      <TabMenu :can-show="canShow" @update:can-show="handleCanShowUpdate" />
       <table class="order">
         <thead>
           <tr>
@@ -45,7 +45,7 @@ const handleCanShowUpdate = (newCanShow) => {
             <td data-label="總計" class="price">{{ order.amount }}</td>
             <td data-label="訂單狀態">{{ order.status }}</td>
             <td data-label="訂單內容">
-              <button @click="viewOrder(order.id)" class="browse">瀏覽</button>
+              <button class="browse" @click="viewOrder(order.id)">瀏覽</button>
             </td>
           </tr>
         </tbody>

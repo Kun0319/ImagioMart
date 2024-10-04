@@ -80,7 +80,7 @@ onMounted(async () => {
 
 <template>
   <NuxtLayout>
-    <IssueInfo :childData="fetchedData" />
+    <IssueInfo :child-data="fetchedData" />
 
     <IssueLine />
     <div class="grid grid-cols-12 gap-6">
@@ -93,7 +93,7 @@ onMounted(async () => {
     </div>
     <client-only>
       <Paginator
-        :totalRecords="50"
+        :total-records="50"
         :rows="8"
         :page="currentPage.value"
         @update:page="updateCurrentPage"

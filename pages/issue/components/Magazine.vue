@@ -53,7 +53,7 @@ const props = defineProps({
       <!-- api獲取-->
       <p class="info__month">{{ props.magazine.subtitle }}</p>
       <p class="info__price">NT${{ props.magazine.price }}</p>
-      <p class="info__memberprice" v-if="props.magazine.member_price">
+      <p v-if="props.magazine.member_price" class="info__memberprice">
         NT${{ props.magazine.member_price }}
       </p>
       <button class="line-height-4 info__shopcart text-black-alpha-90">

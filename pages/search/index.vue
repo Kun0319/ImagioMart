@@ -85,7 +85,7 @@ watch(
 
 <template>
   <NuxtLayout>
-    <Banner :imgSrc="cover" />
+    <Banner :img-src="cover" />
     <div class="search-results inner-wrap">
       <p
         v-if="searchResults && searchResults.length"
@@ -113,7 +113,7 @@ watch(
         </div>
         <Paginator />
         <div class="grid-cols-12 gap-12 md:grid hidden">
-          <div class="col-span-4" v-for="n in 6" :key="n">
+          <div v-for="n in 6" :key="n" class="col-span-4">
             <LittleAdvertise />
           </div>
         </div>

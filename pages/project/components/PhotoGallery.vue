@@ -20,8 +20,8 @@ const isChinese = computed(() => globalStore.language === "CN");
       :scrollbar="{ hide: false }"
       :mousewheel="true"
       :class="'swiper'"
-      :slidesPerView="2.3"
-      :spaceBetween="30"
+      :slides-per-view="2.3"
+      :space-between="30"
     >
       <SwiperSlide>
         <div class="grid grid-cols-12 gap-8">

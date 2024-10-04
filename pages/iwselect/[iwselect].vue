@@ -30,8 +30,8 @@ const slidesData = ref([
     <div class="filter__relative">
       <BreadcrumbLine
         text="Home &nbsp;/&nbsp; IW Select "
-        :showTags="true"
-        :showIcon="true"
+        :show-tags="true"
+        :show-icon="true"
       >
         <template #icon>
           <img
@@ -77,7 +77,7 @@ const slidesData = ref([
         <Navigation />
         <BrandDescription />
         <RecommendedProducts />
-        <Pagination :slidesData="slidesData" class="pagination">
+        <Pagination :slides-data="slidesData" class="pagination">
           <template #title>
             <slot name="title">推薦選品 </slot>
           </template>

@@ -39,7 +39,7 @@ const goToCheckout = () => {
             <div class="quantity-selector">
               <!-- 數量選擇器 -->
               <!-- <button class="decrease" onclick="decreaseValue()">-</button> -->
-              <input type="number" id="quantity" value="1" />
+              <input id="quantity" type="number" value="1" />
               <!-- <button class="increase" onclick="increaseValue()">+</button> -->
             </div>
           </div>
@@ -66,7 +66,7 @@ const goToCheckout = () => {
             <div class="quantity-selector">
               <!-- 數量選擇器 -->
               <!-- <button class="decrease" onclick="decreaseValue()">-</button> -->
-              <input type="number" id="quantity" value="1" />
+              <input id="quantity" type="number" value="1" />
               <!-- <button class="increase" onclick="increaseValue()">+</button> -->
             </div>
           </div>

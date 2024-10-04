@@ -20,8 +20,8 @@ if (!error.value && data.value) {
 <template>
   <div class="rwd-wrap">
     <NuxtLayout
-      :breadcrumbText="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
-      :showFilterMenu="true"
+      :breadcrumb-text="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
+      :show-filter-menu="true"
     >
       <div class="inner-wrap">
         <div class="flex items-center">

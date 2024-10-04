@@ -19,11 +19,11 @@ const handlePageChange = (event) => {
   <div class="paginator">
     <Paginator
       :rows="rows"
-      :totalRecords="totalRecords"
+      :total-records="totalRecords"
       :page="currentPage"
-      @page="handlePageChange"
       class="custom-paginator"
       template="PrevPageLink  PageLinks  NextPageLink"
+      @page="handlePageChange"
     ></Paginator>
   </div>
 </template>

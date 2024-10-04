@@ -52,7 +52,7 @@ const selectedSubOption = ref("");
           <p class="info__title">收件人資訊</p>
           <div class="input-group">
             <label for="fullname" class="required">*</label>
-            <input type="text" id="fullname" placeholder="全名" class="input" />
+            <input id="fullname" type="text" placeholder="全名" class="input" />
           </div>
           <div class="input-group">
             <label for="" class="required">*</label>
@@ -129,8 +129,8 @@ const selectedSubOption = ref("");
           <div class="flex flex-col gap-6 input__invoice">
             <div>
               <input
-                type="checkbox"
                 id="personalCloud"
+                type="checkbox"
                 :checked="selectedInvoiceType === 'personalCloud'"
                 @change="
                   selectedInvoiceType =
@@ -141,8 +141,8 @@ const selectedSubOption = ref("");
               />
               <label for="personalCloud">個人雲端發票</label>
               <div
-                class="flex justify-center"
                 v-if="selectedInvoiceType === 'personalCloud'"
+                class="flex justify-center"
               >
                 <div
                   v-if="selectedInvoiceType === 'personalCloud'"
@@ -150,8 +150,8 @@ const selectedSubOption = ref("");
                 >
                   <div>
                     <input
-                      type="checkbox"
                       id="mobileBarcode"
+                      type="checkbox"
                       :checked="selectedSubOption === 'mobileBarcode'"
                       @change="
                         selectedSubOption =
@@ -166,8 +166,8 @@ const selectedSubOption = ref("");
                   </div>
                   <div>
                     <input
-                      type="checkbox"
                       id="citizenCertificate"
+                      type="checkbox"
                       :checked="selectedSubOption === 'citizenCertificate'"
                       @change="
                         selectedSubOption =
@@ -187,8 +187,8 @@ const selectedSubOption = ref("");
             <!-- 個人紙本 -->
             <div>
               <input
-                type="checkbox"
                 id="personalPaper"
+                type="checkbox"
                 :checked="selectedInvoiceType === 'personalPaper'"
                 @change="
                   selectedInvoiceType =
@@ -207,8 +207,8 @@ const selectedSubOption = ref("");
             <!-- 公司統編 -->
             <div>
               <input
-                type="checkbox"
                 id="companyElectronic"
+                type="checkbox"
                 :checked="selectedInvoiceType === 'companyElectronic'"
                 @change="
                   selectedInvoiceType =
@@ -220,8 +220,8 @@ const selectedSubOption = ref("");
               <label for="companyElectronic">公司戶電子發票證明聯</label>
             </div>
             <div
-              class="flex w-full"
               v-if="selectedInvoiceType === 'companyElectronic'"
+              class="flex w-full"
             >
               <label for="" class="required">*</label>
               <input type="text" placeholder="統一編號" class="input" />
@@ -278,9 +278,9 @@ const selectedSubOption = ref("");
                     -
                   </button>
                   <input
-                    type="text"
                     :id="'quantity' + 'selector1'"
                     v-model="quantities['selector1']"
+                    type="text"
                     @input="(event) => validateInput('selector1', event)"
                   />
                   <button
@@ -315,9 +315,9 @@ const selectedSubOption = ref("");
                     -
                   </button>
                   <input
-                    type="text"
                     :id="'quantity' + 'selector2'"
                     v-model="quantities['selector2']"
+                    type="text"
                     @input="(event) => validateInput('selector2', event)"
                   />
                   <button

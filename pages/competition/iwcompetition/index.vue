@@ -56,10 +56,10 @@ const winners = [
 </script>
 <template>
   <NuxtLayout
-    :breadcrumbText="'Home &nbsp;/&nbsp; IW Competion  &nbsp;/&nbsp;   About '"
+    :breadcrumb-text="'Home &nbsp;/&nbsp; IW Competion  &nbsp;/&nbsp;   About '"
   >
     <div class="top--margin">
-      <Banner :imgSrc="bg" customText="IW<br/>Competion" />
+      <Banner :img-src="bg" custom-text="IW<br/>Competion" />
       <BreadcrumbLine
         :text="'Home &nbsp;/&nbsp; IW Competion  &nbsp;/&nbsp;   About '"
       />
@@ -106,9 +106,9 @@ const winners = [
             <PersonnelCard
               v-for="judge in judges"
               :key="judge.id"
-              :imageSrc="judge.imageSrc"
+              :image-src="judge.imageSrc"
               :name="judge.name"
-              :nameZh="judge.nameZh"
+              :name-zh="judge.nameZh"
             />
           </div>
         </div>
@@ -121,9 +121,9 @@ const winners = [
             <PersonnelCard
               v-for="winner in winners"
               :key="winner.id"
-              :imageSrc="winner.imageSrc"
+              :image-src="winner.imageSrc"
               :name="winner.name"
-              :nameZh="winner.nameZh"
+              :name-zh="winner.nameZh"
             />
           </div>
           <div class="black">

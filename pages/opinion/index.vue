@@ -17,8 +17,8 @@ const updateCurrentPage = (newPage) => {
 <template>
   <NuxtLayout>
     <div class="filter__relative">
-      <Banner :imgSrc="cover" />
-      <BreadcrumbLine text="Home&nbsp; /&nbsp; Opinion " :showTags="true">
+      <Banner :img-src="cover" />
+      <BreadcrumbLine text="Home&nbsp; /&nbsp; Opinion " :show-tags="true">
         <template #icon>
           <img
             src="~/assets/icon/sliders.svg"
@@ -79,13 +79,13 @@ const updateCurrentPage = (newPage) => {
       <PeopleOpinioin :page="currentPage" />
     </div>
     <Paginator
-      :totalRecords="50"
+      :total-records="50"
       :rows="8"
       :page="currentPage.value"
       @update:page="updateCurrentPage"
     />
     <div class="advertise grid-cols-12 gap-12 md:grid hidden inner-wrap">
-      <div class="col-span-4" v-for="n in 6" :key="n">
+      <div v-for="n in 6" :key="n" class="col-span-4">
         <LittleAdvertise />
       </div>
     </div>

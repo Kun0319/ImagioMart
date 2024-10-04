@@ -26,7 +26,7 @@ const magnifierPhotoBlocks = blocks.filter(
           :src="pic"
           mg-corner-bg-color="#e5e5e5"
           height="100%"
-          className="photo "
+          class-name="photo "
         />
       </client-only>
       <!-- <img src="@/assets/images/magazine_mockup_ 1.svg" alt="" /> -->
@@ -59,7 +59,7 @@ const magnifierPhotoBlocks = blocks.filter(
           <VueMagnifier
             :src="`https://iw-api.d-blueprint.com${block.data.image_lft.link}`"
             mg-corner-bg-color="#e5e5e5"
-            className="book__photo__left"
+            class-name="book__photo__left"
             height="100%"
           />
         </div>
@@ -70,7 +70,7 @@ const magnifierPhotoBlocks = blocks.filter(
           <VueMagnifier
             :src="`https://iw-api.d-blueprint.com${block.data.image_rgt.link}`"
             mg-corner-bg-color="#e5e5e5"
-            className="book__photo__right"
+            class-name="book__photo__right"
             height="100%"
           />
         </div>

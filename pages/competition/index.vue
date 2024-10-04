@@ -98,9 +98,9 @@ const projects = [
 </script>
 <template>
   <NuxtLayout
-    :breadcrumbText="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp;Current '"
+    :breadcrumb-text="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp;Current '"
     :cover="bg"
-    customText="CURRENT COMPETITIONS"
+    custom-text="CURRENT COMPETITIONS"
   >
     <div class="inner-wrap">
       <SwiperPic :images="ImageArray" />
@@ -108,7 +108,7 @@ const projects = [
         <template v-for="(project, index) in projects" :key="project.id">
           <DesignShowcase
             :project="project"
-            baseRoute="/competition"
+            base-route="/competition"
             :class="
               index % 2 === 0
                 ? 'md:col-span-6 col-span-full justify-self-start'

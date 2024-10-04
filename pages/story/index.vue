@@ -11,11 +11,11 @@ const toggleFilterMenu = () => {
 <template>
   <NuxtLayout>
     <div class="filter__relative">
-      <Banner :imgSrc="cover" />
+      <Banner :img-src="cover" />
       <BreadcrumbLine
         text="Home &nbsp;/&nbsp; Story &nbsp;/ &nbsp;Furniture "
-        :showTags="true"
-        :showIcon="true"
+        :show-tags="true"
+        :show-icon="true"
       >
         <template #icon>
           <img
@@ -65,7 +65,7 @@ const toggleFilterMenu = () => {
       </BreadcrumbLine>
     </div>
     <!-- 篩選選單 -->
-    <div class="filter__menu" v-show="FilterMenuOpen">
+    <div v-show="FilterMenuOpen" class="filter__menu">
       <div
         v-show="FilterMenuOpen"
         class="overlay"
@@ -88,7 +88,7 @@ const toggleFilterMenu = () => {
       <Paginator />
     </div>
     <div class="grid-cols-12 gap-12 md:grid hidden advertise inner-wrap">
-      <div class="col-span-4" v-for="n in 6" :key="n">
+      <div v-for="n in 6" :key="n" class="col-span-4">
         <LittleAdvertise />
       </div>
     </div>

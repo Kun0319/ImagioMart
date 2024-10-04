@@ -14,7 +14,7 @@ const projectId = route.params.ProjectShowcase;
 </script>
 <template>
   <NuxtLayout
-    :breadcrumbText="'Home &nbsp; / &nbsp; Project &nbsp; / &nbsp; Furniture'"
+    :breadcrumb-text="'Home &nbsp; / &nbsp; Project &nbsp; / &nbsp; Furniture'"
   >
     <div class="inner-wrap">
       <TextImageBlock />

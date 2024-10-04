@@ -27,7 +27,7 @@ const handleSubmit = () => {
           >
             事務所名稱</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input id="userInput" type="text" class="form-input" />
         </div>
         <!-- 事務所網址 -->
         <div class="form-group">
@@ -35,8 +35,8 @@ const handleSubmit = () => {
             事務所網址</label
           >
           <input
-            type="text"
             id="web"
+            type="text"
             class="form-input"
             placeholder="http://"
           />
@@ -50,8 +50,8 @@ const handleSubmit = () => {
             聯絡信箱</label
           >
           <input
-            type="text"
             id="userInput"
+            type="text"
             class="form-input"
             placeholder="電子信箱"
           />
@@ -64,7 +64,7 @@ const handleSubmit = () => {
           >
             案名(中)</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input id="userInput" type="text" class="form-input" />
         </div>
         <div class="form-group">
           <label
@@ -73,7 +73,7 @@ const handleSubmit = () => {
           >
             案名(英)</label
           >
-          <input type="text" id="userInput" class="form-input" />
+          <input id="userInput" type="text" class="form-input" />
         </div>
         <div class="form-group">
           <label
@@ -97,8 +97,8 @@ const handleSubmit = () => {
             案例所在地</label
           >
           <input
-            type="text"
             id="userInput"
+            type="text"
             class="form-input"
             placeholder="國家 / 城市"
           />
@@ -112,8 +112,8 @@ const handleSubmit = () => {
             完工年份</label
           >
           <input
-            type="text"
             id="userInput"
+            type="text"
             class="form-input"
             placeholder="選擇"
           />
@@ -126,8 +126,8 @@ const handleSubmit = () => {
             上傳圖檔</label
           >
           <input
-            type="text"
             id="userInput"
+            type="text"
             class="form-input"
             placeholder="30張以內/ .jpg .png "
           />
@@ -137,8 +137,8 @@ const handleSubmit = () => {
             雲端連結</label
           >
           <input
-            type="text"
             id="userInput"
+            type="text"
             class="form-input"
             placeholder="http://"
           />

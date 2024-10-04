@@ -52,7 +52,7 @@ const slidesData = ref([
 </script>
 <template>
   <NuxtLayout
-    :breadcrumbText="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp; Furniture'"
+    :breadcrumb-text="'Home &nbsp;/&nbsp; Competition &nbsp;/&nbsp; Furniture'"
     :cover="bg"
   >
     <div class="flex flex-col content-center items-center w-full inner-wrap">
@@ -144,19 +144,19 @@ const slidesData = ref([
         <RelatedProject :projects="relatedProjects">
           <template #title>
             <p
-              class="text__title__morecompetition col-span-12"
               v-if="isChinese"
+              class="text__title__morecompetition col-span-12"
             >
               其他競賽資訊
             </p>
-            <p class="text__title__morecompetition col-span-12" v-else>
+            <p v-else class="text__title__morecompetition col-span-12">
               MORE COMPETITION
             </p>
           </template>
         </RelatedProject>
       </div>
 
-      <StoryOpinonPagination :slidesData="slidesData" class="pagination">
+      <StoryOpinonPagination :slides-data="slidesData" class="pagination">
         <template #title>
           <slot name="title">延伸閱讀</slot>
         </template>

@@ -29,7 +29,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
           :modules="[Pagination, Autoplay, Navigation]"
           :autoplay="{ delay: 2000, disableOnInteraction: false }"
           :navigation="true"
-          :spaceBetween="100"
+          :space-between="100"
           class="cover"
         >
           <swiper-slide>
@@ -158,7 +158,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
             :modules="[Scrollbar, Autoplay]"
             :scrollbar="{ hide: false, draggable: true }"
             :autoplay="{ delay: 2000, disableOnInteraction: false }"
-            :slidesPerView="1"
+            :slides-per-view="1"
             :class="'swiperscrollbar'"
           >
             <SwiperSlide>
@@ -250,7 +250,7 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
             :modules="[Scrollbar, Autoplay]"
             :scrollbar="{ hide: false, draggable: true }"
             :autoplay="{ delay: 2000, disableOnInteraction: false }"
-            :slidesPerView="1"
+            :slides-per-view="1"
             :class="'swiperscrollbar__opinion'"
           >
             <SwiperSlide>
@@ -393,21 +393,21 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
           <div class="col-span-6 magazine__container">
             <Magazine
               :magazine="{ name: 'magazine1' }"
-              :imageSrc="picone"
-              issuePeriod="第152期 2023 09&10月"
+              :image-src="picone"
+              issue-period="第152期 2023 09&10月"
               price="NT$300"
-              imageWidth="531px"
-              imageHeight="19.91vw"
+              image-width="531px"
+              image-height="19.91vw"
             />
           </div>
           <div class="col-span-6 magazine__container">
             <Magazine
               :magazine="{ name: 'magazine2' }"
-              :imageSrc="pictwo"
-              issuePeriod="DETAIL’23"
+              :image-src="pictwo"
+              issue-period="DETAIL’23"
               price="NT$300"
-              imageWidth="531px"
-              imageHeight="19.91vw"
+              image-width="531px"
+              image-height="19.91vw"
             />
           </div>
         </div>
@@ -423,9 +423,9 @@ const magazines = Array.from({ length: 1 }, (_, index) => ({
         <!-- 廣告 -->
         <div class="grid-cols-12 gap-4 md:grid hidden advertise">
           <div
-            class="col-span-4 flex justify-self-center"
             v-for="n in 6"
             :key="n"
+            class="col-span-4 flex justify-self-center"
           >
             <LittleAdvertise />
           </div>

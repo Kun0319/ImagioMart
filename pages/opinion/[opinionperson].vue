@@ -78,7 +78,7 @@ if (!error.value && data.value) {
 <template>
   <div class="rwd-wrap">
     <NuxtLayout
-      :breadcrumbText="'Home &nbsp; / &nbsp; Opinion &nbsp; / &nbsp; Furniture'"
+      :breadcrumb-text="'Home &nbsp; / &nbsp; Opinion &nbsp; / &nbsp; Furniture'"
     >
       <div class="inner-wrap">
         <div class="flex flex-col items-center">
@@ -215,8 +215,8 @@ if (!error.value && data.value) {
             :scrollbar="{ hide: false }"
             :mousewheel="true"
             :class="'swiper'"
-            :slidesPerView="2.3"
-            :spaceBetween="30"
+            :slides-per-view="2.3"
+            :space-between="30"
           >
             <SwiperSlide>
               <div class="grid grid-cols-12 gap-8">
@@ -347,7 +347,7 @@ if (!error.value && data.value) {
         </div>
       </div>
       <div class="md:hidden">
-        <StoryOpinonPagination :slidesData="slidesData">
+        <StoryOpinonPagination :slides-data="slidesData">
           <template #title>
             <slot name="title">延伸閱讀</slot>
           </template>

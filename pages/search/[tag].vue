@@ -4,11 +4,11 @@ import cover from "~/assets/images/SearchCover.png";
 </script>
 <template>
   <NuxtLayout>
-    <Banner :imgSrc="cover" />
+    <Banner :img-src="cover" />
     <Tagcontent />
     <Paginator />
     <div class="grid-cols-12 gap-12 md:grid hidden advertise inner-wrap">
-      <div class="col-span-4" v-for="n in 6" :key="n">
+      <div v-for="n in 6" :key="n" class="col-span-4">
         <LittleAdvertise />
       </div>
     </div>

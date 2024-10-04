@@ -9,7 +9,7 @@ const { data, error } = await useFetch(
 </script>
 
 <template lang="">
-  <div class="flex flex-col max-w-full items-center" v-if="data">
+  <div v-if="data" class="flex flex-col max-w-full items-center">
     <!-- <p class="h-16 info__new">Jun.27 / 2023 出刊消息</p> -->
 
     <p class="h-16 info__new">

@@ -7,7 +7,7 @@
       <button class="button">選物</button>
     </div>
 
-    <div class="grid grid-cols-12 gap-4 content" v-for="item in 8" :key="item">
+    <div v-for="item in 8" :key="item" class="grid grid-cols-12 gap-4 content">
       <div class="md:col-span-5 col-span-6 md:col-start-2">
         <img src="~/assets/images/RelatedProject1.png" alt="" class="photo" />
       </div>

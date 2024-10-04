@@ -27,7 +27,7 @@ const canShow = computed(() => globalStore.hasSubmitted);
     </div>
   </div>
   <div class="button__container">
-    <button class="button" v-if="canShow === false">
+    <button v-if="canShow === false" class="button">
       <nuxt-link to="member/designermember">成為設計師會員</nuxt-link>
     </button>
   </div>

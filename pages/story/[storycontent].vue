@@ -29,11 +29,11 @@ const slidesData = ref([
 <template>
   <div class="rwd-wrap">
     <NuxtLayout
-      :breadcrumbText="'Home &nbsp; / &nbsp; Story &nbsp; / &nbsp; Furniture'"
+      :breadcrumb-text="'Home &nbsp; / &nbsp; Story &nbsp; / &nbsp; Furniture'"
     >
       <div class="inner-wrap">
         <ImageGrid>
-          <template v-slot:title>
+          <template #title>
             <div class="slot-wrapper">
               <div class="flex items-center">
                 <p class="title--text__one">Scope｜129｜Brazil</p>
@@ -53,7 +53,7 @@ const slidesData = ref([
                 />
               </div></div
           ></template>
-          <template v-slot:image1>
+          <template #image1>
             <!-- <div class="col-span-12">
               <img
                 class="photo"
@@ -62,7 +62,7 @@ const slidesData = ref([
               />
             </div> -->
           </template>
-          <template v-slot:image2>
+          <template #image2>
             <div class="col-span-12 hidden">
               <img
                 class="photo"
@@ -71,7 +71,7 @@ const slidesData = ref([
               />
             </div>
           </template>
-          <template v-slot:image3>
+          <template #image3>
             <div class="col-span-6">
               <img
                 class="photo"
@@ -87,7 +87,7 @@ const slidesData = ref([
               />
             </div>
           </template>
-          <template v-slot:image4>
+          <template #image4>
             <!-- <div class="col-span-12">
               <img
                 class="photo"
@@ -172,7 +172,7 @@ const slidesData = ref([
         </div>
       </div>
       <div class="md:hidden">
-        <StoryOpinonPagination :slidesData="slidesData" />
+        <StoryOpinonPagination :slides-data="slidesData" />
       </div>
     </NuxtLayout>
   </div>

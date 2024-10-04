@@ -22,7 +22,7 @@ const emailverification = () => {
 </script>
 <template>
   <NuxtLayout>
-    <div class="forgot" v-if="!isVerificationSent">
+    <div v-if="!isVerificationSent" class="forgot">
       <div class="forgot__content">
         <!-- 會員登入 -->
         <p class="forgot__title">忘記密碼</p>
@@ -32,7 +32,7 @@ const emailverification = () => {
           >*註冊信箱</label
         >
         <div class="input-button-container">
-          <input type="text" class="input-email border-0" id="inputField" />
+          <input id="inputField" type="text" class="input-email border-0" />
           <button class="forgot__btn" @click="sendVerification">
             收取驗證信
           </button>
@@ -40,15 +40,15 @@ const emailverification = () => {
       </div>
     </div>
     <div
-      class="login flex justify-center"
       v-if="isVerificationSent && !emailverificationcompleted"
+      class="login flex justify-center"
       @click="emailverification"
     >
       <div class="login__success">
         <p class="text-center">請至登記信箱進行驗證</p>
       </div>
     </div>
-    <div class="forgot" v-if="emailverificationcompleted">
+    <div v-if="emailverificationcompleted" class="forgot">
       <div class="forgot__content">
         <!-- 會員登入 -->
         <p class="forgot__title">Email 驗證完成</p>

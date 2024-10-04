@@ -9,7 +9,7 @@ import { useRoute } from "vue-router";
 <template lang="">
   <NuxtLayout>
     <div class="margin">
-      <BreadcrumbLine text="Home &nbsp; / &nbsp; Issue" :showIcon="true">
+      <BreadcrumbLine text="Home &nbsp; / &nbsp; Issue" :show-icon="true">
         <template #icon2>
           <div class="icon">
             <i class="pi pi-heart mx-3"></i>

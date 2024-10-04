@@ -65,9 +65,9 @@ function validateInput(selectorId, event) {
                   -
                 </button>
                 <input
-                  type="text"
                   :id="'quantity' + 'selector1'"
                   v-model="quantities['selector1']"
+                  type="text"
                   @input="(event) => validateInput('selector1', event)"
                 />
                 <button
@@ -93,9 +93,9 @@ function validateInput(selectorId, event) {
                 -
               </button>
               <input
-                type="text"
                 :id="'quantity' + 'selector1'"
                 v-model="quantities['selector1']"
+                type="text"
                 @input="(event) => validateInput('selector1', event)"
               />
               <button
@@ -120,8 +120,8 @@ function validateInput(selectorId, event) {
           </div>
 
           <button
-            @click="goToCheckout"
             class="button md:col-end-13 md:col-span-5 col-span-12"
+            @click="goToCheckout"
           >
             結帳
           </button>
@@ -151,9 +151,9 @@ function validateInput(selectorId, event) {
                     -
                   </button>
                   <input
-                    type="text"
                     :id="'quantity' + 'selector1'"
                     v-model="quantities['selector1']"
+                    type="text"
                     @input="(event) => validateInput('selector1', event)"
                   />
                   <button
@@ -180,9 +180,9 @@ function validateInput(selectorId, event) {
                 -
               </button>
               <input
-                type="text"
                 :id="'quantity' + 'selector2'"
                 v-model="quantities['selector2']"
+                type="text"
                 @input="(event) => validateInput('selector2', event)"
               />
               <button

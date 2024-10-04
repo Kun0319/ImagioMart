@@ -146,16 +146,16 @@ onMounted(async () => {
 </script>
 <template>
   <NuxtLayout
-    :breadcrumbText="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
+    :breadcrumb-text="'Home &nbsp;/&nbsp; News &nbsp;/&nbsp; Furniture'"
     :cover="bg"
-    customText="NEWS"
+    custom-text="NEWS"
   >
     <div class="content inner-wrap">
       <DesignShowcase
         v-for="(project, index) in projects"
         :key="project.id"
         :project="project"
-        baseRoute="/news"
+        base-route="/news"
         :class="
           index % 2 === 0
             ? 'md:col-span-6 col-span-full justify-self-start'
@@ -164,7 +164,7 @@ onMounted(async () => {
       />
     </div>
     <Paginator
-      :totalRecords="50"
+      :total-records="50"
       :rows="8"
       :page="currentPage.value"
       @update:page="updateCurrentPage"

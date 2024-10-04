@@ -29,13 +29,13 @@ const handleSubmit = async () => {
             >
               工作室/事務所名稱</label
             >
-            <input type="text" id="userInput" class="form-input" />
+            <input id="userInput" type="text" class="form-input" />
           </div>
           <div class="form-group">
             <label for="web" class="form-label designer__text required">
               網站</label
             >
-            <input type="text" id="web" class="form-input" />
+            <input id="web" type="text" class="form-input" />
           </div>
           <!-- 個人資訊 -->
           <div class="personalinfo">

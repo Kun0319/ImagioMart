@@ -1,14 +1,21 @@
-import { createApp, createSSRApp, nextTick } from "/_nuxt/node_modules/.cache/vite/client/deps/vue.js?v=11a84510";
+import {
+  createApp,
+  createSSRApp,
+  nextTick,
+} from "/_nuxt/node_modules/.cache/vite/client/deps/vue.js?v=11a84510";
 import { $fetch } from "/_nuxt/node_modules/ofetch/dist/index.mjs?v=f638a479";
 import { baseURL } from "/_nuxt/@id/virtual:nuxt:/Users/kun/Desktop/iw_v2/.nuxt/paths.mjs";
-import { applyPlugins, createNuxtApp } from "/_nuxt/node_modules/nuxt/dist/app/nuxt.js?v=f638a479";
+import {
+  applyPlugins,
+  createNuxtApp,
+} from "/_nuxt/node_modules/nuxt/dist/app/nuxt.js?v=f638a479";
 import "/_nuxt/@id/virtual:nuxt:/Users/kun/Desktop/iw_v2/.nuxt/css.mjs";
 import plugins from "/_nuxt/@id/virtual:nuxt:/Users/kun/Desktop/iw_v2/.nuxt/plugins/client.mjs";
 import RootComponent from "/_nuxt/@id/virtual:nuxt:/Users/kun/Desktop/iw_v2/.nuxt/root-component.mjs";
 import { vueAppRootContainer } from "/_nuxt/@id/virtual:nuxt:/Users/kun/Desktop/iw_v2/.nuxt/nuxt.config.mjs";
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch.create({
-    baseURL: baseURL()
+    baseURL: baseURL(),
   });
 }
 let entry;
@@ -39,9 +46,12 @@ if (true) {
       return vueAppPromise;
     }
     const isSSR = Boolean(
-      window.__NUXT__?.serverRendered || document.getElementById("__NUXT_DATA__")?.dataset.ssr === "true"
+      window.__NUXT__?.serverRendered ||
+        document.getElementById("__NUXT_DATA__")?.dataset.ssr === "true",
     );
-    const vueApp = isSSR ? createSSRApp(RootComponent) : createApp(RootComponent);
+    const vueApp = isSSR
+      ? createSSRApp(RootComponent)
+      : createApp(RootComponent);
     const nuxt = createNuxtApp({ vueApp });
     try {
       await applyPlugins(nuxt, plugins);

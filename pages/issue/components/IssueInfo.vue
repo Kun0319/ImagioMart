@@ -67,7 +67,7 @@ watch(width, (newWidth) => {
 </script>
 
 <template>
-  <div class="issue grid grid-cols-10 gap-4" v-if="childData">
+  <div v-if="childData" class="issue grid grid-cols-10 gap-4">
     <!-- Magazine Info -->
     <article
       class="flex info md:col-span-5 lg:col-span-6 col-span-full md:order-none order-1 md:text-start text-center md:justify-self-center"
@@ -101,10 +101,10 @@ watch(width, (newWidth) => {
       <!-- <img src="~/assets/images/Rectangle.svg" alt="IW傢飾" /> -->
       <img
         :src="pic"
-        @mouseover="handleMouseOver"
-        @mouseout="handleMouseOut"
         alt="IW傢飾"
         class="pic__hover"
+        @mouseover="handleMouseOver"
+        @mouseout="handleMouseOut"
       />
       <client-only>
         <Swiper

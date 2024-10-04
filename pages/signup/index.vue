@@ -35,8 +35,8 @@ const handleSubmit = () => {
                 <p class="mr-10 mb-10">我要註冊</p>
                 <div class="mr-10">
                   <input
-                    type="checkbox"
                     id="reader"
+                    type="checkbox"
                     :checked="selected === 'reader'"
                     @change="updateSelection('reader')"
                   />
@@ -44,8 +44,8 @@ const handleSubmit = () => {
                 </div>
                 <div class="">
                   <input
-                    type="checkbox"
                     id="designer"
+                    type="checkbox"
                     :checked="selected === 'designer'"
                     @change="updateSelection('designer')"
                   />
@@ -61,20 +61,20 @@ const handleSubmit = () => {
                 <label for="surname" class="form-label signup__text required"
                   >姓</label
                 >
-                <input type="text" id="surname" class="form-input" />
+                <input id="surname" type="text" class="form-input" />
               </div>
               <div class="form-group">
                 <label for="name" class="form-label signup__text required"
                   >名</label
                 >
-                <input type="text" id="name" class="form-input" />
+                <input id="name" type="text" class="form-input" />
               </div>
               <!-- 工作室/事務所名稱 -->
-              <div class="form-group" v-if="selected === 'designer'">
+              <div v-if="selected === 'designer'" class="form-group">
                 <label for="userInput" class="form-label signup__text required">
                   工作室/事務所名稱</label
                 >
-                <input type="text" id="userInput" class="form-input" />
+                <input id="userInput" type="text" class="form-input" />
               </div>
               <!-- 工作室/事務所名稱 -->
               <!-- 電話 -->
@@ -87,8 +87,8 @@ const handleSubmit = () => {
                     <option value="+886">+886</option>
                   </select>
                   <input
-                    type="text"
                     id="phone"
+                    type="text"
                     class="form-input phone-input"
                   />
                 </div>
@@ -98,7 +98,7 @@ const handleSubmit = () => {
                 <label for="email" class="form-label signup__text required"
                   >電子郵件</label
                 >
-                <input type="email" id="email" class="form-input" />
+                <input id="email" type="email" class="form-input" />
               </div>
               <!-- 密碼 -->
               <div class="form-group">
@@ -106,8 +106,8 @@ const handleSubmit = () => {
                   >密碼</label
                 >
                 <input
-                  type="password"
                   id="password"
+                  type="password"
                   placeholder="至少包含 8 個數字與字母 "
                   class="form-input"
                 />
@@ -121,8 +121,8 @@ const handleSubmit = () => {
                   確認密碼</label
                 >
                 <input
-                  type="password"
                   id="confirm password"
+                  type="password"
                   class="form-input"
                 />
               </div>
@@ -146,8 +146,8 @@ const handleSubmit = () => {
               <div class="radio-group">
                 <div class="radio-option">
                   <input
-                    type="radio"
                     id="option1"
+                    type="radio"
                     name="subscription"
                     value="option1"
                     class="hidden-radio"
@@ -158,8 +158,8 @@ const handleSubmit = () => {
                 </div>
                 <div class="radio-option">
                   <input
-                    type="radio"
                     id="option2"
+                    type="radio"
                     name="subscription"
                     value="option2"
                     class="hidden-radio"

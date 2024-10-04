@@ -25,10 +25,10 @@ const handleIframeClick = () => {
     <!-- <div class="overlay"></div> -->
     <!-- </div> -->
     <img
+      v-if="showIcon"
       src="../assets/icon/play.svg"
       alt=""
       class="LittleAdvertise__icon"
-      v-if="showIcon"
     />
   </div>
 </template>

@@ -9,7 +9,7 @@ defineProps({
   <div class="no-padding">
     <img :src="imgSrc" alt="" class="full-width" :class="{ hidden: !imgSrc }" />
     <div class="text">
-      <p v-html="customText" v-if="customText"></p>
+      <p v-if="customText" v-html="customText"></p>
     </div>
   </div>
 </template>

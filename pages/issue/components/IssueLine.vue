@@ -34,7 +34,7 @@ const selectOption = (option) => {
             Sort: {{ selected }}
             <span class="arrow">▼</span>
           </div>
-          <ul class="options" v-if="isOpen">
+          <ul v-if="isOpen" class="options">
             <li
               v-for="option in options"
               :key="option"

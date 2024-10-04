@@ -57,14 +57,14 @@ const handleSubmissionClick = () => {
 <template>
   <NuxtLayout>
     <div class="flex flex-col items-center inner-wrap">
-      <p class="welcome" v-if="canShow">歡迎, 設計師 ANN</p>
-      <p class="welcome" v-else>歡迎, 讀者 ANN</p>
+      <p v-if="canShow" class="welcome">歡迎, 設計師 ANN</p>
+      <p v-else class="welcome">歡迎, 讀者 ANN</p>
 
       <button class="logout" @click="logout">登出</button>
-      <button class="btn__submit" v-if="canShow" @click="handleSubmissionClick">
+      <button v-if="canShow" class="btn__submit" @click="handleSubmissionClick">
         案例投稿
       </button>
-      <TabMenu @update:selectedTab="updateSelectedTab" :can-show="canShow" />
+      <TabMenu :can-show="canShow" @update:selected-tab="updateSelectedTab" />
       <PersonalInfo v-if="selectedTab === 0" />
       <Order v-if="selectedTab === 1" :orders="orders" />
       <UserFavorites v-if="selectedTab === 2" />
