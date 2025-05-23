@@ -1,5 +1,5 @@
-<script setup>
-import { useGlobalStore } from "@/stores/global.js";
+<script setup lang="ts">
+import { useGlobalStore } from "@/stores/global.ts";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");

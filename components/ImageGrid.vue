@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <slot name="title">
     <div class="slot-wrapper">

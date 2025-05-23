@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import VueMagnifier from "@websitebeaver/vue-magnifier";
 import "@websitebeaver/vue-magnifier/styles.css";
 import pic from "@/assets/images/magazine_mockup_1.svg";

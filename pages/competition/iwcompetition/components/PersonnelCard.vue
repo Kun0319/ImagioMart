@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // 定義 props，允許從父組件傳入資料
 defineProps({
   imageSrc: String,

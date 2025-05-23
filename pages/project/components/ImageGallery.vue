@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <div class="grid grid-cols-12 md:gap-8 gap-4">
     <div class="col-span-12">

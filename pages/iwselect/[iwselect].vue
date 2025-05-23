@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TextImageBlock from "./components/TextImageBlock.vue";
 import Navigation from "./components/Navigation.vue";
 import RecommendedProducts from "./components/RecommendedProducts.vue";

@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <title>隱私權政策</title>
   <NuxtLayout>

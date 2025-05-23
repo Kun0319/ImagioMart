@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <title>關於我們</title>
   <NuxtLayout>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper/modules";
 import { useWindowSize } from "@vueuse/core";

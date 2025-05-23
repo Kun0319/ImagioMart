@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <div class="load">
     <button class="load__btn">LOAD MORE</button>

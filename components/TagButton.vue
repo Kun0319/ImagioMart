@@ -1,5 +1,5 @@
 <!-- Button.vue -->
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   tag: String,
 });

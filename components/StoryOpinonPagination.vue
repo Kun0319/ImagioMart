@@ -1,10 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { useGlobalStore } from "@/stores/global.js";
+import { useGlobalStore } from "@/stores/global.ts";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");

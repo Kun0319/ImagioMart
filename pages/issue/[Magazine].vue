@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import MagazineLine from "./components/MagazineLine.vue";
 import MagazineIntroduce from "./components/MagazineIntroduce.vue";
 import MagazinePic from "./components/MagazinePic.vue";

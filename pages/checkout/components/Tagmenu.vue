@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const selectedTab = ref(0);
 const selectTab = (index) => {
   selectedTab.value = index;

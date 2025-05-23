@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const route = useRoute();
 const magazineId = route.params.Magazine;
 const { data, error } = await useFetch(

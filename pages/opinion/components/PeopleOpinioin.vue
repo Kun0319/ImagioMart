@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import pic1 from "@/assets/images/opinion1.webp";
 import pic2 from "@/assets/images/opinion2.webp";
 import pic3 from "@/assets/images/opinion3.jpg";

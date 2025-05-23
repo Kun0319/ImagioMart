@@ -1,4 +1,3 @@
-<script setup></script>
 
 <template lang="">
   <!-- 最外層包覆 -->

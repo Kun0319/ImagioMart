@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import StorySwiperPic from "./components/StorySwiperPic.vue";
 import StoryInfo from "./components/StoryInfo.vue";
 import cover from "~/assets/images/Storycover.png";

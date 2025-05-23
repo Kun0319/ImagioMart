@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Advertise from "../issue/components/Advertise.vue";
 import bg from "../../assets/images/CompetitionBg.png";
 

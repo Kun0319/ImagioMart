@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const FilterList = ref([
   { name: "Furniture", count: 20 },
   { name: "Dining", count: 10 },

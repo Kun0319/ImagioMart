@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // 通知父组件
 const emit = defineEmits(["update:selectedTab"]);
 const selectedTab = ref(0);

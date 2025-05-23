@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import bg from "~/assets/images/newsbg.png";
 
 definePageMeta({

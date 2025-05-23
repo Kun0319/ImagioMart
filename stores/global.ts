@@ -27,7 +27,7 @@ export const useGlobalStore = defineStore("globalStore", () => {
     showShoppingCart.value = !showShoppingCart.value;
   };
 
-  const setSubmissionStatus = (status) => {
+  const setSubmissionStatus = (status: boolean) => {
     hasSubmitted.value = status;
   };
 

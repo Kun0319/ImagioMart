@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <div class="flex items-center">
     <p class="title--text__one">設計椅款｜森/CASA</p>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const showIcon = ref(true);
 
 const handleIframeClick = () => {

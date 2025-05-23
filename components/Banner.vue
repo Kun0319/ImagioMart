@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   imgSrc: String,
   customText: String,

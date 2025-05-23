@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TabMenu from "./components/TabMenu.vue";
 
 const orders = [

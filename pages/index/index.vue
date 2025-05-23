@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // window.location.href = "/issue";
 import cover from "~/assets/images/indexbg.png";
 import { Scrollbar, Autoplay, Pagination, Navigation } from "swiper/modules";

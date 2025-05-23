@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --ext .js,.vue . --fix"
+    "lint": "eslint --ext .ts,.js,.vue . --fix"
   },
   "overrides": {
     "vue": "3.3.4"

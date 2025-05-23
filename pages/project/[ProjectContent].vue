@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TextImageBlock from "./components/TextImageBlock.vue";
 import ImageGallery from "./components/ImageGallery.vue";
 import PhotoGallery from "./components/PhotoGallery.vue";

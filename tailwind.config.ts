@@ -1,0 +1,22 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app.vue',
+    './error.vue'
+  ],
+  theme: {
+    extend: {}
+  },
+  plugins: [],
+  corePlugins: {
+    // Disable Tailwind's base styles
+    preflight: false
+  }
+}
+
+export default config

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import bg from "../../assets/images/CompetitionBg.png";
 import PersonnelCard from "./components/PersonnelCard.vue";
 import Popup from "./components/Popup.vue";
