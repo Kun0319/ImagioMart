@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import PeopleOpinioin from "./components/PeopleOpinioin.vue";
 import cover from "~/assets/images/opinion.png";
 import FilterMenu from "~/components/FilterMenu.vue";

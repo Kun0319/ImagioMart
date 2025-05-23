@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TabMenu from "./components/Tagmenu.vue";
 const quantities = reactive({});
 quantities.selector1 = 1;

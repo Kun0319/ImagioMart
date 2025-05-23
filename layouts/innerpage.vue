@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { computed, inject } from "vue";
 // import cover from "~/assets/images/newsbg.png";
 const FilterMenuOpen = ref(false);

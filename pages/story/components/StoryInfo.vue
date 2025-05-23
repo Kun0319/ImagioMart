@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <nuxt-link to="/story/1">
     <div class="story__info grid grid-cols-12 gap-4">

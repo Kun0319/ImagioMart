@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import RelatedProject from "./components/RelatedProject.vue";
 import bg from "../../assets/images/CompetitionBg.png";
-import { useGlobalStore } from "@/stores/global.js";
+import { useGlobalStore } from "@/stores/global.ts";
 import pic from "../../assets/images/competitioncontent.png";
 
 const globalStore = useGlobalStore();

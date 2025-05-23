@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import "swiper/swiper-bundle.css";
 import { Scrollbar, Autoplay } from "swiper/modules";
 </script>

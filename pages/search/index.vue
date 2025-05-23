@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useRoute } from "vue-router";
 import cover from "~/assets/images/SearchCover.png";
 

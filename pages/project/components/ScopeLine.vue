@@ -1,4 +1,3 @@
-<script setup></script>
 
 <template>
   <div class="mb-2 line flex">

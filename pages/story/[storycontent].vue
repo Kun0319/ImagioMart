@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import StoryRelatedProject from "./components/StoryRelatedProject.vue";
 import StoryNavigation from "./components/StoryNavigation.vue";
 import pic from "~/assets/images/projectcontent6.png";

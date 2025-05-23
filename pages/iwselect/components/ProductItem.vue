@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <nuxt-link to="/iwselect/1" class="col-span-6">
     <div class="product">
@@ -21,7 +20,6 @@
     </div>
   </nuxt-link>
 </template>
-<script></script>
 <style lang="scss" scoped>
 .product {
   @apply col-span-6 flex flex-col items-center;

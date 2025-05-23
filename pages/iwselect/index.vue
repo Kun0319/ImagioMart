@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import cover from "~/assets/images/newsbg.png";
 import ProductItem from "./components/ProductItem.vue";
 import CategorySelector from "./components/CategorySelector.vue";

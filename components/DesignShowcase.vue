@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const emit = defineEmits(["like", "share"]);
 const props = defineProps({
   project: {

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ProjectShowcase from "./components/ProjectShowcase.vue";
 import CategorySelector from "./components/CategorySelector.vue";
 import LoadMore from "./components/LoadMore.vue";

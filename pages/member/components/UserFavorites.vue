@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <div class="flex flex-col w-full">
     <div class="flex text__title">

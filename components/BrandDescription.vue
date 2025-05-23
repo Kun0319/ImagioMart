@@ -1,4 +1,3 @@
-<script setup></script>
 <template lang="">
   <div class="introduce__wrap">
     <div class="introduce">

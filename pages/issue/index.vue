@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import IssueInfo from "./components/IssueInfo.vue";
 import IssueLine from "./components/IssueLine.vue";
 import Magazine from "./components/Magazine.vue";

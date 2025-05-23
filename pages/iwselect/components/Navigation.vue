@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation } from "swiper/modules";
 // 顏色選擇器

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Paginator from "primevue/paginator";
 const props = defineProps({
   // totalRecords: { type: Number },

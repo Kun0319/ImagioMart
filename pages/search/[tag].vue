@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Tagcontent from "./components/Tagcontent.vue";
 import cover from "~/assets/images/SearchCover.png";
 </script>

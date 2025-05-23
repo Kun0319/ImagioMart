@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const router = useRouter();
 // 2秒後跳轉到 /member
 

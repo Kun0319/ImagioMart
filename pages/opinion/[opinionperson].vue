@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 
 import { useRoute } from "vue-router";
@@ -10,7 +10,7 @@ import RelatedOpinion from "./components/RelatedOpinion.vue";
 import "swiper/css";
 import "swiper/css/scrollbar";
 
-import { useGlobalStore } from "@/stores/global.js";
+import { useGlobalStore } from "@/stores/global.ts";
 
 const globalStore = useGlobalStore();
 const isChinese = computed(() => globalStore.language === "CN");

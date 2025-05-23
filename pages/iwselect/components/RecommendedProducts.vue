@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <div class="RelatedProject">
     <div class="grid grid-cols-12 gap-4 justify-center">

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TabMenu from "./components/TabMenu.vue";
 import { useRouter } from "vue-router";
 import Order from "./components/Order.vue";
