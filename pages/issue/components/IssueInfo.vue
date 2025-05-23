@@ -111,7 +111,7 @@ watch(width, (newWidth) => {
           ref="mySwiper"
           :slides-per-view="1"
           :pagination="{ clickable: true }"
-          :modules="[SwiperPagination]"
+          :modules="[Pagination]"
           :class="'pic__swiper '"
         >
           <SwiperSlide><img :src="imgSrc" alt="" /></SwiperSlide>

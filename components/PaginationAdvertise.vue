@@ -2,54 +2,33 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper/modules";
 
+const slides = Array.from({ length: 4 });
+
 import "swiper/css";
 import "swiper/css/pagination";
 </script>
 <template>
-  <swiper
-    ref="mySwiper"
-    :slides-per-view="1"
-    :pagination="{ clickable: true }"
-    :modules="[SwiperPagination]"
-    class="PaginationAdvertise"
-  >
-    <swiper-slide>
-      <div class="LittleAdvertise flex justify-center">
-        <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" />
-        <img
-          src="../assets/icon/play.svg"
-          alt=""
-          class="LittleAdvertise__icon"
-        /></div
-    ></swiper-slide>
-    <swiper-slide>
-      <div class="LittleAdvertise flex justify-center">
-        <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" />
-        <img
-          src="../assets/icon/play.svg"
-          alt=""
-          class="LittleAdvertise__icon"
-        /></div
-    ></swiper-slide>
-    <swiper-slide>
-      <div class="LittleAdvertise flex justify-center">
-        <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" />
-        <img
-          src="../assets/icon/play.svg"
-          alt=""
-          class="LittleAdvertise__icon"
-        /></div
-    ></swiper-slide>
-    <swiper-slide>
-      <div class="LittleAdvertise flex justify-center">
-        <img src="../assets/images/LittleAdvertise.svg" alt="" class="photo" />
-        <img
-          src="../assets/icon/play.svg"
-          alt=""
-          class="LittleAdvertise__icon"
-        /></div
-    ></swiper-slide>
-  </swiper>
+  <client-only>
+    <swiper
+      ref="mySwiper"
+      :slides-per-view="1"
+      :pagination="{ clickable: true }"
+      :modules="[Pagination]"
+      class="PaginationAdvertise"
+    >
+      <swiper-slide v-for="(_, index) in slides" :key="index">
+        <div class="LittleAdvertise flex justify-center">
+          <img src="~/assets/images/LittleAdvertise.svg" alt="" class="photo" loading="lazy" />
+          <img
+            src="~/assets/icon/play.svg"
+            alt=""
+            class="LittleAdvertise__icon"
+            loading="lazy"
+          />
+        </div>
+      </swiper-slide>
+    </swiper>
+  </client-only>
 </template>
 
 <style lang="scss" scoped>
